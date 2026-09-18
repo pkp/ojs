@@ -1,7 +1,7 @@
-# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024.
+# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-07-30 06:56+0000\n"
+"PO-Revision-Date: 2026-09-15 04:51+0000\n"
 "Last-Translator: Apichaya <apichaya_cc@thonburi-u.ac.th>\n"
 "Language-Team: Thai <http://translate.pkp.sfu.ca/projects/ojs/themes-default/"
 "th/>\n"
@@ -14,82 +14,88 @@ msgstr ""
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
 msgstr ""
-"เมื่ออัปโหลดรูปภาพหน้าแรกแล้ว "
-"ให้แสดงในพื้นหลังของส่วนหัวแทนที่จะเป็นตําแหน่งปกติในหน้าแรก"
+"เมื่ออัปโหลดภาพสำหรับหน้าหลักแล้ว "
+"ให้แสดงภาพดังกล่าวเป็นพื้นหลังของส่วนหัวแทนตำแหน่งปกติบนหน้าหลัก"
 
 msgid "plugins.themes.default.option.displayStats.label"
 msgstr "ตัวเลือกการแสดงสถิติการใช้งาน"
 
 msgid "plugins.themes.default.option.displayStats.none"
-msgstr "ไม่แสดงแผนภูมิสถิติการใช้งานการส่งสําหรับผู้อ่าน"
+msgstr "ไม่แสดงกราฟสถิติการใช้งานบทความสำหรับผู้อ่าน"
 
 msgid "plugins.themes.default.name"
 msgstr "ธีมเริ่มต้น"
 
 msgid "plugins.themes.default.description"
-msgstr "ธีมนี้ใช้ธีมเริ่มต้น"
+msgstr "ธีมนี้เป็นรูปแบบมาตรฐานเริ่มต้นของระบบ"
 
 msgid "plugins.themes.default.option.typography.label"
-msgstr "การพิมพ์"
+msgstr "รูปแบบตัวอักษร"
 
 msgid "plugins.themes.default.option.typography.description"
-msgstr "เลือกแบบอักษรที่เหมาะกับวารสารนี้"
+msgstr "เลือกชุดแบบอักษรที่เหมาะกับวารสารนี้"
 
 msgid "plugins.themes.default.option.typography.notoSerif"
-msgstr "Noto Serif: รูปแบบ serif ของแบบอักษร digital-native ของ Google"
+msgstr "Noto Serif: แบบอักษรมีเชิงในตระกูล Noto ของ Google"
 
 msgid "plugins.themes.default.option.typography.lato"
-msgstr "Lato: แบบอักษร sans-serif สมัยใหม่ยอดนิยม"
+msgstr "Lato: แบบอักษรไม่มีเชิงสมัยใหม่ที่นิยมใช้"
 
 msgid "plugins.themes.default.option.typography.lora"
-msgstr "Lora: แบบอักษร serif แบบกว้างเหมาะสําหรับการอ่านออนไลน์"
+msgstr "Lora: แบบอักษรมีเชิงที่อ่านง่ายบนหน้าจอ"
 
 msgid "plugins.themes.default.option.typography.lora_openSans"
 msgstr ""
-"Lora/Open Sans: การจับคู่ฟรีกับหัวเรื่อง serif และข้อความเนื้อหาแบบ sans-"
-"serif"
+"Lora/Open Sans: ใช้แบบอักษรมีเชิงสำหรับหัวข้อ "
+"และแบบอักษรไม่มีเชิงสำหรับเนื้อหา"
 
 msgid "plugins.themes.default.option.colour.label"
 msgstr "สี"
 
 msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
-msgstr "แสดงสรุปวารสารในหน้าแรก"
+msgstr "แสดงคำอธิบายวารสารในหน้าหลัก"
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
 msgstr "ภาพพื้นหลังส่วนหัว"
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
-msgstr "แสดงภาพหน้าแรกเป็นพื้นหลังส่วนหัว"
+msgstr "ใช้ภาพหน้าหลักเป็นพื้นหลังส่วนหัว"
 
 msgid "plugins.themes.default.option.displayStats.bar"
-msgstr "ใช้แผนภูมิแท่งสําหรับการแสดงสถิติการใช้งาน"
+msgstr "แสดงสถิติการใช้งานเป็นกราฟแท่ง"
 
 msgid "plugins.themes.default.option.displayStats.line"
-msgstr "ใช้แผนภูมิเส้นสําหรับการแสดงสถิติการใช้งาน"
+msgstr "แสดงสถิติการใช้งานเป็นกราฟเส้น"
 
 msgid "plugins.themes.default.displayStats.monthInitials"
 msgstr "‘ม.ค. ก.พ. มี.ค. เม.ย. พ.ค. มิ.ย. ก.ค. ส.ค. ก.ย. ต.ค. พ.ย. ธ.ค’"
 
 msgid "plugins.themes.default.displayStats.downloads"
-msgstr "ดาวน์โหลด"
+msgstr "จำนวนดาวน์โหลด"
 
 msgid "plugins.themes.default.displayStats.noStats"
-msgstr "ข้อมูลการดาวน์โหลดยังไม่พร้อมใช้งาน"
+msgstr "ยังไม่มีข้อมูลการดาวน์โหลด"
 
 msgid "plugins.themes.default.option.typography.notoSans"
 msgstr ""
-"Noto Sans: แบบอักษร digital-native ที่ออกแบบโดย Google "
-"เพื่อรองรับภาษาอย่างกว้างขวาง"
+"Noto Sans: แบบอักษรที่ Google ออกแบบมาสำหรับการใช้งานดิจิทัล "
+"และรองรับภาษาได้หลากหลาย"
 
 msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
 msgstr ""
-"Noto Sans/Noto Serif: การจับคู่เสริมกับหัวเรื่อง sans-serif และข้อความเนื้"
-"อหา serif"
+"Noto Sans/Noto Serif: ใช้แบบอักษรไม่มีเชิงสำหรับหัวข้อ "
+"และแบบอักษรมีเชิงสำหรับเนื้อหา"
 
 msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
 msgstr ""
-"Noto Serif/Noto Sans: การจับคู่เสริมกับหัวเรื่อง serif และข้อความเนื้อหา "
-"sans-serif"
+"Noto Serif/Noto Sans: ใช้แบบอักษรมีเชิงสำหรับหัวข้อ "
+"และแบบอักษรไม่มีเชิงสำหรับเนื้อหา"
 
 msgid "plugins.themes.default.option.colour.description"
 msgstr "เลือกสีสําหรับส่วนหัว"
+
+msgid "plugins.themes.default.nextSlide"
+msgstr "สไลด์ถัดไป"
+
+msgid "plugins.themes.default.prevSlide"
+msgstr "สไลด์ก่อนหน้า"

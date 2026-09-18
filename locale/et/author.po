@@ -1,7 +1,7 @@
-# "10 ..." <jaana.tonisson@tlulib.ee>, 2025.
+# "10 ..." <jaana.tonisson@tlulib.ee>, 2025, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-04-05 13:31+0000\n"
+"PO-Revision-Date: 2026-09-03 15:03+0000\n"
 "Last-Translator: \"10 ...\" <jaana.tonisson@tlulib.ee>\n"
 "Language-Team: Estonian <http://translate.pkp.sfu.ca/projects/ojs/author/et/>"
 "\n"
@@ -325,3 +325,6 @@ msgid "author.submit.submissionComplete"
 msgstr ""
 "Kaastöö esitamine on lõpetatud. Täname teid huvi eest avaldada väljaandes "
 "{$journalTitle}."
+
+msgid "author.submit.journalSectionDescription"
+msgstr "Käsikirjad tuleb esitada ühte ajakirja rubriikidest."

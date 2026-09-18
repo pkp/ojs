@@ -1,8 +1,8 @@
 # Rodolphe Lemétayer <rlemetayer@protonmail.com>, 2024.
-# Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>, 2025.
+# Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>, 2025, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-08-14 13:30+0000\n"
+"PO-Revision-Date: 2026-09-08 10:13+0000\n"
 "Last-Translator: Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-native/fr/>\n"
@@ -24,7 +24,7 @@ msgid "plugins.importexport.native.import"
 msgstr "Importer"
 
 msgid "plugins.importexport.native.import.instructions"
-msgstr "Téléverser un fichier XML à importer"
+msgstr "Charger un fichier XML à importer"
 
 msgid "plugins.importexport.native.exportSubmissionsSelect"
 msgstr "Sélectionner les articles à exporter"
@@ -39,7 +39,7 @@ msgid "plugins.importexport.native.results"
 msgstr "Résultats de l'importation"
 
 msgid "plugins.inportexport.native.uploadFile"
-msgstr "Veuillez téléverser un fichier sous « Importer » pour continuer."
+msgstr "Veuillez charger un fichier sous « Importer » pour continuer."
 
 msgid "plugins.importexport.native.importComplete"
 msgstr ""

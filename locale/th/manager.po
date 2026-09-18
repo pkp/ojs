@@ -1,7 +1,7 @@
-# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024.
+# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-10-17 09:54+0000\n"
+"PO-Revision-Date: 2026-09-15 04:51+0000\n"
 "Last-Translator: Apichaya <apichaya_cc@thonburi-u.ac.th>\n"
 "Language-Team: Thai <http://translate.pkp.sfu.ca/projects/ojs/manager/th/>\n"
 "Language: th\n"
@@ -2472,3 +2472,23 @@ msgid "mailable.paymentRequest.description"
 msgstr ""
 "อีเมลนี้ส่งอัตโนมัติให้กับผู้เขียนเพื่อขอชำระค่าธรรมเนียมการเผยแพร่เมื่อการส่"
 "งบทความของพวกเขาได้รับการยอมรับ"
+
+msgid "mailable.subscriptionExpired.description"
+msgstr "อีเมลนี้จะถูกส่งโดยอัตโนมัติเพื่อแจ้งสมาชิกว่าสมาชิกภาพของตนหมดอายุแล้ว"
+
+msgid "emailTemplate.variable.issue.issueTableOfContents"
+msgstr "สารบัญของฉบับวารสาร เช่น รายการบทความทั้งหมดที่อยู่ในฉบับนั้น"
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr ""
+"อีเมลนี้จะถูกส่งโดยอัตโนมัติเพื่อแจ้งสมาชิกว่าสมาชิกภาพของตนใกล้หมดอายุแล้ว"
+
+msgid "manager.setup.contextSummary.description"
+msgstr ""
+"กรุณาเขียนคำอธิบายสั้น ๆ เกี่ยวกับวารสาร "
+"เพื่อให้ผู้อ่านเข้าใจเนื้อหาและวัตถุประสงค์ของวารสารได้อย่างชัดเจน"
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr ""
+"อีเมลนี้จะถูกส่งโดยอัตโนมัติเพื่อแจ้งสมาชิกเป็นครั้งที่สองว่าสมาชิกภาพของตนหม"
+"ดอายุแล้ว"

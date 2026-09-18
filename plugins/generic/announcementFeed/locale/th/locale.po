@@ -1,7 +1,7 @@
-# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024.
+# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-10-19 17:06+0000\n"
+"PO-Revision-Date: 2026-09-15 04:51+0000\n"
 "Last-Translator: Apichaya <apichaya_cc@thonburi-u.ac.th>\n"
 "Language-Team: Thai <http://translate.pkp.sfu.ca/projects/ojs/"
 "generic-announcementFeed/th/>\n"
@@ -13,31 +13,31 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.generic.announcementfeed.displayName"
-msgstr "ปลั๊กอินฟีดประกาศ"
+msgstr "ส่วนเสริมฟีดประกาศ"
 
 msgid "plugins.generic.announcementfeed.description"
-msgstr "ปลั๊กอินนี้สร้างฟีดเว็บในรูปแบบ RSS/Atom สำหรับประกาศของวารสาร"
+msgstr "ส่วนเสริมนี้สร้างฟีด RSS/Atom สำหรับเผยแพร่ประกาศของวารสาร"
 
 msgid "plugins.generic.announcementfeed.settings"
 msgstr "การตั้งค่า"
 
 msgid "plugins.generic.announcementfeed.settings.all"
-msgstr "แสดงลิงก์ฟีดบนทุกหน้าของวารสาร"
+msgstr "แสดงลิงก์ฟีดในทุกหน้าของวารสาร"
 
 msgid "plugins.generic.announcementfeed.settings.homepage"
-msgstr "แสดงลิงก์ฟีดเฉพาะบนหน้าแรกและหน้าประกาศเท่านั้น"
+msgstr "แสดงลิงก์ฟีดเฉพาะในหน้าหลักและหน้าประกาศ"
 
 msgid "plugins.generic.announcementfeed.settings.announcement"
-msgstr "แสดงลิงก์ฟีดเฉพาะบนหน้าประกาศเท่านั้น"
+msgstr "แสดงลิงก์ฟีดเฉพาะในหน้าประกาศ"
 
 msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
-msgstr "จำกัดฟีดให้ถึง"
+msgstr "จำกัดฟีดให้แสดง"
 
 msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
-msgstr "ประกาศล่าสุดเท่านั้น"
+msgstr "ประกาศล่าสุด"
 
 msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
-msgstr "โปรดป้อนจำนวนเต็มบวกสำหรับประกาศล่าสุด"
+msgstr "โปรดระบุจำนวนประกาศล่าสุดเป็นจำนวนเต็มที่มากกว่า 0"
 
 msgid "plugins.generic.announcementfeed.atom.altText"
 msgstr "โลโก้ Atom"

@@ -1,7 +1,7 @@
-# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024.
+# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-10-17 09:02+0000\n"
+"PO-Revision-Date: 2026-09-15 04:51+0000\n"
 "Last-Translator: Apichaya <apichaya_cc@thonburi-u.ac.th>\n"
 "Language-Team: Thai <http://translate.pkp.sfu.ca/projects/ojs/submission/th/>"
 "\n"
@@ -13,182 +13,184 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "submission.submit.userGroup"
-msgstr "ส่งในบทบาทของฉัน..."
+msgstr "ส่งบทความในบทบาทของ..."
 
 msgid "submission.upload.selectComponent"
-msgstr "เลือกส่วนประกอบของบทความ"
+msgstr "เลือกองค์ประกอบของบทความ"
 
 msgid "submission.submit.whatNext.description"
 msgstr ""
-"วารสารได้รับแจ้งการส่งของคุณแล้ว และมีการส่งอีเมลยืนยันถึงคุณเพื่อใช้เป็นหลั"
-"กฐาน เมื่อบรรณาธิการได้พิจารณาการส่งแล้ว บรรณาธิการจะติดต่อกลับไปยังคุณ"
+"วารสารได้รับบทความของคุณแล้ว และได้ส่งอีเมลยืนยันให้คุณเก็บไว้เป็นหลักฐาน "
+"เมื่อบรรณาธิการตรวจสอบบทความแล้วจะติดต่อกลับ"
 
 msgid "submission.title"
 msgstr "ชื่อบทความ"
 
 msgid "submission.submit.newSubmissionMultiple"
-msgstr "เริ่มการส่งใหม่ใน"
+msgstr "เริ่มส่งบทความใหม่ใน"
 
 msgid "submission.submit.newSubmissionSingle"
-msgstr "การส่งใหม่"
+msgstr "ส่งบทความใหม่"
 
 msgid "grid.action.workflow"
-msgstr "ขั้นตอนการส่งบทความ"
+msgstr "ขั้นตอนการดำเนินงาน"
 
 msgid "submission.abstract.wordCount.description"
 msgstr "บทคัดย่อต้องมีความยาวไม่เกิน {$wordCount} คำ"
 
 msgid "submission.submit.noContext"
-msgstr "ไม่พบวารสารที่เกี่ยวข้องกับการส่งนี้"
+msgstr "ไม่พบวารสารของบทความที่ส่งนี้"
 
 msgid "submission.issueEntry"
-msgstr "เมตาดาทา"
+msgstr "ข้อมูลเมตา"
 
 msgid "grid.action.galleyInIssueEntry"
-msgstr "แกลเล่ย์ปรากฏในรายการฉบับ"
+msgstr "แสดงไฟล์เผยแพร่ในข้อมูลฉบับวารสาร"
 
 msgid "grid.action.issueEntry"
-msgstr "ดูเมตาดาทาของการส่งนี้"
+msgstr "ดูข้อมูลเมตาของบทความนี้"
 
 msgid "submission.event.articleGalleyMadeAvailable"
-msgstr "แกลเล่ย์บทความ \"{$galleyFormatName}\" ได้รับการเปิดให้ใช้งาน"
+msgstr "เปิดให้เข้าถึงไฟล์เผยแพร่บทความ \"{$galleyFormatName}\" แล้ว"
 
 msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr "แกลเล่ย์บทความ \"{$galleyFormatName}\" ถูกปิดไม่ให้ใช้งาน"
+msgstr "ปิดการเข้าถึงไฟล์เผยแพร่บทความ \"{$galleyFormatName}\" แล้ว"
 
 msgid "submission.event.publicIdentifiers"
-msgstr "อัปเดตตัวระบุสาธารณะของการส่งแล้ว"
+msgstr "อัปเดตรหัสสาธารณะของบทความแล้ว"
 
 msgid "grid.issueEntry.availableGalley.title"
-msgstr "อนุมัติรูปแบบ"
+msgstr "การอนุมัติรูปแบบ"
 
 msgid "submission.title.tip"
 msgstr ""
-"ประเภทของบทความมักเป็น 'ภาพ', 'ข้อความ' หรือประเภทสื่ออื่นๆ เช่น 'ซอฟต์แวร์' "
-"หรือ 'โต้ตอบ' โปรดเลือกประเภทที่เกี่ยวข้องมากที่สุดสำหรับการส่งของคุณ "
-"ตัวอย่างสามารถดูได้ที่ <a target=\"_blank\" href=\"http://dublincore.org/"
-"documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/"
-"documents/2001/04/12/usageguide/generic.shtml#type</a>"
+"ประเภทของบทความที่ส่งมักเป็น \"ภาพ\" \"ข้อความ\" หรือสื่อประเภทอื่น เช่น "
+"\"ซอฟต์แวร์\" หรือ \"สื่อโต้ตอบ\" "
+"โปรดเลือกประเภทที่ตรงกับบทความของคุณมากที่สุด ดูตัวอย่างได้ที่ <a target="
+"\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/"
+"generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/"
+"generic.shtml#type</a>"
 
 msgid "section.any"
-msgstr "ทุกส่วน"
+msgstr "ทุกหมวด"
 
 msgid "submission.sectionOptions"
-msgstr "ตัวเลือกส่วน"
+msgstr "ตัวเลือกหมวด"
 
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} รายการ"
 
 msgid "catalog.category.heading"
-msgstr "ทุกรายการ"
+msgstr "รายการทั้งหมด"
 
 msgid "galley.editPublishedDisabled"
-msgstr "ไม่สามารถแก้ไขแกลเล่ย์ของการตีพิมพ์นี้ได้ เนื่องจากได้ถูกตีพิมพ์แล้ว"
+msgstr "ไม่สามารถแก้ไขไฟล์เผยแพร่ของรายการนี้ได้ เนื่องจากเผยแพร่แล้ว"
 
 msgid "galley.publicationNotFound"
-msgstr "ไม่พบการตีพิมพ์สำหรับแกลเล่ย์นี้"
+msgstr "ไม่พบรายการเผยแพร่ของไฟล์เผยแพร่นี้"
 
 msgid "publication.assignToissue"
-msgstr "กำหนดให้กับฉบับ"
+msgstr "กำหนดฉบับวารสาร"
 
 msgid "publication.changeIssue"
-msgstr "เปลี่ยนฉบับ"
+msgstr "เปลี่ยนฉบับวารสาร"
 
 msgid "submission.publication"
-msgstr "การตีพิมพ์"
+msgstr "การเผยแพร่"
 
 msgid "publication.unpublish"
-msgstr "ยกเลิกการตีพิมพ์"
+msgstr "ยกเลิกการเผยแพร่"
 
 msgid "publication.unpublish.confirm"
-msgstr "คุณแน่ใจหรือไม่ว่าต้องการยกเลิกการตีพิมพ์นี้?"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการยกเลิกการเผยแพร่รายการนี้?"
 
 msgid "publication.unschedule.confirm"
-msgstr "คุณแน่ใจหรือไม่ว่าต้องการยกเลิกกำหนดเวลาการตีพิมพ์นี้?"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการยกเลิกกำหนดการเผยแพร่รายการนี้?"
 
 msgid "publication.version.details"
-msgstr "รายละเอียดการตีพิมพ์สำหรับเวอร์ชัน {$version}"
+msgstr "รายละเอียดการเผยแพร่ฉบับที่ {$version}"
 
 msgid "submission.queries.production"
-msgstr "การสนทนาช่วงการผลิต"
+msgstr "การสนทนาในขั้นตอนจัดเตรียมเผยแพร่"
 
 msgid "editor.submission.decision.backToReview"
-msgstr "ย้อนกลับไปที่การพิจารณา"
+msgstr "ส่งกลับไปประเมิน"
 
 msgid "editor.submission.decision.promoteFiles.externalReview"
-msgstr "เลือกไฟล์ที่ควรส่งไปยังขั้นตอนการพิจารณา"
+msgstr "เลือกไฟล์ที่จะส่งไปยังขั้นตอนการประเมิน"
 
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
-"ส่งอีเมลถึงผู้เขียนเพื่อแจ้งว่าบทความนี้จะถูกส่งให้ผู้ทรงคุณวุฒิพิจารณา "
-"หากเป็นไปได้ โปรดให้ข้อมูลประมาณการระยะเวลาที่กระบวนการตรวจสอบอาจใช้ "
-"และเมื่อใดที่ผู้เขียนควรคาดว่าจะได้รับการติดต่อจากบรรณาธิการอีกครั้ง "
-"อีเมลนี้จะไม่ถูกส่งจนกว่าจะมีการบันทึกการตัดสินใจ"
+"ส่งอีเมลแจ้งผู้เขียนว่าบทความนี้จะถูกส่งให้ผู้ทรงคุณวุฒิประเมิน หากเป็นไปได้ "
+"ควรแจ้งระยะเวลาโดยประมาณของกระบวนการประเมินและช่วงเวลาที่ผู้เขียนคาดว่าจะได้ร"
+"ับการติดต่อจากบรรณาธิการอีกครั้ง "
+"อีเมลนี้จะยังไม่ถูกส่งจนกว่าจะบันทึกผลการตัดสินใจ"
 
 msgid "doi.submission.issueMissing.representation"
 msgstr ""
-"ไม่สามารถสร้าง DOI สำหรับแกลเล่ย์ {$pubObjectTitle} ของบทความต่อไปนี้: "
-"{$itemTitle} การส่งบทความต้องถูกกำหนดให้กับฉบับก่อนจึงจะสามารถสร้าง DOI ได้"
+"ไม่สามารถสร้าง DOI สำหรับไฟล์เผยแพร่ {$pubObjectTitle} ของบทความ {$itemTitle}"
+" ได้ ต้องกำหนดบทความให้อยู่ในฉบับวารสารก่อนจึงจะสร้าง DOI ได้"
 
 msgid "submission.layout.viewGalley"
-msgstr "ดูแกลเล่ย์"
+msgstr "ดูไฟล์เผยแพร่"
 
 msgid "galley.cantEditPublished"
-msgstr "ไม่สามารถแก้ไขแกลเล่ย์นี้ได้เนื่องจากได้ตีพิมพ์ไปแล้ว"
+msgstr "ไม่สามารถแก้ไขไฟล์เผยแพร่นี้ได้ เนื่องจากเผยแพร่แล้ว"
 
 msgid "submission.copyright.description"
 msgstr ""
-"โปรดอ่านและทำความเข้าใจเงื่อนไขลิขสิทธิ์สำหรับการส่งบทความไปยังวารสารนี้"
+"โปรดอ่านและทำความเข้าใจเงื่อนไขด้านลิขสิทธิ์สำหรับการส่งบทความมายังวารสารนี้"
 
 msgid "submission.sectionNotFound"
-msgstr "ไม่พบส่วนที่เกี่ยวข้องกับการส่งบทความนี้"
+msgstr "ไม่พบหมวดของบทความนี้"
 
 msgid "submission.sectionRestrictedToEditors"
-msgstr "เฉพาะเจ้าหน้าที่บรรณาธิการเท่านั้นที่สามารถส่งบทความในส่วนนี้ได้"
+msgstr "เฉพาะกองบรรณาธิการเท่านั้นที่สามารถส่งบทความมายังหมวดนี้ได้"
 
 msgid "grid.issueEntry.availableGalley.removeMessage"
-msgstr "<p>แกลเล่ย์นี้จะ <em>ไม่สามารถใช้งานได้อีกต่อไป</em> สำหรับผู้อ่าน</p>"
+msgstr "<p>ไฟล์เผยแพร่นี้จะ<em>ไม่เปิดให้ผู้อ่านเข้าถึงอีกต่อไป</em></p>"
 
 msgid "grid.issueEntry.availableGalley.message"
-msgstr "<p>แกลเล่ย์นี้จะ <em>พร้อมให้บริการ</em> สำหรับผู้อ่าน</p>"
+msgstr "<p>ไฟล์เผยแพร่นี้จะ<em>เปิดให้ผู้อ่านเข้าถึง</em></p>"
 
 msgid "grid.action.availableArticleGalley"
-msgstr "เปิดให้แกลเล่ย์นี้พร้อมใช้งาน"
+msgstr "เปิดให้เข้าถึงไฟล์เผยแพร่นี้"
 
 msgid "submission.galleyFiles"
-msgstr "ไฟล์แกลเล่ย์"
+msgstr "ไฟล์เผยแพร่"
 
 msgid "submission.proofReadingDescription"
 msgstr ""
-"บรรณาธิการการจัดวางอัปโหลดไฟล์ที่เตรียมไว้สำหรับการตีพิมพ์ที่นี่ ใช้ "
-"<em>กำหนดผู้ตรวจสอบ</em> เพื่อกำหนดผู้เขียนและบุคคลอื่นๆ ในการตรวจสอบแกลเล่ย์"
-" พร้อมอัปโหลดไฟล์ที่แก้ไขเพื่ออนุมัติก่อนการตีพิมพ์"
+"บรรณาธิการจัดรูปแบบจะอัปโหลดไฟล์ที่เตรียมพร้อมสำหรับการเผยแพร่ไว้ที่นี่ ใช้ "
+"<em>มอบหมายผู้ตรวจ</em> "
+"เพื่อมอบหมายให้ผู้เขียนหรือบุคคลอื่นตรวจพิสูจน์ไฟล์เผยแพร่ "
+"และอัปโหลดไฟล์ที่แก้ไขแล้วเพื่อขออนุมัติก่อนเผยแพร่"
 
 msgid "grid.action.approveProof"
-msgstr "อนุมัติการตรวจสอบนี้เพื่อรวมอยู่ในแกลเล่ย์"
+msgstr "อนุมัติไฟล์พิสูจน์นี้เพื่อรวมในไฟล์เผยแพร่"
 
 msgid "grid.action.pageProofApproved"
-msgstr "การตรวจสอบนี้ได้รับการอนุมัติให้รวมอยู่ในแกลเล่ย์แล้ว"
+msgstr "อนุมัติไฟล์พิสูจน์นี้เพื่อรวมในไฟล์เผยแพร่แล้ว"
 
 msgid "submission.submit.titleAndSummary"
-msgstr "ชื่อและบทคัดย่อ"
+msgstr "ชื่อบทความและบทคัดย่อ"
 
 msgid "submission.submit.upload.description"
 msgstr ""
-"อัปโหลดไฟล์ที่เกี่ยวข้องกับการส่งนี้ เช่น บทความ, มัลติมีเดีย, ชุดข้อมูล, "
-"ผลงานศิลปะ เป็นต้น"
+"อัปโหลดไฟล์ที่เกี่ยวข้องกับบทความนี้ เช่น บทความ สื่อมัลติมีเดีย ชุดข้อมูล "
+"ภาพประกอบ และไฟล์อื่น ๆ"
 
 msgid "submission.pageProofs"
 msgstr "การพิสูจน์อักษร"
 
 msgid "workflow.review.externalReview"
-msgstr "การพิจารณา"
+msgstr "การประเมิน"
 
 msgid "submission.event.issueMetadataUpdated"
-msgstr "อัปเดตเมตาดาทาของฉบับการส่งแล้ว"
+msgstr "อัปเดตข้อมูลเมตาของฉบับวารสารแล้ว"
 
 msgid "submission.upload.fileContents"
-msgstr "ส่วนประกอบของบทความ"
+msgstr "องค์ประกอบของบทความ"
 
 msgid "submission.complete"
 msgstr "อนุมัติแล้ว"
@@ -200,207 +202,203 @@ msgid "submission.submit.submissionChecklist"
 msgstr "รายการตรวจสอบการส่งบทความ"
 
 msgid "submission.submit.privacyStatement"
-msgstr "นโยบายความเป็นส่วนตัว"
+msgstr "คำชี้แจงสิทธิส่วนบุคคล"
 
 msgid "submission.submit.contributorRole"
 msgstr "บทบาทของผู้มีส่วนร่วม"
 
 msgid "submission.citationFormat.notFound"
-msgstr "ไม่สามารถดึงรูปแบบการอ้างอิงที่ต้องการได้"
+msgstr "ไม่พบรูปแบบการอ้างอิงที่ร้องขอ"
 
 msgid "submission.metadataDescription"
 msgstr ""
-"ข้อกำหนดเหล่านี้อ้างอิงจากชุดเมตาดาทา Dublin Core "
-"ซึ่งเป็นมาตรฐานสากลที่ใช้ในการอธิบายเนื้อหาของวารสาร"
+"ข้อกำหนดเหล่านี้อ้างอิงจากชุดข้อมูลเมตา Dublin Core "
+"ซึ่งเป็นมาตรฐานสากลสำหรับอธิบายเนื้อหาของวารสาร"
 
 msgid "publication.assignedToIssue"
 msgstr ""
-"สิ่งนี้ได้ถูกกำหนดให้กับ <a href=\"{$issueUrl}\">{$issueName}</a> "
-"แต่ยังไม่ได้ถูกกำหนดเวลาสำหรับการตีพิมพ์"
+"รายการนี้ถูกกำหนดให้อยู่ใน <a href=\"{$issueUrl}\">{$issueName}</a> แล้ว "
+"แต่ยังไม่ได้กำหนดเวลาเผยแพร่"
 
 msgid "publication.datePublished.description"
 msgstr ""
-"วันที่ตีพิมพ์จะถูกกำหนดอัตโนมัติเมื่อฉบับถูกตีพิมพ์ อย่ากรอกวันที่ตีพิมพ์ "
-"เว้นแต่บทความนั้นเคยถูกตีพิมพ์ที่อื่นมาก่อนและจำเป็นต้องกำหนดวันย้อนหลัง"
+"ระบบจะกำหนดวันที่เผยแพร่โดยอัตโนมัติเมื่อเผยแพร่ฉบับวารสาร "
+"ไม่ต้องระบุวันที่เผยแพร่ "
+"เว้นแต่บทความนี้เคยเผยแพร่ที่อื่นมาก่อนและต้องการใช้วันที่ย้อนหลัง"
 
 msgid "publication.invalidSection"
-msgstr "ไม่พบส่วนที่เกี่ยวข้องกับการตีพิมพ์นี้"
+msgstr "ไม่พบหมวดของรายการเผยแพร่นี้"
 
 msgid "publication.inactiveSection"
-msgstr "{$section} (ไม่ใช้งาน)"
+msgstr "{$section} (ปิดใช้งาน)"
 
 msgid "publication.invalidIssue"
-msgstr "ไม่พบฉบับที่เกี่ยวข้องกับการตีพิมพ์นี้"
+msgstr "ไม่พบฉบับวารสารของรายการเผยแพร่นี้"
 
 msgid "publication.publish.confirmation"
 msgstr ""
-"ข้อกำหนดทั้งหมดสำหรับการตีพิมพ์ได้รับการปฏิบัติตามแล้ว "
-"คุณแน่ใจหรือว่าต้องการตีพิมพ์สิ่งนี้?"
+"ข้อกำหนดสำหรับการเผยแพร่ครบถ้วนแล้ว "
+"คุณแน่ใจหรือไม่ว่าต้องการเผยแพร่รายการนี้?"
 
 msgid "publication.publish.confirmation.futureIssue"
 msgstr ""
-"ข้อกำหนดทั้งหมดสำหรับการตีพิมพ์ได้รับการปฏิบัติตามแล้ว "
-"สิ่งนี้จะถูกตีพิมพ์เมื่อ {$issue} ถูกตีพิมพ์ "
-"คุณแน่ใจหรือว่าต้องการกำหนดเวลาในการตีพิมพ์?"
+"ข้อกำหนดสำหรับการเผยแพร่ครบถ้วนแล้ว รายการนี้จะเผยแพร่เมื่อ {$issue} เผยแพร่ "
+"คุณแน่ใจหรือไม่ว่าต้องการกำหนดรายการนี้เพื่อเผยแพร่?"
 
 msgid "publication.publish.confirmation.backIssue"
 msgstr ""
-"ข้อกำหนดทั้งหมดสำหรับการตีพิมพ์ได้รับการปฏิบัติตามแล้ว "
-"สิ่งนี้จะถูกตีพิมพ์ทันทีใน {$issue} คุณแน่ใจหรือว่าต้องการตีพิมพ์สิ่งนี้?"
+"ข้อกำหนดสำหรับการเผยแพร่ครบถ้วนแล้ว รายการนี้จะเผยแพร่ทันทีใน {$issue} "
+"คุณแน่ใจหรือไม่ว่าต้องการเผยแพร่?"
 
 msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
-"ข้อกำหนดทั้งหมดสำหรับการตีพิมพ์ได้รับการปฏิบัติตามแล้ว "
-"สิ่งนี้จะถูกตีพิมพ์ทันทีเนื่องจากวันที่ตีพิมพ์ได้ถูกกำหนดไว้ที่ "
-"{$datePublished} คุณแน่ใจหรือว่าต้องการตีพิมพ์สิ่งนี้?"
+"ข้อกำหนดสำหรับการเผยแพร่ครบถ้วนแล้ว รายการนี้จะเผยแพร่ทันที "
+"เนื่องจากกำหนดวันที่เผยแพร่เป็น {$datePublished} "
+"คุณแน่ใจหรือไม่ว่าต้องการเผยแพร่?"
 
 msgid "publication.required.issue"
-msgstr "การตีพิมพ์ต้องถูกกำหนดให้กับฉบับก่อนที่จะสามารถตีพิมพ์ได้"
+msgstr "ต้องกำหนดรายการเผยแพร่นี้ให้อยู่ในฉบับวารสารก่อนจึงจะเผยแพร่ได้"
 
 msgid "publication.publishedIn"
-msgstr "ตีพิมพ์ใน <a href=\"{$issueUrl}\">{$issueName}</a>"
+msgstr "เผยแพร่ใน <a href=\"{$issueUrl}\">{$issueName}</a>"
 
 msgid "publication.scheduledIn"
-msgstr "กำหนดเวลาสำหรับการตีพิมพ์ใน <a href=\"{$issueUrl}\">{$issueName}</a>"
+msgstr "กำหนดให้เผยแพร่ใน <a href=\"{$issueUrl}\">{$issueName}</a>"
 
 msgid "publication.unscheduledIn"
-msgstr "สิ่งนี้ยังไม่ได้ถูกกำหนดเวลาสำหรับการตีพิมพ์ในฉบับใดๆ"
+msgstr "รายการนี้ยังไม่ได้กำหนดให้เผยแพร่ในฉบับวารสาร"
 
 msgid "publication.selectIssue"
-msgstr "เลือกฉบับเพื่อกำหนดเวลาสำหรับการตีพิมพ์"
+msgstr "เลือกฉบับวารสารสำหรับกำหนดเผยแพร่"
 
 msgid "publication.status.published"
-msgstr "ตีพิมพ์แล้ว"
+msgstr "เผยแพร่แล้ว"
 
 msgid "submission.status.scheduled"
-msgstr "กำหนดเวลาแล้ว"
+msgstr "กำหนดเผยแพร่แล้ว"
 
 msgid "publication.status.unscheduled"
-msgstr "ยังไม่ได้กำหนดเวลา"
+msgstr "ยังไม่ได้กำหนดเผยแพร่"
 
 msgid "submission.publications"
-msgstr "การตีพิมพ์"
+msgstr "รายการเผยแพร่"
 
 msgid "publication.copyrightYearBasis.issueDescription"
-msgstr "ปีลิขสิทธิ์จะถูกกำหนดอัตโนมัติเมื่อสิ่งนี้ถูกตีพิมพ์ในฉบับ"
+msgstr "ระบบจะกำหนดปีลิขสิทธิ์โดยอัตโนมัติเมื่อรายการนี้เผยแพร่ในฉบับวารสาร"
 
 msgid "publication.copyrightYearBasis.submissionDescription"
-msgstr "ปีลิขสิทธิ์จะถูกกำหนดอัตโนมัติตามวันที่ตีพิมพ์"
+msgstr "ระบบจะกำหนดปีลิขสิทธิ์โดยอัตโนมัติตามวันที่เผยแพร่"
 
 msgid "publication.datePublished"
-msgstr "วันที่ตีพิมพ์"
+msgstr "วันที่เผยแพร่"
 
 msgid "publication.editDisabled"
-msgstr "ไม่สามารถแก้ไขเวอร์ชันนี้ได้เนื่องจากได้ถูกตีพิมพ์แล้ว"
+msgstr "ฉบับนี้เผยแพร่แล้วและไม่สามารถแก้ไขได้"
 
 msgid "publication.event.published"
-msgstr "การส่งนี้ถูกตีพิมพ์แล้ว"
+msgstr "เผยแพร่บทความแล้ว"
 
 msgid "publication.event.scheduled"
-msgstr "การส่งนี้ถูกกำหนดเวลาเพื่อตีพิมพ์"
+msgstr "กำหนดบทความเพื่อเผยแพร่แล้ว"
 
 msgid "publication.event.unpublished"
-msgstr "การส่งนี้ถูกยกเลิกการตีพิมพ์"
+msgstr "ยกเลิกการเผยแพร่บทความแล้ว"
 
 msgid "publication.event.versionPublished"
-msgstr "เวอร์ชันใหม่ได้ถูกตีพิมพ์แล้ว"
+msgstr "เผยแพร่ฉบับใหม่แล้ว"
 
 msgid "publication.event.versionScheduled"
-msgstr "เวอร์ชันใหม่ถูกกำหนดเวลาเพื่อตีพิมพ์"
+msgstr "กำหนดฉบับใหม่เพื่อเผยแพร่แล้ว"
 
 msgid "publication.event.versionUnpublished"
-msgstr "เวอร์ชันถูกลบออกจากการตีพิมพ์"
+msgstr "ยกเลิกการเผยแพร่ฉบับหนึ่งแล้ว"
 
 msgid "publication.invalidSubmission"
-msgstr "ไม่พบการส่งที่เกี่ยวข้องกับการตีพิมพ์นี้"
+msgstr "ไม่พบบทความที่ส่งสำหรับรายการเผยแพร่นี้"
 
 msgid "publication.publish"
-msgstr "ตีพิมพ์"
+msgstr "เผยแพร่"
 
 msgid "publication.publish.requirements"
-msgstr "ข้อกำหนดต่อไปนี้ต้องได้รับการปฏิบัติตามก่อนที่จะสามารถตีพิมพ์ได้"
+msgstr "ต้องดำเนินการตามข้อกำหนดต่อไปนี้ให้ครบถ้วนก่อนจึงจะเผยแพร่ได้"
 
 msgid "publication.required.declined"
-msgstr "การส่งที่ถูกปฏิเสธไม่สามารถตีพิมพ์ได้"
+msgstr "ไม่สามารถเผยแพร่บทความที่ถูกปฏิเสธได้"
 
 msgid "publication.required.reviewStage"
 msgstr ""
-"การส่งบทความต้องอยู่ในขั้นตอนการคัดลอกแก้ไขหรือการผลิตก่อนจึงจะสามารถตีพิมพ์ไ"
-"ด้"
+"บทความต้องอยู่ในขั้นตอนตรวจแก้ต้นฉบับหรือขั้นตอนจัดเตรียมเพื่อเผยแพร่ก่อนจึงจ"
+"ะเผยแพร่ได้"
 
 msgid "submission.license.description"
 msgstr ""
-"สิทธิ์ใช้งานจะถูกตั้งค่าโดยอัตโนมัติเป็น <a href='{$licenseUrl}' "
-"target='_blank'>{$licenseName}</a> เมื่อบทความนี้ถูกตีพิมพ์"
+"ระบบจะกำหนดสัญญาอนุญาตเป็น <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> โดยอัตโนมัติเมื่อเผยแพร่"
 
 msgid "submission.copyrightHolder.description"
-msgstr ""
-"ลิขสิทธิ์จะถูกมอบโดยอัตโนมัติให้กับ {$copyright} เมื่อบทความนี้ถูกตีพิมพ์"
+msgstr "ระบบจะกำหนดลิขสิทธิ์ให้แก่ {$copyright} โดยอัตโนมัติเมื่อเผยแพร่"
 
 msgid "submission.copyrightOther.description"
-msgstr "มอบลิขสิทธิ์สำหรับการส่งที่ตีพิมพ์ให้แก่ฝ่ายที่ระบุต่อไปนี้"
+msgstr "กำหนดลิขสิทธิ์ของบทความที่เผยแพร่ให้แก่บุคคลหรือหน่วยงานต่อไปนี้"
 
 msgid "editor.submission.decision.backToReview.description"
-msgstr ""
-"ยกเลิกการตัดสินใจยอมรับบทความนี้และส่งกลับไปยังขั้นตอนการพิจารณาอีกครั้ง"
+msgstr "ยกเลิกผลการตัดสินใจรับบทความนี้ และส่งกลับไปยังขั้นตอนการประเมิน"
 
 msgid "editor.submission.decision.backToReview.log"
 msgstr ""
-"{$editorName} "
-"ได้ยกเลิกการตัดสินใจยอมรับบทความนี้และส่งกลับไปยังขั้นตอนการพิจารณาอีกครั้ง"
+"{$editorName} ยกเลิกผลการตัดสินใจรับบทความนี้ "
+"และส่งกลับไปยังขั้นตอนการประเมิน"
 
 msgid "editor.submission.decision.backToReview.completed"
-msgstr "ส่งกลับไปที่การพิจารณาแล้ว"
+msgstr "ส่งกลับไปประเมินแล้ว"
 
 msgid "editor.submission.decision.backToReview.completed.description"
-msgstr "บทความ {$title} ได้ถูกส่งกลับไปยังขั้นตอนการพิจารณาอีกครั้ง"
+msgstr "บทความ {$title} ถูกส่งกลับไปยังขั้นตอนการประเมินแล้ว"
 
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
-"ส่งอีเมลถึงผู้เขียนเพื่อแจ้งให้ทราบว่าบทความของพวกเขาถูกส่งกลับไปยังขั้นตอนกา"
-"รพิจารณา โปรดอธิบายเหตุผลในการตัดสินใจนี้และแจ้งให้ผู้เขียนทราบว่าจะมีการพิจา"
-"รณาเพิ่มเติมอย่างไร"
+"ส่งอีเมลแจ้งผู้เขียนว่าบทความของตนถูกส่งกลับไปยังขั้นตอนการประเมิน "
+"พร้อมอธิบายเหตุผลของการตัดสินใจและแจ้งว่าจะมีการประเมินเพิ่มเติมอย่างไร"
 
 msgid "doi.submission.issueMissing.publication"
 msgstr ""
-"ไม่สามารถสร้าง DOI สำหรับบทความต่อไปนี้: {$pubObjectTitle} "
-"การส่งบทความต้องถูกกำหนดให้กับฉบับก่อนจึงจะสามารถสร้าง DOI ได้"
+"ไม่สามารถสร้าง DOI สำหรับบทความต่อไปนี้ได้: {$pubObjectTitle} "
+"ต้องกำหนดบทความให้อยู่ในฉบับวารสารก่อนจึงจะสร้าง DOI ได้"
 
 msgid "doi.submission.incorrectContext"
 msgstr ""
-"ไม่สามารถสร้าง DOI สำหรับบทความต่อไปนี้: {$pubObjectTitle} "
-"เนื่องจากไม่อยู่ในบริบทของวารสารปัจจุบัน"
+"ไม่สามารถสร้าง DOI สำหรับบทความต่อไปนี้ได้: {$pubObjectTitle} "
+"เนื่องจากบทความนี้ไม่ได้อยู่ในวารสารปัจจุบัน"
 
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
-"คุณไม่ได้รับอนุญาตให้ส่งบทความไปยังวารสารนี้เนื่องจากผู้เขียนต้องลงทะเบียนโดย"
-"ทีมบรรณาธิการ หากคุณเชื่อว่าเป็นความผิดพลาด โปรดติดต่อ <a "
-"href='mailto:{$email}'>{$name}</a>"
+"คุณไม่มีสิทธิ์ส่งบทความมายังวารสารนี้ "
+"เนื่องจากผู้เขียนต้องได้รับการลงทะเบียนโดยกองบรรณาธิการ หากคิดว่าเกิดข้อผิ"
+"ดพลาด โปรดติดต่อ <a href='mailto:{$email}'>{$name}</a>"
 
 msgid "submission.wizard.noSectionAllowed.description"
 msgstr ""
-"คุณไม่ได้รับอนุญาตให้ส่งบทความไปยังวารสารนี้เนื่องจากการส่งในทุกส่วนของวารสาร"
-"นี้ถูกปิดหรือถูกจำกัด หากคุณเชื่อว่าเป็นความผิดพลาด โปรดติดต่อ <a "
-"href='mailto:{$email}'>{$name}</a>"
+"คุณไม่มีสิทธิ์ส่งบทความมายังวารสารนี้ "
+"เนื่องจากการส่งบทความในทุกหมวดถูกปิดหรือจำกัดไว้ หากคิดว่าเกิดข้อผิดพลาด "
+"โปรดติดต่อ <a href='mailto:{$email}'>{$name}</a>"
 
 msgid "submission.wizard.sectionClosed.message"
 msgstr ""
-"{$contextName} ไม่รับบทความในส่วน {$section} "
-"หากคุณต้องการความช่วยเหลือในการกู้คืนการส่งบทความ โปรดติดต่อ <a "
+"{$contextName} ไม่เปิดรับบทความในหมวด {$section} "
+"หากต้องการความช่วยเหลือในการกู้คืนบทความที่กำลังส่ง โปรดติดต่อ <a "
 "href='mailto:{$email}'>{$name}</a>"
 
 msgid "submission.submit.form.authorRequired"
 msgstr "ต้องมีผู้เขียนอย่างน้อยหนึ่งคน"
 
 msgid "submission.submit.form.titleRequired"
-msgstr "กรุณากรอกชื่อบทความของคุณ"
+msgstr "โปรดระบุชื่อบทความ"
 
 msgid "submission.submit.form.abstractRequired"
-msgstr "กรุณากรอกบทคัดย่อของบทความของคุณ"
+msgstr "โปรดระบุบทคัดย่อของบทความ"
 
 msgid "submission.submit.form.wordCountAlert"
-msgstr ""
-"บทคัดย่อของคุณยาวเกินไป กรุณาย่อให้สั้นกว่าเกณฑ์ที่กำหนดไว้สำหรับส่วนนี้"
+msgstr "บทคัดย่อยาวเกินกำหนด โปรดย่อให้มีจำนวนคำไม่เกินที่กำหนดสำหรับหมวดนี้"
 
 msgid "submission.submit.form.contributorRoleRequired"
-msgstr "กรุณาเลือกบทบาทของผู้มีส่วนร่วม"
+msgstr "โปรดเลือกบทบาทของผู้มีส่วนร่วม"
