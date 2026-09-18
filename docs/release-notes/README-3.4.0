@@ -1,8 +1,8 @@
 OJS 3.4.0 Release Notes
-Git tag: 3_4_0-10
+Git tag: 3_4_0-11
 
-Release date: November 21, 2025
-===============================
+Release date: September 18, 2026
+================================
 
 Configuration Changes
 ---------------------
@@ -45,6 +45,48 @@ New config.inc.php section for queues is added, with the following parameters:
 New config.inc.php parameters added for emails:
     - default (default value: sendmail), being the default mailer driver to be used for email delivery
     - sendmail_path (default value: "/usr/sbin/sendmail -bs"), being the path to the sendmail program on the server
+
+3.4.0-11 Build
+--------------
+	#12163: [Controlled Vocabularies] | Publication metadata - Suggestions for Controlled Vocabulary entires are fetched from all existing submissions, even rejected and in editing
+	#12189: Update counterBots submodule
+	#12291: Hooks | $issueId parameter missing from call to IssueAction::subscribedDomain
+	#12003: [OPS] | Server Categories - Category forms and pages, paths are incorrect for OPS
+	#12977: Disable external XML entity loading
+	#13014: Properly escape galley title in PDF viewer plugin
+	#13024: Pass plugin category through whitelist before loading
+	#13030: Constrain file extension in native import plugin
+	#13036: [Chapter Authors] | Creating a new publication version incorrectly copies chapter authors (OMP)
+	#13294: Review submission ID / file ID cross-checking in SubmissionDocumentsFilesGridHandler
+	#13335: Limit image extensions by purpose
+	#13343: Authors should not be able to confirm open reviews
+	#13344: Ensure article cover images are image files
+	#9859: Staled session IDs might lead to minor request failures
+	#12182: Crossref plugin uppercases names when it should not
+	#12091: [Workflow] | Review Round – Cannot Start Discussion When Only One Participant Selected
+	#13154: [API] | Apply consistent anonymization in submissions API
+	#12140: Back port decision lost solution for 3.4 which introduced for 3.5/main upgrade
+	#11759: Upgrade | OPS 3.3.0 to 3.4.0 (or 3.5.0) may cause fatal errors on CrossRef plugin
+	#12173: [Citations] | Publication Metadata - references fields, cannot be saved when empty
+	#12232: [DOI] | DOI management, Publications without issues cause fatal errors when minting DOIs
+	#12264: Issue deletion never sets current issue
+	#10496: Null pointer in the Editorial Reminder if the user has blocked notifications
+	#12394: [Administration] | Remove a journal - Unable to delete a journal due to integrity constraint violation on review assignments/forms
+	#12125: Can't re-assign reviewer if they are a manager and have reviewed a previous round
+	#10862: Context menu of TinyMCE is overriding the default context menu
+	#12486: Fatal error in user/subscriptions with institutional subscriptions
+	#12497: [Main Feature] | Workflow Section - Recommend only option
+	#12508: UserGroup Collector, order by name fix - use scalar correlated subqueries to fix MySQL error
+	#11758: [Upgrade to >= 3.4] | I8866_DispatchRegionCodesFixingJobs - FixRegionCodes Job
+	#12553: [Crossref] | Versioned preprint deposits fail
+	#12637: [DOI] | Null custom suffix pattern causes Type
+	#10971: Users XML plugin | Export - missing username in user selection
+	#12883: [Datacite plugin] | Datacite plugin settings, Test username validation is incorrect
+	#12940: Fix CrossrefReferenceLinking plugin to work when jobs are run via CLI worker
+	#13013: Ensure author reordering checks specified author IDs for appropriateness
+	#13235: Properly escape submission title in HTML article galley plugin
+	#13302: Stats issue filter ignores selected issue and returns all published submissions
+	#12183: OJS 3.4.0-10 ships with WebFeed for 3.5.0-x, leading to fatal errors in log
 
 3.4.0-10 Build
 --------------

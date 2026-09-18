@@ -1,8 +1,8 @@
 OJS 3.3.0 Release Notes
-Git tag: 3_3_0-18
+Git tag: 3_3_0-23
 
-Release date: July 19, 2024
-===========================
+Release date: September 18, 2026
+================================
 
 Configuration Changes
 ---------------------
@@ -29,6 +29,78 @@ configuration parameters.
   - email.smtp_oauth_refreshtoken
 - The setting general.session_samesite (default value: Lax) has been added to control the "SameSite" setting for the session cookie.
 - The setting security.force_ssl, when enabled, will also set the "Secure" flag for the session cookie.
+
+3.3.0-23 Build
+--------------
+	#12163: Publication metadata - Suggestions for Controlled Vocabulary entires are fetched from all existing submissions, even rejected and in editing
+	#12189: Update counterBots submodule
+	#12291: $issueId parameter missing from call to IssueAction::subscribedDomain
+	#12003: Server Categories - Category forms and pages, paths are incorrect for OPS
+	#11995: [NativeXML plugin] | Failure when exporting authorless publications
+	#12977: Disable external XML entity loading
+	#13014: Properly escape galley title in PDF viewer plugin
+	#13024: Pass plugin category through whitelist before loading
+	#13030: Constrain file extension in native import pluginSecurityAn issue related to the security of the software.
+	#13036: [Chapter Authors] | Creating a new publication version incorrectly copies chapter authors (OMP)
+	#13294: Review submission ID / file ID cross-checking in SubmissionDocumentsFilesGridHandler
+	#13335: Limit image extensions by purpose
+	#13343: Authors should not be able to confirm open reviews
+	#13344: Ensure article cover images are image files
+	#9859: Staled session IDs might lead to minor request failures
+	#11832: [Email Templates] | Edit Templates - Review Email, Editorial signature is not being displayed correctly in the templates
+	#12182: Crossref plugin uppercases names when it should not
+	#12091: [Workflow] | Review Round – Cannot Start Discussion When Only One Participant Selected
+
+3.3.0-22 Build
+--------------
+	#10139: By Author search pulls in keywords too
+	#11598: [DOI deposit] OPS Crossref deposit does not include title prefix
+	#11305: Add a Hook for PKPReviewerReviewStep3Form::saveForLater
+	#10941: Section policies are shown for inactive sections on Submissions page (3.3)
+	#11978: [Sessions] | Log in form is missing a CSRF check
+	#12022: Payments | Properly escape payment instructions
+	#11974: Themes | Validate base colour setting in default theme
+	#12039: Import | Permit hrefs only for command-line based imports
+	#11973: Import/Export | Sanitize imported issue file filenames
+	#11977: [Subscriptions/stats] |Properly escape keyword search contents in institution collector
+
+3.3.0-21 Build
+--------------
+	#11399: Properly escape uploaded plugin filename on upload bounce
+	#11244: Respond to request - Title, missing a space after the colon
+	#11242: Fix string concatenation of URLs to avoid subdomain redirection
+	#11236: Participants - Assign Participant, Assignment privileges not working correctly
+	#11212: Published article - Download statistics display is ambiguous
+	#11095: Custom Blocks (plugin) - Unable to save sitewide custom block
+	#11051: Fix static call to non-static method
+	#11049: Password resets fail with PHP 8.1
+	#10938: Unable to save license terms
+	#10922: Native XML export error - ArgumentCountError
+	#10837: Announcement desc toolbar missing image code and lists
+	#10786: Resolver plugin not matching on page ranges
+	#10738: Do not permit user XML import to import with role_id = ROLE_ID_SITE_ADMIN
+	#10680: Files in the publisher library are missing a file description field
+	#10664: .xhtml file missing text/html mimetype, not loaded by HtmlArticleGalley plugin
+	#10660: Cancelling a file revision deletes the original file
+	#10616: Proposal: add ThemePlugin function to access multilingual theme options
+	#10578: Unable to upload images to custom nav item at site level
+
+3.3.0-20 Build
+--------------
+	#10277: Contributors in browse lists are required to send mail in editorial decision
+	#10249: Limited data loss at settings tables when migrating from a version smaller than 3.3.0
+	#10213: Hide or remove provider's secrets in the administration "system info" page
+	#9877: Provide submission/book DOI/URN via OMP OAI
+	#9812: The plugin gallery isn't visible at the site settings
+	#6055: Category selection not reloaded when submission step 1 form doesn't validate
+
+3.3.0-19 Build
+--------------
+	#6055: Category selection not reloaded when submission step 1 form doesn't validate
+	#9812: The plugin gallery isn't visible at the site settings
+	#10277: Contributors in browse lists are required to send mail in editorial decision
+	#10249: Limited data loss at settings tables when migrating from a version smaller than 3.3.0
+	#10213: Hide or remove provider's secrets in the administration "system info" page
 
 3.3.0-18 Build
 --------------
