@@ -12,6 +12,10 @@
 
 	.search_input {
 
+		label {
+			margin-bottom: 8px;
+		}
+
 		.query {
 			width: 100%;
 			max-width: 100%;
@@ -44,12 +48,24 @@
 			font-size: @font-base;
 		}
 
-		label {
-			.pkp_screen_reader();
+		fieldset {
+			display: grid;
+			grid-template-rows: auto auto;
+			grid-auto-flow: column;
+			grid-auto-columns: minmax(0, auto);
+			justify-content: start;
+			column-gap: @half;
 		}
 
-		select + label + select {
-			margin-left: 0.25em;
+		label {
+			display: block;
+			margin-bottom: @half;
+			font-size: @font-sml;
+		}
+
+		select {
+			max-width: 100%;
+			margin: 0;
 		}
 
 		[name*="Year"] {
@@ -115,8 +131,10 @@
 		}
 
 		.date_range {
-			float: left;
-			width: 50%;
+
+			fieldset {
+				column-gap: @base;
+			}
 
 			.to fieldset {
 				margin-bottom: 0;
