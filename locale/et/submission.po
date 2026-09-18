@@ -1,7 +1,7 @@
-# "10 ..." <jaana.tonisson@tlulib.ee>, 2025.
+# "10 ..." <jaana.tonisson@tlulib.ee>, 2025, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-04-06 09:42+0000\n"
+"PO-Revision-Date: 2026-09-03 15:03+0000\n"
 "Last-Translator: \"10 ...\" <jaana.tonisson@tlulib.ee>\n"
 "Language-Team: Estonian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "et/>\n"
@@ -182,7 +182,7 @@ msgid "publication.copyrightYearBasis.submissionDescription"
 msgstr "Autoriõiguse aasta määratakse automaatselt avaldamise kuupäeva põhjal."
 
 msgid "publication.datePublished"
-msgstr "Avaldamise kuupäev"
+msgstr "Publitseerimise kuupäev"
 
 msgid "publication.editDisabled"
 msgstr "See versioon on avaldatud ja seda ei saa muuta."

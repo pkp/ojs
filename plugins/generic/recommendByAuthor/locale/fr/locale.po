@@ -1,7 +1,7 @@
 # Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-03-20 18:58+0000\n"
+"PO-Revision-Date: 2026-09-09 11:59+0000\n"
 "Last-Translator: Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/"
 "generic-recommendByAuthor/fr/>\n"
@@ -13,12 +13,12 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.generic.recommendByAuthor.displayName"
-msgstr "Articles recommandés par auteur et autrice"
+msgstr "Articles de l'auteur/ice recommandés"
 
 msgid "plugins.generic.recommendByAuthor.description"
 msgstr ""
-"Ce module insère une liste d'articles du même auteur ou de la même autrice "
-"sur la page de résumé de l'article."
+"Ce module insère une liste d'articles du ou de la même auteur/ice sur la "
+"page de résumé de l'article."
 
 msgid "plugins.generic.recommendByAuthor.heading"
-msgstr "Articles les plus lus par le ou les mêmes auteur/ices"
+msgstr "Articles les plus lus des mêmes auteur/ices"

@@ -1,7 +1,7 @@
-# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024.
+# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-10-20 01:53+0000\n"
+"PO-Revision-Date: 2026-09-15 04:51+0000\n"
 "Last-Translator: Apichaya <apichaya_cc@thonburi-u.ac.th>\n"
 "Language-Team: Thai <http://translate.pkp.sfu.ca/projects/ojs/"
 "reports-articles/th/>\n"
@@ -17,8 +17,11 @@ msgstr "รายงานบทความ"
 
 msgid "plugins.reports.articles.description"
 msgstr ""
-"ปลั๊กอินนี้สร้างรายงานในรูปแบบ CSV "
-"ซึ่งประกอบด้วยรายการบทความและข้อมูลของบทความเหล่านั้น"
+"ส่วนเสริมนี้จัดทำรายงานในรูปแบบ CSV "
+"ซึ่งประกอบด้วยรายการบทความและข้อมูลที่เกี่ยวข้อง"
 
 msgid "plugins.reports.articles.nodecision"
-msgstr "ไม่มีการตัดสินใจ"
+msgstr "ยังไม่มีผลการตัดสินใจ"
+
+msgid "plugins.reports.articles.initialDecline"
+msgstr "ปฏิเสธก่อนเข้าสู่การประเมิน"

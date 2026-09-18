@@ -1,12 +1,12 @@
 # Germán Huélamo Bautista <germanhuelamo@gmail.com>, 2024.
 # Deleted User <noreply+532@weblate.org>, 2025.
-# Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>, 2025.
+# Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:23+00:00\n"
-"PO-Revision-Date: 2025-04-11 17:19+0000\n"
+"PO-Revision-Date: 2026-09-07 14:43+0000\n"
 "Last-Translator: Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/api/fr/>\n"
 "Language: fr\n"
@@ -17,12 +17,12 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "api.announcements.400.contextsNotMatched"
-msgstr "L'annonce que vous recherchez n'existe pas dans cette revue."
+msgstr "L'actualité que vous recherchez n'existe pas dans cette revue."
 
 msgid "api.emails.403.disabled"
 msgstr ""
-"La fonctionnalité de notification par email n'a pas été activée pour cette "
-"revue."
+"La fonctionnalité de notification par courriel n'a pas été activée pour "
+"cette revue."
 
 msgid "api.submissions.400.wrongContext"
 msgstr "La soumission que vous avez demandée n'est pas dans cette revue."

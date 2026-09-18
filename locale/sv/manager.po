@@ -1,11 +1,11 @@
 # Viveka Svensson <viveka.svensson@lnu.se>, 2021, 2022.
-# Magnus Annemark <magnus.annemark@ub.lu.se>, 2022, 2023, 2025.
+# Magnus Annemark <magnus.annemark@ub.lu.se>, 2022, 2023, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:35+00:00\n"
-"PO-Revision-Date: 2025-10-13 08:28+0000\n"
+"PO-Revision-Date: 2026-09-09 11:59+0000\n"
 "Last-Translator: Magnus Annemark <magnus.annemark@ub.lu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/manager/sv/>"
 "\n"
@@ -2489,15 +2489,15 @@ msgstr "Utgången prenumeration"
 msgid "mailable.subscriptionExpired.description"
 msgstr ""
 "Det här e-postmeddelandet meddelar en prenumerant att prenumerationen har "
-"förfallit. Det inkluderar tidskriftens URL samt instruktioner för tillgång."
+"förfallit."
 
 msgid "mailable.subscriptionExpiredLast.name"
 msgstr "Utgången prenumeration"
 
 msgid "mailable.subscriptionExpiredLast.description"
 msgstr ""
-"Det här e-postmeddelandet meddelar en prenumerant att prenumerationen har "
-"gått ut. Det inkluderar tidskriftens URL samt instruktioner för tillgång."
+"Det här e-postmeddelandet meddelar ytterligare en gång en prenumerant att "
+"prenumerationen har gått ut"
 
 msgid "mailable.subscriptionPurchaseIndividual.name"
 msgstr "Köp individuell prenumeration"
@@ -2626,3 +2626,8 @@ msgstr ""
 
 msgid "manager.setup.contextSummary.description"
 msgstr "Ange en kort beskrivning av tidskriftens innehåll och syfte."
+
+msgid "emailTemplate.variable.issue.issueTableOfContents"
+msgstr ""
+"Numrets innehållsförteckning, en lista över alla bidrag som är knutna till "
+"numret."
