@@ -1,8 +1,8 @@
 OJS 3.3.0 Release Notes
-Git tag: 3_3_0-22
+Git tag: 3_3_0-23
 
-Release date: November 19, 2025
-===============================
+Release date: September 18, 2026
+================================
 
 Configuration Changes
 ---------------------
@@ -29,6 +29,27 @@ configuration parameters.
   - email.smtp_oauth_refreshtoken
 - The setting general.session_samesite (default value: Lax) has been added to control the "SameSite" setting for the session cookie.
 - The setting security.force_ssl, when enabled, will also set the "Secure" flag for the session cookie.
+
+3.3.0-23 Build
+--------------
+	#12163: Publication metadata - Suggestions for Controlled Vocabulary entires are fetched from all existing submissions, even rejected and in editing
+	#12189: Update counterBots submodule
+	#12291: $issueId parameter missing from call to IssueAction::subscribedDomain
+	#12003: Server Categories - Category forms and pages, paths are incorrect for OPS
+	#11995: [NativeXML plugin] | Failure when exporting authorless publications
+	#12977: Disable external XML entity loading
+	#13014: Properly escape galley title in PDF viewer plugin
+	#13024: Pass plugin category through whitelist before loading
+	#13030: Constrain file extension in native import pluginSecurityAn issue related to the security of the software.
+	#13036: [Chapter Authors] | Creating a new publication version incorrectly copies chapter authors (OMP)
+	#13294: Review submission ID / file ID cross-checking in SubmissionDocumentsFilesGridHandler
+	#13335: Limit image extensions by purpose
+	#13343: Authors should not be able to confirm open reviews
+	#13344: Ensure article cover images are image files
+	#9859: Staled session IDs might lead to minor request failures
+	#11832: [Email Templates] | Edit Templates - Review Email, Editorial signature is not being displayed correctly in the templates
+	#12182: Crossref plugin uppercases names when it should not
+	#12091: [Workflow] | Review Round – Cannot Start Discussion When Only One Participant Selected
 
 3.3.0-22 Build
 --------------
