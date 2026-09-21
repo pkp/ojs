@@ -2140,3 +2140,6 @@ msgstr "Payment Request"
 
 msgid "mailable.paymentRequest.description"
 msgstr "This automated email is sent to the author to request payment of the publication fee when their submission is accepted."
+
+msgid "manager.setup.enableEnrollmentMasthead.description"
+msgstr "If desired, a masthead can be generated automatically based on user enrollments, including start and end dates. See also Settings > Journal > Masthead."
