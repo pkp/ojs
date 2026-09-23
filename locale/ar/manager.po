@@ -1,12 +1,12 @@
 # M. Ali <vorteem@gmail.com>, 2021, 2022, 2023.
 # Salam Al-Khammasi <salam.alshemmari@uokufa.edu.iq>, 2022.
-# "M. Ali" <vorteem@gmail.com>, 2025.
+# "M. Ali" <vorteem@gmail.com>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2025-03-11 15:15+0000\n"
+"PO-Revision-Date: 2026-09-20 09:59+0000\n"
 "Last-Translator: \"M. Ali\" <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/manager/ar/>"
 "\n"
@@ -2406,8 +2406,7 @@ msgstr "الاشتراك منتهي"
 
 msgid "mailable.subscriptionExpired.description"
 msgstr ""
-"هذه الرسالة تُعلم مشتركاً بانتهاء فترة إشتراكه في المجلة، وهي تقدم له رابط "
-"الدخول إلى الموقع مع تعليمات الوصول."
+"هذه الرسالة تُرسل تلقائيًا لتُعلم مشتركاً بانتهاء فترة إشتراكه في المجلة."
 
 msgid "mailable.subscriptionExpiredLast.name"
 msgstr "الاشتراك المنتهي مؤخرًا"
