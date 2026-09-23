@@ -33,7 +33,6 @@
 }
 
 .CrossrefCitedByBody__citationTitle {
-	margin: 0 0 @half;
 	font-family: @font-heading;
 	font-size: @font-base;
 	font-weight: @bold;
@@ -41,7 +40,6 @@
 }
 
 .CrossrefCitedByBody__citationAuthors {
-	margin: 0 0 @half;
 	font-family: @font;
 	font-size: @font-base;
 	line-height: @line-bump;
@@ -70,9 +68,9 @@
 	line-height: @line-base;
 	color: @primary;
 	text-decoration: underline;
-
 	&:hover,
 	&:focus {
+		background-color: transparent;
 		color: @primary-lift;
 	}
 }
@@ -81,7 +79,9 @@
 	margin-bottom: @base;
 }
 
-.CrossrefCitedBy__detailed {
-	max-width: 20rem;
-	width: 100%;
+.CrossrefCitedByBody__citationTitle,
+.CrossrefCitedByBody__citationAuthors,
+.CrossrefCitedByBody__citationSource,
+.CrossrefCitedByBody__citationDoi {
+	margin: 0;
 }
