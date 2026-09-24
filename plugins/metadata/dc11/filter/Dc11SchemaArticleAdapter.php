@@ -181,9 +181,9 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
             );
         }
 
-        // Source (journal title, issue id and pages)
+        // Source (journal title, issue id and pages or article number)
         $sources = $journal->getName(null);
-        $pages = $publication->getData('pages');
+        $pages = $publication->getData('pages') ?: $publication->getData('articleNumber');
         if (!empty($pages)) {
             $pages = '; ' . $pages;
         }
