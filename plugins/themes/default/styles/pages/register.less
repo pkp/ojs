@@ -13,7 +13,7 @@
 	.required_label {
 		font-size: @font-sml;
 		line-height: @line-sml;
-		color: @text-light;
+		color: @a11y-text-light;
 		margin-bottom: @double;
 	}
 
@@ -85,8 +85,8 @@
 	#formErrors {
 		margin: @double 0;
 		padding: @base;
-		background: @no;
-		color: #fff;
+		background: @a11y-error;
+		color: @a11y-text-on-error;
 
 		.pkp_form_error {
 			padding: 0;
@@ -103,7 +103,7 @@
 			line-height: @line-sml;
 
 			a {
-				color: #fff;
+				color: @a11y-text-on-error;
 			}
 		}
 	}

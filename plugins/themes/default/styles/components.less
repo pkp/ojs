@@ -25,7 +25,7 @@
 	font-size: @font-sml;
 	line-height: calc(~"@{triple} - 2px"); // account for border
 	font-weight: @bold;
-	color: @primary;
+	color: @a11y-link;
 	text-decoration: none;
 
 	&:hover,
@@ -43,12 +43,12 @@
 	border-radius: @radius;
 	font-size: @font-sml;
 	line-height: calc(~"@{triple} - 2px"); // account for border
-	color: @primary;
+	color: @a11y-link;
 	text-decoration: none;
 
 	&:hover,
 	&:focus {
-		background: @primary;
+		background: @a11y-link;
 		color: #fff;
 	}
 }
@@ -107,7 +107,7 @@
 	font-size: @font-sml;
 	font-weight: @bold;
 	line-height: @triple;
-	color: @primary;
+	color: @a11y-link;
 	text-decoration: none;
 
 	&:after {
@@ -124,7 +124,7 @@
 
 	&:hover,
 	&:focus {
-		color: @primary-lift;
+		color: @a11y-link-hover;
 	}
 }
 
@@ -169,13 +169,13 @@
 				left: 0.5em; // Sit off the rounded edge of input fields
 				bottom: 11px; // Sit on the bottom line of the input field above
 				padding: 0 0.5em; // Keep it tight so it doesn't bleed into next field
-				background: @no;
+				background: @a11y-error;
 				border-bottom-left-radius: @radius;
 				border-bottom-right-radius: @radius;
 				font-size: @font-sml;
 				line-height: @double;
 				font-weight: @bold;
-				color: #fff;
+				color: @a11y-text-on-error;
 			}
 		}
 	}
@@ -219,8 +219,8 @@
 		padding: 0 0.5em;
 		font-weight: @bold;
 		font-size: @font-sml;
-		background: @no;
-		color: #fff;
+		background: @a11y-error;
+		color: @a11y-text-on-error;
 	}
 
 	label > input[type="checkbox"],
@@ -246,7 +246,7 @@
 		margin-top: 0;
 		font-size: @font-sml;
 		line-height: 1.5em;
-		color: @text-light;
+		color: @a11y-text-light;
 
 	}
 
@@ -370,12 +370,12 @@
 	}
 
 	.separator {
-		color: @text-light;
+		color: @a11y-text-light;
 		padding: 0 0.5em;
 	}
 
 	.current {
-		color: @text-light;
+		color: @a11y-text-light;
 
 		h1 {
 			margin: 0;
@@ -442,7 +442,7 @@
 		clip: auto;
 		top: 0;
 		left: 50%;
-		color: @primary;
+		color: @a11y-link;
 	}
 }
 
