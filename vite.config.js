@@ -102,6 +102,8 @@ export default defineConfig(({mode}) => {
 				'mathjax',
 				'@sciflow/editor-core',
 				'@sciflow/editor-start',
+				'@sciflow/pandoc-ast',
+				'@sciflow/schema-prosemirror',
 			],
 		},
 		build: {
