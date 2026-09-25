@@ -651,13 +651,19 @@ class Issue extends \PKP\core\DataObject
 
     /**
      * Get number of articles in this issue.
+     *
+     * Counts the status of the publication assigned to this issue, not of the submission's
+     * current publication: those differ whenever a submission has a newer, unpublished
+     * draft, and unpublishing an issue moves the current publication onto such a draft.
      */
     public function getNumArticles(): int
     {
         return Repo::submission()->getCollector()
             ->filterByContextIds([$this->getData('journalId')])
-            ->filterByIssueIds([$this->getId()])
-            ->filterByCurrentPublicationStatus([PKPPublication::STATUS_SCHEDULED, PKPPublication::STATUS_PUBLISHED])
+            ->filterByIssueIds(
+                [$this->getId()],
+                [PKPPublication::STATUS_SCHEDULED, PKPPublication::STATUS_PUBLISHED]
+            )
             ->getCount();
     }
 

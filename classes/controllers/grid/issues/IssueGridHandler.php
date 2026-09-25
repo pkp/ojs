@@ -32,7 +32,9 @@ use APP\core\Request;
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\issue\Collector;
+use APP\issue\Issue;
 use APP\jobs\notifications\IssuePublishedNotifyUsers;
+use APP\journal\Journal;
 use APP\notification\Notification;
 use APP\notification\NotificationManager;
 use APP\publication\Publication;
@@ -543,7 +545,7 @@ class IssueGridHandler extends GridHandler
      */
     public function publishIssue($args, $request)
     {
-        /** @var \APP\issue\Issue $issue */
+        /** @var Issue $issue */
         $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         $context = $request->getContext();
         $contextId = $context->getId();
@@ -580,7 +582,7 @@ class IssueGridHandler extends GridHandler
 
         // If subscriptions with delayed open access are enabled then
         // update open access date according to open access delay policy
-        if ($context->getData('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_SUBSCRIPTION && ($delayDuration = $context->getData('delayedOpenAccessDuration'))) {
+        if ($context->getData('publishingMode') == Journal::PUBLISHING_MODE_SUBSCRIPTION && ($delayDuration = $context->getData('delayedOpenAccessDuration'))) {
             $delayYears = (int)floor($delayDuration / 12);
             $delayMonths = (int)fmod($delayDuration, 12);
 
@@ -591,7 +593,7 @@ class IssueGridHandler extends GridHandler
             $delayOpenAccessYear = $curYear + $delayYears + (int)floor(($curMonth + $delayMonths) / 12);
             $delayOpenAccessMonth = (int)fmod($curMonth + $delayMonths, 12);
 
-            $issue->setAccessStatus(\APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION);
+            $issue->setAccessStatus(Issue::ISSUE_ACCESS_SUBSCRIPTION);
             $issue->setOpenAccessDate(date('Y-m-d H:i:s', mktime(0, 0, 0, $delayOpenAccessMonth, $curDay, $delayOpenAccessYear)));
         }
 
@@ -602,27 +604,25 @@ class IssueGridHandler extends GridHandler
         if (!$wasPublished) {
             Repo::doi()->issueUpdated($issue);
 
-            // Publish all related publications
-            // Include published submissions in order to support cases where two
-            // versions of the same submission are published in distinct issues. In
-            // such cases, the submission will be STATUS_PUBLISHED but the
-            // publication will be STATUS_SCHEDULED.
+            // Publish all related publications. Every submission with a publication in
+            // this issue is considered, matching unpublishIssue(): the publication being
+            // restored is the one that has to be STATUS_SCHEDULED, which the loop below
+            // checks. Filtering on the submission's current publication instead would skip
+            // submissions whose current publication is an unpublished draft.
             $submissions = Repo::submission()->getCollector()
                 ->filterByContextIds([$issue->getJournalId()])
                 ->filterByIssueIds([$issue->getId()])
-                ->filterByCurrentPublicationStatus([PKPPublication::STATUS_SCHEDULED, PKPPublication::STATUS_PUBLISHED])
                 ->getMany();
 
             foreach ($submissions as $submission) { /** @var Submission $submission */
                 $publications = $submission->getData('publications');
 
                 foreach ($publications as $publication) { /** @var Publication $publication */
-
                     if ((int) $publication->getData('issueId') !== (int) $issue->getId()) {
                         continue;
                     }
 
-                    if ($publication->getData('status') === Publication::STATUS_SCHEDULED) {
+                    if ($publication->getData('status') === PKPPublication::STATUS_SCHEDULED) {
                         Repo::publication()->publish($publication);
 
                         // dispatch the MetadataChanged event after publishing
@@ -633,7 +633,7 @@ class IssueGridHandler extends GridHandler
         }
 
         // Send a notification to associated users if selected and context is publishing content online with OJS
-        if ($request->getUserVar('sendIssueNotification') && $context->getData('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE) {
+        if ($request->getUserVar('sendIssueNotification') && $context->getData('publishingMode') != Journal::PUBLISHING_MODE_NONE) {
             // Notify users
             /** @var NotificationSubscriptionSettingsDAO $notificationSubscriptionSettingsDao */
             $notificationSubscriptionSettingsDao = DAORegistry::getDAO('NotificationSubscriptionSettingsDAO');
@@ -693,7 +693,7 @@ class IssueGridHandler extends GridHandler
      */
     public function unpublishIssue($args, $request)
     {
-        /** @var \APP\issue\Issue $issue */
+        /** @var Issue $issue */
         $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         $journal = $request->getJournal();
 
@@ -721,7 +721,10 @@ class IssueGridHandler extends GridHandler
         foreach ($submissions as $submission) { /** @var Submission $submission */
             $publications = $submission->getData('publications');
             foreach ($publications as $publication) { /** @var Publication $publication */
-                if ($publication->getData('status') === Publication::STATUS_PUBLISHED && $publication->getData('issueId') === (int) $issue->getId()) {
+                if (
+                    $publication->getData('status') === Publication::STATUS_PUBLISHED &&
+                    $publication->getData('issueId') === (int) $issue->getId()
+                ) {
                     // Republish the publication in the issue, now that it's status has changed,
                     // to ensure the publication's status is restored to Publication::STATUS_SCHEDULED
                     // rather than Publication::STATUS_QUEUED
