@@ -4,7 +4,7 @@
 # Vincas Grigas <vincas.grigas@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-09-25 08:59+0000\n"
+"PO-Revision-Date: 2026-09-25 13:28+0000\n"
 "Last-Translator: Vincas Grigas <vincas.grigas@gmail.com>\n"
 "Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "lt/>\n"
@@ -1033,7 +1033,7 @@ msgid "submission.layout.galley.remoteURL"
 msgstr "Nuotoliniu būdu talpinamo turinio URL adresas"
 
 msgid "reviewer.pendingReviews"
-msgstr "Recenzuojami straipsniai"
+msgstr "Straipsniai, laukiantys recenzavimo"
 
 msgid "reviewer.completedReviews"
 msgstr "Pateikta"
@@ -1042,7 +1042,7 @@ msgid "reviewer.averageQuality"
 msgstr "Reitingas"
 
 msgid "reviewer.article.fileToBeReviewed"
-msgstr "Failą ketinama recenzuoti"
+msgstr "Failas, skirtas recenzuoti"
 
 msgid "reviewer.article.notifyTheEditor"
 msgstr "Pranešti redaktoriui (-ei)"
@@ -1055,7 +1055,8 @@ msgstr "Negalėsiu recenzuoti"
 
 msgid "reviewer.article.restrictedFileAccess"
 msgstr ""
-"Pateikimas bus prieinamas, jei ir kai recenzentas sutiks atlikti recenziją"
+"Paraiška bus pateikta recenzentui tik tuo atveju, jei jis sutiks ją "
+"recenzuoti"
 
 msgid "reviewer.article.submissionEditor"
 msgstr "Straipsnio redaktorius"
@@ -1064,7 +1065,7 @@ msgid "reviewer.article.reviewerCommentsDescription"
 msgstr "Įveskite arba įklijuokite recenzijos komentarus čia"
 
 msgid "reviewer.article.editorToEnter"
-msgstr "Redaktorius (įrašyti)"
+msgstr "Pildo redaktorius"
 
 msgid "reviewer.article.sendReminder"
 msgstr "Siųsti priminimą"
@@ -1073,7 +1074,7 @@ msgid "reviewer.article.automatic"
 msgstr "(automatiškai)"
 
 msgid "reviewer.article.recommendation"
-msgstr "Siūlymas"
+msgstr "Rekomendacija"
 
 msgid "reviewer.article.submitReview"
 msgstr "Teikti recenziją redaktoriui"
@@ -1089,11 +1090,11 @@ msgstr "Recenzento įkelta versija"
 
 msgid "reviewer.article.reviewersAnnotatedVersionDescription"
 msgstr ""
-"(Jei norite teikti pastabas kaip redaktorius, išsaugokite savo kompiuterio "
-"kietajame diske, peržiūrėkite ir įkelkite.)"
+"(Jei norite pridėti pastabų redaktoriui, išsaugokite failą savo kompiuteryje "
+"ir įkelkite jį naudodami funkciją „Naršyti / Įkelti“.)"
 
 msgid "reviewer.article.schedule.request"
-msgstr "Redaktoriaus pateiktas reikalavimas"
+msgstr "Redaktoriaus prašymas"
 
 msgid "reviewer.article.schedule.response"
 msgstr "Jūsų atsakymas"
@@ -1108,13 +1109,13 @@ msgid "reviewer.article.decision.accept"
 msgstr "Priimti straipsnį"
 
 msgid "reviewer.article.decision.pendingRevisions"
-msgstr "Taisyti"
+msgstr "Reikalingos pataisos"
 
 msgid "reviewer.article.decision.resubmitHere"
 msgstr "Teikti recenzuoti dar kartą"
 
 msgid "reviewer.article.decision.resubmitElsewhere"
-msgstr "Teikti spausdinti kitur"
+msgstr "Pateikti kitam leidiniui"
 
 msgid "reviewer.article.decision.decline"
 msgstr "Atmesti straipsnį"
@@ -1123,13 +1124,13 @@ msgid "reviewer.article.decision.seeComments"
 msgstr "Žiūrėti komentarus"
 
 msgid "reviewer.article.schedule"
-msgstr "Numatyti"
+msgstr "Suplanuoti"
 
 msgid "reviewer.article.submissionToBeReviewed"
 msgstr "Straipsnį ketinama recenzuoti"
 
 msgid "reviewer.article.reviewSchedule"
-msgstr "Recenzavimas"
+msgstr "Recenzavimo tvarkaraštis"
 
 msgid "reviewer.article.reviewSteps"
 msgstr "Recenzavimo eiga"
@@ -1139,17 +1140,17 @@ msgstr "Nurodymai recenzentams"
 
 msgid "reviewer.article.reviewGuidelinesDescription"
 msgstr ""
-"Recenzijos gairės suteiks recenzentams kriterijus, pagal kuriuos jie galės "
-"vertinti pateikties tinkamumą publikavimui žurnale, ir gali apimti "
-"specialias instrukcijas, kaip parengti veiksmingą ir naudingą recenziją. "
-"Vykdant recenziją recenzentams pateikiami du atviri teksto laukai: pirmasis –"
-" „autoriui ir redaktoriui“, antrasis – „tik redaktoriui“. Taip pat žurnalo "
-"vadybininkas gali sukurti recenzavimo formą skiltyje „Recenzijų formos“. "
-"Visais atvejais redaktoriai galės nuspręsti, ar įtraukti recenzijas į "
-"susirašinėjimą su autoriumi."
+"Recenzavimo gairės suteikia recenzentams kriterijus, pagal kuriuos "
+"vertinamas pateikto darbo tinkamumas publikuoti žurnale, taip pat gali "
+"apimti specialias instrukcijas, padedančias parengti išsamią ir naudingą "
+"recenziją. Atliekant recenzavimą, recenzentams pateikiami du atviro teksto "
+"laukai: pirmasis skirtas „autoriui ir redaktoriui“, antrasis – „redaktoriui“"
+". Alternatyviai žurnalo administratorius gali sukurti recenzavimo formą "
+"skiltyje „Recenzavimo formos“. Visais atvejais redaktoriai turės galimybę "
+"įtraukti recenzijas į susirašinėjimą su autoriumi."
 
 msgid "reviewer.article.notifyEditorA"
-msgstr "Inormuoti straipsnio redaktorių"
+msgstr "Informuoti paraiškos redaktorių"
 
 msgid "reviewer.article.notifyEditorB"
 msgstr "ar imsitės recenzuoti."
@@ -1159,14 +1160,14 @@ msgstr "Jei recenzuosite, perskaitykite „nurodymus recenzentams“."
 
 msgid "reviewer.article.downloadSubmission"
 msgstr ""
-"Pažymėkite, kuriuos su straipsniu susijusius failus norėtumėte atsisiųsti ir "
-"recenzuoti (kompiuteriu arba popieriuje)."
+"Spustelėkite failų pavadinimus, kad atsisiųstumėte ir peržiūrėtumėte su šia "
+"paraiška susijusius failus (ekrane arba atsispausdintus)."
 
 msgid "reviewer.article.enterCompetingInterests"
 msgstr ""
-"Nurodykite, ar turite, ar neturite konkuruojančių interesų, susijusių su "
-"šiuo tyrimu (žr. <a target=\"_new\" class=\"action\" href=\""
-"{$competingInterestGuidelinesUrl}\">Konkuruojančių interesų politiką</a>)."
+"Nurodykite, ar turite interesų konfliktų, susijusių su šiuo tyrimu. (žr. <a "
+"target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\""
+">Interesų konfliktų politiką</a>)."
 
 msgid "reviewer.article.enterReviewA"
 msgstr ""
@@ -1175,27 +1176,29 @@ msgstr ""
 
 msgid "reviewer.article.uploadFile"
 msgstr ""
-"Dar galite įkelti ir failus, dėl kurių norite pasitarti su redaktoriumi ar "
-"autoriumi."
+"Papildomai galite įkelti ir failus, dėl kurių norite pasitarti su "
+"redaktoriumi ar autoriumi."
 
 msgid "reviewer.article.selectRecommendation"
 msgstr ""
-"Galiausiai parinkite siūlymą ir pateikite recenziją. Įrašyti recenziją arba "
-"įkelti failą reikia prieš pasirenkant siūlymą."
+"Norėdami užbaigti procesą, pasirinkite rekomendaciją ir pateikite recenziją. "
+"Prieš pasirinkdami rekomendaciją turite pateikti recenziją arba įkelti failą."
 
 msgid "reviewer.article.selectRecommendation.byEditor"
-msgstr "Parinkite arba pritaikykite siūlymą dėl straipsnio spausdinimo."
+msgstr "Nustatykite arba pakeiskite recenzento rekomendaciją."
 
 msgid "reviewer.article.mustSelectDecision"
-msgstr "Siūlymas nepasirinktas. Kad pateiktumėte siūlymą, turite jį pasirinkti."
+msgstr ""
+"Rekomendacija nepasirinkta. Norėdami pateikti recenziją, pasirinkite "
+"rekomendaciją."
 
 msgid "reviewer.article.confirmDecision"
 msgstr ""
-"Įrašę savo sprendimą, šios recenzijos nebegalėsite keisti. Ar tikrai norite "
-"tęsti?"
+"Įrašę savo sprendimą, šios recenzijos nebegalėsite koreguoti. Ar tikrai "
+"norite tęsti?"
 
 msgid "copyeditor.article.fileToCopyedit"
-msgstr "Failas kalbos redaktoriui"
+msgstr "Failas kalbos redagavimui"
 
 msgid "copyeditor.article.copyeditorFile"
 msgstr "Kalbos redaktoriaus failas"
@@ -1224,12 +1227,14 @@ msgstr ""
 "</ol>"
 
 msgid "submission.review.mustUploadFileForReview"
-msgstr "Negalima išsiųsti elektroninio laiško, kol nebus baigta recenzuoti."
+msgstr ""
+"Negalima išsiųsti prašymo el. laiško, kol nėra parengta recenzavimui skirta "
+"versija."
 
 msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
 msgstr ""
-"Negalima išsiųsti elektroninio laiško, kol nebus pasirinktas redaktoriaus "
-"sprendimo arba recenzijos failas."
+"Prašymo el. laiškas negali būti išsiųstas, kol recenzavimo etapo skiltyje „"
+"Redaktoriaus sprendimas“ nepasirinktas failas kalbos redagavimui."
 
 msgid "submission.copyedit.mustUploadFileForCopyedit"
 msgstr ""
@@ -1240,13 +1245,13 @@ msgid "submission.copyedit.initialCopyedit"
 msgstr "Pirminė kalbos redakcija"
 
 msgid "submission.copyedit.editorsCopyedit"
-msgstr "Redaktoriaus taisymai"
+msgstr "Redaktoriaus redaguota versija"
 
 msgid "submission.copyedit.editorAuthorReview"
-msgstr "Autoriaus taisymai"
+msgstr "Autoriaus redaguota versija"
 
 msgid "submission.copyedit.finalCopyedit"
-msgstr "Galutinė kalbos redakcija"
+msgstr "Galutinė redaguota versija"
 
 msgid "submission.copyedit.copyeditVersion"
 msgstr "Suredaguotas straipsnis"
@@ -1265,11 +1270,11 @@ msgstr "Nurodymai kalbos redaktoriui"
 
 msgid "submission.layout.noLayoutFile"
 msgstr ""
-"Nėra (Norėdami siųsti užklausą, pirma įkelkite galutinę redakciją kaip "
-"straipsnį, skirtą maketuoti)"
+"Nėra (prieš siųsdami užklausą, įkelkite galutinę kalbos redagavimo versiją "
+"kaip maketavimo versiją)"
 
 msgid "submission.layout.galleyPublicIdentificationExists"
-msgstr "Toks viešasis skilties identifikatorius jau naudojamas."
+msgstr "Toks viešasis rinkmenos identifikatorius jau egzistuoja."
 
 msgid "submission.layout.assignLayoutEditor"
 msgstr "Paskirti maketuotoją"
@@ -1284,7 +1289,7 @@ msgid "submission.layout.instructions"
 msgstr "Nurodymai maketuotojui"
 
 msgid "submission.layout.referenceLinking"
-msgstr "Sąsajos"
+msgstr "Literatūros nuorodų susiejimas"
 
 msgid "submission.proofreadingComments"
 msgstr "Korektoriaus pastabos"
@@ -1302,25 +1307,25 @@ msgid "submission.logType.author"
 msgstr "Autorius"
 
 msgid "submission.logType.editor"
-msgstr "Vyriausioji redaktorė"
+msgstr "Redaktorius (-ė)"
 
 msgid "submission.logType.review"
 msgstr "Recenzavimas"
 
 msgid "submission.logType.copyedit"
-msgstr "Redaguoti kalbą"
+msgstr "Kalbos redagavimas"
 
 msgid "submission.logType.layout"
-msgstr "Maketuoti"
+msgstr "Maketavimas"
 
 msgid "submission.logType.proofread"
-msgstr "Skaityti korektūrą"
+msgstr "Korektūra"
 
 msgid "submission.comments.editorAuthorCorrespondence"
 msgstr "Redaktoriaus ir autoriaus susirašinėjimas"
 
 msgid "submission.comments.copyeditComments"
-msgstr "Redaguoti pastabas"
+msgstr "Kalbos redagavimo pastabos"
 
 msgid "submission.comments.viewableDescription"
 msgstr ""
@@ -1335,8 +1340,8 @@ msgstr "Redaktoriui"
 
 msgid "submission.comments.blindCcReviewers"
 msgstr ""
-"Išsiuntę pateikite redaguojamą nematomą kopiją, kurią būtų galima išsiųsti "
-"recenzentams."
+"Po išsiuntimo pateikti redaguojamą BCC (slaptosios kopijos) laiško versiją, "
+"skirtą recenzentams."
 
 msgid "submission.comments.forAuthorEditor"
 msgstr "Autoriui ir redaktoriui"
@@ -1363,23 +1368,23 @@ msgid "user.register.registrationDisabled"
 msgstr "Šiuo metu naujų vartotojų registracija negalima."
 
 msgid "user.register.form.passwordLengthTooShort"
-msgstr "Įvedėte per trumą slaptažodį."
+msgstr "Įvedėte per trumpą slaptažodį."
 
 msgid "user.register.readerDescription"
-msgstr "Pranešti elektroniniu paštu, kai žurnalo numeris išleidžiamas."
+msgstr "Pranešti elektroniniu paštu, kai išleidžiamas žurnalo numeris."
 
 msgid "user.register.openAccessNotificationDescription"
 msgstr ""
 "Pranešti elektroniniu paštu, kai žurnalo numeriui suteikiama atvira prieiga."
 
 msgid "user.register.authorDescription"
-msgstr "Galiu šiam žurnalui teikti straipsnius."
+msgstr "Turi teisę teikti publikacijas į žurnalą."
 
 msgid "user.register.reviewerDescriptionNoInterests"
 msgstr "Noriu recenzuoti šiam žurnalui teikiamus straipsnius."
 
 msgid "user.register.reviewerDescription"
-msgstr "Noriu recenzuoti šioje svetainėje teikiamus straipsnius."
+msgstr "Sutinka recenzuoti svetainėje pateikiamus straipsnius."
 
 msgid "user.register.reviewerInterests"
 msgstr ""
@@ -1393,16 +1398,16 @@ msgstr ""
 
 msgid "user.register.form.privacyConsentThisContext"
 msgstr ""
-"Sutinku teikti <a href=\"{$privacyUrl}\" target=\"_blank\">privatumo "
-"nuostatoje</a> nurodytus duomenis."
+"Taip, sutinku, kad mano duomenys būtų renkami ir saugomi pagal šio žurnalo "
+"<a href=\"{$privacyUrl}\" target=\"_blank\">privatumo nuostatas</a>."
 
 msgid "user.register.form.missingContextConsent"
 msgstr ""
 "Turite sutikti su visų žurnalų, kurių registruotas vartotojas esate, "
-"skelbiamomis privatumo politikomis."
+"privatumo politikomis."
 
 msgid "user.register.form.missingSiteConsent"
-msgstr "Turite sutikti su šios svetainės privatumo nuostata."
+msgstr "Turite sutikti su šios svetainės privatumo nuostatomis."
 
 msgid "user.subscriptions.mySubscriptions"
 msgstr "Mano prenumeratos"
@@ -1435,34 +1440,34 @@ msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
 msgstr "Internetinis mokėjimas buvo inicijuotas, bet atšauktas arba neužbaigtas"
 
 msgid "user.subscriptions.individualSubscriptions"
-msgstr "Prenumeratorius asmuo"
+msgstr "Individuali prenumerata"
 
 msgid "user.subscriptions.institutionalSubscriptions"
-msgstr "Prenumeratorius institucija"
+msgstr "Institucinės prenumeratos"
 
 msgid "user.subscriptions.renew"
 msgstr "Pratęsti"
 
 msgid "user.subscriptions.purchase"
-msgstr "Užsisakyti prenumeratą"
+msgstr "Įsigyti"
 
 msgid "user.subscriptions.purchaseNewSubscription"
-msgstr "Užsisakyti naują prenumeratą"
+msgstr "Įsigyti naują prenumeratą"
 
 msgid "user.subscriptions.purchaseIndividualSubscription"
-msgstr "Užsisakyti prenumeratą asmeniui"
+msgstr "Įsigyti individualią prenumeratą"
 
 msgid "user.subscriptions.purchaseInstitutionalSubscription"
-msgstr "Užsisakyti prenumeratą institucijai"
+msgstr "Įsigyti prenumeratą institucijai"
 
 msgid "user.subscriptions.expires"
 msgstr "Baigiasi: {$date}"
 
 msgid "user.subscriptions.expired"
-msgstr "Pasibaigė: {$date}"
+msgstr "Baigė galioti: {$date}"
 
 msgid "user.subscriptions.viewSubscriptionTypes"
-msgstr "Rodyti galimas prenumeratos rūšis"
+msgstr "Peržiūrėti galimus prenumeratos tipus"
 
 msgid "user.subscriptions.form.typeId"
 msgstr "Prenumeratos tipas"
@@ -1471,16 +1476,17 @@ msgid "user.subscriptions.form.membership"
 msgstr "Narystė"
 
 msgid "user.subscriptions.form.membershipRequired"
-msgstr "Pasirinktam prenumeratos tipui reikalinga narystės informacija."
+msgstr "Pasirinktam prenumeratos tipui būtina nurodyti narystės informaciją."
 
 msgid "user.subscriptions.form.typeIdValid"
-msgstr "Nurodykite tinkamą prenumeratos rūšį."
+msgstr "Nurodykite tinkamą prenumeratos tipą."
 
 msgid "user.subscriptions.form.subscriptionExists"
-msgstr "Šiai vartotojo paskyrai jau užsakyta prenumerata asmeniui."
+msgstr "Ši naudotojo paskyra jau turi individualią prenumeratą."
 
 msgid "user.subscriptions.form.membershipInstructions"
-msgstr "Narystės informacija, jei ji reikalinga pasirinktam prenumeratos tipui."
+msgstr ""
+"Narystės informacija, jei ji reikalinga pasirinktai prenumeratos rūšiai."
 
 msgid "user.subscriptions.form.institutionName"
 msgstr "Institucijos pavadinimas"
@@ -1501,11 +1507,11 @@ msgstr ""
 
 msgid "user.subscriptions.form.domainIPRangeRequired"
 msgstr ""
-"Pasirinkus šią prenumeratos rūšį, reikia nurodyti domeną ir (arba) IP "
+"Pasirinkus šį prenumeratos tipą, reikia nurodyti domeną ir (arba) IP "
 "diapazoną. Tik taip bus galima nustatyti prenumeratoriaus tapatybę."
 
 msgid "user.subscriptions.form.domainValid"
-msgstr "Įveskite teisingą domeną."
+msgstr "Įveskite tinkamą domeną."
 
 msgid "user.subscriptions.form.ipRange"
 msgstr "IP diapazonai"
@@ -1536,7 +1542,7 @@ msgid "search.searchFor"
 msgstr "Ieškoti straipsnių apie"
 
 msgid "search.withinJournal"
-msgstr "Šiame žurnale"
+msgstr "Per laikotarpį"
 
 msgid "search.allJournals"
 msgstr "Visuose žurnaluose"
@@ -1549,23 +1555,25 @@ msgstr "Apie autorių"
 
 msgid "search.syntaxInstructions"
 msgstr ""
-"Paieškos patarimai: <ul>\n"
-"<li>Paieškos terminai nėra jautrūs raidžių dydžiui</li> \n"
-"<li>Įprasti žodžiai yra ignoruojami</li> \n"
-"<li>Pagal numatytuosius nustatymus grąžinami tik tie straipsniai, kurie turi "
-"<em>visus</em> užklausos terminus (t. y. numanomas <em>AND</em>)</li> \n"
-"<li>Kombinuokite kelis žodžius su <em>OR</em>, kad rastumėte straipsnius, "
-"turinčius bent vieną terminą; pvz., <em>švietimas OR tyrimai</em></li> \n"
-"<li>Naudokite skliaustelius sudėtingesnėms užklausoms; pvz., <em>archyvas (("
-"žurnalas OR konferencija) NOT tezės)</em></li> \n"
-"<li>Tikslios frazės ieškokite įdėję ją į kabutes; pvz., <em>\"atvira "
-"prieiga\"</em></li> \n"
-"<li>Išskirkite žodį, pridėdami prieš jį <strong>-</strong> arba <em>NOT</em>;"
-" pvz., <em>internetinis -politika</em> arba <em>internetinis NOT "
-"politika</em></li> \n"
-"<li>Naudokite <strong>*</strong> kaip pakaitos simbolį, kad atitiktų bet "
-"kokią simbolių seką; pvz., <em>soci* moralė</em> atitiks dokumentus, "
-"kuriuose yra „sociologinis“ arba „socialinis“</li> \n"
+"Paieškos patarimai:<ul>\n"
+"<li>Paieškos terminai neskiria didžiųjų ir mažųjų raidžių.</li>\n"
+"<li>Dažnai vartojami žodžiai ignoruojami.</li>\n"
+"<li>Pagal numatytuosius nustatymus grąžinami tik tie straipsniai, kuriuose "
+"yra <em>visi</em> užklausoje nurodyti terminai (t. y. numanomas operatorius "
+"<em>AND</em>).</li>\n"
+"<li>Sujunkite kelis žodžius operatoriumi <em>OR</em>, jei norite rasti "
+"straipsnius, kuriuose yra bent vienas iš terminų, pvz., <em>education OR "
+"research</em>.</li>\n"
+"<li>Naudokite skliaustus sudėtingesnėms užklausoms kurti, pvz., <em>archive "
+"((journal OR conference) NOT theses)</em>.</li>\n"
+"<li>Tikslios frazės paieškai ją rašykite kabutėse, pvz., <em>\"open access "
+"publishing\"</em>.</li>\n"
+"<li>Norėdami neįtraukti žodžio, prieš jį rašykite <strong>-</strong> arba "
+"<em>NOT</em>, pvz., <em>online -politics</em> arba <em>online NOT "
+"politics</em>.</li>\n"
+"<li>Naudokite simbolį <strong>*</strong> kaip pakaitos ženklą bet kokiai "
+"simbolių sekai, pvz., <em>soci* morality</em> ras dokumentus, kuriuose yra "
+"žodžiai „sociological“ arba „societal“.</li>\n"
 "</ul>"
 
 msgid "article.pageTitle"
@@ -1607,7 +1615,7 @@ msgid "site.journalCurrent"
 msgstr "Naujausias numeris"
 
 msgid "site.noJournals"
-msgstr "Žurnalai nepasiekiami."
+msgstr "Šiuo metu nėra prieinamų žurnalų."
 
 msgid "current.current"
 msgstr "Naujausias"
@@ -1616,13 +1624,13 @@ msgid "current.noCurrentIssue"
 msgstr "Naujausio numerio nėra"
 
 msgid "current.noCurrentIssueDesc"
-msgstr "Nėra nė vieno šio žurnalo numerio."
+msgstr "Šis žurnalas dar nėra paskelbęs nė vieno numerio."
 
 msgid "archive.archives"
 msgstr "Archyvas"
 
 msgid "archive.archivesPageNumber"
-msgstr "Archyvas – {$pageNumber} puslapis"
+msgstr "Archyvas – puslapis {$pageNumber}"
 
 msgid "archive.browse"
 msgstr "Ieškoti ankstesniuose numeriuose"
@@ -1643,16 +1651,16 @@ msgid "about.history"
 msgstr "Žurnalo istorija"
 
 msgid "about.editorialPolicies"
-msgstr "Leidybos nuostatos"
+msgstr "Redakcinė politika"
 
 msgid "about.focusAndScope"
-msgstr "Sritis ir tikslas"
+msgstr "Tematika ir aprėptis"
 
 msgid "about.sectionPolicies"
-msgstr "Šio skyriaus nuostatos"
+msgstr "Skyriaus nuostatos"
 
 msgid "about.submissions"
-msgstr "Straipsnių teikimas"
+msgstr "Paraiškos"
 
 msgid "about.onlineSubmissions.login"
 msgstr "Prisijungti"
@@ -1673,13 +1681,13 @@ msgid "about.onlineSubmissions.newSubmission"
 msgstr "Teikti naują straipsnį"
 
 msgid "about.onlineSubmissions.viewSubmissions"
-msgstr "Žiūrėti, kokie straipsniai yra pateikti"
+msgstr "Peržiūrėti laukiančias paraiškas"
 
 msgid "about.authorGuidelines"
 msgstr "Nurodymai autoriams"
 
 msgid "about.submissionPreparationChecklist"
-msgstr "Keliami reikalavimai"
+msgstr "Paraiškos pateikimo kontrolinis sąrašas"
 
 msgid "about.submissionPreparationChecklist.description"
 msgstr ""
@@ -1688,16 +1696,16 @@ msgstr ""
 "būti atmestas."
 
 msgid "about.copyrightNotice"
-msgstr "Apie autorių teises"
+msgstr "Autorių teisių sąlygos"
 
 msgid "about.privacyStatement"
-msgstr "Privatumo nuostata"
+msgstr "Privatumo nuostatos"
 
 msgid "about.authorFees"
-msgstr "Autoriaus mokesčiai"
+msgstr "Informacija apie mokesčius autoriams"
 
 msgid "about.authorFeesMessage"
-msgstr "Šiame žurnale taikomi šie autoriaus mokesčiai."
+msgstr "Žurnale autoriams taikomi šie mokesčiai."
 
 msgid "about.peerReviewProcess"
 msgstr "Recenzavimas"
