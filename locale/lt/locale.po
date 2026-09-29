@@ -4,7 +4,7 @@
 # Vincas Grigas <vincas.grigas@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-09-26 13:47+0000\n"
+"PO-Revision-Date: 2026-09-29 12:59+0000\n"
 "Last-Translator: Vincas Grigas <vincas.grigas@gmail.com>\n"
 "Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "lt/>\n"
@@ -2356,7 +2356,7 @@ msgid "editor.navigation.issues"
 msgstr "Numeriai"
 
 msgid "notification.type.approveSubmission"
-msgstr "Laukiama patvirtinimo, kad straipsnį galima spausdinti šiame numeryje."
+msgstr "Laukiama patvirtinimo, kad straipsnį galima publikuoti šiame numeryje."
 
 msgid "notification.type.approveSubmissionTitle"
 msgstr "Laukiama patvirtinimo."
@@ -2377,19 +2377,19 @@ msgid "grid.catalogEntry.availableRepresentation.notApproved"
 msgstr "Laukiama patvirtinimo"
 
 msgid "grid.catalogEntry.approvedRepresentation.title"
-msgstr "Skilties patvirtinimas"
+msgstr "Rinkmenos patvirtinimas"
 
 msgid "grid.catalogEntry.approvedRepresentation.message"
-msgstr "<p>Patvirtinti šį maketą publikavimui.</p>"
+msgstr "<p>Patvirtinti šį rinkinį publikavimui.</p>"
 
 msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
-msgstr "<p>Atšaukti šio maketo patvirtinimą.</p>"
+msgstr "<p>Atšaukti šio rinkinio patvirtinimą.</p>"
 
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "{$journalName} indeksavimas"
 
 msgid "search.cli.rebuildIndex.unknownJournal"
-msgstr "Adresas {$journalPath} negali būti nustatomas kaip šio žurnalo adresas."
+msgstr "Nurodytas žurnalo kelias „{$journalPath}“ neatitinka jokio žurnalo."
 
 msgid "editor.issues.backIssues"
 msgstr "Ankstesni numeriai"
@@ -2398,10 +2398,10 @@ msgid "editor.issues.futureIssues"
 msgstr "Būsimi numeriai"
 
 msgid "navigation.subscriptions"
-msgstr "Prenumerata"
+msgstr "Prenumeratos"
 
 msgid "log.editor.submissionExpedited"
-msgstr "{$editorName} pradeda straipsnio {$submissionId} rengimą spaudai."
+msgstr "Straipsnio {$submissionId} redagavimą perėmė redaktorius {$editorName}."
 
 msgid "catalog.sortBy"
 msgstr "Straipsnių eiliškumas"
