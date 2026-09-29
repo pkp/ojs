@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-09-29 12:59+0000\n"
+"PO-Revision-Date: 2026-09-30 15:59+0000\n"
 "Last-Translator: Nicolas Dickner <dickner.nicolas@uqam.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
 "invitation/fr_CA/>\n"
@@ -61,3 +61,18 @@ msgstr ""
 "Pour commencer dans OJS et accepter un nouveau rôle, vous devrez vous créer "
 "un compte. Veuillez saisir choisir un nom d'utilisateur(-trice) et un mot de "
 "passe."
+
+msgid "acceptInvitation.detailsReview.stepDescription"
+msgstr "Vérifier les informations pour activer vos nouveaux rôles"
+
+msgid "acceptInvitation.detailsReview.nextButtonLabel"
+msgstr "Accepter et continuer vers OJS"
+
+msgid "acceptInvitation.modal.title"
+msgstr "Un nouveau rôle vous a été attribué dans OJS"
+
+msgid "acceptInvitation.modal.message"
+msgstr ""
+"Félicitations pour votre nouveau rôle ! Vous devriez avoir accès à de "
+"nouvelles options. Si vous avez besoin d'aide dans la prise en main du "
+"logiciel, veuillez cliquer sur les boutons \"Aide\"."
