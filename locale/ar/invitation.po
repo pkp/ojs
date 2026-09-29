@@ -1,0 +1,88 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2026-09-20 09:59+0000\n"
+"Last-Translator: \"M. Ali\" <vorteem@gmail.com>\n"
+"Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/invitation/"
+"ar/>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "acceptInvitation.accountDetails.stepLabel"
+msgstr "{$step} - إنشاء حساب في نظام المجلات المفتوحة"
+
+msgid "acceptInvitation.accountDetails.stepName"
+msgstr "إنشاء حساب في نظام المجلات المفتوحة"
+
+msgid "acceptInvitation.detailsReview.nextButtonLabel"
+msgstr "قبول ومتابعة إلى نظام المجلات المفتوحة"
+
+msgid "invitation.orcid.acceptInvitation.message"
+msgstr ""
+"غير متحقق منه. بإمكانك إجراء التحقق من خلال مقطع ملفك الشخصي في نظام المجلات "
+"المفتوحة."
+
+msgid "invitation.role.masthead"
+msgstr "طاقم تحرير المجلة"
+
+msgid "userInvitation.enterDetails.stepDescription"
+msgstr "بإمكانك دعوتهم لتولي دور في نظام المجلات المفتوحة"
+
+msgid "userInvitation.roleTable.journalMasthead"
+msgstr "طاقم تحرير المجلة"
+
+msgid "userInvitation.search.userFound"
+msgstr "المستخدم موجود مسبقًا في المجلة"
+
+msgid "userInvitation.search.userNotFound"
+msgstr "المستخدم ليس لديه دور في المجلة"
+
+msgid "userInvitation.sendMail.stepDescription"
+msgstr ""
+"إرسل بريدًا الكترونيًا إلى المستخدم لإبلاغه بشأن الدعوة، الخطوات القادمة، "
+"سياسة اللائحة العامة لحماية البيانات في المجلة، والتحقق من مُعرَّف ORCID"
+
+msgid "acceptInvitation.accountDetails.stepDescription"
+msgstr ""
+"لتبدأ مع نظام المجلات المفتوحة وتقبل بدورك الجديد فيه، تحتاج إلى إنشاء حساب "
+"معنا. لهذا الغرض، يرجى إدخال اسم المستخدم وكلمة المرور لحسابك الجديد."
+
+msgid "acceptInvitation.detailsReview.stepDescription"
+msgstr "مراجعة التفاصيل للبدء مع أدوارك الجديدة في نظام المجلات المفتوحة"
+
+msgid "acceptInvitation.modal.message"
+msgstr ""
+"تهانينا بشأن دورك الجديد في نظام المجلات المفتوحة! ربما قد صارت لديك إمكانية "
+"الوصول إلى خيارات جديدة. إذا كنت بحاجة إلى أي مساعدة لفهم هذا النظام، يرجى "
+"النقر على زر \"مساعدة\" للحصول على الإرشادات."
+
+msgid "acceptInvitation.modal.title"
+msgstr "لقد تم تعيين دور جديد لك في نظام المجلات المفتوحة"
+
+msgid "acceptInvitation.verifyOrcid.stepDescription"
+msgstr ""
+"يمكنك أن تختار التحقق من معرفك في ORCID أو تخطي ذلك. إذا اخترت تخطيه الآن، "
+"بإمكانك إجراء التحقق لاحقًا من خلال مقطع ملفك الشخصي في نظام المجلات المفتوحة"
+
+msgid "invitation.wizard.pageTitleDescription"
+msgstr ""
+"أنت تدعو مستخدمًا لتولي دور في نظام المجلات المفتوحة مع إظهاره ضمن طاقم "
+"تحرير المجلة"
+
+msgid "userInvitation.modal.message"
+msgstr ""
+"لقد تمت دعوة {$email} لتولي دور جديد في نظام المجلات المفتوحة. بإمكانك أن "
+"تحصل على تبليغات بشأن قرار المستخدم من خلال صفحة المستخدمين والأدوار، "
+"إشعاراتك في نظام المجلات المفتوحة و/أو عنوان بريدك الالكتروني"
+
+msgid "userInvitation.searchUser.stepDescription"
+msgstr ""
+"البحث عن المستخدم باستعمال عنوان بريده الالكتروني، اسم المستخدم أو مُعرَّفه "
+"في ORCID. أدخل تفصيلة واحدة على الأقل للبدء. إذا لم يكن المستخدم موجودًا، "
+"بإمكانك دعوته لتولي أدوار جديدة وليكون جزءًا من مجلتك. إذا كان المستخدم "
+"موجود مسبقًا في النظام، بإمكانك معاينة معلوماته وتوجيه الدعوة له لتولي مهام "
+"إضافية."

@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/pubmed/filter/ArticlePubMedXmlFilter.php
  *
- * Copyright (c) 2014-2025 Simon Fraser University
- * Copyright (c) 2000-2025 John Willinsky
+ * Copyright (c) 2014-2026 Simon Fraser University
+ * Copyright (c) 2000-2026 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticlePubMedXmlFilter
@@ -99,6 +99,13 @@ class ArticlePubMedXmlFilter extends PersistableFilter
                 // We have a page range or e-location id
                 $articleNode->appendChild($doc->createElement('FirstPage'))->appendChild($doc->createTextNode($startPage));
                 $articleNode->appendChild($doc->createElement('LastPage'))->appendChild($doc->createTextNode($endPage));
+            }
+
+            if ($articleNumber = $publication->getData('articleNumber')) {
+                $articleNumberNode = $doc->createElement('ELocationID');
+                $articleNumberNode->appendChild($doc->createTextNode($articleNumber));
+                $articleNumberNode->setAttribute('EIdType', 'pii');
+                $articleNode->appendChild($articleNumberNode);
             }
 
             if ($doi = $publication->getStoredPubId('doi')) {

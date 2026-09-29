@@ -143,6 +143,10 @@ class DublinCoreMetaPlugin extends GenericPlugin
             $templateMgr->addHeader('dublinCorePages', '<meta name="DC.Identifier.pageNumber" content="' . htmlspecialchars($pages) . '"/>');
         }
 
+        if ($articleNumber = $publication->getData('articleNumber')) {
+            $templateMgr->addHeader('dublinCoreArticleNumber', '<meta name="DC.Identifier.articleNumber" content="' . htmlspecialchars($articleNumber) . '"/>');
+        }
+
         if ($doi = $publication->getDoi()) {
             $templateMgr->addHeader('dublinCorePubIdDOI', '<meta name="DC.Identifier.DOI" content="' . htmlspecialchars($doi) . '"/>');
         }

@@ -3,7 +3,7 @@
 # Kamil Federyga <kamilfederyga@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-09-16 14:59+0000\n"
+"PO-Revision-Date: 2026-09-22 12:59+0000\n"
 "Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/locale/rue/>\n"
 "Language: rue\n"
@@ -1584,3 +1584,400 @@ msgstr "Формат переносных файлів (PDF)"
 
 msgid "article.download"
 msgstr "Стягний тот файль PDF"
+
+msgid "site.journalsHosted"
+msgstr "Часописы доступны на стороні"
+
+msgid "site.journalView"
+msgstr "Вкаж часопис"
+
+msgid "site.journalRegister"
+msgstr "Зареґіструй"
+
+msgid "about.aboutContext"
+msgstr "О часописі"
+
+msgid "about.history"
+msgstr "Істория часопису"
+
+msgid "about.editorialPolicies"
+msgstr "Принципы"
+
+msgid "about.focusAndScope"
+msgstr "Обсяг і засяг часопису"
+
+msgid "about.submissions"
+msgstr "Пересыланя текстів"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Лоґуваня"
+
+msgid "about.onlineSubmissions.register"
+msgstr "Зареґіструй"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login} або {$register} жебы зголосити текст."
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Додай новый впис в секциі <a href=\"{$url}\">{$name}</a>."
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Зголос новый текст"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "вкаж зголошыня якы ждут"
+
+msgid "about.authorGuidelines"
+msgstr "Вказівкы для авторів"
+
+msgid "article.nonpdf.note"
+msgstr ""
+"Побераня выбраного файля повинно розпочати ся автоматычні. Кєд так ся не "
+"стане, кликний слідуючый мотузок. Памятай, же до высвітліня того файля може "
+"быти потрібна специяльна переглядарка або втычка.<br /><br />Кєд файль не "
+"побере ся автоматычні,<a href=\"{$url}\">кликний гев</a>."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} або {$viewSubmissions}."
+
+msgid "site.journalCurrent"
+msgstr "Актуальный номер"
+
+msgid "site.noJournals"
+msgstr "Неє ниякых часописів."
+
+msgid "current.current"
+msgstr "Актуальный номер"
+
+msgid "current.noCurrentIssue"
+msgstr "Брак актуального номеру"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Тот часопис не опубликувал ниякого выданя."
+
+msgid "archive.archives"
+msgstr "Архів"
+
+msgid "archive.archivesPageNumber"
+msgstr "Архівы-сторона {$pageNumber}"
+
+msgid "archive.browse"
+msgstr "Переглядай старшы выданя"
+
+msgid "archive.issueUnavailable"
+msgstr "Недоступный номер"
+
+msgid "about.statistics"
+msgstr "Статистыкы"
+
+msgid "about.contact"
+msgstr "Контакт"
+
+msgid "about.sectionPolicies"
+msgstr "Ділы"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Провіріня тексту перед высланьом"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Перийод"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Кошт"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Виды субскрипций"
+
+msgid "about.memberships"
+msgstr "Членства"
+
+msgid "help.ojsHelp"
+msgstr "Поміч Open Journal Systems"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "Поміч OJS"
+
+msgid "help.searchReturnResults"
+msgstr "Верний до результатів выглядуваня"
+
+msgid "help.goToEditPage"
+msgstr "Едитуй {$sectionTitle}"
+
+msgid "donations.thankYou"
+msgstr "Дякуєме"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+"Просит ся авторів о провіріня ци текст сполнят вымогы окрислены долов. "
+"Тексты, якы не сполняют редакцийных вымогів можут быти одшмарены."
+
+msgid "about.delayedOpenAccess"
+msgstr "Одставленый в часі свобідный доступ до змісту"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr ""
+"Змісты якы сут поміщены в тым часопиці будут доступны на принципах "
+"отвореного доступу"
+
+msgid "about.aboutSoftware"
+msgstr "О системі Open Journal Systems"
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+"Тот часопис корыстат з системы Open Journal Systems {$ojsVersion}, котра єст "
+"проґрамовым забезпечыньом тыпу open source до управляня часописами і "
+"публикациями, опрацуваным, обслугуваным і безплатні розпроваджаным през "
+"орґанізацию Public Knowledge Project на ліценциі GNU General Public License. "
+"Одвидж сторінку інтернетову PKP, жебы <a href=\"https://pkp.sfu.ca/\""
+">довідати ся більше о тым проґрамовым забезпечыню</a>. В припадку звідань "
+"односячых ся до часопису і присыланя статий просиме о <a href=\"{$contactUrl}"
+"\">безпосередній контакт з редакцийом</a>."
+
+msgid "payment.loginRequired.forArticle"
+msgstr ""
+"Жебы достати доступ до той статі, потрібна є субскрипция або купно допису. "
+"Жебы зверифікувати субскрипцию, або купил/-а єс доступ до той статі, залоґуй "
+"ся до часопису."
+
+msgid "about.copyrightNotice"
+msgstr "Авторскы права"
+
+msgid "about.privacyStatement"
+msgstr "Політыка приватности"
+
+msgid "about.authorFees"
+msgstr "Авторскы оплаты"
+
+msgid "about.authorFeesMessage"
+msgstr "Кошты публикациі в часописі."
+
+msgid "about.peerReviewProcess"
+msgstr "Процес рецензиі"
+
+msgid "about.publicationFrequency"
+msgstr "Гармоноґрам публикациі"
+
+msgid "about.openAccessPolicy"
+msgstr "Політыка отвертого доступу"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "місяців од часу публикаициі номеру."
+
+msgid "about.archiving"
+msgstr "Архівізуваня"
+
+msgid "about.subscriptions"
+msgstr "Субскрипциі"
+
+msgid "about.subscriptions.individual"
+msgstr "Індивідуальны субскрипциі"
+
+msgid "about.subscriptions.institutional"
+msgstr "Субскрипциі для інституций"
+
+msgid "about.subscriptionsContact"
+msgstr "Контакт дс. субскрипциі"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Назва"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Формат"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr ""
+"Веце інформациі на тему системы публикациі, сервісу та процесу працы в рамах "
+"OJS/PKP."
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "Едиторскій і выдавничый процес в системі OJS"
+
+msgid "about.aboutOJSSite"
+msgstr ""
+"Тота сторона корыстат ся з системы Open Journal Systems {$ojsVersion}, "
+"проґрамового забезпечыня тыпу open source до управліня часописами і "
+"публикациями, опрацуваного, спомаганого і безплатні дистрибууваного през "
+"орґанізацию Public Knowledge Project на ліценциі GNU General Public License. "
+"Одвид сторінку інтернетову PKP, жебы<a href=\"https://pkp.sfu.ca/\">довідати "
+"ся більше о тым проґрамовым забезпечыню</a>. В разі звідань односячых ся до "
+"часописів публикуваных на тій стороні та надсыланя статий до них просиме о "
+"безпосередній контакт з адміністратором стороны."
+
+msgid "donations.thankYouMessage"
+msgstr "Дякуєме за передачу даровизны.\tБарз доціняме Вашу поміч."
+
+msgid "payment.loginRequired"
+msgstr "Мусиш ся залоґувати, жебы заплатити."
+
+msgid "payment.type.fastTrack"
+msgstr "Запалата за скору рецензию"
+
+msgid "payment.type.membership"
+msgstr "Індивідуальна заплата за членство"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Заплат за доступ до статі"
+
+msgid "payment.type.purchaseIssue"
+msgstr "Заплат за доступ до номеру"
+
+msgid "payment.type.subscription"
+msgstr "Запалата за субскрипцию"
+
+msgid "payment.type.donation"
+msgstr "Даровизны"
+
+msgid "payment.requestPublicationFee"
+msgstr "Просьба о заплату за публикацию ({$feeAmount})"
+
+msgid "payment.loginRequired.forIssue"
+msgstr ""
+"Жебы достати доступ до номеру, необхідна є сыбскрипция або його закуп. Жебы "
+"зверификувати, ци маш субскрипцию або купил/-а єс уж тот номер, залоґуй ся "
+"на стороні часопису."
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Жебы передати даровизну, мусиш ся залоґувати."
+
+msgid "payment.waive"
+msgstr "Знесено оплату"
+
+msgid "payment.alreadyPaidMessage"
+msgstr ""
+"Зазнач тото поле, кєд доконал єс юж оплаты до часопису,  жебы завершыти "
+"процес зголошыня. \tЗголошыня не буде розсмотрене до часу отриманя оплаты.\t "
+"Кликний притиск „ЗАПЛАТ ТЕПЕР” горі, жебы высвітлити вказівкы до оплаты."
+
+msgid "payment.notFound"
+msgstr ""
+"Была зголошена просьба о доконаня оплаты, але термін єй важности минул. "
+"Сконтактуй ся з редактором пресы, жебы достати дрібниці."
+
+msgid "payment.subscription.purchase"
+msgstr "Куп субскрипцию"
+
+msgid "installer.updatingInstructions"
+msgstr ""
+"Кєд актуалізуєш фунґуючу інсталяцию OJS, <a href=\"{$upgradeUrl}\">кликний "
+"гев</a>жебы довершыти."
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>OJS Версия {$version}</h4>\n"
+"\n"
+"<p>Дякуєме за стягніня проґрамового забезпечыня <strong>Open Journal "
+"Systems</strong> авторства Public Knowledge Project. Перед початком роботы "
+"просиме о запознаня ся з файльом <a href=\"{$baseUrl}/README.md\">README</"
+"a>, доданым до того проґрамового забезпечыня. Жебы отримати веце інформаций "
+"на тему Public Knowledge Project і його проєктів проґрамового забезпечыня, "
+"одвид <a href=\"https://pkp.sfu.ca/\" target=\"_blank\">інтернетову сторону "
+"PKP</a>. Кєд хочеш зголосити хыбу або попросити о технічну поміч дотычачу "
+"Open Journal Systems, заглянь на <a href=\"https://forum.pkp.sfu.ca\" target="
+"\"_blank\">форум технічной помочы</a>або одвид інтернетову<a href=\"https"
+"://github.com/pkp/pkp-lib#issues\" target=\"_blank\">систему зголошаня хыб</"
+"a>. Хоц форум підпоры єст преферуваном методом контакту, мож тіж выслати "
+"віст e-mail до команды на адрес <a href=\"mailto:pkp.contact@gmail.com\">pkp."
+"contact@gmail.com</a>.</p</li>\n"
+"\n"
+"<h4>Рекомендуваны системовы вымаганя</h4>\n"
+"\n"
+"<ul>\n"
+"\t<a href=\"https://www.php.net/\" target=\"_blank\">PHP</a>>= "
+"{$phpRequiredVersion}; тепер хоснуєш PHP  {$phpVersion}{$wrongPhpText}\n"
+"</li>\n"
+"\t<li><a href=\"https://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 "
+"або<a href=\"https://www.postgresql.org/\" target=\"_blank\">PostgreSQL\n"
+"</a>>= 9.1.5</li>\n"
+"\t<li><a href=\"https://httpd.apache.org/\" target=\"_blank\">Apache</a> >= "
+"1.3.2x or >= 2.0.4x or Microsoft IIS 6</li>\n"
+"\t<li>Операцийна система: довільна операцийна система, што обслугує вышнє "
+"опроґрамуваня, в тым<a href=\"https://www.linux.org/\" target=\"_blank\""
+">Linux</a>, <a href=\"https://www.bsd.org\" target=\"_blank\">BSD</a>,<a "
+"href=\"https://www.oracle.com/solaris/\" target=\"_blank\">Solaris</a>,<a "
+"href=\"https://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href="
+"\"https://www.microsoft.com/\">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>Понеже PKP не диспонуює засобами, што уможливляют перетестуваня вшыткых "
+"можливых комбінаций версий опроґрамуваня і плятформ, не дає ся нияка "
+"ґваранция правилного діяня ани технічне підпертя.</p>\n"
+"<p>Зміны в тых уставлінях мож ввести по інсталяциі, редаґуючы файль<tt>config"
+".inc.php</tt> в головным каталозі OJS або або хоснуючы інтернетовый "
+"адміністрацийный інтерфейс сервісу.</p>\n"
+"\n"
+"<h4>Обслугуваны системы баз даных</h4>\n"
+"\n"
+"<p>OJS был дотепер выпрібуваный выключні на MySQL і PostgreSQL, хоц інчы "
+"системы заряджыня базами даных, обслугуваны през <a href=\"https://adodb."
+"org\" target=\"_blank\">ADOdb</a>, можут діяти (в цілости або частиово). "
+"Рапорты дотычны згідности і/або поправкы коду для альтернативных системів "
+"заряджыня базами даных можна пересылати до колектыву OJS.</p>\n"
+
+msgid "payment.paid"
+msgstr "Заплачене"
+
+msgid "payment.unpaid"
+msgstr "Незаплачене"
+
+msgid "payment.waived"
+msgstr "Знесено"
+
+msgid "payment.payNow"
+msgstr "Заплат тепер"
+
+msgid "payment.alreadyPaid"
+msgstr "Уж заплечене"
+
+msgid "payment.paymentReceived"
+msgstr "Отримано заплату"
+
+msgid "payment.paymentSent"
+msgstr "Заплата остала выслана"
+
+msgid "payment.authorFees"
+msgstr "Заплата автора"
+
+msgid "payment.type.submission"
+msgstr "Заплата за зголошыня"
+
+msgid "payment.type.publication"
+msgstr "Заплата за публикацию"
+
+msgid "payment.type.publication.required"
+msgstr "Треба дати оплату за публикацию."
+
+msgid "payment.requestPublicationFee.notEnabled"
+msgstr "Не влучено оплат за публикацию."
+
+msgid "payment.donation.makeDonation"
+msgstr "Перекаж даровизну"
+
+msgid "payment.submission.paySubmission"
+msgstr "Заплат за зголошыня"
+
+msgid "payment.publication.payPublication"
+msgstr "Заплат за публикацию"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Заплата за публикацию довершена"
+
+msgid "payment.membership.buyMembership"
+msgstr "Куп індивідуальне членство"
+
+msgid "payment.membership.renewMembership"
+msgstr "Одновліня індивідуального членства"
+
+msgid "payment.membership.ends"
+msgstr "Закінчыня"
+
+msgid "payment.subscription.renew"
+msgstr "Одновліня субскрипциі"
+
+msgid "payment.subscription.expires"
+msgstr "Выгасат"
+
+msgid "installer.appInstallation"
+msgstr "Інсталаяция OJS"
+
+msgid "installer.ojsUpgrade"
+msgstr "Актуалізация OJS"
