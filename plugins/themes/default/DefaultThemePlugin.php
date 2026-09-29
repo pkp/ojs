@@ -19,6 +19,8 @@ use APP\file\PublicFileManager;
 use APP\journal\enums\JournalContentOption;
 use PKP\config\Config;
 use PKP\core\PKPSessionGuard;
+use PKP\plugins\Hook;
+use PKP\template\TemplateManager;
 
 class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
 {
@@ -167,7 +169,9 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
 
         // Update colour based on theme option
         if (($baseColour = $this->getOption('baseColour')) !== '#1E6292') {
-            if (!preg_match('/^#[0-9a-fA-F]{1,6}$/', $baseColour)) $baseColour = '#1E6292'; // pkp/pkp-lib#11974
+            if (!preg_match('/^#[0-9a-fA-F]{1,6}$/', $baseColour)) {
+                $baseColour = '#1E6292';
+            } // pkp/pkp-lib#11974
             $additionalLessVariables[] = '@bg-base:' . $baseColour . ';';
             if (!$this->isColourDark($baseColour)) {
                 $additionalLessVariables[] = '@text-bg-base:rgba(0,0,0,0.84);';
@@ -227,6 +231,66 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
 
         // Add navigation menu areas for this theme
         $this->addMenuArea(['primary', 'user']);
+
+        Hook::add('TemplateManager::display', $this->addSkipToScript(...));
+    }
+
+    /**
+     * Inject the SkipTo.js menu button, which replaces the static skip links.
+     *
+     * SkipTo.js builds its menu from the landmarks and headings it finds in the
+     * rendered page, so keyboard and screen reader users can reach the main
+     * content, the navigation and every section heading. It reads its
+     * configuration from `window.SkipToConfig` when the window load event
+     * fires. See pkp/pkp-lib#12645.
+     */
+    public function addSkipToScript(string $hookName, array $args): bool
+    {
+        /** @var TemplateManager $templateMgr */
+        $templateMgr = $args[0];
+
+        $baseUrl = Application::get()->getRequest()->getBaseUrl();
+        $config = json_encode($this->getSkipToConfig(), JSON_UNESCAPED_SLASHES);
+
+        $templateMgr->addHeader(
+            'skipTo',
+            '<script defer src="' . $baseUrl . '/plugins/themes/default/js/skipto.js"></script>'
+            . '<script>var SkipToConfig = ' . $config . ';</script>'
+        );
+
+        return false;
+    }
+
+    /**
+     * Build the SkipTo.js configuration, colouring the menu button with the
+     * theme's base colour option.
+     */
+    protected function getSkipToConfig(): array
+    {
+        $baseColour = $this->getOption('baseColour');
+        if (!preg_match('/^#[0-9a-fA-F]{6}$/', $baseColour)) {
+            $baseColour = '#1E6292';
+        }
+        $contrastColour = $this->isColourDark($baseColour) ? '#ffffff' : 'rgba(0,0,0,0.84)';
+
+        return [
+            // Keep the button out of the way until it is focused, the way the
+            // skip links it replaces behaved.
+            'displayOption' => 'popup',
+            'landmarks' => 'main search navigation complementary contentinfo',
+            'headings' => 'h1 h2',
+            'highlightTarget' => 'smooth',
+            'buttonTextColor' => $contrastColour,
+            'buttonBackgroundColor' => $baseColour,
+            'focusBorderColor' => $baseColour,
+            'menuTextColor' => 'rgba(0,0,0,0.84)',
+            'menuBackgroundColor' => '#ffffff',
+            'menuitemFocusTextColor' => $contrastColour,
+            'menuitemFocusBackgroundColor' => $baseColour,
+            'buttonLabel' => __('plugins.themes.default.skipTo.buttonLabel'),
+            'landmarkGroupLabel' => __('plugins.themes.default.skipTo.landmarkGroupLabel'),
+            'headingGroupLabel' => __('plugins.themes.default.skipTo.headingGroupLabel'),
+        ];
     }
 
     /**
@@ -241,9 +305,12 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
     }
 
     /** @see ThemePlugin::saveOption */
-    public function saveOption($name, $value, $contextId = null) {
+    public function saveOption($name, $value, $contextId = null)
+    {
         // Validate the base colour setting value.
-        if ($name == 'baseColour' && !preg_match('/^#[0-9a-fA-F]{1,6}$/', $value)) $value = null; // pkp/pkp-lib#11974
+        if ($name == 'baseColour' && !preg_match('/^#[0-9a-fA-F]{1,6}$/', $value)) {
+            $value = null;
+        } // pkp/pkp-lib#11974
 
         parent::saveOption($name, $value, $contextId);
     }
