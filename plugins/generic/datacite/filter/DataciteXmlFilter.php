@@ -27,6 +27,7 @@ use APP\submission\Submission;
 use DOMDocument;
 use DOMNode;
 use Exception;
+use PKP\affiliation\Affiliation;
 use PKP\author\contributorRole\ContributorRoleIdentifier;
 use PKP\author\contributorRole\ContributorType;
 use PKP\context\Context;
@@ -407,6 +408,9 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                     $affiliations = $affiliation ? [$affiliation] : null;
                     $orcid = $reviewer->getData('orcidIsVerified') ? $reviewer->getData('orcid') : null;
                 } else {
+                    // DataCite has no concept of an anonymous creator; use its
+                    // controlled value for "known to be unknown" instead.
+                    // https://datacite-metadata-schema.readthedocs.io/en/4.6/appendices/appendix-3/
                     $name = DATACITE_UNKNOWN_ANONYMOUS;
                 }
 
@@ -444,7 +448,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                     // https://datacite-metadata-schema.readthedocs.io/en/4.6/appendices/appendix-3/
                     if ($contributorType === ContributorType::ANONYMOUS->getName()) {
                         $creators[] = [
-                            'name' => ':unkn',
+                            'name' => DATACITE_UNKNOWN_ANONYMOUS,
                         ];
                     } elseif ($contributorType === ContributorType::ORGANIZATION->getName()) {
                         $creators[] = [
@@ -468,7 +472,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                     // fall back to its controlled value for "value unavailable, unknown, or not applicable".
                     // https://datacite-metadata-schema.readthedocs.io/en/4.6/appendices/appendix-3/
                     $creators[] = [
-                        'name' => ':unav',
+                        'name' => DATACITE_UNKNOWN_ANONYMOUS,
                     ];
                 }
                 break;
@@ -514,7 +518,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                     }
                     $node = $doc->createElementNS($deployment->getNamespace(), 'affiliation');
 
-                    if (!isset($reviewAssignment)) {
+                    if ($affiliation instanceof Affiliation) {
                         $ror = $affiliation->getRor();
 
                         if ($ror) {
@@ -663,8 +667,9 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $alternativeTitle = null;
         switch (true) {
             case isset($reviewAssignment):
+                $titles = [];
                 /***
-                 * The `getTranslationsByPrecedence` method, which is called further down, expect $titles be an assoc array where the key is the locale key and the value is the localized string for that locale.
+                 * The `getTranslationsByPrecedence` method, which is called further down, expects $titles to be an assoc array where the key is the locale key and the value is the localized string for that locale.
                  * Since reviews don't have localized titles/names available, manually go through each locale key and add an entry in the $title for that key.
                  */
                 foreach ($objectLocalePrecedence as $locale) {
@@ -677,6 +682,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                         $reviewRoundDao = DAORegistry::getDAO('ReviewRoundDAO');
                         /** @var ReviewRound $reviewRound */
                         $reviewRound = $reviewRoundDao->getById($reviewAssignment->getReviewRoundId());
+                        $cache->add($reviewRound, null);
                     }
 
                     // Get Revision Number (round of review)
@@ -696,7 +702,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
 
                     $reviewIds = array_map(fn (ReviewAssignment $ra) => $ra->getId(), $allReviewsInRound);
 
-                    // 2 - Find index of current review assignment within the sorted reviews for the round
+                    // 2 - Find index for the current review assignment within the sorted reviews for the round
                     $reviewNumber = array_search($reviewAssignment->getId(), $reviewIds) + 1;
 
                     // Translate locale using Locale::getBundle so that a `null` value is returned for missing locale

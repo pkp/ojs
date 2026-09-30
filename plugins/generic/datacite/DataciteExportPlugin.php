@@ -25,7 +25,6 @@ use PKP\config\Config;
 use PKP\context\Context;
 use PKP\core\DataObject;
 use PKP\core\PKPApplication;
-use PKP\db\DAORegistry;
 use PKP\doi\Doi;
 use PKP\file\FileManager;
 use PKP\file\TemporaryFileManager;
@@ -33,7 +32,6 @@ use PKP\galley\Galley;
 use PKP\plugins\Plugin;
 use PKP\submission\Representation;
 use PKP\submission\reviewAssignment\ReviewAssignment;
-use PKP\submission\reviewRound\ReviewRoundDAO;
 
 // DataCite API
 define('DATACITE_API_RESPONSE_OK', 201);
@@ -424,7 +422,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
      */
     public function _getObjectUrl($request, $context, $object)
     {
-        //Dispatcher needed when  called from CLI
+        //Dispatcher needed when called from CLI
         $dispatcher = $request->getDispatcher();
         // Retrieve the article of article files.
         if ($object instanceof Galley) {
@@ -449,11 +447,16 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
                 $url = $dispatcher->url($request, PKPApplication::ROUTE_PAGE, $context->getPath(), 'article', 'view', [$article->getBestId(), $object->getBestGalleyId()], null, null, true, '');
                 break;
             case $object instanceof ReviewAssignment:
-                /** @var ReviewRoundDAO $reviewRoundDao */
-                $reviewRoundDao = DAORegistry::getDAO('ReviewRoundDAO');
+                $articleId = $object->getSubmissionId();
+                $publication = Repo::publication()->get($articleId);
+                $cache = $this->getCache();
+                $article = null;
 
-                $reviewRound = $reviewRoundDao->getById($object->getReviewRoundId());
-                $publication = Repo::publication()->get($reviewRound->getData('publicationId'));
+                if ($cache->isCached('articles', $articleId)) {
+                    $article = $cache->get('articles', $articleId);
+                } else {
+                    $article = Repo::submission()->get($articleId);
+                }
 
                 $url = $dispatcher->url(
                     $request,
@@ -461,9 +464,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
                     $context->getPath(),
                     'article',
                     'view',
-                    [
-                        $publication->getData('urlPath') ?? $publication->getData('submissionId'),
-                    ],
+                    [$article->getBestId(), 'version', $publication->getId()],
                     [
                         'tab' => 'peer-review-record',
                         'reviewId' => $object->getId(),
