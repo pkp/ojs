@@ -27,6 +27,7 @@ use APP\submission\Submission;
 use DOMDocument;
 use DOMNode;
 use Exception;
+use PKP\affiliation\Affiliation;
 use PKP\author\contributorRole\ContributorRoleIdentifier;
 use PKP\author\contributorRole\ContributorType;
 use PKP\context\Context;
@@ -165,28 +166,9 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
 
             $doi = $reviewAssignment->getDoi();
 
-            if ($cache->isCached('reviewRounds', $pubObject->getReviewRoundId())) {
-                $reviewRound = $cache->get('reviewRounds', $pubObject->getReviewRoundId());
-            } else {
-                $reviewRoundId = $pubObject->getReviewRoundId();
-                $reviewRoundDao = DAORegistry::getDAO('ReviewRoundDAO');
-                /** @var ReviewRound $reviewRound */
-                $reviewRound = $reviewRoundDao->getById($reviewRoundId);
-
-                // Cache the review round
-                $cache->add($reviewRound, null);
-            }
-
-            $publicationId = $reviewRound->getPublicationId();
-            $publication = Repo::publication()->get($publicationId);
-
-            if ($cache->isCached('articles', $publication->getData('submissionId'))) {
-                $article = $cache->get('articles', $publication->getData('submissionId'));
-            } else {
-                $article = Repo::submission()->get($publication->getData('submissionId'));
-                if ($article) {
-                    $cache->add($article, null);
-                }
+            $article = Repo::submission()->get($reviewAssignment->getSubmissionId());
+            if ($article) {
+                $cache->add($article, null);
             }
         }
 
@@ -265,22 +247,25 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $rootNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'publicationYear', date('Y', strtotime($publicationDate))));
         // Subjects
         $subjects = [];
-        if (!empty($galleyFile) && !empty($genre) && $genre->getSupplementary()) {
-            $subjects = (array) $this->getPrimaryTranslation($galleyFile->getData('subject'), $objectLocalePrecedence);
-        } elseif (!empty($article) && !empty($publication)) {
-            $subjects = array_merge(
-                (array) $this->getPrimaryTranslation($publication->getData('keywords'), $objectLocalePrecedence),
-                (array) $this->getPrimaryTranslation($publication->getData('subjects'), $objectLocalePrecedence)
-            );
-        }
-        if (!empty($subjects)) {
-            $subjects = array_map(static fn ($s) => $s['name'], $subjects);
 
-            $subjectsNode = $doc->createElementNS($deployment->getNamespace(), 'subjects');
-            foreach ($subjects as $subject) {
-                $subjectsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'subject', htmlspecialchars($subject, ENT_COMPAT, 'UTF-8')));
+        if (!isset($reviewAssignment)) {
+            if (!empty($galleyFile) && !empty($genre) && $genre->getSupplementary()) {
+                $subjects = (array)$this->getPrimaryTranslation($galleyFile->getData('subject'), $objectLocalePrecedence);
+            } elseif (!empty($article) && !empty($publication)) {
+                $subjects = array_merge(
+                    (array)$this->getPrimaryTranslation($publication->getData('keywords'), $objectLocalePrecedence),
+                    (array)$this->getPrimaryTranslation($publication->getData('subjects'), $objectLocalePrecedence)
+                );
             }
-            $rootNode->appendChild($subjectsNode);
+            if (!empty($subjects)) {
+                $subjects = array_map(static fn ($s) => $s['name'], $subjects);
+
+                $subjectsNode = $doc->createElementNS($deployment->getNamespace(), 'subjects');
+                foreach ($subjects as $subject) {
+                    $subjectsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'subject', htmlspecialchars($subject, ENT_COMPAT, 'UTF-8')));
+                }
+                $rootNode->appendChild($subjectsNode);
+            }
         }
         // Contributors
         $contributorsNode = $this->createContributorsNode($doc, $publication);
@@ -343,15 +328,20 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
             $rootNode->appendChild($rightsNode);
         }
         // Descriptions
-        $descriptionsNode = $this->createDescriptionsNode($doc, $issue, $article, $publication, $galley, $galleyFile, $objectLocalePrecedence);
-        if ($descriptionsNode) {
+        if (!isset($reviewAssignment)) {
+            $descriptionsNode = $this->createDescriptionsNode($doc, $issue, $article, $publication, $galley, $galleyFile, $objectLocalePrecedence);
+        }
+        if (isset($descriptionsNode)) {
             $rootNode->appendChild($descriptionsNode);
         }
         // relatedItems
-        $relatedItemsNode = $this->createRelatedItemsNode($doc, $issue, $article, $publication, $publisher, $objectLocalePrecedence);
-        if ($relatedItemsNode) {
-            $rootNode->appendChild($relatedItemsNode);
+        if (!isset($reviewAssignment)) {
+            $relatedItemsNode = $this->createRelatedItemsNode($doc, $issue, $article, $publication, $publisher, $objectLocalePrecedence);
+            if ($relatedItemsNode) {
+                $rootNode->appendChild($relatedItemsNode);
+            }
         }
+
         // Funding references
         $fundingReferencesNode = $this->createFundingReferencesNode($doc, $publication, $article);
         if ($fundingReferencesNode) {
@@ -412,6 +402,9 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                     $affiliations = $affiliation ? [$affiliation] : null;
                     $orcid = $reviewer->getData('orcidIsVerified') ? $reviewer->getData('orcid') : null;
                 } else {
+                    // DataCite has no concept of an anonymous creator; use its
+                    // controlled value for "known to be unknown" instead.
+                    // https://datacite-metadata-schema.readthedocs.io/en/4.6/appendices/appendix-3/
                     $name = DATACITE_UNKNOWN_ANONYMOUS;
                 }
 
@@ -449,7 +442,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                     // https://datacite-metadata-schema.readthedocs.io/en/4.6/appendices/appendix-3/
                     if ($contributorType === ContributorType::ANONYMOUS->getName()) {
                         $creators[] = [
-                            'name' => ':unkn',
+                            'name' => DATACITE_UNKNOWN_ANONYMOUS,
                         ];
                     } elseif ($contributorType === ContributorType::ORGANIZATION->getName()) {
                         $creators[] = [
@@ -473,7 +466,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                     // fall back to its controlled value for "value unavailable, unknown, or not applicable".
                     // https://datacite-metadata-schema.readthedocs.io/en/4.6/appendices/appendix-3/
                     $creators[] = [
-                        'name' => ':unav',
+                        'name' => DATACITE_UNKNOWN_ANONYMOUS,
                     ];
                 }
                 break;
@@ -519,7 +512,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                     }
                     $node = $doc->createElementNS($deployment->getNamespace(), 'affiliation');
 
-                    if (!isset($reviewAssignment)) {
+                    if ($affiliation instanceof Affiliation) {
                         $ror = $affiliation->getRor();
 
                         if ($ror) {
@@ -668,46 +661,41 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $alternativeTitle = null;
         switch (true) {
             case isset($reviewAssignment):
-                /***
-                 * The `getTranslationsByPrecedence` method, which is called further down, expect $titles be an assoc array where the key is the locale key and the value is the localized string for that locale.
+                $titles = [];
+                $cache = $plugin->getCache();
+                $reviewRound = null;
+
+                if ($cache->isCached('reviewRounds', $reviewAssignment->getReviewRoundId())) {
+                    $reviewRound = $cache->get('reviewRounds', $reviewAssignment->getReviewRoundId());
+                } else {
+                    $reviewRoundDao = DAORegistry::getDAO('ReviewRoundDAO');
+                    /** @var ReviewRound $reviewRound */
+                    $reviewRound = $reviewRoundDao->getById($reviewAssignment->getReviewRoundId());
+                    $cache->add($reviewRound, null);
+                }
+
+                // Get all reviews in the round
+                $allReviewsInRound = Repo::reviewAssignment()
+                    ->getCollector()
+                    ->filterByReviewRoundIds([$reviewRound->getId()])
+                    ->filterByIsPubliclyVisible(true)
+                    ->filterByIsConfirmedByEditor(true)
+                    ->getMany()
+                    ->all();
+
+                /**
+                 * The `getTranslationsByPrecedence` method, which is called further down, expects $titles to be an assoc array where the key is the locale key and the value is the localized string for that locale.
                  * Since reviews don't have localized titles/names available, manually go through each locale key and add an entry in the $title for that key.
                  */
                 foreach ($objectLocalePrecedence as $locale) {
-                    $cache = $plugin->getCache();
-                    $reviewRound = null;
-
-                    if ($cache->get('reviewRounds', $reviewAssignment->getReviewRoundId())) {
-                        $reviewRound = $cache->get('reviewRounds', $reviewAssignment->getReviewRoundId());
-                    } else {
-                        $reviewRoundDao = DAORegistry::getDAO('ReviewRoundDAO');
-                        /** @var ReviewRound $reviewRound */
-                        $reviewRound = $reviewRoundDao->getById($reviewAssignment->getReviewRoundId());
-                    }
-
                     // Get Revision Number (round of review)
                     $revisionNumber = $reviewRound->getRound();
-
-                    /** Get Review Number (position of the review assignment within the round) */
-                    // 1 - Get all reviews in the round
-                    $allReviewsInRound = Repo::reviewAssignment()
-                        ->getCollector()
-                        ->filterByReviewRoundIds([$reviewRound->getId()])
-                        ->filterByIsPubliclyVisible(true)
-                        ->filterByIsConfirmedByEditor(true)
-                        ->getMany()
-                        ->all();
-
-                    usort($allReviewsInRound, fn (ReviewAssignment $a, ReviewAssignment $b) => strtotime($a->getDateCompleted()) <=> strtotime($b->getDateCompleted()));
-
-                    $reviewIds = array_map(fn (ReviewAssignment $ra) => $ra->getId(), $allReviewsInRound);
-
-                    // 2 - Find index of current review assignment within the sorted reviews for the round
-                    $reviewNumber = array_search($reviewAssignment->getId(), $reviewIds) + 1;
+                    $reviewNumber = Repo::reviewAssignment()->getReviewPositionInRound($reviewAssignment, $allReviewsInRound);
 
                     // Translate locale using Locale::getBundle so that a `null` value is returned for missing locale
-                    // instead of the ##locale.key format
+                    // instead of the ##locale.key## format
                     $title = Locale::getBundle($locale)
-                        ->translateSingular('plugins.generic.dataCite.reviewTitle', [
+                        ->translateSingular('submission.doi.review.title', [
                             'publicationTitle' => $publication->getLocalizedTitle($locale),
                             'revisionNumber' => $revisionNumber,
                             'reviewNumber' => $reviewNumber,
@@ -769,13 +757,18 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $dates = [];
         switch (true) {
             case isset($reviewAssignment):
-                // Submitted date (for review assignments): date completed
+                // Submitted date (for review assignments): date completed by reviewer
                 $dateCompleted = $reviewAssignment->getDateCompleted();
                 $dates[DATACITE_DATE_SUBMITTED] = $dateCompleted;
 
-                // Accepted date (for review assignment): date considered (date editor confirmed the review)
-                $dateConsidered = $reviewAssignment->getDateConsidered();
-                $dates[DATACITE_DATE_ACCEPTED] = $dateConsidered;
+                // Accepted date (for review assignment): date editor considered/acknowledged the review
+                $dateAccepted = $reviewAssignment->getDateConsidered() ?: $reviewAssignment->getDateAcknowledged();
+
+                if (!$dateAccepted) {
+                    throw new Exception('DataCite export: cannot export review assignment ' . $reviewAssignment->getId() . ' because it was never confirmed by an editor.');
+                }
+
+                $dates[DATACITE_DATE_ACCEPTED] = $dateAccepted;
 
                 // Last modified date (for review assignments): last modified date.
                 $lastModified = $reviewAssignment->getLastModified();
@@ -960,7 +953,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                 // Reviews: publication/article
                 $publicationDoi = $publication->getDoi();
 
-                if (!empty($publicationDoi)) {
+                if ($publicationDoi) {
                     $relatedIdentifiersNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'relatedIdentifier', htmlspecialchars($publicationDoi, ENT_COMPAT, 'UTF-8')));
                     $node->setAttribute('relatedIdentifierType', DATACITE_IDTYPE_DOI);
                     $node->setAttribute('relationType', DATACITE_RELTYPE_REVIEWS);
