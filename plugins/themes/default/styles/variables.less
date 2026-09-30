@@ -21,14 +21,24 @@
 // Primary "anchor" color for links
 @primary:                #006798;
 @primary-lift:           lighten(@primary, 10%);
+// WCAG 2.1 AAA (1.4.6) reader links on @bg/@bg-shade — pkp-lib#12661
+@a11y-link:              #00466a;
+@a11y-link-hover:        #003d5c;
 
 // Yes/no, success/error, on/off, go/stop, etc. Typically green and red.
 @yes:                    #00b24e;
 @no:                     #ff4040;
+// WCAG 2.1 AAA (1.4.6) error fill with white text — pkp-lib#12661 (~7.85:1)
+@a11y-error:             #a31515;
+@a11y-text-on-error:     #fff;
 
 // Text
 @text:                   rgba(0,0,0,0.87);
 @text-light:             rgba(0,0,0,0.54);
+// WCAG 2.1 AAA (1.4.6) on @bg — pkp-lib#12661; opaque equivalent to ~rgba(0,0,0,0.66)
+@a11y-text-light:        #575757;
+// WCAG AAA on @bg-shade (e.g. disabled controls)
+@a11y-text-light-on-shade: #454545;
 @text-bg-base:           #fff;
 
 // Border colors
