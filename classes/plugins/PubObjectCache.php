@@ -35,7 +35,7 @@ class PubObjectCache
     /**
      * Add a publishing object to the cache.
      *
-     * @param Issue|Submission|Galley|Genre $object
+     * @param Issue|Submission|Galley|Genre|ReviewRound|ReviewAssignment $object
      * @param Submission|null $parent Only required when adding a galley.
      */
     public function add($object, $parent)
