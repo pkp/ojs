@@ -1,0 +1,82 @@
+# Komronbek Tufliyev <komronbek773@gmail.com>, 2024.
+# Shoyim Obloqulov <obloqulovshoyim1@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-01-30 11:06+0000\n"
+"Last-Translator: Komronbek Tufliyev <komronbek773@gmail.com>\n"
+"Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/api/uz/>\n"
+"Language: uz@cyrillic\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "Сиз сўраган эълон ушбу журналнинг бир қисми эмас."
+
+msgid "api.emails.403.disabled"
+msgstr "Бу журнал учун электрон почта хабарномаси функцияси ёқилмаган."
+
+msgid "api.submissions.400.wrongContext"
+msgstr "Сиз сўраган сўров ушбу журналда йўқ."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Сиз топшириш (submission) журналини ўзгартира олмайсиз."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Сизда чоп этилмаган нашрларни кўриш учун рухсат йўқ."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Сиз фақат ёқилган (enabled) журналларни кўришингиз мумкин."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Сизда бу журнални кўриш учун рухсат йўқ."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Журнал API ёки бутун сайт API га сўров юбормагунингизча ушбу журнални "
+"кўра олмайсиз ёки таҳрирлай олмайсиз."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Сиз ушбу журнални бутун сайт API'сидан таҳрирлай олмайсиз."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Сизда бу журнални таҳрирлаш учун рухсат йўқ."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Сизда бу журнални ўчиришга рухсатингиз йўқ."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Сиз сўраган журнал топилмади."
+
+msgid "api.dois.403.contextsNotMatched"
+msgstr "Сиз сўраган DOI ушбу журналнинг бир қисми эмас."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "Ушбу журнал учун DOI рўйхатга олиш агентлиги созланмаган."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Баъзи элементлар муваффақиятли топширилмади. Илтимос, алоҳида "
+"элементларнинг хато хабарларини текширинг."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"Ушбу электрон почта шаблонини бошқа журналга кўчиришга рухсатингиз "
+"йўқ."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Сиз танлаган тўлов усули қўллаб-қувватланмайди."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Сиз сўраган нашр ушбу журналнинг бир қисми эмас."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Сиз сўраган нашр ушбу юбориш (submission)нинг бир қисми эмас."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Ушбу файл босқичидаги файлни galley билан боғлай олмайсиз."
+
+msgid "api.submission.400.inactiveSection"
+msgstr "Бу бўлим энди юбормаларни қабул қилмаяпти."
