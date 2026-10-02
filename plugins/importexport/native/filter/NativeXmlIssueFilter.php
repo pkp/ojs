@@ -152,6 +152,10 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
                     }
                     break;
                 case 'articles':
+                    if (!$processOnlyChildren) {
+                        // Persist the issue identity first, so its articles can inherit it
+                        Repo::issue()->edit($issue, []);
+                    }
                     $this->parseArticles($n, $issue);
                     break;
                 case 'issue_galleys':
@@ -171,6 +175,41 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
                 case 'issue_identification':
                     if (!$processOnlyChildren) {
                         $this->parseIssueIdentification($n, $issue);
+                    }
+                    break;
+                case 'contextName':
+                case 'contextAbbreviation':
+                    if (!$processOnlyChildren) {
+                        [$locale, $value] = $this->parseLocalizedContent($n);
+                        if (empty($locale)) {
+                            $locale = $context->getPrimaryLocale();
+                        }
+                        $issue->setData($n->tagName, $value, $locale);
+                    }
+                    break;
+                case 'contextPrimaryLocale':
+                    if (!$processOnlyChildren) {
+                        $issue->setData('contextPrimaryLocale', $n->textContent);
+                    }
+                    break;
+                case 'onlineIssn':
+                    if (!$processOnlyChildren) {
+                        $issue->setData('onlineIssn', $n->textContent);
+                    }
+                    break;
+                case 'printIssn':
+                    if (!$processOnlyChildren) {
+                        $issue->setData('printIssn', $n->textContent);
+                    }
+                    break;
+                case 'publisher':
+                    if (!$processOnlyChildren) {
+                        $issue->setData('publisher', $n->textContent);
+                    }
+                    break;
+                case 'publisherLocation':
+                    if (!$processOnlyChildren) {
+                        $issue->setData('publisherLocation', $n->textContent);
                     }
                     break;
                 default:
