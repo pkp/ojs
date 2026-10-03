@@ -12,6 +12,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.18.2\n"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "Журналды DOAJ үчүн экспорттоо."
 
@@ -39,6 +40,7 @@ msgstr "DOAJ экспорт плагини"
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "DOAJ менен байланышып, кошуу өтүнүчүн жөнөтүү"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "Эгер макалаларды OJS ичинен каттоону кааласаңыз, DOAJ API ачкычыңызды "

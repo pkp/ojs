@@ -18,12 +18,14 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "Wtyczka eksportu DOAJ"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "Eksportuj czasopismo do DOAJ."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Skontaktuj się z DOAJ, aby włączyć czasopismo do bazy"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "Jeśli chciałbyś(abyś) zarejestrować artykuły z OJS, włącz swój klucz API "

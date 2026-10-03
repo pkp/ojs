@@ -18,12 +18,14 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "إضافة التصدير DOAJ"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "تصدير المجلة إلى DOAJ."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "عنوان اتصال DOAJ لأغراض التضمين"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr "إذا رغبت بتسجيل المقالات من داخل نظام المجلات المفتوحة، لطفاً، أدخل مفتاح واجهة التطبيق لـ DOAJ. بخلاف ذلك، لا يزال بإمكانك التصدير بصيغة DOAJ XML ولكن بدون تسجيل مقالاتك في DOAJ مباشرة من نظام المجلات المفتوحة."
 

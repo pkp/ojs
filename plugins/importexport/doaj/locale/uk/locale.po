@@ -19,12 +19,14 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "Плагін експорту DOAJ"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "Експортувати журнал у DOAJ."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Контактувати з DOAJ щодо включення"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr "Якщо ви хочете зареєструвати статті одразу з OJS, будь ласка, введіть свій ключ API DOAJ. Якщо у вас немає ключа API DOAJ, ви все одно зможете експортувати в DOAJ XML, але ви не можете зареєструвати свої DOI в DOAJ з OJS."
 
