@@ -93,3 +93,6 @@ msgstr "DataCite"
 
 msgid "plugins.generic.datacite.deposit.unsuccessful"
 msgstr "Registration was not successful! Please check your configuration and try again."
+
+msgid "plugins.generic.dataCite.reviewTitle"
+msgstr "Review: {$publicationTitle} (Round{$revisionNumber}/Review{$reviewNumber})"
