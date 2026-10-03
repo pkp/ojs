@@ -44,9 +44,11 @@ msgstr ""
 "{$scriptName} {$pluginName} transfer edin [xmlFileName] [journal_path] "
 "articles objectId1 [objectId2] ...\n"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "Jurnalı DOAJ üçün ixrac edin."
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "Əgər məqalələri OJS içindən birbaşa yadda saxlamaq istəyirsinizsə, zəhmət "

@@ -19,12 +19,14 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "DOAJ Export Plugin"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "Exporteer het tijdschrift voor DOAJ."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Neem contact op met de DOAJ voor opname"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "Registreer uw DOAJ API sleutel om artikelen te registreren via OJS. Zoniet "
@@ -37,6 +39,7 @@ msgstr "DOAJ API sleutel"
 msgid "plugins.importexport.doaj.settings.form.apiKey.description"
 msgstr "U vindt uw API sleutel op uw DOAJ gebruikerspagina."
 
+#, fuzzy
 msgid "plugins.importexport.doaj.settings.form.automaticRegistration.description"
 msgstr ""
 "OJS zal artikelen na publicatie automatisch deponeren bij DOAJ. Dit kan even "
