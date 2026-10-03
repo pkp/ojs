@@ -15,12 +15,14 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "\"Doaj экспорттау\" модулі"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "DOAJ жүйесіне журналды экспорттайды."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Журналды қосу үшін DOAJ-бен хабарласыңыз"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "Егер сіз мақалаларды тікелей OJS-тен тіркегіңіз келсе, DOAJ API кілтін "

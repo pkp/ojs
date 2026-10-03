@@ -16,12 +16,14 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "Плъгин за DOAJ експорт"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "Експорт на списание за DOAJ."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Свържете се с DOAJ за включване"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "Ако искате да регистрирате статии от OJS, моля, въведете своя DOAJ API ключ. "

@@ -14,12 +14,14 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "گرێدانی هەناردەی DOAJ"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "هەناردەکردنی گۆڤار بۆ DOAJ"
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "ناونیشانی پەیوەندیکردن بە DOAJ بەمەبەستی بونە ئەندام"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "ئەگەر دەتەوێت توێژینەوە تۆمار بکەیت لە چوارچێوەی سیستەمی گۆڤاری کراوە، تکایە "

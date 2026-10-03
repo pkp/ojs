@@ -18,12 +18,14 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "Plugin di esportazione per DOAJ"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "Esporta i metadati degli articoli e della rivista per DOAJ."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Suggerisci la rivista a DOAJ"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "Se vuoi registrare gli articoli da OJS, inserisci la tua DOAJ API key. "
