@@ -22,6 +22,7 @@ use APP\issue\Issue;
 use APP\issue\IssueGalleyDAO;
 use APP\plugins\generic\datacite\DataciteExportDeployment;
 use APP\plugins\generic\datacite\DataciteExportPlugin;
+use APP\publication\enums\VersionStage;
 use APP\publication\Publication;
 use APP\submission\Submission;
 use DOMDocument;
@@ -94,7 +95,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
     /**
      * @see Filter::process()
      *
-     * @param Issue|Submission|Galley $pubObject
+     * @param Issue|Publication|Galley $pubObject
      *
      */
     public function &process(&$pubObject): DOMDocument
@@ -111,19 +112,25 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $cache = $plugin->getCache();
 
         // Get all objects
-        $issue = $article = $galley = $galleyFile = $doi = null;
+        $issue = $article = $publication = $galley = $galleyFile = $doi = null;
+
         if ($pubObject instanceof Issue) {
             $issue = $pubObject;
             if (!$cache->isCached('issues', $issue->getId())) {
                 $cache->add($issue, null);
             }
             $doi = $issue->getDoi();
-        } elseif ($pubObject instanceof Submission) {
-            $article = $pubObject;
-            if (!$cache->isCached('articles', $article->getId())) {
-                $cache->add($article, null);
+        } elseif ($pubObject instanceof Publication) {
+            $publication = $pubObject;
+            if ($cache->isCached('articles', $publication->getData('submissionId'))) {
+                $article = $cache->get('articles', $publication->getData('submissionId'));
+            } else {
+                $article = Repo::submission()->get($publication->getData('submissionId'));
+                if ($article) {
+                    $cache->add($article, null);
+                }
             }
-            $doi = $article->getCurrentPublication()->getDoi();
+            $doi = $publication->getDoi();
         } elseif ($pubObject instanceof Galley) {
             $galley = $pubObject;
             $galleyFile = Repo::submissionFile()->get($galley->getData('submissionFileId'));
@@ -150,8 +157,9 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
             }
             $doi = $galley->getDoi();
         }
+
         if (!$issue) {
-            $issueId = $article->getCurrentPublication()->getData('issueId');
+            $issueId = $publication->getData('issueId');
             if ($issueId) {
                 if ($cache->isCached('issues', $issueId)) {
                     $issue = $cache->get('issues', $issueId);
@@ -163,9 +171,6 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                 }
             }
         }
-
-        // Get the most recently published version
-        $publication = $article ? $article->getCurrentPublication() : null;
 
         // Identify the object locale.
         $objectLocalePrecedence = $this->getObjectLocalePrecedence($context, $article, $publication, $galley);
@@ -230,7 +235,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         // Language
         $rootNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'language', LocaleConversion::toBcp47($objectLocalePrecedence[0])));
         // Resource Type
-        $resourceTypeNode = $this->createResourceTypeNode($doc, $issue, $article, $galley, $galleyFile);
+        $resourceTypeNode = $this->createResourceTypeNode($doc, $issue, $article, $publication, $galley, $galleyFile);
         if ($resourceTypeNode) {
             $rootNode->appendChild($resourceTypeNode);
         }
@@ -253,6 +258,19 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                 $formatsNode = $doc->createElementNS($deployment->getNamespace(), 'formats');
                 $formatsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'format', htmlspecialchars($format, ENT_COMPAT, 'UTF-8')));
                 $rootNode->appendChild($formatsNode);
+            }
+        }
+        // Version
+        if ($pubObject instanceof Publication && $publication->getData('versionStage')) {
+            $versionMajor = $publication->getData('versionMajor');
+            $versionMinor = $publication->getData('versionMinor');
+            $version = null;
+            if ($versionMajor !== null) {
+                $version = $versionMajor . '.' . ($versionMinor ?? 0);
+            }
+
+            if ($version) {
+                $rootNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'version', $version));
             }
         }
         // Rights
@@ -669,7 +687,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
     /**
      * Create a resource type node.
      */
-    public function createResourceTypeNode(DOMDocument $doc, ?Issue $issue, ?Submission $article, ?Galley $galley, ?SubmissionFile $galleyFile): DOMNode
+    public function createResourceTypeNode(DOMDocument $doc, ?Issue $issue, ?Submission $article, ?Publication $publication, ?Galley $galley, ?SubmissionFile $galleyFile): DOMNode
     {
         /** @var DataciteExportDeployment $deployment */
         $deployment = $this->getDeployment();
@@ -698,8 +716,13 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         }
         if ($resourceType == 'Article') {
             // Create the resourceType element for Article and Galley.
+            // The version stage distinguishes preprints from journal articles
             $resourceTypeNode = $doc->createElementNS($deployment->getNamespace(), 'resourceType');
-            $resourceTypeNode->setAttribute('resourceTypeGeneral', 'JournalArticle');
+            $resourceTypeNode->setAttribute('resourceTypeGeneral', $this->isPreprint($publication) ? 'Preprint' : 'JournalArticle');
+            $stage = VersionStage::tryFrom($publication->getData('versionStage'));
+            if ($stage) {
+                $resourceTypeNode->appendChild($doc->createTextNode($stage->label('en')));
+            }
         } elseif ($resourceType == 'Journal Issue') {
             $resourceTypeNode = $doc->createElementNS($deployment->getNamespace(), 'resourceType', $resourceType);
             $resourceTypeNode->setAttribute('resourceTypeGeneral', 'Text');
@@ -786,6 +809,16 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                         $node->setAttribute('relationType', DATACITE_RELTYPE_HASPART);
                     }
                     unset($relatedGalley, $doi);
+                }
+                // Versions: link to the previous version DOI with relationType "IsNewVersionOf" if versioning is enabled.
+                $context = $deployment->getContext();
+                if ($context->getData(Context::SETTING_DOI_VERSIONING)) {
+                    $versionRelation = Repo::publication()->getVersionRelation($publication, $article, $context);
+                    if ($versionRelation?->doi) {
+                        $relatedIdentifiersNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'relatedIdentifier', htmlspecialchars($versionRelation->doi, ENT_COMPAT, 'UTF-8')));
+                        $node->setAttribute('relatedIdentifierType', DATACITE_IDTYPE_DOI);
+                        $node->setAttribute('relationType', DATACITE_RELTYPE_ISNEWVERSIONOF);
+                    }
                 }
                 // Data citations.
                 foreach ($publication->getData('dataCitations') ?? [] as $dataCitation) {
@@ -1088,6 +1121,14 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
             $titlesNode->appendChild($titleNode);
             $relatedItemNode->appendChild($titlesNode);
 
+            // A preprint is published in the journal but not in an issue,
+            // so it has no volume, issue, article number or pages
+            // Therefore return the relatedItems node now
+            if ($this->isPreprint($publication)) {
+                $relatedItemsNode->appendChild($relatedItemNode);
+                return $relatedItemsNode;
+            }
+
             if ($issue) {
                 if ($issue->getVolume()) {
                     $relatedItemNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'volume', $issue->getVolume()));
@@ -1138,6 +1179,22 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
     //
     // Helper functions
     //
+    /**
+     * Check if a publication is a preprint
+     *
+     * @param Publication|null $publication The publication to check
+     *
+     * @return bool True if the publication is a preprint, false otherwise
+     */
+    public function isPreprint(?Publication $publication): bool
+    {
+        return in_array(
+            VersionStage::tryFrom($publication?->getData('versionStage')),
+            [VersionStage::AUTHOR_ORIGINAL, VersionStage::PUBLISHED_MANUSCRIPT_UNDER_REVIEW],
+            true
+        );
+    }
+
     /**
      * Identify the locale precedence for this export.
      *

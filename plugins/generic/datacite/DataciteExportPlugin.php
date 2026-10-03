@@ -19,7 +19,7 @@ use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\plugins\DOIPubIdExportPlugin;
 use APP\plugins\IDoiRegistrationAgency;
-use APP\submission\Submission;
+use APP\publication\Publication;
 use Exception;
 use PKP\config\Config;
 use PKP\context\Context;
@@ -90,11 +90,11 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
     }
 
     /**
-     * @copydoc PubObjectsExportPlugin::getSubmissionFilter()
+     * @copydoc PubObjectsExportPlugin::getPublicationFilter()
      */
-    public function getSubmissionFilter()
+    public function getPublicationFilter(): ?string
     {
-        return 'article=>datacite-xml';
+        return 'publication=>datacite-xml';
     }
 
     /**
@@ -264,11 +264,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
 
         $request = Application::get()->getRequest();
         // Get the DOI and the URL for the object.
-        if ($object instanceof Submission) {
-            $doi = $object->getCurrentPublication()->getDoi();
-        } else {
-            $doi = $object->getDoi();
-        }
+        $doi = $object->getDoi();
         if (empty($doi)) {
             throw new Exception('DataCite export: no DOI assigned to the object being deposited.');
         }
@@ -342,13 +338,10 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
     /**
      * Update stored DOI status based on if deposits and registration have been successful
      *
-     * @param Submission|Issue|Representation $object
+     * @param Publication|Issue|Representation $object
      */
     public function updateDepositStatus(DataObject $object, string $status, ?string $failedMsg = null)
     {
-        if ($object instanceof Submission) {
-            $object = $object->getCurrentPublication();
-        }
         $doiObject = $object->getData('doiObject');
         $editParams = [
             'status' => $status,
@@ -412,15 +405,15 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
      *
      * @param \APP\core\Request $request
      * @param \PKP\context\Context $context
-     * @param \APP\issue\Issue|\APP\submission\Submission|\PKP\galley\Galley $object
+     * @param \APP\issue\Issue|\APP\publication\Publication|\PKP\galley\Galley $object
      */
     public function _getObjectUrl($request, $context, $object)
     {
         //Dispatcher needed when  called from CLI
         $dispatcher = $request->getDispatcher();
-        // Retrieve the article of article files.
-        if ($object instanceof Galley) {
-            $publication = Repo::publication()->get($object->getData('publicationId'));
+        // Retrieve the article for publications and galleys, needed for url's.
+        if ($object instanceof Publication || $object instanceof Galley) {
+            $publication = $object instanceof Publication ? $object : Repo::publication()->get($object->getData('publicationId'));
             $articleId = $publication->getData('submissionId');
             $cache = $this->getCache();
             if ($cache->isCached('articles', $articleId)) {
@@ -434,11 +427,19 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
             case $object instanceof Issue:
                 $url = $dispatcher->url($request, PKPApplication::ROUTE_PAGE, $context->getPath(), 'issue', 'view', [$object->getBestIssueId()], null, null, true, '');
                 break;
-            case $object instanceof Submission:
-                $url = $dispatcher->url($request, PKPApplication::ROUTE_PAGE, $context->getPath(), 'article', 'view', [$object->getBestId()], null, null, true, '');
+            case $object instanceof Publication:
+                if ($context->getData(Context::SETTING_DOI_VERSIONING)) {
+                    $url = $dispatcher->url($request, PKPApplication::ROUTE_PAGE, $context->getPath(), 'article', 'view', [$article->getBestId(), 'version', $object->getId()], null, null, true, '');
+                } else {
+                    $url = $dispatcher->url($request, PKPApplication::ROUTE_PAGE, $context->getPath(), 'article', 'view', [$article->getBestId()], null, null, true, '');
+                }
                 break;
             case $object instanceof Galley:
-                $url = $dispatcher->url($request, PKPApplication::ROUTE_PAGE, $context->getPath(), 'article', 'view', [$article->getBestId(), $object->getBestGalleyId()], null, null, true, '');
+                if ($context->getData(Context::SETTING_DOI_VERSIONING)) {
+                    $url = $dispatcher->url($request, PKPApplication::ROUTE_PAGE, $context->getPath(), 'article', 'view', [$article->getBestId(), 'version', $publication->getId(), $object->getBestGalleyId()], null, null, true, '');
+                } else {
+                    $url = $dispatcher->url($request, PKPApplication::ROUTE_PAGE, $context->getPath(), 'article', 'view', [$article->getBestId(), $object->getBestGalleyId()], null, null, true, '');
+                }
                 break;
         }
         if ($this->isTestMode($context)) {
@@ -449,13 +450,13 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
     }
 
     /**
-     * @param Submission|Issue|Representation $object
+     * @param Publication|Issue|Representation $object
      *
      */
     private function _getFilterFromObject(DataObject $object): string
     {
-        if ($object instanceof Submission) {
-            return $this->getSubmissionFilter();
+        if ($object instanceof Publication) {
+            return $this->getPublicationFilter();
         } elseif ($object instanceof Issue) {
             return $this->getIssueFilter();
         } elseif ($object instanceof Representation) {
@@ -466,13 +467,14 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
     }
 
     /**
-     * @param Submission|Issue|Representation $object
+     * @param Publication|Issue|Representation $object
      *
      */
     private function _getObjectFileNamePart(DataObject $object): string
     {
-        if ($object instanceof Submission) {
-            return 'articles-' . $object->getId();
+        if ($object instanceof Publication) {
+            // publicationIds are needed to avoid name collision
+            return 'articles-' . $object->getData('submissionId') . '-' . $object->getId();
         } elseif ($object instanceof Issue) {
             return 'issues-' . $object->getId();
         } elseif ($object instanceof Representation) {
