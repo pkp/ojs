@@ -17,12 +17,14 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "DOAJ-Export-Plugin"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "Zeitschrift für DOAJ exportieren."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Kontaktieren Sie DOAJ zur Aufnahme"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr "Wenn Sie Artikel aus OJS heraus registrieren möchten, geben Sie bitte Ihren DOAJ-API-Key ein. Ansonsten können Sie immer noch Metadaten in das DOAJ-XML-Format exportieren, aber keine Artikel aus OJS bei DOAJ registrieren."
 

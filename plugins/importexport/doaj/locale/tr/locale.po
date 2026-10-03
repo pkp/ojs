@@ -17,12 +17,14 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "DOAJ Aktarma Eklentisi"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "Dergiyi DOAJ için dışa aktar."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Katılım için DOAJ ile iletişime geç"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "Eğer makaleleri  OJS içinden doğrudan kaydetmek istiyorsanız, lütfen DOAJ "

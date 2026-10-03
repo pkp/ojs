@@ -17,12 +17,14 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "DOAJ Export Plugin"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "Folyóirat exportálása DOAJ-ba."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Lépjen kapcsolatba a DOAJ a bekerülés érdekében"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr "Ha cikkeket szeretne regisztrálni a OJS-en belülről, kérjük, írja be a DOAJ API kulcsát. Egyébként Ön továbbra is képes lesz exportálni a DOAJ XML formátumba, de nem tud regisztrálni cikkeket a DOAJ-ba az OJS-en belülről."
 

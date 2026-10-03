@@ -13,12 +13,14 @@ msgstr ""
 "19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
 "X-Generator: Weblate 4.18.2\n"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "Eksportēt žurnālu DOAJ."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Sazināties ar DOAJ par iekļaušanu"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "Ja vēlaties reģistrēt rakstus no OJS, lūdzu, ievadiet savu DOAJ API atslēgu. "
