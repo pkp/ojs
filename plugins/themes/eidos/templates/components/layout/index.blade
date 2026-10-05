@@ -53,16 +53,18 @@ This is the layout used for most pages on the site.
 
 <body
     {{
-        $attributes->merge([
-            'class' => join(' ', [
-                join(' ', $bodyClasses),
-                'site-width-' . $activeTheme->getOption('siteWidth'),
-                'font-' . ($usesCustomFonts ? $activeTheme->getOption('font') : 'default'),
-                'font-titles-' . ($usesCustomFonts ? $activeTheme->getOption('titlesFont') : 'default'),
-                'font-actions-' . ($usesCustomFonts ? $activeTheme->getOption('actionsFont') : 'default'),
-            ]),
-            'dir' => $currentLocaleLangDir ?? 'ltr',
-        ])
+        $attributes
+            ->filter(fn(string $v, string $k) => !in_array($k, ['title', 'description']))
+            ->merge([
+                'class' => join(' ', [
+                    join(' ', $bodyClasses),
+                    'site-width-' . $activeTheme->getOption('siteWidth'),
+                    'font-' . ($usesCustomFonts ? $activeTheme->getOption('font') : 'default'),
+                    'font-titles-' . ($usesCustomFonts ? $activeTheme->getOption('titlesFont') : 'default'),
+                    'font-actions-' . ($usesCustomFonts ? $activeTheme->getOption('actionsFont') : 'default'),
+                ]),
+                'dir' => $currentLocaleLangDir ?? 'ltr',
+            ])
     }}
 >
     <x-header.skip-links>
