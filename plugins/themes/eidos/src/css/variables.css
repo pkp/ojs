@@ -1,9 +1,9 @@
 :root {
   --color-background: #FDFBF7;
-  --color-primary: #22252A;
-  --color-secondary: #22252A;
-  --color-text: rgba(0, 0, 0, 0.85);
-  --color-text-on-primary: white;
+  --color-primary: #F4F1EA;
+  --color-secondary: #2B2B2A;
+  --color-text: #2B2B2A;
+  --color-text-on-primary: #2B2B2A;
   --color-error: #c00;
 
   --color-header-background: var(--color-primary);
