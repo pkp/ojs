@@ -26,12 +26,17 @@ namespace APP\issue;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
+use APP\journal\Journal;
+use APP\publication\HasContextIdentityMetadata;
 use PKP\core\Core;
 use PKP\facades\Locale;
+use PKP\plugins\PluginRegistry;
 use PKP\publication\PKPPublication;
 
 class Issue extends \PKP\core\DataObject
 {
+    use HasContextIdentityMetadata;
+
     public const ISSUE_ACCESS_OPEN = 1;
     public const ISSUE_ACCESS_SUBSCRIPTION = 2;
 
@@ -708,5 +713,24 @@ class Issue extends \PKP\core\DataObject
     public function getUIDisplayString()
     {
         return __('plugins.importexport.issue.cli.display', ['issueId' => $this->getId(), 'issueIdentification' => $this->getIssueIdentification()]);
+    }
+
+    /**
+     * Stamp the journal's current identity metadata. The publisher location is taken from the
+     * CSL plugin settings if that plugin is enabled, and cleared otherwise.
+     */
+    public function stampContextIdentity(Journal $context): void
+    {
+        $this->setData('contextName', array_filter((array) $context->getName()) ?: null);
+        $this->setData('contextAbbreviation', $context->getAbbreviationOrAcronym());
+        $this->setData('contextPrimaryLocale', $context->getPrimaryLocale());
+        $this->setData('printIssn', $context->getData('printIssn'));
+        $this->setData('onlineIssn', $context->getData('onlineIssn'));
+        $this->setData('publisher', $context->getData('publisherInstitution'));
+
+        // Always set, so a re-stamp does not keep an old location when CSL provides none
+        $cslPlugin = PluginRegistry::getPlugin('generic', 'citationstylelanguageplugin');
+        $publisherLocation = $cslPlugin?->getEnabled($context->getId()) ? $cslPlugin->getSetting($context->getId(), 'publisherLocation') : null;
+        $this->setData('publisherLocation', $publisherLocation ?: null);
     }
 }
