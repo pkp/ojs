@@ -82,8 +82,8 @@
   }
 
   & .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 1rem;
-    transform: translateY(-50);
+    bottom: 2rem;
+    transform: translateY(50%);
   }
 }
 
