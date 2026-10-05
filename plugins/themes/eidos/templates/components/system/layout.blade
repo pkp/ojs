@@ -13,7 +13,7 @@ and registration, error messages, etc.
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ $pageTitle }}</title>
+    <title>{{ $title . __('common.titleSeparator') . $contextName }}</title>
     @if ($description)
         <meta name="description" content="{{ ViewHelper::html2text($description) }}">
     @endif
@@ -27,13 +27,12 @@ and registration, error messages, etc.
 
 <body
     {{
-        $attributes->merge([
-            'class' => join(' ', [
-                'system',
-                $bodyClasses,
-            ]),
-            'dir' => $currentLocaleLangDir ?? 'ltr',
-        ])
+        $attributes
+            ->filter(fn(string $v, string $k) => !in_array($k, ['title', 'description']))
+            ->merge([
+                'class' => 'system',
+                'dir' => $currentLocaleLangDir ?? 'ltr',
+            ])
     }}
 >
 

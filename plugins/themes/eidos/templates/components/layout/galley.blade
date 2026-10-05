@@ -28,17 +28,20 @@ full-text PDF and HTML files.
 </head>
 
 <body
-    class="{{
-        join(' ', [
-            $bodyClasses,
-            'site-width-' . $activeTheme->getOption('siteWidth'),
-            'font-' . ($usesCustomFonts ? $activeTheme->getOption('font') : 'default'),
-            'font-titles-' . ($usesCustomFonts ? $activeTheme->getOption('titlesFont') : 'default'),
-            'font-actions-' . ($usesCustomFonts ? $activeTheme->getOption('actionsFont') : 'default'),
-            $notice ? 'page-galley-has-notice' : '',
-        ])
-    }}"
-    dir="{{ $currentLocaleLangDir ?? 'ltr' }}"
+    {{
+        $attributes
+            ->filter(fn(string $v, string $k) => !in_array($k, ['title', 'description', 'submissionTitle', 'backUrl', 'downloadUrl', 'notice']))
+            ->merge([
+                'class' => join(' ', [
+                    'site-width-' . $activeTheme->getOption('siteWidth'),
+                    'font-' . ($usesCustomFonts ? $activeTheme->getOption('font') : 'default'),
+                    'font-titles-' . ($usesCustomFonts ? $activeTheme->getOption('titlesFont') : 'default'),
+                    'font-actions-' . ($usesCustomFonts ? $activeTheme->getOption('actionsFont') : 'default'),
+                    $notice ? 'page-galley-has-notice' : '',
+                ]),
+                'dir' => $currentLocaleLangDir ?? 'ltr',
+            ])
+    }}
 >
 
     <header class="page-galley-header">
