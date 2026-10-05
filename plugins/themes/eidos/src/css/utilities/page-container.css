@@ -21,26 +21,14 @@
   @media (min-width: 1200px) {
     --page-container-y-padding: 4rem;
   }
-}
 
-@utility page-container-xs {
-  max-width: calc(640px + var(--page-container-x-padding));
+  @media (min-width: 1920px) {
+    --page-container-x-padding: 8rem;
+  }
 }
 
 @utility page-container-sm {
   max-width: calc(1024px + var(--page-container-x-padding));
-}
-
-@utility page-container-md {
-  max-width: calc(1200px + var(--page-container-x-padding));
-}
-
-@utility page-container-lg {
-  max-width: calc(1536px + var(--page-container-x-padding));
-
-  @media (min-width: 1536px) {
-    --page-container-x-padding: 4rem;
-  }
 }
 
 /**
@@ -48,7 +36,7 @@
  * content should share a left/right boundary with
  * the header.
  */
-.site-width-fixed .page-container {
+.site-width-fixed .page-container:not(.page-container-sm) {
   max-width: 1536px;
 
   @media (min-width: 1600px) {

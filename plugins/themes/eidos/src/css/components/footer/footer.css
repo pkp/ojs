@@ -162,12 +162,34 @@
   }
 }
 
+@media (min-width: 1200px) {
+
+  .footer {
+    --inline-padding: 2rem;
+  }
+}
+
 @media (min-width: 1536px) {
 
   .footer-inner {
     max-width: 1536px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .site-width-fixed {
+
+    & .footer {
+      max-width: 1536px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    & .footer-inner {
+      max-width: none;
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
   }
 }
 
@@ -177,6 +199,13 @@
     padding-left: 0;
     padding-right: 0;
   }
+
+  .site-width-fixed {
+
+    & .footer {
+      margin-bottom: 2rem;
+    }
+  }
 }
 
 @media (min-width: 1920px) {
@@ -184,5 +213,12 @@
   .footer-name {
     font-size: 2rem;
     margin-bottom: 1rem;
+  }
+
+  .site-width-fixed {
+
+    & .footer {
+      max-width: 1792px;
+    }
   }
 }
