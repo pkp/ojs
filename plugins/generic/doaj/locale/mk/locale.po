@@ -14,12 +14,14 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "Плагин за експортирање на DOAJ"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "Експортирај списание за DOAJ."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Контактирајте го DOAJ за вклучување"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "Доколку би сакале да регистрирате трудови преку OJS, ве молиме да го внесете "

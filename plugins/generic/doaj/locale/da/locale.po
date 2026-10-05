@@ -17,12 +17,14 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "DOAJ Eksport-plugin"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "Eksportér tidsskrift til DOAJ."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Kontakt DOAJ for at blive inkluderet"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "Hvis du gerne vil registrere artikler direkte fra OJS, skal du indtaste din "
