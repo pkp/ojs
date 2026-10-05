@@ -35,6 +35,16 @@
   margin-bottom: 1rem;
 }
 
+@media (min-width: 1536px) {
+
+  .site-width-fixed .header-desktop-boxed {
+
+    & .header-desktop-inner-content {
+      padding-block: 1rem
+    }
+  }
+}
+
 @media (min-width: 1920px) {
 
   .header-desktop-boxed {

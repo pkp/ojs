@@ -154,7 +154,7 @@
   }
 
   .page-category-has-subcategories {
-    grid-template-columns: min(25%, 20rem) 1fr;
+    grid-template-columns: min(25%, 40rem) 1fr;
   }
 
   .page-category-title {

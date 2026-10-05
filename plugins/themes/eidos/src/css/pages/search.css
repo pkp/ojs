@@ -129,3 +129,12 @@
     padding-bottom: 0.75rem;
   }
 }
+
+@media (min-width: 1920px) {
+
+  .page-search-has-results {
+    grid-template-columns: minmax(32rem, 1fr) 4fr;
+    gap: 4rem
+    8rem;
+  }
+}
