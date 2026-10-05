@@ -27,21 +27,13 @@
         @endif
     </div>
 
-    @if ($review['competingInterestsDeclared'])
-        <section
-            class="peer-review-content-competing-interests"
-            aria-label="{{ __('reviewer.submission.competingInterests') }}"
-        >
-            <h4 class="peer-review-content-competing-interests-title">
-                {{ __('reviewer.submission.competingInterests') }}
-            </h4>
-            <div class="peer-review-content-competing-interests-statement">
-                @if ($review['competingInterests'])
-                    {!! ViewHelper::sanitizeHtml($review['competingInterests']) !!}
-                @else
-                    {{ __('reviewer.submission.competingInterests.declaredNone') }}
-                @endif
-            </div>
+    @if ($review['doi'])
+        <section class="peer-review-content-metadata">
+            @if ($review['doi'])
+                <div class="peer-review-content-doi">
+                    {!! ViewHelper::sanitizeHtml(__('openReview.citeDoi', ['doi' => $review['doi']])) !!}
+                </div>
+            @endif
         </section>
     @endif
 
@@ -77,15 +69,23 @@
                 {{ __('openReview.noCommentsAvailable') }}
             </p>
         @endif
-    </section>
 
-    @if ($review['doi'])
-        <section class="peer-review-content-metadata">
-            @if ($review['doi'])
-                <div class="peer-review-content-doi">
-                    {!! ViewHelper::sanitizeHtml(__('openReview.citeDoi', ['doi' => $review['doi']])) !!}
+        @if ($review['competingInterestsDeclared'])
+            <section
+                class="peer-review-content-competing-interests"
+                aria-label="{{ __('reviewer.submission.competingInterests') }}"
+            >
+                <h4 class="peer-review-content-competing-interests-title">
+                    {{ __('reviewer.submission.competingInterests') }}
+                </h4>
+                <div class="peer-review-content-competing-interests-statement">
+                    @if ($review['competingInterests'])
+                        {!! ViewHelper::sanitizeHtml($review['competingInterests']) !!}
+                    @else
+                        {{ __('reviewer.submission.competingInterests.declaredNone') }}
+                    @endif
                 </div>
-            @endif
-        </section>
-    @endif
+            </section>
+        @endif
+    </section>
 </div>
