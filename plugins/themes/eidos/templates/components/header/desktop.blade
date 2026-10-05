@@ -65,9 +65,14 @@
                     @endif
                 </div>
                 @if (in_array($activeTheme->getOption('header'), ['boxed', 'line']))
-                    <nav class="header-desktop-nav-main" id="skip-to-nav-desktop">
-                        @loadMenu(['name' => 'primary', 'id' => 'nav-desktop-primary', 'path' => 'components/menu-dropdowns'])
-                    </nav>
+                    <div class="header-desktop-nav-main" id="skip-to-nav-desktop">
+                        @loadMenu([
+                            'name' => 'primary',
+                            'id' => 'nav-desktop-primary',
+                            'path' => 'components/menu-dropdowns',
+                            'ariaLabel' => __('plugins.themes.eidos.nav.mainMenuTop')
+                        ])
+                    </div>
                 @endif
                 @if (in_array($activeTheme->getOption('header'), ['default', 'line']))
                     <x-header.utility-menu />
@@ -78,7 +83,12 @@
     @if (in_array($activeTheme->getOption('header'), ['default']))
         <div class="header-desktop-row">
             <nav class="header-desktop-nav-main" id="skip-to-nav-desktop">
-                @loadMenu(['name' => 'primary', 'id' => 'nav-desktop-primary', 'path' => 'components/menu-dropdowns'])
+                @loadMenu([
+                    'name' => 'primary',
+                    'id' => 'nav-desktop-primary',
+                    'path' => 'components/menu-dropdowns',
+                    'ariaLabel' => __('plugins.themes.eidos.nav.mainMenuTop')
+                ])
             </nav>
             <x-header.desktop-pubids />
         </div>

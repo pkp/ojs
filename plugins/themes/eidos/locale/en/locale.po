@@ -4,6 +4,21 @@ msgstr "Eidos"
 msgid "plugins.themes.eidos.description"
 msgstr "An official theme from PKP that is highly configurable."
 
+msgid "plugins.themes.eidos.nav.mainMenuTop"
+msgstr "Main menu top"
+
+msgid "plugins.themes.eidos.nav.searchAndUserMenu"
+msgstr "Search, login, and user account menu"
+
+msgid "plugins.themes.eidos.nav.contactAndPolicyMenu"
+msgstr "Contact and policy menu"
+
+msgid "plugins.themes.eidos.nav.mainMenuBottom"
+msgstr "Main menu bottom"
+
+msgid "plugins.themes.eidos.nav.userMenuBottom"
+msgstr "Login and user account menu bottom"
+
 msgid "plugins.themes.eidos.changeLanguage"
 msgstr "Change Language"
 

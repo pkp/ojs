@@ -17,7 +17,7 @@ This template displays a NavigationMenu with submenus in a dropdown.
 
 @if (count($items))
     <div class="menu-dropdowns" data-vue-root>
-        <navigation-menu-root class="menu-dropdowns-nav">
+        <navigation-menu-root class="menu-dropdowns-nav"@if ($ariaLabel) aria-label="{{ $ariaLabel }}"@endif>
             <navigation-menu-list class="menu-dropdowns-list {{ $ulClass }}">
                 @foreach ($items as $item)
                     @if (!$item->navigationMenuItem->getIsDisplayed())

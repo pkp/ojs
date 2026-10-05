@@ -33,7 +33,7 @@
                         @endif
                     </div>
                 @endif
-                <nav class="footer-links">
+                <nav class="footer-links" aria-label="{{ __('plugins.themes.eidos.nav.contactAndPolicyMenu') }}">
                     @php
                         $policyMenu = \Illuminate\Support\Facades\Blade::render(
                             "@loadMenu(['name' => 'policy', 'id' => 'nav-footer-policy', 'path' => 'components/menu'])"
@@ -61,10 +61,10 @@
                     @endif
                 </nav>
                 </div>
-                <nav class="footer-block footer-block-menu">
+                <nav class="footer-block footer-block-menu" aria-label="{{ __('plugins.themes.eidos.nav.mainMenuBottom') }}">
                     @loadMenu(['name' => 'primary', 'id' => 'nav-footer-primary', 'path' => 'components/menu'])
                 </nav>
-                <nav class="footer-block footer-block-menu">
+                <nav class="footer-block footer-block-menu" aria-label="{{ __('plugins.themes.eidos.nav.userMenuBottom') }}">
                     @loadMenu(['name' => 'user', 'id' => 'nav-footer-user', 'path' => 'components/menu'])
                 </nav>
             </div>
