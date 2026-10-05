@@ -26,8 +26,7 @@
 
 .article-section-summary-of-changes {
   padding: 0.75rem;
-  background: var(--color-block-background);
-  color: var(--color-block-text);
+  border: 1px solid;
   border-radius: var(--radius);
 }
 
