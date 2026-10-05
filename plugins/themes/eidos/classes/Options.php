@@ -77,10 +77,10 @@ class Options
     public const COLOR_MODE_DEFAULT = 'default';
     public const COLOR_MODE_ADVANCED = 'advanced';
 
-    public const COLOR_PRIMARY = '#22252A';
-    public const COLOR_ACCENT = '#22252A';
+    public const COLOR_PRIMARY = '#F4F1EA';
+    public const COLOR_ACCENT = '#2B2B2A';
     public const COLOR_PAGE_BACKGROUND = '#FDFBF7';
-    public const COLOR_PAGE_TEXT = '#22252A';
+    public const COLOR_PAGE_TEXT = '#2B2B2A';
     public const COLOR_PRIMARY_TEXT = '#FFFFFF';
 
     /**
