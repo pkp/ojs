@@ -11,7 +11,7 @@
         title="{{ $issue->getIssueIdentification() }}"
         description="{{ $issue->getLocalizedDescription() }}"
     >
-        <main class="page-container page-container-lg page-issue" id="skip-to-main">
+        <main class="page-container page-issue" id="skip-to-main">
             @include('components/issue-toc', [
                 'issue' => $issue,
                 'headingStart' => 1,
