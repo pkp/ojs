@@ -72,6 +72,7 @@
 }
 
 .peer-review-trigger {
+  text-align: start;
 
   &:focus-visible {
     outline-offset: 0;
@@ -153,7 +154,6 @@
 }
 
 .peer-review-content-doi {
-  font-size: 0.875rem;
 
   & a {
     @apply link;
@@ -177,28 +177,14 @@
   }
 }
 
-.peer-review-content-competing-interests {
-  padding: 0.75rem;
-  border: 1px solid;
-  border-radius: var(--radius);
-}
-
-.peer-review-content-competing-interests-title {
-  font-size: 1.125rem;
-  font-weight: 600;
-}
-
+.peer-review-content-comment,
+.peer-review-content-response-text,
 .peer-review-content-competing-interests-statement {
   @apply html-text;
-  margin-top: 0.5rem;
 }
 
-.peer-review-content-comment,
-.peer-review-content-response-text {
-  @apply html-text;
-}
-
-.peer-review-content-question-text {
+.peer-review-content-question-text,
+.peer-review-content-competing-interests-title {
   margin-top: 1.5rem;
   font-weight: 700;
 }
@@ -218,10 +204,6 @@
     padding-inline-end: 1rem;
     padding-inline-start: 2.75rem;
     padding-bottom: 2.75rem;
-  }
-
-  .peer-review-content-competing-interests {
-    padding: 1.5rem;
   }
 }
 
