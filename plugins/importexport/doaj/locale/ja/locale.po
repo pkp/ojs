@@ -16,12 +16,14 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "DOAJエクスポートプラグイン"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "DOAJ登録用にジャーナル情報や論文メタデータをエクスポートします。"
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr ""
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 

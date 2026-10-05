@@ -18,12 +18,14 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "Vtičnik za DOAJ izvoz"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "Izvozi revijo za DOAJ."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Kontaktirajte DOAJ za vključitev"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr "Če bi želeli registrirati prispevke direktno iz OJS, prosimo vnesite vaš DOAJ API ključ. Če nimate svojega DOAJ API ključa, lahko še vedno izvozite podatke v DOAJ XML obliki, ampak ne morete registrirati DOI-jev pri DOAJ direktno iz OJS."
 

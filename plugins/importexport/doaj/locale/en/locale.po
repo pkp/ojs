@@ -15,16 +15,16 @@ msgid "plugins.importexport.doaj.displayName"
 msgstr "DOAJ Export Plugin"
 
 msgid "plugins.importexport.doaj.description"
-msgstr "Export Journal for DOAJ."
+msgstr "Export article metadata to the Directory of Open Access Journals (DOAJ)."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Contact DOAJ for inclusion"
 
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
-"If you would like to register articles from within OJS, please enter your "
-"DOAJ API Key. Else, you'll still be able to export into the DOAJ XML format "
-"but you cannot register your articles with DOAJ from within OJS."
+"To register articles with DOAJ directly from OJS, enter your DOAJ API key. "
+"Without an API key, you can still export articles in DOAJ XML format, but "
+"you will need to submit them to DOAJ yourself."
 
 msgid "plugins.importexport.doaj.settings.form.apiKey"
 msgstr "DOAJ API Key"

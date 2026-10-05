@@ -14,12 +14,14 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "افزونه برون دهی DOAJ"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "برون دهی اطلاعات مجله به DOAJ"
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "برای استفاده از DOAJ  با آن تماس بگیرید"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "اگر می خواهید مقالات را در DOAJ ثبت کنید، لطفا کلید API DOAJ خود را وارد "
