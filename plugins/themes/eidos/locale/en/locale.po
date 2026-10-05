@@ -124,6 +124,9 @@ msgstr "Manage Notifications"
 msgid "plugins.themes.eidos.backToTitle"
 msgstr "Back to {$title}"
 
+msgid "plugins.themes.eidos.onDate"
+msgstr "{$name} on {$date}"
+
 msgid "plugins.themes.eidos.skip.userNav"
 msgstr "Skip to login and user account menu"
 

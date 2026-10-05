@@ -76,7 +76,10 @@
                             @foreach($round['reviews'] as $review)
                                 @php
                                     $title = $review['reviewerRecommendationDisplayText'] ?? __('common.inProgress');
-                                    $subtitle = $review['reviewerFullName'] ?? __('submission.submit.contributorType.anonymous');
+                                    $subtitle = __('plugins.themes.eidos.onDate', [
+                                        'name' => $review['reviewerFullName'] ?? __('submission.submit.contributorType.anonymous'),
+                                        'date' => ViewHelper::dateFormat($review['dateCompleted'], $dateFormatLong),
+                                    ]);
                                     $openLabel = __('openReview.readReview');
                                     $closeLabel = __('openReview.hideReview');
                                 @endphp
@@ -102,13 +105,17 @@
                                             $round['authorResponse']['associatedAuthors'] ?? [],
                                         )
                                     );
+                                    $subtitle = __('plugins.themes.eidos.onDate', [
+                                        'name' => $authorList,
+                                        'date' => ViewHelper::dateFormat($review['dateCompleted'], $dateFormatLong),
+                                    ]);
                                     $openLabel = __('openReview.readResponse');
                                     $closeLabel = __('openReview.hideResponse');
                                 @endphp
                                 <accordion-item as="article" value="author{{ $round['roundId'] }}`" class="peer-reviews-item peer-reviews-item-author-response">
                                     <x-article.peer-review-header
                                         title="{{ __('submission.reviewRound.authorResponse') }}"
-                                        subtitle="{{ $authorList }}"
+                                        :$subtitle
                                         :$openLabel
                                         :$closeLabel
                                     />
