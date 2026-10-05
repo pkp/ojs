@@ -77,6 +77,7 @@
    */
   .header-desktop-line {
     --header-width: 1536px;
+    --inline-padding: 2rem;
     display: block;
     min-height: calc(var(--header-height) + 2rem);
 
@@ -94,7 +95,8 @@
 @media (min-width: 1920px) {
 
   .header-desktop-line {
-    --header-width: 1792px;
+    --header-width: 1664px;
+    --inline-padding: 2rem;
 
     & .header-desktop-name-xs {
       top: -0.125rem;

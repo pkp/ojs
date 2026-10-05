@@ -132,10 +132,14 @@
     --inline-padding: 4rem;
   }
 
-  .site-width-fixed .header-desktop {
-    max-width: 1536px;
-    margin-left: auto;
-    margin-right: auto;
+  .site-width-fixed {
+
+    & .header-desktop {
+      max-width: 1536px;
+      margin-left: auto;
+      margin-right: auto;
+      --inline-padding: 2rem;
+    }
   }
 
   .header-desktop-above,
@@ -158,6 +162,10 @@
 }
 
 @media (min-width: 1920px) {
+
+  .header-desktop {
+    --inline-padding: 8rem;
+  }
 
   .header-desktop-logo {
     max-width: 20rem;
