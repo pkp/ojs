@@ -141,7 +141,7 @@
 
     & .swiper-slide-image {
       width: 100%;
-      max-height: none;
+      max-height: 32rem;
     }
 
     & .swiper-slide-button {
