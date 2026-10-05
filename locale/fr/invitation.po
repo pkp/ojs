@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-10-02 15:20+0000\n"
+"PO-Revision-Date: 2026-10-05 13:49+0000\n"
 "Last-Translator: Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/invitation/"
 "fr/>\n"
@@ -48,7 +48,8 @@ msgstr "Responsabilités"
 
 msgid "invitation.wizard.pageTitleDescription"
 msgstr ""
-"Vous invitez une personne à prendre un rôle dans un comité de votre revue"
+"Vous invitez une personne à prendre un rôle et à apparaître dans la page "
+"Responsabilités de votre revue"
 
 msgid "userInvitation.enterDetails.stepDescription"
 msgstr "Vous pouvez l'inviter à prendre un rôle"
