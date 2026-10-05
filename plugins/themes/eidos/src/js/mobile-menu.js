@@ -34,10 +34,10 @@ const set = ($button, $target, $focusable, state) => {
   $target.inert = !state
   if (state) {
     document.body.className = ` ${overflowHiddenClass}`
-    $focusable[0].focus()
+    $focusable[0].focus({preventScroll: true})
   } else {
     document.body.className = document.body.className.replace(` ${overflowHiddenClass}`, '')
-    $button.focus()
+    $button.focus({preventScroll: true})
   }
 }
 
@@ -74,9 +74,9 @@ const init = () => {
   $target.addEventListener('focusout', function(e) {
     if (!e?.relatedTarget || !$target.contains(e?.relatedTarget)) {
       if (e.target === $close) {
-        $focusable[0]?.focus()
+        $focusable[0]?.focus({preventScroll: true})
       } else {
-        $close.focus()
+        $close.focus({preventScroll: true})
       }
     }
   })
