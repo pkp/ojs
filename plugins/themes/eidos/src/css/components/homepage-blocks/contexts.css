@@ -21,7 +21,7 @@
   align-items: flex-start;
   gap: 0.25rem;
   padding: var(--padding);
-  border: 1px solid;
+  border: var(--border-width) solid;
   border-radius: var(--radius);
 }
 
@@ -62,14 +62,14 @@
 
   .homepage-block-contexts {
     --padding: 1.5rem;
-    border: 1px solid;
+    border: var(--border-width) solid;
     border-radius: var(--radius);
     overflow: hidden;
   }
 
   .homepage-block-contexts-header {
     padding: var(--padding);
-    border-bottom: 1px solid;
+    border-bottom: var(--border-width) solid;
   }
 
   .homepage-block-contexts-title {

@@ -30,7 +30,7 @@
 .system-form-input {
   width: 100%;
   padding: 0.5em 0.5em;
-  border: 1px solid;
+  border: var(--border-width) solid;
   border-radius: var(--radius);
 
   &:focus-visible {
@@ -79,7 +79,7 @@
 .system-form-select {
   width: 100%;
   padding: 0.5em 0.5em;
-  border: 1px solid;
+  border: var(--border-width) solid;
   border-radius: var(--radius);
 
   &:focus-visible {

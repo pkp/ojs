@@ -4,19 +4,24 @@
   --color-secondary: #2B2B2A;
   --color-text: #2B2B2A;
   --color-text-on-primary: #2B2B2A;
+  --color-line: #2B2B2A33;
+  --color-line-on-primary: #2B2B2A33;
   --color-error: #c00;
 
   --color-header-background: var(--color-primary);
   --color-header-text: var(--color-text-on-primary);
+  --color-header-line: var(--color-line-on-primary);
   --color-page-background: var(--color-background);
   --color-page-text: var(--color-text);
   --color-page-links: var(--color-secondary);
+  --color-page-line: var(--color-line);
   --color-button-background: var(--color-background);
   --color-button-text: var(--color-secondary);
   --color-block-background: var(--color-primary);
   --color-block-text: var(--color-text-on-primary);
   --color-overlay-background: var(--color-background);
   --color-overlay-text: var(--color-text);
+  --color-overlay-line: var(--color-line);
   --color-footer-background: var(--color-primary);
   --color-footer-text: var(--color-text-on-primary);
 
