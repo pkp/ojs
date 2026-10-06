@@ -98,7 +98,7 @@
 
   .page-search-results-header {
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid;
+    border-bottom: var(--border-width) solid var(--color-page-line);
   }
 }
 

@@ -4,7 +4,7 @@
 
   @media (min-width: 1024px) {
     padding: 2rem;
-    border: var(--border-width) solid;
+    border: var(--border-width) solid var(--color-page-line);
     border-radius: var(--radius);
   }
 

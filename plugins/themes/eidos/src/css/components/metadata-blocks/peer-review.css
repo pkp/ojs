@@ -1,5 +1,6 @@
 .metadata-block-id-peer-review {
   position: relative;
+  z-index: -1;
 
   & .metadata-block-content {
     max-width: 25rem;
@@ -47,7 +48,7 @@
   padding: 0.25rem 0.25rem;
   min-width: 1.5rem;
   text-align: center;
-  border: 1px solid;
+  border: var(--border-width) solid var(--color-page-line);
   border-radius: var(--radius);
   font-size: 0.875rem;
   line-height: 1;

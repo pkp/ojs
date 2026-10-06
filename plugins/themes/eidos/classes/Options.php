@@ -6,7 +6,6 @@ use APP\core\Application;
 use APP\journal\Journal;
 use APP\plugins\themes\eidos\EidosTheme;
 use APP\template\TemplateManager;
-use Illuminate\Support\Collection;
 use PKP\view\HomepageBlock;
 use PKP\view\MetadataBlock;
 
@@ -168,48 +167,67 @@ class Options
     /**
      * Get CSS variables based on the theme options
      */
-    public function getCssVariables(): Collection
+    public function getCssVariables(): array
     {
-        $variables = new Collection([]);
+        $variables = [];
 
         if ($this->theme->getOption('colorMode') === self::COLOR_MODE_DEFAULT) {
             $variables['--color-primary'] = $this->theme->getOption('primaryColor');
             $variables['--color-secondary'] = $this->theme->getOption('accentColor');
+            $variables['--color-line'] = self::COLOR_PAGE_TEXT . '33';
+            // If the user chooses a color that is lighter than the default background,
+            // swich the background color to pure white. This prevents the header/footer
+            // from looking brighter than the page background.
+            $backgroundBrightness = $this->theme->getColourBrightness(self::COLOR_PAGE_BACKGROUND);
+            if (!$this->theme->isColourDark($this->theme->getOption('primaryColor'), $backgroundBrightness)) {
+                $variables['--color-background'] = '#ffffff';
+            }
             if ($this->theme->isColourDark($this->theme->getOption('primaryColor'))) {
-                $variables['--color-text-on-primary'] = 'white';
-                $variables['--color-button-text'] = 'var(--color-primary)';
+                $variables['--color-text-on-primary'] = '#ffffff';
+                $variables['--color-line-on-primary'] = $variables['--color-text-on-primary'] . '33';
             } else {
                 $variables['--color-text-on-primary'] = 'rgba(0, 0, 0, 0.85)';
+                $variables['--color-line-on-primary'] = 'rgba(0, 0, 0, 0.2)'; // 0.2 = '33' in hex notation
             }
             if ($this->theme->isColourDark($this->theme->getOption('accentColor'))) {
                 $variables['--color-page-links'] = 'var(--color-secondary)';
+                $variables['--color-button-background'] = 'var(--color-background)';
                 $variables['--color-button-text'] = 'var(--color-secondary)';
+                $variables['--color-overlay-text'] = 'var(--color-secondary)';
+                $variables['--color-overlay-line'] = $this->theme->getOption('accentColor') . '33';
             } else {
                 $variables['--color-page-links'] = 'var(--color-text)';
-                $variables['--color-button-text'] = 'var(--color-text)';
+                $variables['--color-button-background'] = 'var(--color-secondary)';
+                $variables['--color-button-text'] = 'var(--color-page-text)';
+                $variables['--color-overlay-text'] = 'var(--color-text)';
+                $variables['--color-overlay-line'] = 'var(--color-line)';
             }
             $variables['--color-header-background'] = 'var(--color-primary)';
             $variables['--color-header-text'] = 'var(--color-text-on-primary)';
-            $variables['--color-button-background'] = 'var(--color-background)';
-            $variables['--color-button-text'] = 'var(--color-secondary)';
+            $variables['--color-header-line'] = 'var(--color-line-on-primary)';
+            $variables['--color-page-background'] = 'var(--color-background)';
+            $variables['--color-page-text'] = 'var(--color-text)';
+            $variables['--color-page-line'] = 'var(--color-line)';
             $variables['--color-block-background'] = 'var(--color-primary)';
             $variables['--color-block-text'] = 'var(--color-text-on-primary)';
             $variables['--color-overlay-background'] = 'var(--color-background)';
-            $variables['--color-overlay-text'] = 'var(--color-text)';
             $variables['--color-footer-background'] = 'var(--color-primary)';
             $variables['--color-footer-text'] = 'var(--color-text-on-primary)';
         } else {
             $variables['--color-header-background'] = $this->theme->getOption('headerBackgroundColor');
             $variables['--color-header-text'] = $this->theme->getOption('headerTextColor');
+            $variables['--color-header-line'] = $this->theme->getOption('headerTextColor') . '33';
             $variables['--color-page-background'] = $this->theme->getOption('pageBackgroundColor');
             $variables['--color-page-text'] = $this->theme->getOption('pageTextColor');
             $variables['--color-page-links'] = $this->theme->getOption('pageLinkColor');
+            $variables['--color-page-line'] = $this->theme->getOption('pageTextColor') . '33';
             $variables['--color-button-background'] = $this->theme->getOption('buttonBackgroundColor');
             $variables['--color-button-text'] = $this->theme->getOption('buttonTextColor');
             $variables['--color-block-background'] = $this->theme->getOption('blockBackgroundColor');
             $variables['--color-block-text'] = $this->theme->getOption('blockTextColor');
             $variables['--color-overlay-background'] = $this->theme->getOption('blockBackgroundColor');
             $variables['--color-overlay-text'] = $this->theme->getOption('blockTextColor');
+            $variables['--color-overlay-line'] = $this->theme->getOption('blockTextColor') . '33';
             $variables['--color-footer-background'] = $this->theme->getOption('footerBackgroundColor');
             $variables['--color-footer-text'] = $this->theme->getOption('footerTextColor');
         }
@@ -243,9 +261,11 @@ class Options
      */
     public function getCssVariablesString(string $selector = 'body'): string
     {
-        $string = $this->getCssVariables()
-            ->map(fn ($val, $var) => "{$var}: {$val};")
-            ->join('');
+        $string = [];
+        foreach ($this->getCssVariables() as $var => $val) {
+            $string[] = "{$var}: {$val};";
+        }
+        $string = join('', $string);
 
         return "{$selector} {{$string}}";
     }

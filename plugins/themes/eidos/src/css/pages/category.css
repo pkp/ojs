@@ -87,7 +87,7 @@
 }
 
 .page-category-empty {
-  border: 1px solid;
+  border: var(--border-width) solid var(--color-page-line);
   padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
@@ -134,7 +134,7 @@
 
 
   .page-category-items-showing {
-    border-bottom: 1px solid;
+    border-bottom: var(--border-width) solid var(--color-page-line);
     padding-bottom: 0.75rem;
   }
 
