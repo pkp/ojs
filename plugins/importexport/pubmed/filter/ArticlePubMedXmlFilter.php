@@ -219,7 +219,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter
         $publisherNameNode->appendChild($doc->createTextNode($publication->getPublisher($journal) ?? ''));
         $journalNode->appendChild($publisherNameNode);
 
-        $journalTitle = $nlmTitle ?? $publication->getPrimaryContextName($journal);
+        $journalTitle = $nlmTitle ?: $publication->getPrimaryContextName($journal);
 
         $journalTitleNode = $doc->createElement('JournalTitle');
         $journalTitleNode->appendChild($doc->createTextNode($journalTitle));
