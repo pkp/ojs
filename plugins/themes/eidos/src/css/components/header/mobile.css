@@ -99,8 +99,8 @@
   top: 4rem;
   width: 100%;
   max-height: calc(100% - 4rem);
-  background: var(--color-overlay-background);
-  color: var(--color-overlay-text);
+  background: var(--color-page-background);
+  color: var(--color-page-text);
   overflow-y: auto;
   box-shadow: var(--overlay-shadow);
   transform: scale(0);

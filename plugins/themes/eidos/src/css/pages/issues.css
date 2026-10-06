@@ -37,7 +37,7 @@
 
   & .issue-summary {
     padding: 1rem;
-    border: 1px solid;
+    border: var(--border-width) solid var(--color-page-line);
     border-radius: var(--radius);
   }
 
@@ -132,7 +132,7 @@
 
     & .issue-summary {
       padding: 1rem;
-      border: 1px solid;
+      border: var(--border-width) solid var(--color-page-line);
       border-radius: var(--radius);
     }
   }

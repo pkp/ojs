@@ -51,7 +51,7 @@
 
 @utility input-fieldset {
   padding: 0.75rem;
-  border: 1px solid var(--color-page-text);
+  border: var(--border-width) solid var(--color-page-line);
 
   @media (min-width: 1200px) {
     padding: 1rem;
