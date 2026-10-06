@@ -55,6 +55,12 @@ msgstr "Use default patterns.<br />%j.v%vi%i for issues<br />%j.v%vi%i.%a for ar
 msgid "doi.manager.settings.doiCreationTime.copyedit"
 msgstr "Upon reaching the copyediting stage"
 
+msgid "manager.dois.filters.workflow"
+msgstr "Workflow"
+
+msgid "manager.dois.filters.inEditingOrPublished"
+msgstr "In Copyediting, Production, Published or with DOIs"
+
 msgid "manager.website.archiving"
 msgstr "Archiving"
 

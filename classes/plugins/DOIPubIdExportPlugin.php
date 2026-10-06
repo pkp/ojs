@@ -80,7 +80,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
     {
         foreach ($objects as $object) {
             $doiIds = match (true) {
-                $object instanceof Submission => Repo::doi()->getDoisForSubmission($object->getId()),
+                $object instanceof Submission => Repo::doi()->getPublishedDoisForSubmission($object->getId()),
                 $object instanceof Issue => Repo::doi()->getDoisForIssue($object->getId(), true),
             };
             foreach ($doiIds as $doiId) {

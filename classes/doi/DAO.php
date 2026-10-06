@@ -41,6 +41,8 @@ class DAO extends \PKP\doi\DAO
         $q = DB::table($this->table, 'd')
             ->leftJoin('publications as p', 'd.doi_id', '=', 'p.doi_id')
             ->leftJoin('submissions as s', 'p.publication_id', '=', 's.current_publication_id')
+            // A review DOI can be depositable on its own, e.g. when the review is confirmed after the article was deposited
+            ->leftJoin('review_assignments as dra', 'dra.doi_id', '=', 'd.doi_id')
             ->where('d.context_id', '=', $context->getId())
             ->where(function (Builder $q) use ($enabledDoiTypes) {
                 // Publication DOIs
@@ -78,7 +80,9 @@ class DAO extends \PKP\doi\DAO
                                 ->whereNotNull('ra.doi_id')
                                 ->where('p.status', '=', PKPPublication::STATUS_PUBLISHED)
                                 // Peer reviews should be public to be considered
-                                ->where('ra.is_review_publicly_visible', '=', 1);
+                                ->where('ra.is_review_publicly_visible', '=', 1)
+                                // Only reviews confirmed by an editor are deposited, see getExportableDOIsPeerReviewIds()
+                                ->where(fn (Builder $q) => $q->whereNotNull('ra.date_considered')->orWhereNotNull('ra.date_acknowledged'));
                         });
                     })
                     // Author Response DOIs
@@ -115,7 +119,7 @@ class DAO extends \PKP\doi\DAO
                     });
             });
         $q->whereIn('d.status', [Doi::STATUS_UNREGISTERED, Doi::STATUS_ERROR, Doi::STATUS_STALE]);
-        return $q->get(['s.submission_id', 'd.doi_id']);
+        return $q->get([DB::raw('COALESCE(s.submission_id, dra.submission_id) AS submission_id'), 'd.doi_id']);
     }
 
     /**

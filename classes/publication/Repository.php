@@ -29,6 +29,7 @@ use PKP\context\Context;
 use PKP\core\Core;
 use PKP\db\DAORegistry;
 use PKP\doi\exceptions\DoiException;
+use PKP\observers\events\PublicationVersioned;
 use PKP\submission\reviewAssignment\ReviewAssignment;
 use PKP\submission\reviewRound\ReviewRoundDAO;
 
@@ -175,6 +176,8 @@ class Repository extends \PKP\publication\Repository
                 Repo::galley()->add($newGalley);
             }
         }
+
+        event(new PublicationVersioned($this->get($newId), $publication, Repo::submission()->get($publication->getData('submissionId')), $context));
 
         return $newId;
     }
