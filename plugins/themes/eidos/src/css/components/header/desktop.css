@@ -7,6 +7,15 @@
 @media (min-width: 1200px) {
   .header-desktop {
     display: block;
+
+    & .dropdown-content {
+      background: var(--color-page-background);
+      color: var(--color-page-text);
+    }
+
+    & .menu-dropdowns-arrow svg {
+      fill: var(--color-page-background);
+    }
   }
 }
 

@@ -51,7 +51,7 @@
 }
 
 .peer-reviews-item {
-  border: 1px solid var(--color-page-text);
+  border: var(--border-width) solid var(--color-page-line);
   border-radius: var(--radius);
 }
 
@@ -83,15 +83,6 @@
   background: var(--color-block-background);
   color: var(--color-block-text);
   border-radius: var(--radius);
-}
-
-.peer-reviews-item-author-response .peer-review-trigger {
-
-  &[aria-expanded="false"]:hover,
-  &:focus-visible {
-    outline-color: var(--color-block-text);
-    outline-offset: -4px;
-  }
 }
 
 .peer-review-trigger-left {

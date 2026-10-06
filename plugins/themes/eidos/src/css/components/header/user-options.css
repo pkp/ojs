@@ -29,16 +29,16 @@
   border-radius: var(--radius);
 
   &:hover {
-    outline: 1px solid var(--color-overlay-text);
+    outline: 1px solid;
   }
 }
 
 .user-options-language-selected {
-  background: var(--color-overlay-text);
-  color: var(--color-overlay-background);
+  background: var(--color-page-text);
+  color: var(--color-page-background);
 
   &:focus-visible {
-    outline-color: var(--color-overlay-text);
+    outline-color: var(--color-page-text);
   }
 }
 
