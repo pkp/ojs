@@ -139,7 +139,11 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
      */
     public function exportPeerReviews(array $reviewAssignments, Context $context): array
     {
-        return [];
+        $exportPlugin = $this->_getExportPlugin();
+        $xmlErrors = [];
+
+        $temporaryFileId = $exportPlugin->exportAsDownload($context, $reviewAssignments, null, $xmlErrors);
+        return ['temporaryFileId' => $temporaryFileId, 'xmlErrors' => $xmlErrors];
     }
 
     /**
@@ -177,7 +181,14 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
      */
     public function depositPeerReviews(array $peerReviews, Context $context): array
     {
-        return [];
+        $exportPlugin = $this->_getExportPlugin();
+        $responseMessage = '';
+
+        $status = $exportPlugin->exportAndDeposit($context, $peerReviews, $responseMessage);
+        return [
+            'hasErrors' => !$status,
+            'responseMessage' => $responseMessage
+        ];
     }
 
     /**
@@ -428,6 +439,7 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
             Repo::doi()::TYPE_PUBLICATION,
             Repo::doi()::TYPE_REPRESENTATION,
             Repo::doi()::TYPE_ISSUE,
+            Repo::doi()::TYPE_PEER_REVIEW,
         ];
     }
 }

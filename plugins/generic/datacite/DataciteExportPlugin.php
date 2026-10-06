@@ -31,6 +31,7 @@ use PKP\file\TemporaryFileManager;
 use PKP\galley\Galley;
 use PKP\plugins\Plugin;
 use PKP\submission\Representation;
+use PKP\submission\reviewAssignment\ReviewAssignment;
 
 // DataCite API
 define('DATACITE_API_RESPONSE_OK', 201);
@@ -95,6 +96,11 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
     public function getSubmissionFilter()
     {
         return 'article=>datacite-xml';
+    }
+
+    public function getPeerReviewFilter()
+    {
+        return 'peerReview=>datacite-xml';
     }
 
     /**
@@ -342,7 +348,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
     /**
      * Update stored DOI status based on if deposits and registration have been successful
      *
-     * @param Submission|Issue|Representation $object
+     * @param Submission|Issue|ReviewAssignment|Representation $object
      */
     public function updateDepositStatus(DataObject $object, string $status, ?string $failedMsg = null)
     {
@@ -416,7 +422,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
      */
     public function _getObjectUrl($request, $context, $object)
     {
-        //Dispatcher needed when  called from CLI
+        //Dispatcher needed when called from CLI
         $dispatcher = $request->getDispatcher();
         // Retrieve the article of article files.
         if ($object instanceof Galley) {
@@ -440,6 +446,34 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
             case $object instanceof Galley:
                 $url = $dispatcher->url($request, PKPApplication::ROUTE_PAGE, $context->getPath(), 'article', 'view', [$article->getBestId(), $object->getBestGalleyId()], null, null, true, '');
                 break;
+            case $object instanceof ReviewAssignment:
+                $articleId = $object->getSubmissionId();
+                $publication = Repo::publication()->get($articleId);
+                $cache = $this->getCache();
+                $article = null;
+
+                if ($cache->isCached('articles', $articleId)) {
+                    $article = $cache->get('articles', $articleId);
+                } else {
+                    $article = Repo::submission()->get($articleId);
+                }
+
+                $url = $dispatcher->url(
+                    $request,
+                    PKPApplication::ROUTE_PAGE,
+                    $context->getPath(),
+                    'article',
+                    'view',
+                    [$article->getBestId(), 'version', $publication->getId()],
+                    [
+                        'tab' => 'peer-review-record',
+                        'reviewId' => $object->getId(),
+                    ],
+                    null,
+                    true,
+                    '',
+                );
+                break;
         }
         if ($this->isTestMode($context)) {
             // Change server domain for testing.
@@ -460,6 +494,8 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
             return $this->getIssueFilter();
         } elseif ($object instanceof Representation) {
             return $this->getRepresentationFilter();
+        } elseif ($object instanceof ReviewAssignment) {
+            return $this->getPeerReviewFilter();
         } else {
             return '';
         }
@@ -477,6 +513,8 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
             return 'issues-' . $object->getId();
         } elseif ($object instanceof Representation) {
             return 'galleys-' . $object->getId();
+        } elseif ($object instanceof ReviewAssignment) {
+            return 'reviews-' . $object->getId();
         } else {
             return '';
         }
