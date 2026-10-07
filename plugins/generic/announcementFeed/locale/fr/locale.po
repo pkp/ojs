@@ -1,7 +1,7 @@
 # Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-09-07 14:43+0000\n"
+"PO-Revision-Date: 2026-10-02 14:17+0000\n"
 "Last-Translator: Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/"
 "generic-announcementFeed/fr/>\n"
@@ -13,12 +13,12 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.generic.announcementfeed.displayName"
-msgstr "Module de flux d'actualités"
+msgstr "Module de flux d'annonces"
 
 msgid "plugins.generic.announcementfeed.description"
 msgstr ""
-"Ce module produit des flux de syndication web RSS/Atom pour les actualités "
-"des revues."
+"Ce module produit des flux de syndication web RSS/Atom pour les annonces de "
+"la revue."
 
 msgid "plugins.generic.announcementfeed.settings"
 msgstr "Paramètres"
@@ -28,19 +28,19 @@ msgstr "Afficher les liens de flux sur toutes les pages de la revue."
 
 msgid "plugins.generic.announcementfeed.settings.homepage"
 msgstr ""
-"Afficher les liens de flux sur la page d'accueil et sur la page d'actualités."
+"Afficher les liens de flux sur la page d'accueil et sur la page d'annonces."
 
 msgid "plugins.generic.announcementfeed.settings.announcement"
-msgstr "Afficher les liens de flux sur la page d'actualités uniquement."
+msgstr "Afficher les liens de flux sur la page d'annonces uniquement."
 
 msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
 msgstr "Limiter le flux aux"
 
 msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
-msgstr "actualités les plus récentes."
+msgstr "annonces les plus récentes."
 
 msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
-msgstr "Veuillez entrer un entier positif pour les actualités récentes."
+msgstr "Veuillez entrer un entier positif pour les annonces récentes."
 
 msgid "plugins.generic.announcementfeed.atom.altText"
 msgstr "Logo Atom"

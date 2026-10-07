@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-09-17 15:02+0000\n"
+"PO-Revision-Date: 2026-10-05 13:49+0000\n"
 "Last-Translator: Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/invitation/"
 "fr/>\n"
@@ -44,10 +44,12 @@ msgstr ""
 "identifiant depuis votre profil utilisateur."
 
 msgid "invitation.role.masthead"
-msgstr "Équipe éditoriale"
+msgstr "Responsabilités"
 
 msgid "invitation.wizard.pageTitleDescription"
-msgstr "Vous invitez une personne à prendre un rôle dans votre revue"
+msgstr ""
+"Vous invitez une personne à prendre un rôle et à apparaître dans la page "
+"Responsabilités de votre revue"
 
 msgid "userInvitation.enterDetails.stepDescription"
 msgstr "Vous pouvez l'inviter à prendre un rôle"
@@ -59,7 +61,7 @@ msgstr ""
 "notifications OJS et/ou par courriel"
 
 msgid "userInvitation.roleTable.journalMasthead"
-msgstr "Équipe éditoriale"
+msgstr "Responsabilités"
 
 msgid "userInvitation.search.userFound"
 msgstr "L'utilisateur/ice existe déjà dans cette revue"

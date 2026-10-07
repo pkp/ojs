@@ -1,2 +1,91 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2026-10-02 14:17+0000\n"
+"Last-Translator: Nicolas Dickner <dickner.nicolas@uqam.ca>\n"
+"Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
+"invitation/fr_CA/>\n"
+"Language: fr_CA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "userInvitation.roleTable.journalMasthead"
+msgstr "Page du personnel éditorial"
+
+msgid "userInvitation.search.userNotFound"
+msgstr "Cette personne n'a pas de rôle dans cette revue"
+
+msgid "userInvitation.enterDetails.stepDescription"
+msgstr "Vous pouvez les inviter à assumer un rôle pour la revue"
+
+msgid "userInvitation.modal.message"
+msgstr ""
+"Un nouveau rôle a été proposé à {$email}. Vous pouvez connaître sa décision "
+"dans la section Utilisateur(-trice)s et Rôles, dans vos notifications OJS, "
+"et/ou par courriel."
+
+msgid "userInvitation.search.userFound"
+msgstr "Cette personne a déjà un rôle dans cette revue"
+
+msgid "userInvitation.searchUser.stepDescription"
+msgstr ""
+"Recherchez la personne en utilisant son adresse courriel, son nom "
+"d'utilisateur(-trice) ou son identifiant ORCID. Entrez au moins une "
+"information pour débuter. Si la personne n'existe pas dans le système, vous "
+"pouvez l'inviter à occuper des rôles et à faire partie de votre revue. Si "
+"elle existe déjà, vous pouvez consulter ses informations et l'inviter à "
+"occuper des rôles supplémentaires."
+
+msgid "userInvitation.sendMail.stepDescription"
+msgstr ""
+"Envoyez un courriel à la personne afin de l'informer de l’invitation, des "
+"étapes à suivre, des politiques de gestion des données personnelles de la "
+"revue, ainsi que de la vérification ORCID"
+
+msgid "acceptInvitation.verifyOrcid.stepDescription"
+msgstr ""
+"Vous pouvez vérifier votre identifiant ORCID ou passer cette étape. Si vous "
+"passez cette étape, vous pourrez vérifier à tout moment votre identifiant "
+"ORCID depuis votre page de profil."
+
+msgid "acceptInvitation.accountDetails.stepName"
+msgstr "Créer un compte OJS"
+
+msgid "acceptInvitation.accountDetails.stepLabel"
+msgstr "{$step} - créer un compte OJS"
+
+msgid "acceptInvitation.accountDetails.stepDescription"
+msgstr ""
+"Pour commencer dans OJS et accepter un nouveau rôle, vous devrez vous créer "
+"un compte. Veuillez saisir choisir un nom d'utilisateur(-trice) et un mot de "
+"passe."
+
+msgid "acceptInvitation.detailsReview.stepDescription"
+msgstr "Vérifier les informations pour activer vos nouveaux rôles"
+
+msgid "acceptInvitation.detailsReview.nextButtonLabel"
+msgstr "Accepter et continuer vers OJS"
+
+msgid "acceptInvitation.modal.title"
+msgstr "Un nouveau rôle vous a été attribué dans OJS"
+
+msgid "acceptInvitation.modal.message"
+msgstr ""
+"Félicitations pour votre nouveau rôle ! Vous devriez avoir accès à de "
+"nouvelles options. Si vous avez besoin d'aide dans la prise en main du "
+"logiciel, veuillez cliquer sur les boutons \"Aide\"."
+
+msgid "invitation.role.masthead"
+msgstr "Page du personnel éditorial"
+
+msgid "invitation.orcid.acceptInvitation.message"
+msgstr ""
+"Non vérifié. Vous pouvez valider votre identifiant ORCID à partir de votre "
+"profil dans OJS."
+
+msgid "invitation.wizard.pageTitleDescription"
+msgstr ""
+"Vous invitez un utilisateur ou une utilisatrice à jouer un rôle dans OJS et "
+"à apparaitre sur la page du personnel éditorial de la revue."
