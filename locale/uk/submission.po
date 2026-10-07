@@ -1,11 +1,11 @@
 # IgorVeha <igor.veha@gmail.com>, 2022.
-# Petro Bilous <petrobilous@ukr.net>, 2023.
+# Petro Bilous <petrobilous@ukr.net>, 2023, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:37+00:00\n"
-"PO-Revision-Date: 2023-06-01 09:27+0000\n"
+"PO-Revision-Date: 2026-09-25 13:28+0000\n"
 "Last-Translator: Petro Bilous <petrobilous@ukr.net>\n"
 "Language-Team: Ukrainian <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/uk/>\n"
@@ -13,9 +13,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.13.1\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "submission.submit.userGroup"
 msgstr "Подати, використовуючи мою роль..."
@@ -132,9 +132,8 @@ msgstr "Очікується підтвердження"
 msgid "submission.submit.submissionChecklist"
 msgstr "Вимоги до подання"
 
-#, fuzzy
 msgid "submission.submit.privacyStatement"
-msgstr "Положення про конфіденційність"
+msgstr "Заява про конфіденційність"
 
 msgid "submission.submit.contributorRole"
 msgstr "Роль відправника"
@@ -326,9 +325,8 @@ msgstr "Деталі публікації для версії {$version}"
 msgid "submission.queries.production"
 msgstr "Обговорення подання"
 
-#, fuzzy
 msgid "editor.submission.decision.backToReview"
-msgstr "Повернутися до Огляду"
+msgstr "Повернутися на рецензування"
 
 msgid "editor.submission.decision.backToReview.description"
 msgstr ""
@@ -340,9 +338,8 @@ msgstr ""
 "{$editorName} скасував рішення про прийняття цього матеріалу і відправив "
 "його назад на стадію розгляду."
 
-#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
-msgstr "Відправити назад на перевірку"
+msgstr "Відправлено назад на рецензування"
 
 #, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
@@ -356,33 +353,31 @@ msgstr ""
 "рішення, і проінформуйте автора про те, яке подальше рецензування буде "
 "проведено."
 
-#, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
-"Надішліть електронний лист авторам, щоб повідомити їм, що дана робота буде "
-"відправлена на рецензування. Якщо можливо, повідомте авторам, скільки часу "
+"Надішліть електронний лист авторам, щоб повідомити їм, що це подання буде "
+"відправлено на рецензування. Якщо можливо, повідомте авторам, скільки часу "
 "може зайняти процес рецензування і коли їм слід очікувати нових повідомлень "
-"від редакторів."
+"від редакторів. Цей лист не буде надіслано, доки не буде записано рішення."
 
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "Виберіть файли, які повинні бути відправлені на етап рецензування."
 
 msgid "doi.submission.issueMissing.publication"
 msgstr ""
-"Не вдалося створити DOI для наступного надсилання: {$pubObjectTitle}. "
+"Не вдалося створити DOI для наступного надсилання: \"{$pubObjectTitle}\". "
 "Подання має бути віднесено до випуску, перш ніж можна буде створити DOI."
 
 msgid "doi.submission.issueMissing.representation"
 msgstr ""
-"Не вдалося створити DOI для {$pubObjectTitle} гранки для наступного подання: "
-"{$itemTitle}. Подання має бути віднесено до випуску, перш ніж DOI може бути "
-"створений."
+"Не вдалося створити DOI для \"{$pubObjectTitle}\" гранки для наступного "
+"подання: \"{$itemTitle}\". Подання має бути віднесено до випуску, перш ніж "
+"DOI може бути створено."
 
-#, fuzzy
 msgid "doi.submission.incorrectContext"
 msgstr ""
-"Не вдалося створити DOI для наступного матеріалу: {$pubObjectTitle}. Він не "
-"існує в поточному контексті/розділі журналу."
+"Не вдалося створити DOI для наступного подання: \"{$pubObjectTitle}\". Воно "
+"не існує в поточному контексті журналу."
 
 msgid "submission.layout.viewGalley"
 msgstr "Переглянути гранку"
