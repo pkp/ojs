@@ -1470,6 +1470,11 @@
 					"nullable": true,
 					"description": "The user's ORCID identifier."
 				},
+				"userOrcid": {
+					"type": "string",
+					"nullable": true,
+					"description": "The User's full ORCID URL."
+				},
 				"isUserOrcidAuthenticated": {
 					"type": "boolean",
 					"description": "Whether the user has verified their ORCID."
@@ -1550,6 +1555,11 @@
 					"type": "string",
 					"nullable": true,
 					"description": "The user's ORCID identifier."
+				},
+				"userOrcid": {
+					"type": "string",
+					"nullable": true,
+					"description": "The User's full ORCID URL."
 				},
 				"note": {
 					"type": "string",
