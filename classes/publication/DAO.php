@@ -134,7 +134,7 @@ class DAO extends \PKP\publication\DAO
                         fn (Builder $q) => $q->whereNull('pss.setting_value'),
                         fn (Builder $q) => $q->when(
                             $settingValue == PubObjectsExportPlugin::EXPORT_STATUS_DEPOSITABLE,
-                            fn (Builder $q) => $q->whereNull('pss.setting_value')->orWhere('pss.setting_value', '=', PubObjectsExportPlugin::EXPORT_STATUS_STALE),
+                            fn (Builder $q) => $q->where(fn (Builder $q) => $q->whereNull('pss.setting_value')->orWhere('pss.setting_value', '=', PubObjectsExportPlugin::EXPORT_STATUS_STALE)),
                             fn (Builder $q) => $q->where('pss.setting_value', '=', $settingValue)
                         )
                     )
