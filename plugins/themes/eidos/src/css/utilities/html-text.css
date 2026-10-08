@@ -1,0 +1,162 @@
+/**
+ * Use this utility to wrap any rich text
+ * content.
+ *
+ * Tailwind strips out all default styles. Apply this
+ * class to a parent element of any HTML string to restore
+ * styles to things like links, lists, blockquotes, etc.
+ *
+ * Example usage:
+ *
+ * <div class="html-text">
+ *   {$currentContext->getLocalizedData('description')}
+ * </div>
+ */
+@utility html-text {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75;
+
+  & a {
+    @apply link;
+  }
+
+  abbr {
+    text-decoration: underline dotted;
+    text-decoration-thickness: 2px;
+  }
+
+  p,
+  ul,
+  ol,
+  blockquote,
+  figure,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+
+  ul,
+  ol {
+    margin-left: 2em;
+  }
+
+  li {
+    list-style: initial;
+    line-height: 1.5;
+
+    + li {
+      margin-top: 0.25em;
+    }
+  }
+
+  blockquote {
+    margin-left: 2em;
+    line-height: 1.5;
+  }
+
+  figcaption {
+    max-width: 40em;
+    margin-top: 0.5em;
+    font-size: 0.875em;
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-titles);
+    line-height: 1.25;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+
+  h4 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  h5 {
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  h6 {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  /**
+   * @see utilities/plain-list
+   */
+  & .plain-list {
+    margin: 0;
+  }
+
+  @media (min-width: 1200px) {
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+    }
+
+    h4 {
+      font-size: 1.125rem;
+    }
+
+    h5 {
+      font-size: 1.125rem;
+    }
+
+    h6 {
+      font-size: 1.125rem;
+    }
+  }
+}

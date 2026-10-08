@@ -1,0 +1,11 @@
+<x-layout
+    title="{{ $currentContext->getLocalizedName() }}"
+    description="{{ $currentContext->getLocalizedData('description') }}"
+>
+    <div class="page-container page-homepage" id="skip-to-main">
+        <h1 class="sr-only">
+            {{ $currentContext->getLocalizedName() }}
+        </h1>
+        <x-homepage-blocks />
+    </div>
+</x-layout>

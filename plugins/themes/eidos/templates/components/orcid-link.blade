@@ -1,0 +1,22 @@
+@props([
+    'name',
+    'orcid',
+    'isVerified' => false,
+])
+
+<a
+    {{
+        $attributes->merge([
+            'class' => 'orcid-link',
+            'href' => $orcid,
+            'target' => "_blank",
+            'aria-label' => __('common.editorialHistory.page.orcidLink', ['name' => $name]),
+        ])
+    }}
+>
+    @if ($isVerified)
+        {!! $orcidIcon !!}
+    @else
+        {!! $orcidUnauthenticatedIcon!!}
+    @endif
+</a>

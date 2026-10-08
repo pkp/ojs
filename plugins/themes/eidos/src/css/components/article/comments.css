@@ -1,0 +1,378 @@
+.PkpComments {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.PkpComment {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.PkpComment__header {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.5rem;
+}
+
+.PkpComment__author {
+  display: flex;
+  flex-direction: column;
+}
+
+.PkpComment__author-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.PkpComment__authorOrcid {
+  display: inline-block;
+  position: relative;
+  top: 0.25em;
+
+  & .PkpOrcidDisplay__icon {
+    width: 1.5rem;
+  }
+}
+
+.PkpComment__author-affiliation {
+  font-size: 1.125rem;
+}
+
+.PkpComment__header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.PkpComment__header-date {
+  font-size: 0.875rem;
+}
+
+.PkpComment__menu-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius);
+  color: var(--color-page-text);
+
+  &:hover {
+    outline: 1px solid;
+    background: var(--color-button-background);
+    color: var(--color-button-text);
+  }
+
+  &:focus-visible {
+    outline: 2px solid;
+  }
+}
+
+.PkpComment__menu-content {
+  width: 100vw;
+  max-width: 20rem;
+  background: var(--color-overlay-background);
+  color: var(--color-overlay-text);
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: var(--overlay-shadow);
+}
+
+.PkpComment__menu-items {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.PkpComment__menu-item,
+.PkpComment__menu-item-copy .PkpCopyToClipboard__button {
+  padding-inline: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 3rem;
+  text-align: start;
+  line-height: 1.25;
+  border-radius: var(--radius);
+
+  &:hover {
+    background: var(--color-overlay-text);
+    color: var(--color-overlay-background);
+  }
+
+  &:focus-visible {
+    outline: 2px solid;
+  }
+}
+
+.PkpComment__menu-item-icon {
+  flex-shrink: 0;
+}
+
+.PkpComment__menu-item-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.PkpComment__menu-item-copy {
+  padding-inline: 0;
+}
+
+.PkpComment__menu-text-item {
+  font-size: 0.875rem;
+  padding : 1.5rem;
+  border-top: var(--border-width) solid var(--color-overlay-line);
+  line-height: 1.5;
+
+  & a {
+    @apply link;
+  }
+}
+
+.PkpComment__menu-arrow {
+  fill: var(--color-overlay-background);
+  stroke: rgba(0, 0, 0, 0.075);
+}
+
+.PkpComment__message {
+  line-height: 1.75;
+  white-space: pre-line;
+}
+
+.PkpCommentsCta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  text-align: center;
+
+  & .PkpButton {
+    @apply button;
+    @apply button-highlight;
+  }
+}
+
+.PkpCommentsCta__message {
+  font-size: 1.125rem;
+  font-weight: 500;
+  max-width: 30em;
+}
+
+.PkpCommentsVersionDivider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.PkpCommentsVersionDivider__divider {
+  width: 100%;
+  border-top: 2px dashed;
+  margin-bottom: 1rem;
+}
+
+.PkpCommentsVersionDivider__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.PkpCommentsVersionDivider__desc {
+  font-size: 0.875rem;
+}
+
+.PkpCommentAdd__fields-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.PkpCommentAdd {
+
+  & .PkpTextarea__label {
+    display: block;
+    max-width: 40em;
+  }
+
+  & .PkpTextarea__element {
+    @apply input;
+    @apply input-textarea;
+    margin-top: 0.5rem;
+    max-width: 40em;
+  }
+}
+
+.PkpCommentAdd__submit {
+  @apply button;
+  @apply button-highlight;
+}
+
+.PkpComment__pending {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: var(--border-width) dashed;
+  border-radius: var(--radius);
+  padding: 0.75rem;
+}
+
+.PkpComment__pending-icon {
+  flex-shrink: 0;
+}
+
+.PkpCommentAdd__buttons,
+.PkpCommentReport__buttons {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  gap: 0.5rem;
+}
+
+.PkpCommentAdd__submitting,
+.PkpCommentReport__submitting {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.PkpCommentAdd__spinner,
+.PkpCommentReport__spinner {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+}
+
+.PkpCommentReport__reason {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  & .PkpTextarea__label {
+    @apply input-label;
+
+    & strong {
+      font-weight: 500;
+      text-decoration: underline;
+      text-decoration-style: dashed;
+      text-decoration-thickness: 0.1em;
+      text-underline-offset: 0.25em;
+    }
+  }
+
+  & .PkpTextarea__element {
+    @apply input;
+    @apply input-textarea;
+  }
+}
+
+.PkpCommentReport__submit {
+  @apply button;
+  @apply button-highlight;
+}
+
+.PkpCommentReport__cancel {
+  @apply button;
+}
+
+
+.PkpCommentsShowMore {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.PkpCommentsShowMore__divider {
+  position: absolute;
+  top: 1.5rem;
+  width: 100%;
+  border-top: 2px dashed;
+  margin-bottom: 1rem;
+}
+
+.PkpCommentsShowMore__button-bg {
+  position: relative;
+  z-index: 10;
+  background: var(--color-page-background);
+}
+
+.PkpCommentsShowMore__button {
+  @apply button;
+  @apply button-highlight;
+}
+
+.PkpCommentsShowMore__loading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (min-width: 640px) {
+
+  .PkpComment__header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .PkpComment__pending {
+    flex-direction: row;
+    border: none;
+    padding: 0;
+  }
+
+  .PkpCommentsVersionDivider {
+    position: relative;
+  }
+
+  .PkpCommentsVersionDivider__divider {
+    position: absolute;
+    top: 1em;
+  }
+
+  .PkpCommentsVersionDivider__title {
+    position: relative;
+    padding: 0 1rem;
+    background: var(--color-page-background);
+  }
+
+  .PkpCommentAdd__buttons,
+  .PkpCommentReport__buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .PkpCommentReport__buttons {
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1536px) {
+
+  .PkpComments {
+    gap: 6rem;
+  }
+
+  .PkpComment {
+    gap: 2rem;
+  }
+
+  .PkpComment__message {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1920px) {
+
+  .PkpComment__message {
+    font-size: 1.25rem;
+  }
+}

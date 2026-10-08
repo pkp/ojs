@@ -74,8 +74,10 @@ class ArticleHandler extends Handler
                 $secret = Config::getVar('security', 'api_key_secret', '');
                 if (!$secret) {
                     $templateMgr = TemplateManager::getManager($request);
-                    $templateMgr->assign('message', 'api.500.apiSecretKeyMissing');
-                    return $templateMgr->display('frontend/pages/message.tpl');
+                    return $templateMgr->displaySystemMessage(
+                        title: __('common.error'),
+                        message: __('api.500.apiSecretKeyMissing'),
+                    );
                 }
                 try {
                     $headers = new stdClass();
@@ -88,8 +90,10 @@ class ArticleHandler extends Handler
                     $this->setApiToken($apiToken);
                 } catch (\Exception $e) {
                     $templateMgr = TemplateManager::getManager($request);
-                    $templateMgr->assign('message', 'api.400.invalidApiToken');
-                    return $templateMgr->display('frontend/pages/message.tpl');
+                    return $templateMgr->displaySystemMessage(
+                        title: __('common.error'),
+                        message: __('api.500.invalidApiToken'),
+                    );
                 }
             }
         }
@@ -230,6 +234,7 @@ class ArticleHandler extends Handler
         $templateMgr->assign([
             'issue' => $issue,
             'article' => $article,
+            'submission' => $article,
             'publication' => $publication,
             'currentPublication' => $article->getCurrentPublication(),
             'galley' => $this->galley,
@@ -293,26 +298,28 @@ class ArticleHandler extends Handler
 
         $primaryGalleys = [];
         $supplementaryGalleys = [];
+        $primaryFileGenreIds = [];
+        $supplementaryFileGenreIds = [];
         if ($galleys) {
             $genreDao = DAORegistry::getDAO('GenreDAO'); /** @var GenreDAO $genreDao */
-            $primaryGenres = $genreDao->getPrimaryByContextId($context->getId())->toArray();
-            $primaryGenreIds = array_map(function ($genre) {
-                return $genre->getId();
-            }, $primaryGenres);
-            $supplementaryGenres = $genreDao->getBySupplementaryAndContextId(true, $context->getId())->toArray();
-            $supplementaryGenreIds = array_map(function ($genre) {
-                return $genre->getId();
-            }, $supplementaryGenres);
-
+            $primaryFileGenreIds = $genreDao->getIdsBy(
+                contextIds: [$context->getId()],
+                supplementary: false,
+                dependent: false,
+            )->toArray();
+            $supplementaryFileGenreIds = $genreDao->getIdsBy(
+                contextIds: [$context->getId()],
+                supplementary: true,
+            )->toArray();
             foreach ($galleys as $galley) {
                 $remoteUrl = $galley->getData('urlRemote');
                 $file = Repo::submissionFile()->get((int) $galley->getData('submissionFileId'));
                 if (!$remoteUrl && !$file) {
                     continue;
                 }
-                if ($remoteUrl || in_array($file->getGenreId(), $primaryGenreIds)) {
+                if ($remoteUrl || in_array($file->getGenreId(), $primaryFileGenreIds)) {
                     $primaryGalleys[] = $galley;
-                } elseif (in_array($file->getGenreId(), $supplementaryGenreIds)) {
+                } elseif (in_array($file->getGenreId(), $supplementaryFileGenreIds)) {
                     $supplementaryGalleys[] = $galley;
                 }
             }
@@ -320,19 +327,21 @@ class ArticleHandler extends Handler
         $templateMgr->assign([
             'primaryGalleys' => $primaryGalleys,
             'supplementaryGalleys' => $supplementaryGalleys,
+            'primaryFileGenreIds' => $primaryFileGenreIds,
+            'supplementaryFileGenreIds' => $supplementaryFileGenreIds,
         ]);
 
         // Check if JATS is publicly available for this publication
-        if ($publication->getData('jatsPublicVisibility')) {
-            $templateMgr->assign([
-                'jatsDownloadUrl' => $request->getDispatcher()->url(
+        $templateMgr->assign([
+            'jatsDownloadUrl' => $publication->getData('jatsPublicVisibility')
+                ? $request->getDispatcher()->url(
                     $request,
                     PKPApplication::ROUTE_API,
                     $context->getPath(),
                     "submissions/{$article->getId()}/publications/{$publication->getId()}/jats/download"
                 )
-            ]);
-        }
+                : ''
+        ]);
 
         // Citations
         $templateMgr->assign([
@@ -401,12 +410,15 @@ class ArticleHandler extends Handler
             );
 
             $paymentManager = Application::get()->getPaymentManager($context);
-            if ($paymentManager->onlyPdfEnabled()) {
-                $templateMgr->assign('restrictOnlyPdf', true);
-            }
-            if ($paymentManager->purchaseArticleEnabled()) {
-                $templateMgr->assign('purchaseArticleEnabled', true);
-            }
+            $templateMgr->assign('restrictOnlyPdf', (bool) $paymentManager->onlyPdfEnabled());
+            $templateMgr->assign('purchaseArticleEnabled', (bool) $paymentManager->purchaseArticleEnabled());
+
+            // Load metadata blocks late so that they can re-use
+            // data already passed to the template
+            $metadataBlocks = $templateMgr->metadataBlocks->load($publication, $article);
+            $templateMgr->assign([
+                'metadataBlocks' => $metadataBlocks,
+            ]);
 
             if (!Hook::call('ArticleHandler::view', [&$request, &$issue, &$article, $publication])) {
                 $templateMgr->display('frontend/pages/article.tpl');

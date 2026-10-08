@@ -1,0 +1,18 @@
+/**
+ * Use this to style any item like a text link
+ * with an underline and hover/focus states.
+ */
+@utility link {
+  @apply tab-focus;
+  font-weight: 500;
+  color: currentColor;
+  text-decoration: underline;
+  text-decoration-thickness: 0.15em;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+    outline: 0.15em solid;
+    outline-offset: 0.15em;
+  }
+}

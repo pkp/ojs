@@ -1,0 +1,57 @@
+<x-layout.basic
+	title="{{ __('about.contact') }}"
+	pageId="contact"
+>
+    <div class="html-text">
+        @if ($mailingAddress)
+            <h2>{{ __('common.mailingAddress') }}</h2>
+            <p>
+                {!! ViewHelper::sanitizeHtml(nl2br($mailingAddress)) !!}
+            </p>
+        @endif
+
+        @if ($contactTitle || $contactName || $contactAffiliation || $contactPhone || $contactEmail)
+            <h2>
+                {{ __('about.contact.principalContact') }}
+            </h2>
+            <p>
+                @if ($contactName)
+                    {{ $contactName }}<br>
+                @endif
+                @if ($contactTitle)
+                    {{ $contactTitle }}<br>
+                @endif
+                @if ($contactAffiliation)
+                    {!! ViewHelper::sanitizeHtml($contactAffiliation) }}<br>
+                @endif
+                @if ($contactPhone)
+                    {{ $contactPhone }}<br>
+                @endif
+                @if ($contactEmail)
+                    <a href="mailto:{{ $contactEmail }}">
+                        {{ $contactEmail }}
+                    </a>
+                @endif
+            </p>
+        @endif
+
+        @if ($supportName || $supportPhone || $supportEmail)
+            <h2>
+                {{ __('about.contact.supportContact') }}
+            </h2>
+            <p>
+                @if ($supportName)
+                    {{ $supportName }}<br>
+                @endif
+                @if ($supportPhone)
+                    {{ $supportPhone }}<br>
+                @endif
+                @if ($supportEmail)
+                    <a href="mailto:{{ $supportEmail }}">
+                        {{ $supportEmail }}
+                    </a>
+                @endif
+            </p>
+        @endif
+    </div>
+</x-layout.basic>

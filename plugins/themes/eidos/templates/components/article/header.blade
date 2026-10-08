@@ -1,0 +1,37 @@
+<header class="article-header">
+    <h1 class="article-title">
+        {!! ViewHelper::sanitizeHtml(
+            $publication->getLocalizedFullTitle()
+        ) !!}
+    </h1>
+    @if ($publication->getData('authors'))
+        <h2 class="sr-only">
+            {{ __('article.authors') }}
+        </h2>
+        <ul class="article-authors">
+            @foreach ($publication->getData('authors') as $author)
+                <li class="article-author">
+                    {{-- preserve this formatting so that there isn't an extra space before the comma --}}
+                    {{
+                        $author->getFullName()
+                    }}@if ($author->getData('orcid'))
+                        <x-orcid-link
+                            class="article-author-orcid"
+                            name="{{ $author->getFullName() }}"
+                            orcid="{{ $author->getData('orcid') }}"
+                            :is-verified="$author->hasVerifiedOrcid()"
+                        />
+                    @endif{{
+                    ""}}@if ($loop->iteration < $publication->getData('authors')->count()){{
+                        __('common.commaListSeparator')
+                    }}@endif
+                </li>
+            @endforeach
+        </ul>
+        <div class="article-authors-more">
+            <x-arrow-link href="?section=article#authors" :truncate="true">
+                {{ __('plugins.themes.eidos.viewAuthorDetails') }}
+            </x-arrow-link>
+        </div>
+    @endif
+</header>

@@ -1,0 +1,108 @@
+.PkpDialog__overlay {
+	position: fixed;
+	inset: 0;
+  z-index: 999999;
+	background: #000;
+	opacity: 0;
+	transition: opacity 1s;
+
+	&[data-state="open"] {
+		opacity: 0.85;
+	}
+}
+
+.PkpDialog__positionContainer {
+  position: fixed;
+	inset: 0;
+  z-index: 999999;
+	overflow-y: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5rem;
+	pointer-events: none; /* Allow clicks to pass through to overlay */
+}
+
+.PkpDialog__content {
+  position: relative;
+  width: 100%;
+  max-width: 32rem;
+  padding: 0.75rem;
+  background: var(--color-overlay-background);
+  color: var(--color-overlay-text);
+  box-shadow: var(--overlay-shadow);
+  border-radius: var(--overlay-radius);
+	pointer-events: auto; /* Re-enable clicks on the dialog itself */
+}
+
+.PkpDialog__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.PkpDialog__body {
+  margin-top: 0.75rem;
+}
+
+.PkpDialog__actionButtons {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+
+  & .PkpButton {
+    @apply button;
+  }
+
+  & .PkpButton__warning {
+    @apply button-highlight;
+  }
+}
+
+.PkpDialog__close {
+  @apply tab-focus;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & .PkpIcon {
+    fill: currentColor;
+  }
+
+  &:hover .PkpIcon {
+    border-radius: var(--radius);
+    border: var(--border-width) solid;
+  }
+
+  &:focus-visible {
+    outline-offset: -0.5rem;
+  }
+}
+
+[dir="rtl"] {
+
+  & .PkpDialog__close {
+    left: 0;
+    right: auto;
+  }
+}
+
+@media (min-width: 480px) {
+
+  .PkpDialog__content {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 640px) {
+
+  .PkpDialog__title {
+    font-size: 1.25rem;
+  }
+}

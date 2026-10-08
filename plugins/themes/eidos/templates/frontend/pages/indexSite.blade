@@ -1,0 +1,11 @@
+<x-layout
+    title="{{ $site->getLocalizedTitle() }}"
+    description="{{ $site->getLocalizedData('about') }}"
+>
+    <div class="page-container page-homepage" id="skip-to-main">
+        <h1 class="sr-only">
+            {{ $site->getLocalizedTitle() }}
+        </h1>
+        <x-homepage-blocks />
+    </div>
+</x-layout>

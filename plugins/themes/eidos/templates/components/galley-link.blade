@@ -1,0 +1,74 @@
+@php
+    /**
+     * Assume the galley is in the current context if
+     * no specific context is passed.
+     */
+    $galleyContextPath = $galleyContextPath ?? $currentContext->getPath();
+
+    /**
+     * Determine whether the user has access to this galley
+     */
+    $access = $hasAccess || ($restrictOnlyPdf && !$galley->isPdfGalley());
+
+    /**
+     * Get the icon to display with this galley
+     */
+    $icon = 'other';
+    if (!$access) {
+        $icon = 'locked';
+    } else if ($galley->getData('urlRemote')) {
+        $icon = 'remote';
+    } else {
+        $type = app()->get('file')->getDocumentType($galley->getFileType());
+        if ($type === \PKP\file\FileManager::DOCUMENT_TYPE_PDF) {
+            $icon = 'pdf';
+        } else if ($type === \PKP\file\FileManager::DOCUMENT_TYPE_HTML || $type === 'application/xhtml+xml') {
+            $icon = 'html';
+        } else if ($type === \PKP\file\FileManager::DOCUMENT_TYPE_EXCEL || $type === 'text/csv') {
+            $icon = 'spreadsheet';
+        }
+    }
+
+    /**
+     * Get the url to this galley
+     */
+    $url = ViewHelper::url([
+        'context' => $galleyContextPath,
+        'page' => 'article',
+        'op' => 'view',
+        'path' => [
+            $publication->getData('urlPath') ?? $submission->getBestId(),
+            $galley->getBestGalleyId(),
+        ],
+    ]);
+
+    /**
+     * Get the price if one is set
+     */
+    $price = '';
+    if (!$access && $galleyContext) {
+        $price = __('reader.purchasePrice', [
+            'price' => $galleyContext->getSetting('purchaseIssueFee'),
+            'currency' => $galleyContext->getSetting('currency'),
+        ]);
+    }
+@endphp
+
+<a
+    class="{{ join(' ', [$class, 'galley-link']) }}"
+    href="{{ $url }}"
+    @if ($labelledBy)
+        aria-labelledBy="{{ $labelledBy }}"
+    @endif
+>
+    @includeIf('components/icons/galley-' . $icon)
+    <span class="galley-link-name">
+        {{ $label }}
+
+        @if ($price)
+            <span class="galley-link-cost">
+                {{ $price }}
+            </span>
+        @endif
+    </span>
+</a>

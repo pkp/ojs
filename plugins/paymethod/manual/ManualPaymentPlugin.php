@@ -191,14 +191,12 @@ class ManualPaymentPlugin extends PaymethodPlugin
 
                 Mail::send($mailable);
 
-                $templateMgr->assign([
-                    'currentUrl' => $request->url(null, 'payment', 'plugin', ['notify', $queuedPaymentId]),
-                    'pageTitle' => 'plugins.paymethod.manual.paymentNotification',
-                    'message' => 'plugins.paymethod.manual.notificationSent',
-                    'backLink' => $queuedPayment->getRequestUrl(),
-                    'backLinkLabel' => 'common.continue'
-                ]);
-                $templateMgr->display('frontend/pages/message.tpl');
+                $templateMgr->displaySystemMessage(
+                    title: __('plugins.paymethod.manual.paymentNotification'),
+                    message: __('plugins.paymethod.manual.notificationSent'),
+                    backLink: $queuedPayment->getRequestUrl(),
+                    backLinkLabel: __('common.continue'),
+                );
                 exit;
             default:
                 throw new Exception("Invalid payment operation: {$op}");

@@ -1,0 +1,8 @@
+<div class="article-tab-comments">
+    @php
+        $json = json_encode($userCommentsInitConfig);
+        $json = str_replace('{{', '{ {', $json);
+        $json = str_replace('}}', '} }', $json);
+    @endphp
+    <pkp-comments v-bind='{!! $json !!}'></pkp-comments>
+</div>

@@ -1,0 +1,30 @@
+<x-homepage-blocks.default slug="how-to-submit">
+    <x-notice
+        title="<h2>{!!
+            ViewHelper::sanitizeHtml(
+                str_replace(
+                    '{$journalName}',
+                    $currentContext->getLocalizedData('name'),
+                    $activeTheme->getLocalizedOption('howToSubmitTitle'),
+                )
+            )
+        !!}</h2>"
+    >
+        <div class="html-text">
+            {!!
+                ViewHelper::sanitizeHtml(
+                    str_replace(
+                        '{$journalName}',
+                        $currentContext->getLocalizedData('name'),
+                        $activeTheme->getLocalizedOption('howToSubmitText'),
+                    )
+                )
+            !!}
+        </div>
+        <x-slot:actions>
+            <a class="button" href="{{ ViewHelper::url(['page' => 'about', 'op' => 'submissions']) }}">
+                {{ $activeTheme->getLocalizedOption('howToSubmitAction') }}
+            </a>
+        </x-slot:actions>
+    </x-notice>
+</x-homepage-blocks.default>

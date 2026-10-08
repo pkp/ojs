@@ -1,0 +1,175 @@
+{{--
+ * Display the full issue table of contents
+ *
+ * This template is intended to be used on the the issue
+ * page as well as when a full issue is displayed on the
+ * homepage.
+ *
+--}}
+
+@props([
+    /**
+     * The issue to display
+     */
+    'issue' => null,
+
+    /**
+     * Pass the heading level for the issue title
+     * For example, to use <h2>, pass `1`.
+     *
+     * All subsequent headings will be adjusted
+     * based on this value.
+     *
+     * Must be an `int`.
+     */
+    'headingStart' => 1,
+
+    /**
+     * Whether or not to show article covers
+     * with articles in the table contents.
+     */
+    'showArticleCovers' => false,
+
+    /**
+     * Whether or not to show a download link
+     * for article galleys.
+     */
+    'showArticleGalleys' => false,
+])
+
+@php
+    $issueHeading = 'h' . $headingStart;
+    $sectionHeading = 'h' . $headingStart + 1;
+    $articleHeading = 'h' . $headingStart + 2;
+@endphp
+
+<div class="
+  issue-toc
+  @if ($issue->getLocalizedCoverImageUrl()) issue-toc-with-cover @endif
+">
+    <div class="issue-toc-wrapper">
+        @if ($issue->getLocalizedCoverImageUrl())
+            <div class="issue-toc-cover">
+                <img
+                    class="issue-toc-cover-image"
+                    src="{{ $issue->getLocalizedCoverImageUrl() }}"
+                    alt="{{ $issue->getLocalizedCoverImageAltText() }}"
+                >
+            </div>
+        @endif
+        <div class="issue-toc-header">
+            <div class="issue-toc-header-top">
+                <{{ $issueHeading }} class="issue-toc-identification">
+                    <div class="issue-toc-vol">
+                        {{ $issue->getIssueIdentification(['showTitle' => false, 'showYear' => false]) }}
+                    </div>
+                    @if ($issue->getYear())
+                        <div class="issue-toc-year">
+                            {{ $issue->getYear() }}
+                        </div>
+                    @endif
+                    @if ($issue->getLocalizedTitle())
+                        <div class="issue-toc-title">
+                            {{ $issue->getLocalizedTitle() }}
+                        </div>
+                    @endif
+                </{{ $issueHeading }}>
+                @if (!empty($issueGalleys))
+                    <div class="issue-toc-galleys">
+                        @foreach ($issueGalleys as $galley)
+                            @php
+                                $url = ViewHelper::url([
+                                    'page' => 'issue',
+                                    'op' => 'view',
+                                    'path' => [$issue->getBestIssueId(), $galley->getBestGalleyId()],
+                                ]);
+                            @endphp
+                            <a
+                                class="issue-galley"
+                                href="{{ $url }}"
+                                aria-label="{{
+                                    __('submission.representationOfTitle', [
+                                        'representation' => $galley->getGalleyLabel(),
+                                        'title' => $issue->getIssueIdentification(),
+                                    ])
+                                }}"
+                            >
+                                @if ($galley->isPdfGalley())
+                                    @includeIf('components/icons/galley-pdf')
+                                @endif
+                                <span class="issue-galley-name">
+                                    {{ $galley->getGalleyLabel() }}
+                                </span>
+                            </a>
+                        @endforeach
+                    </div>
+                @endif
+            </div>
+
+            @foreach ($pubIdPlugins as $pubIdPlugin)
+                @php $pubId = $issue->getStoredPubId($pubIdPlugin->getPubIdType()); @endphp
+                @if ($pubId)
+                    @php $doiUrl = $pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId); @endphp
+                    <div class="issue-toc-metadata issue-metadata-{{ $pubIdPlugin->getPubIdType() }}">
+                        <strong>
+                            {{ __('semicolon', ['label' => $pubIdPlugin->getPubIdDisplayType()]) }}
+                        </strong>
+                        @if ($doiUrl)
+                            <a class="link" href="{{ $doiUrl }}">
+                                {{ $doiUrl }}
+                            </a>
+                        @else
+                            {{ $pubId }}
+                        @endif
+                    </div>
+                @endif
+            @endforeach
+
+            @if ($issue->getDatePublished())
+                <div class="issue-toc-metadata issue-toc-metadata-published">
+                    <strong>
+                        {{ __('semicolon', [
+                            'label' => __('submissions.published'),
+                        ]) }}
+                    </strong>
+                    {{ ViewHelper::dateFormat($issue->getDatePublished(), $dateFormatLong) }}
+                </div>
+            @endif
+
+            <x-reveal id="issue-description-{{ $issue->getId() }}" class="issue-toc-description" height="15">
+                <x-slot:trigger>
+                    {{ __('common.readMore') }}
+                </x-slot>
+                <div class="html-text">
+                    {!! $issue->getLocalizedDescription() !!}
+                </div>
+            </x-reveal>
+        </div>
+
+        <ul class="issue-toc-sections">
+            @foreach ($publishedSubmissions as $section)
+                @if ($section['articles'])
+                    <li class="issue-toc-section">
+                        @if ($section['title'])
+                            <{{ $sectionHeading }} class="issue-toc-section-name">
+                                {{ $section['title'] }}
+                                </{{ $sectionHeading }}>
+                        @endif
+                        <ul class="issue-toc-articles">
+                            @foreach ($section['articles'] as $article)
+                                <li class="issue-toc-article">
+                                    <x-article-summary
+                                        :heading="$articleHeading"
+                                        :submission="$article"
+                                        :show-cover="$showArticleCovers"
+                                        :show-galleys="$showArticleGalleys"
+                                    />
+                                </li>
+                            @endforeach
+                        </ul>
+                    </li>
+                @endif
+            @endforeach
+        </ul>
+    </div>
+</div>

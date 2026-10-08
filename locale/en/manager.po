@@ -2233,3 +2233,12 @@ msgstr "This automated email is sent to the author to request payment of the pub
 
 msgid "manager.setup.enableEnrollmentMasthead.description"
 msgstr "If desired, a masthead can be generated automatically based on user enrollments, including start and end dates. See also Settings > Journal > Masthead."
+
+msgid "manager.homepageBlocks.issueSummary"
+msgstr "Current Issue (Summary)"
+
+msgid "manager.homepageBlocks.issueToc"
+msgstr "Current Issue (Table of Contents)"
+
+msgid "manager.homepageBlocks.issueSmmary.viewLatest"
+msgstr "View Latest Issue"

@@ -1,0 +1,25 @@
+.header-desktop-utility-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  & .menu-dropdowns-content {
+    min-width: 20rem;
+  }
+}
+
+.header-utility-menu-icon {
+  --button-x-padding: 0.5rem;
+}
+
+@media (min-width: 1920px) {
+
+  .header-utility-menu-icon {
+    --button-x-padding: 0.75rem;
+
+    > svg {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+}
