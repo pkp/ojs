@@ -98,18 +98,24 @@
       grid-column-end: 3;
     }
 
-    & .article-sidebar-cite {
-
-      & .dropdown-content {
-        min-width: 24rem;
-      }
+    & .article-sidebar-cite,
+    & .article-sidebar-share {
+      min-width: 0;
     }
 
-    & .article-sidebar-share {
+    & .article-sidebar-cite-button-text,
+    & .article-sidebar-share-button-text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
 
-      & .dropdown-content {
-        min-width: 16rem;
-      }
+    & .article-sidebar-cite .dropdown-content {
+      min-width: 24rem;
+    }
+
+    & .article-sidebar-share .dropdown-content {
+      min-width: 16rem;
     }
   }
 }

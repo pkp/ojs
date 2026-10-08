@@ -35,7 +35,9 @@
             >
                 <x-slot:trigger>
                     @include('components/icons/cite')
-                    {{ __('plugins.themes.eidos.cite') }}
+                    <span class="article-sidebar-cite-button-text">
+                        {{ __('plugins.themes.eidos.cite') }}
+                    </span>
                 </x-slot:trigger>
                 <pkp-cite-body v-bind='@json($citeConfig)'></pkp-cite-body>
             </x-dropdown>
@@ -47,7 +49,9 @@
             >
                 <x-slot:trigger>
                     @include('components/icons/share')
-                    {{ __('plugins.themes.eidos.share') }}
+                    <span class="article-sidebar-cite-button-text">
+                        {{ __('plugins.themes.eidos.share') }}
+                    </span>
                 </x-slot:trigger>
                 <x-share-links
                     :share-options="$shareOptions"
