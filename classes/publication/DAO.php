@@ -156,4 +156,18 @@ class DAO extends \PKP\publication\DAO
     {
         return $this->fromRow($row, [$row->publication_id], (object) []);
     }
+
+    /**
+     * @copydoc \PKP\publication\DAO::whereHasDoi()
+     */
+    protected function whereHasDoi(\Illuminate\Database\Query\Builder $q): \Illuminate\Database\Query\Builder
+    {
+        return parent::whereHasDoi($q)
+            ->orWhereExists(
+                fn (Builder $q) => $q->select(DB::raw(1))
+                    ->from('publication_galleys as g')
+                    ->whereColumn('g.publication_id', '=', 'p.publication_id')
+                    ->whereNotNull('g.doi_id')
+            );
+    }
 }
