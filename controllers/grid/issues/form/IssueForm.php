@@ -282,7 +282,7 @@ class IssueForm extends Form
         if ($isNewIssue) {
             $issue->setPublished(0);
             Repo::issue()->add($issue);
-            if (Repo::doi()->assignOnCreation($journal)) {
+            if (Repo::doi()->assignOnItemCreation($journal)) {
                 Repo::issue()->createDoi($issue);
             }
         }
