@@ -209,19 +209,26 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         // Subjects
         $subjects = [];
         if (!empty($galleyFile) && !empty($genre) && $genre->getSupplementary()) {
-            $subjects = (array) $this->getPrimaryTranslation($galleyFile->getData('subject'), $objectLocalePrecedence);
+            foreach ($this->getTranslationsByPrecedence($galleyFile->getData('subject') ?? [], $objectLocalePrecedence) as $locale => $subject) {
+                $subjects[$locale][] = $subject;
+            }
         } elseif (!empty($article) && !empty($publication)) {
-            $subjects = array_merge(
-                (array) $this->getPrimaryTranslation($publication->getData('keywords'), $objectLocalePrecedence),
-                (array) $this->getPrimaryTranslation($publication->getData('subjects'), $objectLocalePrecedence)
-            );
+            foreach (['keywords', 'subjects'] as $field) {
+                foreach ($this->getTranslationsByPrecedence($publication->getData($field) ?? [], $objectLocalePrecedence) as $locale => $items) {
+                    foreach ((array) $items as $item) {
+                        $subjects[$locale][] = $item['name'];
+                    }
+                }
+            }
         }
         if (!empty($subjects)) {
-            $subjects = array_map(static fn ($s) => $s['name'], $subjects);
-
             $subjectsNode = $doc->createElementNS($deployment->getNamespace(), 'subjects');
-            foreach ($subjects as $subject) {
-                $subjectsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'subject', htmlspecialchars($subject, ENT_COMPAT, 'UTF-8')));
+            foreach ($subjects as $locale => $localizedSubjects) {
+                foreach ($localizedSubjects as $subject) {
+                    $node = $doc->createElementNS($deployment->getNamespace(), 'subject', htmlspecialchars($subject, ENT_COMPAT, 'UTF-8'));
+                    $node->setAttribute('xml:lang', LocaleConversion::toBcp47($locale));
+                    $subjectsNode->appendChild($node);
+                }
             }
             $rootNode->appendChild($subjectsNode);
         }
@@ -575,16 +582,23 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         }
         $titlesNode = $doc->createElementNS($deployment->getNamespace(), 'titles');
         // Start with the primary object locale.
+        $primaryTitleLocale = array_key_first($titles);
         $primaryTitle = array_shift($titles);
-        $titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', htmlspecialchars($primaryTitle, ENT_COMPAT, 'UTF-8')));
+        $node = $doc->createElementNS($deployment->getNamespace(), 'title', htmlspecialchars($primaryTitle, ENT_COMPAT, 'UTF-8'));
+        $node->setAttribute('xml:lang', LocaleConversion::toBcp47($primaryTitleLocale));
+        $titlesNode->appendChild($node);
+
         // Then let the translated titles follow.
         foreach ($titles as $locale => $title) {
-            $titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', htmlspecialchars($title, ENT_COMPAT, 'UTF-8')));
+            $node = $doc->createElementNS($deployment->getNamespace(), 'title', htmlspecialchars($title, ENT_COMPAT, 'UTF-8'));
+            $node->setAttribute('xml:lang', LocaleConversion::toBcp47($locale));
             $node->setAttribute('titleType', DATACITE_TITLETYPE_TRANSLATED);
+            $titlesNode->appendChild($node);
         }
         // And finally the alternative title.
         if (!empty($alternativeTitle)) {
             $titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', htmlspecialchars($alternativeTitle, ENT_COMPAT, 'UTF-8')));
+            $node->setAttribute('xml:lang', LocaleConversion::toBcp47($objectLocalePrecedence[0]));
             $node->setAttribute('titleType', DATACITE_TITLETYPE_ALTERNATIVE);
         }
         return $titlesNode;
@@ -1017,25 +1031,25 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                 if (!$galley->getData('urlRemote')) {
                     $genre = $plugin->getCache()->get('genres', $galleyFile->getData('genreId'));
                     if ($genre->getSupplementary()) {
-                        $suppFileDesc = $this->getPrimaryTranslation($galleyFile->getData('description'), $objectLocalePrecedence);
-                        if (!empty($suppFileDesc)) {
-                            $descriptions[DATACITE_DESCTYPE_OTHER] = $suppFileDesc;
+                        $suppFileDescs = $this->getTranslationsByPrecedence($galleyFile->getData('description') ?? [], $objectLocalePrecedence);
+                        foreach ($suppFileDescs as $locale => $suppFileDesc) {
+                            $descriptions[DATACITE_DESCTYPE_OTHER][$locale] = $suppFileDesc;
                         }
                     }
                 }
                 break;
             case isset($article):
-                $articleAbstract = $this->getPrimaryTranslation($publication->getData('abstract'), $objectLocalePrecedence);
-                if (!empty($articleAbstract)) {
-                    $descriptions[DATACITE_DESCTYPE_ABSTRACT] = $articleAbstract;
+                $articleAbstracts = $this->getTranslationsByPrecedence($publication->getData('abstract') ?? [], $objectLocalePrecedence);
+                foreach ($articleAbstracts as $locale => $abstract) {
+                    $descriptions[DATACITE_DESCTYPE_ABSTRACT][$locale] = $abstract;
                 }
                 break;
             case isset($issue):
-                $issueDesc = $this->getPrimaryTranslation($issue->getDescription(null), $objectLocalePrecedence);
-                if (!empty($issueDesc)) {
-                    $descriptions[DATACITE_DESCTYPE_OTHER] = $issueDesc;
+                $issueDescs = $this->getTranslationsByPrecedence($issue->getDescription(null) ?? [], $objectLocalePrecedence);
+                foreach ($issueDescs as $locale => $issueDesc) {
+                    $descriptions[DATACITE_DESCTYPE_OTHER][$locale] = $issueDesc;
                 }
-                $descriptions[DATACITE_DESCTYPE_TOC] = $this->getIssueToc($issue, $objectLocalePrecedence);
+                $descriptions[DATACITE_DESCTYPE_TOC][$objectLocalePrecedence[0]] = $this->getIssueToc($issue, $objectLocalePrecedence);
                 break;
             default:
                 throw new Exception('DataCite export: unable to determine descriptions; none of issue, article or galley is set.');
@@ -1043,9 +1057,12 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $descriptionsNode = null;
         if (!empty($descriptions)) {
             $descriptionsNode = $doc->createElementNS($deployment->getNamespace(), 'descriptions');
-            foreach ($descriptions as $descType => $description) {
-                $descriptionsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'description', htmlspecialchars(PKPString::html2text($description), ENT_COMPAT, 'UTF-8')));
-                $node->setAttribute('descriptionType', $descType);
+            foreach ($descriptions as $descType => $localizedDescriptions) {
+                foreach ($localizedDescriptions as $locale => $description) {
+                    $descriptionsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'description', htmlspecialchars(PKPString::html2text($description), ENT_COMPAT, 'UTF-8')));
+                    $node->setAttribute('descriptionType', $descType);
+                    $node->setAttribute('xml:lang', LocaleConversion::toBcp47($locale));
+                }
             }
         }
         return $descriptionsNode;
