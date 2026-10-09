@@ -1,7 +1,7 @@
 OJS 3.5.0 Release Notes
 Git tag: 3_5_0-0
 
-Release date: 
+Release date:
 ============================
 
 Configuration Changes
@@ -31,6 +31,13 @@ New config.inc.php parameters added for caching:
     - default (default value: 'file'). Can be either 'file' or 'opcache' to indicate which Laravel caching implementation should be used.
     - path (default value: 'cache/opcache'). Use to specify a path for cache storage when using 'file' or 'opcache' drivers.
 
+The following (previously optional) settings have been removed from the config.inc.php file and are now stored in the database. These can safely be removed post-migration.
+    - In the [orcid] section:
+        - client_id
+        - client_secret
+        - api_url
+    - In the [orcidProfilePlugin] section:
+        - orcid_redirect_base_url
 
 New Features
 ------------
