@@ -252,6 +252,9 @@
 		<note file="docs/release-notes/README-3.6.0" />
 	</upgrade>
 
+	<!-- Cached data, e.g. the event listeners, may name classes that no longer exist -->
+	<code function="clearDataCache" />
+
 	<!-- update plugin configuration - should be done as the final upgrade task -->
 	<code function="addPluginVersions" />
 </install>
