@@ -18,17 +18,20 @@
 @bg-shade:               #ddd;
 @bg-base:                #1E6292; // Accent color used in the header
 
-// Primary "anchor" color for links
-@primary:                #006798;
-@primary-lift:           lighten(@primary, 10%);
+// Primary "anchor" color for links.
+// WCAG 2.1 AAA on @bg and @bg-shade (pkp-lib#12661).
+@primary:                #00466a;
+@primary-lift:           #003d5c;
 
 // Yes/no, success/error, on/off, go/stop, etc. Typically green and red.
+// WCAG 2.1 AAA (1.4.6) error fill with white text — pkp-lib#12661 (~7.85:1)
 @yes:                    #00b24e;
-@no:                     #ff4040;
+@no:                     #a31515;
 
 // Text
 @text:                   rgba(0,0,0,0.87);
-@text-light:             rgba(0,0,0,0.54);
+// WCAG 2.1 AAA (1.4.6) on @bg — pkp-lib#12661
+@text-light:             #454545;
 @text-bg-base:           #fff;
 
 // Border colors
