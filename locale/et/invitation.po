@@ -71,12 +71,14 @@ msgstr ""
 "Kutsute kasutajat täitma OJS-is rolli ning olema ühtlasi nimetatud ajakirja "
 "toimetuse koosseisus"
 
+#, fuzzy
 msgid "userInvitation.modal.message"
 msgstr ""
 "{$email} on kutsutud OJS-is uut rolli vastu võtma. Kasutaja otsuse kohta "
 "saate teavet lehelt „Kasutajad ja rollid“, OJS-i teavitustest ja/või oma "
 "e-postist"
 
+#, fuzzy
 msgid "userInvitation.searchUser.stepDescription"
 msgstr ""
 "Otsige kasutajat tema e-posti aadressi, kasutajanime või ORCIDi iD järgi. "
