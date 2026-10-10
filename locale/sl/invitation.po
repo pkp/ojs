@@ -43,6 +43,7 @@ msgstr ""
 msgid "userInvitation.enterDetails.stepDescription"
 msgstr "Lahko jih povabite, da prevzamejo vlogo v OJS"
 
+#, fuzzy
 msgid "userInvitation.modal.message"
 msgstr ""
 "{$email} je bil povabljen za novo vlogo v OJS. Odločitev uporabnika lahko "
@@ -58,6 +59,7 @@ msgstr "Ta uporabnik že obstaja pri reviji"
 msgid "userInvitation.search.userNotFound"
 msgstr "Ta uporabnik še nima vloge pri reviji"
 
+#, fuzzy
 msgid "userInvitation.searchUser.stepDescription"
 msgstr ""
 "Poiščite uporabnika po njegovem e-poštnem naslovu, uporabniškem imenu ali "
