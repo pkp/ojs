@@ -54,6 +54,7 @@ msgstr ""
 msgid "userInvitation.enterDetails.stepDescription"
 msgstr "Vous pouvez l'inviter à prendre un rôle"
 
+#, fuzzy
 msgid "userInvitation.modal.message"
 msgstr ""
 "Un nouveau rôle dans votre revue a été proposé à {$email}. Vous pouvez "
@@ -69,6 +70,7 @@ msgstr "L'utilisateur/ice existe déjà dans cette revue"
 msgid "userInvitation.search.userNotFound"
 msgstr "Cette personne n'a aucun rôle dans cette revue"
 
+#, fuzzy
 msgid "userInvitation.searchUser.stepDescription"
 msgstr ""
 "Vérifiez si la personne existe déjà dans la base de données à l'aide de son "
