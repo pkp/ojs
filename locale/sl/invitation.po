@@ -27,6 +27,7 @@ msgstr "Preglejte podrobnosti, da začnete s svojo novo vloge v OJS"
 msgid "acceptInvitation.modal.title"
 msgstr "V OJS ste dobili novo vlogo"
 
+#, fuzzy
 msgid "acceptInvitation.verifyOrcid.stepDescription"
 msgstr ""
 "Lahko se odločite, da potrdite svoj ORCID iD ali to preskočite. Če se "
@@ -44,6 +45,7 @@ msgstr ""
 msgid "userInvitation.enterDetails.stepDescription"
 msgstr "Lahko jih povabite, da prevzamejo vlogo v OJS"
 
+#, fuzzy
 msgid "userInvitation.modal.message"
 msgstr ""
 "{$email} je bil povabljen za novo vlogo v OJS. Odločitev uporabnika lahko "
@@ -59,6 +61,7 @@ msgstr "Ta uporabnik že obstaja pri reviji"
 msgid "userInvitation.search.userNotFound"
 msgstr "Ta uporabnik še nima vloge pri reviji"
 
+#, fuzzy
 msgid "userInvitation.searchUser.stepDescription"
 msgstr ""
 "Poiščite uporabnika po njegovem e-poštnem naslovu, uporabniškem imenu ali "
