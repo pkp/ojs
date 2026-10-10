@@ -13,5 +13,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#, fuzzy
 msgid "userInvitation.searchUser.stepDescription"
 msgstr "ユーザーが存在しない場合は、役割への招待を送信できます。既存ユーザーの場合は、ユーザー情報を確認し、追加の役割へ招待できます。"

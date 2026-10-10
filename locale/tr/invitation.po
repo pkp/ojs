@@ -64,6 +64,7 @@ msgstr ""
 "geçmeyi seçerseniz, ORCID iD’nizi ileride OJS’deki profil bölümünden "
 "doğrulayabilirsiniz."
 
+#, fuzzy
 msgid "userInvitation.modal.message"
 msgstr ""
 "{$email} OJS’de yeni bir göreve davet edilmiştir. Kullanıcının kararını "
@@ -75,6 +76,7 @@ msgstr ""
 "Kullanıcıya davet, izlenecek adımlar, derginin GDPR politikaları ve ORCID "
 "doğrulaması konusunda bilgi vermek amacıyla bir e-posta gönderiniz."
 
+#, fuzzy
 msgid "userInvitation.searchUser.stepDescription"
 msgstr ""
 "Kullanıcıyı e-posta adresi, kullanıcı adı veya ORCID iD ile arayın. Başlamak "

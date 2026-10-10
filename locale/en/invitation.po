@@ -35,7 +35,7 @@ msgid "userInvitation.enterDetails.stepDescription"
 msgstr "You can invite them to take up a role in OJS"
 
 msgid "userInvitation.modal.message"
-msgstr "{$email} has been invited to new role in OJS. You can be updated about the user's decision on the Users & Roles page, your OJS notifications and/or your email"
+msgstr "{$email} has been invited to a new role in OJS. You can see the user's response on the Users & Roles page, in your OJS notifications, or in your email."
 
 msgid "userInvitation.roleTable.journalMasthead"
 msgstr "Journal Masthead"
@@ -47,7 +47,7 @@ msgid "userInvitation.search.userNotFound"
 msgstr "The user does not have a role in this journal"
 
 msgid "userInvitation.searchUser.stepDescription"
-msgstr "Search for the user using their email address, username or ORCID ID. Enter at least one details to get started. If the user does not exist, you can invite them to take up roles and be a part of your journal. If the user already exist in the system, you can view user information and invite to take a additional roles."
+msgstr "Search for the user by email address, username or ORCID iD. Enter at least one of these to get started. If the user does not exist, you can invite them to take on roles and become part of your journal. If the user already exists in the system, you can view their information and invite them to take on additional roles."
 
 msgid "userInvitation.sendMail.stepDescription"
 msgstr "Send the user an email to let them know about the invitation, next steps, journal GDPR polices and ORCID verification"
