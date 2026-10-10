@@ -49,6 +49,7 @@ msgstr ""
 "Hvis du har brug for hjælp til at forstå systemet, kan du klikke på knappen "
 "\"Hjælp\" i systemet for at få vejledning."
 
+#, fuzzy
 msgid "userInvitation.modal.message"
 msgstr ""
 "{$email} er blevet inviteret til en ny rolle i OJS. Du kan blive opdateret "
@@ -61,6 +62,7 @@ msgstr "Tidsskriftets kolofon"
 msgid "userInvitation.search.userFound"
 msgstr "Brugeren findes allerede hos tidsskriftet"
 
+#, fuzzy
 msgid "userInvitation.searchUser.stepDescription"
 msgstr ""
 "Søg efter brugeren ved hjælp af dennes e-mailadresse, brugernavn eller ORCID-"

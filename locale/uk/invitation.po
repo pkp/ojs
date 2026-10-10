@@ -33,6 +33,7 @@ msgstr "Користувач у журналі вже існує"
 msgid "userInvitation.search.userNotFound"
 msgstr "Користувач не має жодної ролі в цьому журналі"
 
+#, fuzzy
 msgid "userInvitation.searchUser.stepDescription"
 msgstr ""
 "Знайдіть користувача, використовуючи його адресу електронної пошти, ім'я "
@@ -54,6 +55,7 @@ msgstr ""
 "створити в нас обліковий запис (акаунт). З цією метою, будь ласка, введіть "
 "ім'я користувача й пароль."
 
+#, fuzzy
 msgid "userInvitation.modal.message"
 msgstr ""
 "Користувача {$email} запросили на нову роль в OJS. Ви можете отримувати "
