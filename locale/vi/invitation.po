@@ -55,6 +55,7 @@ msgstr ""
 msgid "userInvitation.enterDetails.stepDescription"
 msgstr "Bạn có thể mời họ đảm nhận một vai trò trong OJS"
 
+#, fuzzy
 msgid "userInvitation.modal.message"
 msgstr ""
 "{$email} đã được mời đảm nhận vai trò mới trong OJS. Bạn có thể theo dõi "
@@ -78,6 +79,7 @@ msgstr "Tạo tài khoản OJS"
 msgid "acceptInvitation.detailsReview.nextButtonLabel"
 msgstr "Đồng ý và Tiếp tục sử dụng OJS"
 
+#, fuzzy
 msgid "userInvitation.searchUser.stepDescription"
 msgstr ""
 "Tìm kiếm người dùng bằng địa chỉ email, tên đăng nhập hoặc ORCID ID. Vui "

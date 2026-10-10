@@ -57,6 +57,7 @@ msgstr ""
 "Sollten Sie den Schritt jetzt überspringen, können Sie die iD später noch in "
 "Ihrem OJS-Profil verifzieren"
 
+#, fuzzy
 msgid "userInvitation.modal.message"
 msgstr ""
 "{$email} wurde eingeladen, eine neue Rolle in OJS anzunehmen. Sie können "
@@ -72,6 +73,7 @@ msgstr "Diese/r Benutzer/in ist bereits in dieser Zeitschrift vorhanden"
 msgid "userInvitation.search.userNotFound"
 msgstr "Diese/r Benutzer/in besitzt keine Rolle in dieser Zeitschrift"
 
+#, fuzzy
 msgid "userInvitation.searchUser.stepDescription"
 msgstr ""
 "Suchen Sie mit der E-Mail Adresse, Benutzer/innennamen oder der ORCID ID "

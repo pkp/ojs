@@ -68,12 +68,14 @@ msgstr ""
 "Para começar a usar o OJS e aceitar o novo papel, terá de criar uma conta "
 "connosco. Para isso, insira um nome de utilizador e uma senha."
 
+#, fuzzy
 msgid "userInvitation.modal.message"
 msgstr ""
 "{$email} foi convidado para um novo papel no OJS. Poderá ser atualizado "
 "sobre a decisão do utilizador na página Utilizadores & Papéis, nas suas "
 "notificações do OJS e/ou no seu e-mail"
 
+#, fuzzy
 msgid "userInvitation.searchUser.stepDescription"
 msgstr ""
 "Procure o utilizador usando o seu endereço de e-mail, nome de utilizador ou "

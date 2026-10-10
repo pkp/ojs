@@ -55,6 +55,7 @@ msgstr ""
 msgid "userInvitation.enterDetails.stepDescription"
 msgstr "Та тэднийг OJS системд үүрэг гүйцэтгэхийг урьж болно"
 
+#, fuzzy
 msgid "userInvitation.modal.message"
 msgstr ""
 "{$email} хаягт OJS системийн шинэ үүргийн урилга илгээлээ. Хэрэглэгчийн "
@@ -70,6 +71,7 @@ msgstr "Хэрэглэгч энэ сэтгүүлд аль хэдийн бүрт�
 msgid "userInvitation.search.userNotFound"
 msgstr "Энэ хэрэглэгч тус сэтгүүлд ямар нэгэн үүрэггүй байна"
 
+#, fuzzy
 msgid "userInvitation.searchUser.stepDescription"
 msgstr ""
 "Хэрэглэгчийг имэйл хаяг, нэвтрэх нэр эсвэл ORCID ID-аар нь хайна уу. "
