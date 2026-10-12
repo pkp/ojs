@@ -21,3 +21,6 @@ msgstr ""
 
 msgid "plugins.generic.recommendByAuthor.heading"
 msgstr "Most read articles by the same author(s)"
+
+msgid "plugins.generic.recommendByAuthor.publishedIn"
+msgstr "{$author}; {$title}, in {$issue}"
