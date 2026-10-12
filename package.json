@@ -7,12 +7,15 @@
   "scripts": {
     "dev": "vue-cli-service build --no-clean --watch",
     "build": "vue-cli-service build --no-clean",
-    "lint": "vue-cli-service lint js/load.js lib/pkp/js/load.js lib/pkp/js/classes/VueRegistry.js"
+    "lint": "vue-cli-service lint js/load.js lib/pkp/js/load.js lib/pkp/js/classes/VueRegistry.js",
+    "postinstall": "copyfiles -f node_modules/altcha/dist/altcha.js lib/pkp/js/lib/altcha"
   },
   "dependencies": {
     "@tinymce/tinymce-vue": "^1.1.0",
+    "altcha": "^1.2.0",
     "chart.js": "^2.9.4",
     "clone-deep": "^4.0.1",
+    "copyfiles": "^2.4.1",
     "debounce": "^1.2.0",
     "dompurify": "^3.0.8",
     "moment": "^2.27.0",
