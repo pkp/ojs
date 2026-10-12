@@ -26,7 +26,7 @@
 		<query>
 			UPDATE issues as i
 			SET url_path = (
-				SELECT ist.setting_value
+				SELECT SUBSTR(ist.setting_value, 1, 64)
 				FROM issue_settings as ist
 				WHERE ist.issue_id = i.issue_id
 					AND ist.setting_name = 'pub-id::publisher-id'
@@ -35,7 +35,7 @@
 		<query>
 			UPDATE issue_galleys as ig
 			SET url_path = (
-				SELECT igs.setting_value
+				SELECT SUBSTR(igs.setting_value, 1, 64)
 				FROM issue_galley_settings as igs
 				WHERE igs.galley_id = ig.galley_id
 					AND igs.setting_name = 'pub-id::publisher-id'
@@ -44,7 +44,7 @@
 		<query>
 			UPDATE publication_galleys as g
 			SET url_path = (
-				SELECT gs.setting_value
+				SELECT SUBSTR(gs.setting_value, 1, 64)
 				FROM publication_galley_settings as gs
 				WHERE gs.galley_id = g.galley_id
 					AND gs.setting_name = 'pub-id::publisher-id'
