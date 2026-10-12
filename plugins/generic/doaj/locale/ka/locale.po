@@ -14,12 +14,14 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "მოდული „ექსპორტი DOAJ-ში“"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "ახდენს ჟურნალის ექსპორტს DOAJ-ში."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "DOAJ-თან დაკავშირება ჟურნალის დასამატებლად"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "თუ გსურთ სტატიის რეგისტრაცია უშუალოდ OJS-იდან, გთხოვთ შეიტანეთ API DOAJ "

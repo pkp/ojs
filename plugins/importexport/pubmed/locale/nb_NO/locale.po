@@ -1,11 +1,12 @@
 # Eirik Hanssen <eirikh@oslomet.no>, 2026.
+# Jan Erik Frantsvåg <jan.e.frantsvag@uit.no>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:05:45+00:00\n"
-"PO-Revision-Date: 2026-04-15 15:52+0000\n"
-"Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
+"PO-Revision-Date: 2026-09-14 11:53+0000\n"
+"Last-Translator: Jan Erik Frantsvåg <jan.e.frantsvag@uit.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-pubmed/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -48,10 +49,10 @@ msgid "plugins.importexport.pubmed.cliError"
 msgstr "FEIL:"
 
 msgid "plugins.importexport.pubmed.export.error.issueNotFound"
-msgstr "Ingen utgave stemmer med angitt utgave-ID \"{$issueId}\"."
+msgstr "Ingen utgave stemmer med angitt utgave-ID «{$issueId}»."
 
 msgid "plugins.importexport.pubmed.export.error.articleNotFound"
-msgstr "Ingen artikkel stemmer med den angitte artikkel-ID \"{$articleId}\"."
+msgstr "Ingen artikkel stemmer med den angitte artikkel-ID «{$articleId}»."
 
 msgid "plugins.importexport.pubmed.settings.form.nlmTitle.description"
 msgstr ""

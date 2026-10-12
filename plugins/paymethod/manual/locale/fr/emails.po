@@ -1,9 +1,10 @@
 # Rodolphe Lemétayer <rlemetayer@protonmail.com>, 2024.
 # Express2120+ <mirouxmmp111@gmail.com>, 2025.
+# Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-01 14:43+0000\n"
-"Last-Translator: Express2120+ <mirouxmmp111@gmail.com>\n"
+"PO-Revision-Date: 2026-09-04 12:24+0000\n"
+"Last-Translator: Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/"
 "paymethod-manual-emails/fr/>\n"
 "Language: fr\n"
@@ -18,9 +19,9 @@ msgstr "Notification de paiement manuel"
 
 msgid "emails.manualPaymentNotification.body"
 msgstr ""
-"Un paiement manuel doit être traité pour la revue {$contextName} et "
-"l'utilisateur ou utilisatrice {$senderName} (nom d'utilisateur ou "
-"d'utilisatrice &quot;{$senderUsername}&quot;).<br />\n"
+"Un paiement manuel doit être traité pour la revue {$contextName} et l'"
+"utilisateur/ice {$senderName} (nom d'utilisateur "
+"&quot;{$senderUsername}&quot;).<br />\n"
 "<br />\n"
 "L'élément facturé est &quot;{$paymentName}&quot;.<br />\n"
 "Le coût est de {$paymentAmount} ({$paymentCurrencyCode}).<br />\n"

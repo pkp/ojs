@@ -178,12 +178,27 @@ class Collector extends \PKP\submission\Collector
 
     /**
      * APP-specific filtering for submissions that should be listed on the DOI management page.
-     * Those are:
-     * submissions in the workflow editing and production stage,
-     * submissions that have a published publication, and
-     * submissions whose sub objects have a DOI.
+     * Those are all submitted submissions that have not been declined, and all submissions in the
+     * copyediting or production stage, with a published publication or with a DOI. The latter
+     * can also be listed on their own (inEditingOrPublished).
      */
     protected function addOnDoiPageFilterToQuery(Builder $q)
+    {
+        $q->where('s.submission_progress', '');
+        if ($this->inEditingOrPublished) {
+            $this->addInEditingPublishedOrWithDoisToQuery($q);
+        } else {
+            $q->where(function (Builder $q) {
+                $q->where('s.status', '!=', Submission::STATUS_DECLINED)
+                    ->orWhere(fn (Builder $q) => $this->addInEditingPublishedOrWithDoisToQuery($q));
+            });
+        }
+    }
+
+    /**
+     * Submissions in the copyediting or production stage, with a published publication or with a DOI
+     */
+    protected function addInEditingPublishedOrWithDoisToQuery(Builder $q): void
     {
         $q->where(function (Builder $q) {
             $q->whereIn('s.stage_id', [WORKFLOW_STAGE_ID_EDITING, WORKFLOW_STAGE_ID_PRODUCTION])

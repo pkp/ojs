@@ -1,0 +1,242 @@
+# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2026.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2026-09-15 04:51+0000\n"
+"Last-Translator: Apichaya <apichaya_cc@thonburi-u.ac.th>\n"
+"Language-Team: Thai <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/th/>"
+"\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.pubIds.urn.displayName"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjects"
+msgstr "เนื้อหาวารสาร"
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "URN ต้องขึ้นต้นด้วย {$urnPrefix}"
+
+msgid "plugins.pubIds.urn.description"
+msgstr ""
+"ส่วนเสริมนี้ใช้สำหรับกำหนด Uniform Resource Name (URN) ให้กับฉบับวารสาร "
+"บทความ และไฟล์เผยแพร่ใน OJS"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
+msgstr "โปรดเลือกรายการที่ต้องการกำหนด URN"
+
+msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
+msgstr "ฉบับวารสาร"
+
+msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
+msgstr "บทความ"
+
+msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
+msgstr "ไฟล์เผยแพร่"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
+msgstr "คำนำหน้า URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
+msgstr ""
+"คำนำหน้า URN เป็นส่วนที่กำหนดไว้ตายตัวและไม่เปลี่ยนแปลง เช่น \"urn"
+":nbn:de:0000-\""
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
+msgstr "รูปแบบคำนำหน้า URN ต้องเป็น \"urn:\"<NID>\":\"<NSS>"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix"
+msgstr "คำต่อท้าย URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
+msgstr ""
+"ใช้รูปแบบด้านล่างเพื่อสร้างคำต่อท้าย URN โดยใช้ %j สำหรับชื่อย่อวารสาร, %v "
+"สำหรับปีที่, %i สำหรับฉบับที่, %Y สำหรับปี, %a สำหรับรหัสบทความใน OJS, %g "
+"สำหรับรหัสไฟล์เผยแพร่ใน OJS, %f สำหรับรหัสไฟล์ใน OJS, %p สำหรับเลขหน้า และ "
+"%x สำหรับ \"รหัสที่กำหนดเอง\""
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
+msgstr ""
+"ตัวอย่างเช่น vol%viss%ipp%p อาจสร้างคำต่อท้าย URN เป็น \"vol3iss2pp230\""
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues"
+msgstr "สำหรับฉบับวารสาร"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
+msgstr "สำหรับบทความ"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
+msgstr "สำหรับไฟล์เผยแพร่"
+
+msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
+msgstr "โปรดระบุรูปแบบคำต่อท้าย URN สำหรับฉบับวารสาร"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired"
+msgstr "โปรดระบุรูปแบบคำต่อท้าย URN สำหรับบทความ"
+
+msgid "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
+msgstr "โปรดระบุรูปแบบคำต่อท้าย URN สำหรับไฟล์เผยแพร่"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
+msgstr "ใช้รูปแบบเริ่มต้น"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบ URN ที่มีอยู่ทั้งหมด?"
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo"
+msgstr "เลขตรวจสอบ"
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
+msgstr ""
+"ระบบจะคำนวณเลขตรวจสอบโดยอัตโนมัติและเพิ่มไว้ท้ายสุดเป็นหลักสุดท้ายของ URN"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace"
+msgstr "Namespace"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
+msgstr "เลือก"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.description"
+msgstr ""
+"namespace ของรหัสถาวรที่มักจำเป็นสำหรับการจดทะเบียน เช่น กับ Deutsche "
+"Nationalbibliothek"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver"
+msgstr "URL สำหรับแปลง URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
+msgstr "(เช่น https://nbn-resolving.de/)"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
+msgstr "โปรดระบุ URL สำหรับแปลง URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign"
+msgstr "กำหนด URN ใหม่"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
+msgstr ""
+"หากเปลี่ยนการตั้งค่า URN ค่า URN ที่กำหนดไว้แล้วจะไม่เปลี่ยนแปลง "
+"หลังจากบันทึกการตั้งค่า URN ใหม่แล้ว ให้ใช้ปุ่มนี้เพื่อล้าง URN ที่มีอยู่ทั้"
+"งหมด เพื่อให้การตั้งค่าใหม่มีผลกับรายการเดิม"
+
+msgid "plugins.pubIds.urn.editor.urn"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "บทความ"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "ไฟล์เผยแพร่"
+
+msgid "plugins.pubIds.urn.editor.customSuffixMissing"
+msgstr "ไม่สามารถกำหนด URN ได้ เนื่องจากยังไม่ได้ระบุคำต่อท้ายแบบกำหนดเอง"
+
+msgid "plugins.pubIds.urn.editor.patternNotResolved"
+msgstr ""
+"ไม่สามารถกำหนด URN ได้ "
+"เนื่องจากรูปแบบที่กำหนดยังมีค่าบางส่วนที่ไม่สามารถสร้างได้"
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr ""
+"URN ที่แสดงอยู่นี้เป็นเพียงตัวอย่าง "
+"โปรดเลือกช่องทำเครื่องหมายและบันทึกแบบฟอร์มเพื่อกำหนด URN"
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "URN นี้ถูกกำหนดให้กับ{$pubObjectType}นี้แล้ว"
+
+msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
+msgstr ""
+"คำต่อท้าย URN ที่ระบุถูกใช้กับรายการเผยแพร่อื่นแล้ว โปรดกำหนดคำต่อท้าย URN "
+"ที่ไม่ซ้ำกันสำหรับแต่ละรายการ"
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "เพิ่มเลขตรวจสอบ"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "ล้าง"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "ล้าง URN ของรายการในฉบับ"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบ URN ของรายการทั้งหมดในฉบับนี้?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr ""
+"ใช้ตัวเลือกนี้เพื่อล้าง URN ของรายการทั้งหมดที่กำหนดไว้ในฉบับนี้ ได้แก่ "
+"บทความและไฟล์เผยแพร่"
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "กำหนด URN {$pubId} ให้กับ{$pubObjectType}นี้"
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "ไม่สามารถกำหนด URN ได้ เนื่องจากยังไม่ได้ระบุคำต่อท้ายแบบกำหนดเอง"
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr ""
+"ไม่สามารถกำหนด URN {$pubId} ได้ "
+"เนื่องจากรูปแบบที่กำหนดยังมีค่าบางส่วนที่ไม่สามารถสร้างได้"
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "กำหนด URN {$pubId} แล้ว"
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "ต้องระบุเลขตรวจสอบ"
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "URN ต้องขึ้นต้นด้วย {$prefix}"
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "กำหนด"
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr "ไม่สามารถสร้าง URN ได้จนกว่าจะกำหนดบทความนี้ให้อยู่ในฉบับวารสาร"
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "ยังไม่ได้กำหนด URN ให้กับบทความนี้"
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "ไฟล์เผยแพร่: {$galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "รายการ"
+
+msgid "plugins.pubIds.urn.manager.settings.description"
+msgstr "โปรดตั้งค่าส่วนเสริม URN เพื่อให้สามารถจัดการและใช้งาน URN ใน OJS ได้:"
+
+msgid "plugins.pubIds.urn.manager.settings.explainURNs"
+msgstr "โปรดเลือกรายการเผยแพร่ที่จะกำหนด Uniform Resource Name (URN):"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
+msgstr ""
+"คำต่อท้าย URN สามารถกำหนดในรูปแบบใดก็ได้ "
+"แต่ต้องไม่ซ้ำกับรายการเผยแพร่อื่นที่ใช้คำนำหน้า URN เดียวกัน:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
+msgstr ""
+"%j.v%vi%i สำหรับฉบับวารสาร<br />%j.v%vi%i.%a สำหรับบทความ<br /"
+">%j.v%vi%i.%a.g%g สำหรับไฟล์เผยแพร่"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
+msgstr "ฉบับวารสาร"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบ URN ที่มีอยู่?"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
+msgstr ""
+"ระบุคำต่อท้าย URN สำหรับแต่ละรายการที่เผยแพร่ด้วยตนเอง โดยจะมีช่อง URN "
+"เพิ่มเติมในหน้าข้อมูลเมตาของแต่ละรายการ"
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr ""
+"ไม่สามารถสร้าง URN ได้ เนื่องจากข้อมูลบางส่วนที่จำเป็นสำหรับรูปแบบ URN "
+"ยังไม่ครบถ้วน คุณอาจต้องกำหนดบทความให้อยู่ในฉบับ ระบุรหัสผู้เผยแพร่ "
+"หรือกรอกเลขหน้า"
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "URN สำหรับบทความนี้จะเป็น {$urn}"

@@ -15,12 +15,14 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "DOAJ eksport plagini"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "DOAJ uchun eksport jurnali."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Qo'shish uchun DOAJ bilan bog'laning"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "Agar siz OJS ichidagi maqolalarni ro'yxatdan o'tkazmoqchi bo'lsangiz, DOAJ "

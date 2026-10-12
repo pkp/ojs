@@ -19,6 +19,7 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "Dodatak za iznošenje u DOAJ"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr ""
 "Ovaj dodatak iznosi časopis za DOAJ i omogućuje slanje informacija o "
@@ -27,6 +28,7 @@ msgstr ""
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Kontaktiraj DOAJ za uključenje"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "Ako želite registrirati članke iz OJS-a, molimo unesite svoj DOAJ API ključ. "

@@ -1,7 +1,7 @@
-# "10 ..." <jaana.tonisson@tlulib.ee>, 2025.
+# "10 ..." <jaana.tonisson@tlulib.ee>, 2025, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-04-06 09:42+0000\n"
+"PO-Revision-Date: 2026-09-03 15:03+0000\n"
 "Last-Translator: \"10 ...\" <jaana.tonisson@tlulib.ee>\n"
 "Language-Team: Estonian <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-pubmed/et/>\n"
@@ -49,3 +49,11 @@ msgstr "Ükski artikkel ei vastanud artikli ID-le \"{$articleId}\"."
 
 msgid "plugins.importexport.pubmed.displayName"
 msgstr "PubMed XML Export plugin"
+
+msgid "plugins.importexport.pubmed.settings.form.nlmTitle"
+msgstr "NLM pealkirja lühend"
+
+msgid "plugins.importexport.pubmed.settings.form.nlmTitle.description"
+msgstr ""
+"NLM pealkirja lühend ajakirjale. Kui sa ei tea lühendit,  <a href=\"https"
+"://www.ncbi.nlm.nih.gov/nlmcatalog/\">otsi NLM kataloogist</a>."

@@ -16,12 +16,14 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "DOAJ արտահանման պլագին"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "Արտահանեք ամսագրերը DOAJ-ի համար."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Ներառման համար դիմեք DOAJ-ին"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "Եթե ցանկանում եք հոդվածներ գրանցել OJS-ից, խնդրում ենք մուտքագրել ձեր DOAJ "

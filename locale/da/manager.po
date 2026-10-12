@@ -1,12 +1,12 @@
 # Niels Erik Frederiksen <nef@kb.dk>, 2021.
-# Alexandra Fogtmann-Schulz <alfo@kb.dk>, 2022, 2023, 2024, 2025.
+# Alexandra Fogtmann-Schulz <alfo@kb.dk>, 2022, 2023, 2024, 2025, 2026.
 # Jesper B. Thestrup <jbt@kb.dk>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
-"PO-Revision-Date: 2025-10-15 07:18+0000\n"
+"PO-Revision-Date: 2026-09-08 10:13+0000\n"
 "Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/manager/da/>"
 "\n"
@@ -2512,16 +2512,16 @@ msgstr "Abonnementet er udløbet"
 
 msgid "mailable.subscriptionExpired.description"
 msgstr ""
-"Denne e-mail underretter en abonnent om, at vedkommendes abonnement er "
-"udløbet. Den indeholder tidsskriftets URL-adresse samt adgangsinstruktioner."
+"Denne e-mail sendes automatisk for at underrette en abonnent om, at "
+"vedkommendes abonnement er udløbet."
 
 msgid "mailable.subscriptionExpiredLast.name"
 msgstr "Abonnement udløb sidste"
 
 msgid "mailable.subscriptionExpiredLast.description"
 msgstr ""
-"Denne e-mail underretter en abonnent om, at vedkommendes abonnement er "
-"udløbet. Den indeholder tidsskriftets URL-adresse samt adgangsinstruktioner."
+"Denne e-mail sendes automatisk for anden gang for at underrette en abonnent "
+"om, at vedkommendes abonnement er udløbet"
 
 msgid "mailable.subscriptionPurchaseIndividual.name"
 msgstr "Køb individuelt abonnement"

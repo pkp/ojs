@@ -1,7 +1,7 @@
-# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024.
+# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-10-20 01:53+0000\n"
+"PO-Revision-Date: 2026-09-15 04:51+0000\n"
 "Last-Translator: Apichaya <apichaya_cc@thonburi-u.ac.th>\n"
 "Language-Team: Thai <http://translate.pkp.sfu.ca/projects/ojs/"
 "reports-counter/th/>\n"
@@ -14,11 +14,11 @@ msgstr ""
 
 msgid "plugins.reports.counter.description"
 msgstr ""
-"ปลั๊กอิน COUNTER ช่วยให้สามารถรายงานกิจกรรมของวารสาร โดยใช้ <a href=\"https"
-"://www.projectcounter.org\">มาตรฐาน COUNTER</a> "
-"รายงานเหล่านี้เพียงอย่างเดียวไม่ทำให้วารสารเป็นไปตามมาตรฐาน COUNTER "
-"หากต้องการให้มีความสอดคล้องกับ COUNTER โปรดตรวจสอบข้อกำหนดที่เว็บไซต์ "
-"Project COUNTER."
+"ส่วนเสริม COUNTER ช่วยจัดทำรายงานการใช้งานวารสารตามมาตรฐาน <a href=\"https"
+"://www.projectcounter.org\">COUNTER</a> อย่างไรก็ตาม "
+"รายงานเหล่านี้เพียงอย่างเดียวไม่ได้หมายความว่าวารสารเป็นไปตามข้อกำหนดของ "
+"COUNTER หากต้องการให้เป็นไปตามมาตรฐาน COUNTER "
+"โปรดตรวจสอบข้อกำหนดเพิ่มเติมจากเว็บไซต์ Project COUNTER"
 
 msgid "plugins.reports.counter.error.noXML"
 msgstr "ไม่สามารถจัดรูปแบบผลลัพธ์เป็น XML ได้"
@@ -31,7 +31,7 @@ msgid "plugins.reports.counter"
 msgstr "รายงาน COUNTER"
 
 msgid "plugins.reports.counter.release"
-msgstr "เวอร์ชัน COUNTER"
+msgstr "รุ่นของ COUNTER"
 
 msgid "plugins.reports.counter.error.badParameters"
 msgstr "พารามิเตอร์ของรายงานไม่ถูกต้อง"
@@ -46,7 +46,7 @@ msgid "plugins.reports.counter.1a.name"
 msgstr "รายงาน COUNTER JR1 (R3)"
 
 msgid "plugins.reports.counter.allCustomers"
-msgstr "ลูกค้าทั้งหมด"
+msgstr "ผู้ใช้ทั้งหมด"
 
 msgid "plugins.reports.counter.ar1.title"
 msgstr "รายงานบทความ 1"

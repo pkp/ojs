@@ -245,9 +245,15 @@
 		<migration class="PKP\migration\upgrade\v3_6_0\I12347_FixRevisionUploadLogData" />
 		<migration class="PKP\migration\upgrade\v3_6_0\I13109_PermitPublishedMetadataEdit" />
 		<migration class="PKP\migration\upgrade\v3_6_0\I13213_TaskTemplateForeignConstraint"/>
+		<migration class="PKP\migration\upgrade\v3_6_0\I12813_UpdateAuthorResponseAndSubmissionCommentTextType"/>
+		<migration class="PKP\migration\upgrade\v3_6_0\I12994_CompetingInterestsDeclared" />
+		<migration class="APP\migration\upgrade\v3_6_0\I7527_IdentityMetadata" />
 		<code function="rebuildSearchIndex" />
 		<note file="docs/release-notes/README-3.6.0" />
 	</upgrade>
+
+	<!-- Cached data, e.g. the event listeners, may name classes that no longer exist -->
+	<code function="clearDataCache" />
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
 	<code function="addPluginVersions" />

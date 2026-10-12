@@ -1,7 +1,7 @@
-# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024.
+# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-10-20 01:53+0000\n"
+"PO-Revision-Date: 2026-09-15 04:51+0000\n"
 "Last-Translator: Apichaya <apichaya_cc@thonburi-u.ac.th>\n"
 "Language-Team: Thai <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-pubmed/th/>\n"
@@ -16,7 +16,7 @@ msgid "plugins.importexport.pubmed.export"
 msgstr "ส่งออกข้อมูล"
 
 msgid "plugins.importexport.pubmed.export.selectIssue"
-msgstr "เลือกหมายเลขวารสารที่ต้องการส่งออก."
+msgstr "เลือกฉบับวารสารที่ต้องการส่งออก"
 
 msgid "plugins.importexport.pubmed.export.articles"
 msgstr "ส่งออกบทความ"
@@ -26,23 +26,34 @@ msgstr "เลือกบทความที่ต้องการส่ง
 
 msgid "plugins.importexport.pubmed.cliUsage"
 msgstr ""
-"การใช้งาน:\n"
+"วิธีใช้:\n"
 "{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles "
 "[articleId1] [articleId2] ...\n"
 "{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]\n"
 
 msgid "plugins.importexport.pubmed.cliError"
-msgstr "ERROR:"
+msgstr "ข้อผิดพลาด:"
 
 msgid "plugins.importexport.pubmed.export.error.issueNotFound"
-msgstr "ไม่พบหมายเลขปัญหาที่ตรงกับหมายเลข ID ที่ระบุ \"{$issueId}\"."
+msgstr "ไม่พบฉบับวารสารที่ตรงกับรหัสฉบับ \"{$issueId}\""
 
 msgid "plugins.importexport.pubmed.export.error.articleNotFound"
-msgstr "ไม่พบบทความที่ตรงกับหมายเลข ID บทความ \"{$articleId}\"."
+msgstr "ไม่พบบทความที่ตรงกับรหัสบทความ \"{$articleId}\""
 
 msgid "plugins.importexport.pubmed.displayName"
-msgstr "ปลั๊กอินการส่งออก PubMed XML"
+msgstr "ส่วนเสริมส่งออก PubMed XML"
 
 msgid "plugins.importexport.pubmed.description"
 msgstr ""
-"ส่งออกข้อมูลเมตาดาต้าของบทความในรูปแบบ XML ของ PubMed เพื่อทำดัชนีใน MEDLINE."
+"ส่งออกข้อมูลเมตาของบทความในรูปแบบ PubMed XML เพื่อใช้จัดทำดัชนีใน MEDLINE"
+
+msgid "plugins.importexport.pubmed.export.issues"
+msgstr "ส่งออกฉบับวารสาร"
+
+msgid "plugins.importexport.pubmed.settings.form.nlmTitle.description"
+msgstr ""
+"ชื่อย่อวารสารตาม NLM หากไม่ทราบชื่อย่อ สามารถ <a href=\"https://www.ncbi.nlm."
+"nih.gov/nlmcatalog/\">ค้นหาใน NLM Catalog</a>"
+
+msgid "plugins.importexport.pubmed.settings.form.nlmTitle"
+msgstr "ชื่อย่อวารสารตาม NLM"

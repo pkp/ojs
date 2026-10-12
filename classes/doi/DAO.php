@@ -37,35 +37,36 @@ class DAO extends \PKP\doi\DAO
     public function getAllDepositableSubmissionIds(Context $context): Collection
     {
         $enabledDoiTypes = $context->getData(Context::SETTING_ENABLED_DOI_TYPES) ?? [];
+        $doiVersioning = (bool) $context->getData(Context::SETTING_DOI_VERSIONING);
 
         $q = DB::table($this->table, 'd')
+            // Minor versions share their major version's DOIs, so a DOI can match several publications/galleys
             ->leftJoin('publications as p', 'd.doi_id', '=', 'p.doi_id')
-            ->leftJoin('submissions as s', 'p.publication_id', '=', 's.current_publication_id')
+            ->leftJoin('publication_galleys as gd', 'd.doi_id', '=', 'gd.doi_id')
+            ->leftJoin('publications as gp', 'gd.publication_id', '=', 'gp.publication_id')
+            // A review DOI can be depositable on its own, e.g. when the review is confirmed after the article was deposited
+            ->leftJoin('review_assignments as dra', 'dra.doi_id', '=', 'd.doi_id')
             ->where('d.context_id', '=', $context->getId())
-            ->where(function (Builder $q) use ($enabledDoiTypes) {
+            ->where(function (Builder $q) use ($enabledDoiTypes, $doiVersioning) {
                 // Publication DOIs
-                $q->when(in_array(Repo::doi()::TYPE_PUBLICATION, $enabledDoiTypes), function (Builder $q) {
-                    $q->whereIn('d.doi_id', function (Builder $q) {
+                $q->when(in_array(Repo::doi()::TYPE_PUBLICATION, $enabledDoiTypes), function (Builder $q) use ($doiVersioning) {
+                    $q->whereIn('d.doi_id', function (Builder $q) use ($doiVersioning) {
                         $q->select('p.doi_id')
                             ->from('publications', 'p')
-                            // FIXME: Consider how downstream metadata services expect publication versions to be handled
-                            ->leftJoin('submissions as s', 'p.publication_id', '=', 's.current_publication_id')
-                            ->whereColumn('p.publication_id', '=', 's.current_publication_id')
                             ->whereNotNull('p.doi_id')
                             ->where('p.status', '=', PKPPublication::STATUS_PUBLISHED);
+                        $this->whereDepositablePublication($q, $doiVersioning);
                     });
                 })
                     // Galley DOIs
-                    ->when(in_array(Repo::doi()::TYPE_REPRESENTATION, $enabledDoiTypes), function (Builder $q) {
-                        $q->orWhereIn('d.doi_id', function (Builder $q) {
+                    ->when(in_array(Repo::doi()::TYPE_REPRESENTATION, $enabledDoiTypes), function (Builder $q) use ($doiVersioning) {
+                        $q->orWhereIn('d.doi_id', function (Builder $q) use ($doiVersioning) {
                             $q->select('g.doi_id')
                                 ->from('publication_galleys', 'g')
-                                ->leftJoin('publications as p', 'g.publication_id', '=', 'p.publication_id')
-                                // FIXME: Consider how downstream metadata services expect publication versions to be handled
-                                ->leftJoin('submissions as s', 'p.publication_id', '=', 's.current_publication_id')
-                                ->whereColumn('p.publication_id', '=', 's.current_publication_id')
+                                ->join('publications as p', 'g.publication_id', '=', 'p.publication_id')
                                 ->whereNotNull('g.doi_id')
                                 ->where('p.status', '=', PKPPublication::STATUS_PUBLISHED);
+                            $this->whereDepositablePublication($q, $doiVersioning, false);
                         });
                     })
                     // Peer Review DOIs
@@ -78,7 +79,9 @@ class DAO extends \PKP\doi\DAO
                                 ->whereNotNull('ra.doi_id')
                                 ->where('p.status', '=', PKPPublication::STATUS_PUBLISHED)
                                 // Peer reviews should be public to be considered
-                                ->where('ra.is_review_publicly_visible', '=', 1);
+                                ->where('ra.is_review_publicly_visible', '=', 1)
+                                // Only reviews confirmed by an editor are deposited, see getExportableDOIsPeerReviewIds()
+                                ->where(fn (Builder $q) => $q->whereNotNull('ra.date_considered')->orWhereNotNull('ra.date_acknowledged'));
                         });
                     })
                     // Author Response DOIs
@@ -115,7 +118,7 @@ class DAO extends \PKP\doi\DAO
                     });
             });
         $q->whereIn('d.status', [Doi::STATUS_UNREGISTERED, Doi::STATUS_ERROR, Doi::STATUS_STALE]);
-        return $q->get(['s.submission_id', 'd.doi_id']);
+        return $q->distinct()->get([DB::raw('COALESCE(p.submission_id, gp.submission_id, dra.submission_id) AS submission_id'), 'd.doi_id']);
     }
 
     /**

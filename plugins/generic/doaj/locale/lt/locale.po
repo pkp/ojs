@@ -17,6 +17,7 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "DOAJ eksporto papildinys"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "Eksportuoti žurnalą į DOAJ."
 
@@ -41,6 +42,7 @@ msgstr ""
 "{$scriptName} {$pluginName} export [xmlFailoPavadinimas] [žurnalo_kelias] "
 "articles objectId1 [objectId2] ...\n"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "Jei norite registruoti straipsnius tiesiai iš OJS, įveskite savo DOAJ API "

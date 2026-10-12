@@ -98,6 +98,17 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         self::assertStringNotContainsString('<dc:description', $xml);
     }
 
+    /**
+     * The article number takes the place of the pages in dc:source when there are no pages.
+     */
+    public function testToXmlWithArticleNumber()
+    {
+        $record = $this->createOAIRecord();
+        $record->getData('article')->getCurrentPublication()->setData('pages', null);
+        $xml = $this->toXml($record);
+        self::assertStringContainsString('<dc:source xml:lang="en">journal-title; issue-identification; e0142</dc:source>', $xml);
+    }
+
     private function toXml(OAIRecord $record): string
     {
         $prefix = OAIMetadataFormatPlugin_DC::getMetadataPrefix();
@@ -182,6 +193,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         $publication->setData('issueId', 96);
         $publication->setData('sectionId', 1);
         $publication->setData('pages', 15);
+        $publication->setData('articleNumber', 'e0142');
         $publication->setData('type', 'art-type', 'en');
         $publication->setData('title', 'article-title-en', 'en');
         $publication->setData('title', 'article-title-de', 'de');

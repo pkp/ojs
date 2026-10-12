@@ -1,8 +1,9 @@
 # Darius Zviedris <darius.zviedris@lki.lt>, 2025.
+# Vincas Grigas <vincas.grigas@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-10-01 13:47+0000\n"
-"Last-Translator: Darius Zviedris <darius.zviedris@lki.lt>\n"
+"PO-Revision-Date: 2026-09-25 08:59+0000\n"
+"Last-Translator: Vincas Grigas <vincas.grigas@gmail.com>\n"
 "Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "lt/>\n"
 "Language: lt\n"
@@ -15,13 +16,13 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "editor.home"
-msgstr "Redaktoriaus pagrindinis puslapis"
+msgstr "Redaktoriaus pradžia"
 
 msgid "editor.submissionsAndPublishing"
 msgstr "Paraiškos ir publikavimas"
 
 msgid "editor.submissionQueue"
-msgstr "Laukiamos paraiškos"
+msgstr "Paraiškų eilė"
 
 msgid "editor.submissionArchive"
 msgstr "Paraiškų archyvas"
@@ -39,18 +40,16 @@ msgid "editor.notifyUsers"
 msgstr "Pranešti naudotojams"
 
 msgid "editor.notifyUsers.allIndividualSubscribers"
-msgstr "visus žurnalą prenumeruojančius asmenis (iš viso {$count})"
+msgstr "Visi individualūs prenumeratoriai ({$count} naudotojai)"
 
 msgid "editor.issues.datePublished.notPublished.description"
-msgstr ""
-"Jei paliksite tuščią, data bus nustatyta automatiškai, kai numeris bus "
-"išleistas."
+msgstr "Palikus lauką tuščią, data bus automatiškai nustatyta paskelbus numerį."
 
 msgid "editor.issues.datePublished.invalid"
-msgstr "Paskelbimo data negalioja. Data turi būti pateikta formatu YYYY-MM-DD."
+msgstr "Publikavimo data negalioja. Data turi būti pateikta formatu YYYY-MM-DD."
 
 msgid "editor.issues.datePublished.requiredWhenPublished"
-msgstr "Išleidimo data privaloma, kai numeris publikuojamas."
+msgstr "Skelbiant numerį būtina nurodyti publikavimo datą."
 
 msgid "editor.issues.accessDate"
 msgstr "Atvirosios prieigos data"
@@ -71,13 +70,13 @@ msgstr ""
 "ir bandykite dar kartą."
 
 msgid "issues.submissions.issueIds"
-msgstr "Priskirta problemai"
+msgstr "Priskirta numeriui"
 
 msgid "editor.article.showPublicationVersion"
-msgstr "Rodyti suplanuotą leidinį"
+msgstr "Rodyti suplanuotą publikavimą"
 
 msgid "editor.article.publishVersion"
-msgstr "Publikuoti versiją"
+msgstr "Publikavimo versija"
 
 msgid "editor.article.viewMetadata"
 msgstr "Peržiūrėti versijos metaduomenis"
@@ -86,15 +85,16 @@ msgid "editor.article.editMetadata"
 msgstr "Redaguoti versijos metaduomenis"
 
 msgid "editor.article.scheduleForPublication"
-msgstr "Bus skelbiama (žurnalo numeris)"
+msgstr "Suplanuoti publikavimą"
 
 msgid "editor.article.scheduleForPublication.toBeAssigned"
-msgstr "Bus paskirti"
+msgstr "Dar nepriskirta"
 
 msgid "editor.article.payment.publicationFeeNotPaid"
 msgstr ""
-"Nesumokėtas spausdinimo mokestis. Kad straipsnis būtų spausdinamas, priminti "
-"autoriui apie mokestį arba mokesčio nereikalauti."
+"Publikavimo mokestis nesumokėtas. Norėdami suplanuoti publikavimą, "
+"informuokite autorių, kad sumokėtų mokestį, arba pritaikykite atleidimą nuo "
+"mokesčio."
 
 msgid "editor.article.removeCoverImageFileNotFound"
 msgstr ""
@@ -102,38 +102,38 @@ msgstr ""
 "ištrintas. Pamėginkite perkrauti puslapį."
 
 msgid "grid.action.removeArticle"
-msgstr "Straipsnį iš šio numerio išbraukti"
+msgstr "Pašalinti straipsnį iš numerio"
 
 msgid "editor.article.remove"
-msgstr "Išbraukti"
+msgstr "Pašalinti"
 
 msgid "editor.article.remove.confirm"
 msgstr ""
-"Ar tikrai norite straipsnį iš šio numerio išbraukti? Jį bus galima numatyti "
-"kitam numeriui."
+"Ar tikrai norite pašalinti šį straipsnį iš numerio? Straipsnį bus galima "
+"suplanuoti paskelbti kitame numeryje."
 
 msgid "editor.article.payment.requestPayment"
 msgstr "Prašyti mokėjimo"
 
 msgid "editor.allSections"
-msgstr "Visi skirsniai"
+msgstr "Visi skyriai"
 
 msgid "editor.allEditors"
 msgstr "Visi redaktoriai"
 
 msgid "editor.publicIdentificationExists"
 msgstr ""
-"Šis viešasis identifikatorius {$publicIdentifier} jau taikomas kitam "
-"objektui (numeriui, straipsniui, skilčiai, aplankui) identifikuoti. Prašom "
-"pasirinkti unikalų savo žurnalo identifikatorių."
+"Viešasis identifikatorius „{$publicIdentifier}“ jau yra priskirtas kitam "
+"objektui (numeriui, straipsniui, rinkmenai arba failui). Žurnale visi "
+"identifikatoriai turi būti unikalūs."
 
 msgid "editor.submissionArchive.noSubmissions"
-msgstr "Archyve straipsnių nėra."
+msgstr "Archyve paraiškų nėra."
 
 msgid "editor.submissionArchive.saveChanges"
 msgstr ""
-"Išsaugoti archyvuotų straipsnių pakeitimus? Straipsniai, pažymėti „Naikinti“"
-", iš sistemos bus ištrinti negrįžtamai."
+"Išsaugoti archyvuotų paraiškų pakeitimus? Paraiškos, pažymėtos ištrinti, bus "
+"negrįžtamai pašalintos iš sistemos."
 
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Ar tikrai norite, kad šis sprendimas būtų įrašytas?"
@@ -145,24 +145,24 @@ msgstr ""
 
 msgid "editor.submissionReview.cannotSendToCopyediting"
 msgstr ""
-"Prieš siųsdamas straipsnį redaguoti, laišku „Informuoti autorių“ praneškite "
-"autoriui apie sprendimą ir pasirinkite variantą, kuris bus siunčiamas "
-"redaguoti."
+"Prieš perduodant paraišką kalbos redagavimui, naudodami nuorodą „Pranešti "
+"autoriui“ informuokite autorių apie sprendimą ir pasirinkite redagavimui "
+"siunčiamą versiją."
 
 msgid "editor.notifyUsers.allReaders"
-msgstr "visus skaitytojus (iš viso {$count})"
+msgstr "Visi skaitytojai ({$count} vartotojai)"
 
 msgid "editor.notifyUsers.allAuthors"
-msgstr "visus spausdintų straipsnių autorius (iš viso {$count})"
+msgstr "Visi publikuotų straipsnių autoriai ({$count} naudotojai)"
 
 msgid "editor.notifyUsers.allInstitutionalSubscribers"
-msgstr "visas žurnalą prenumeruojančias institucijas (iš viso {$count})"
+msgstr "Visi instituciniai prenumeratoriai ({$count} naudotojai)"
 
 msgid "editor.notifyUsers.inProgress"
-msgstr "Informuojama..."
+msgstr "Siunčiami pranešimai naudotojams..."
 
 msgid "editor.usersNotified"
-msgstr "Informuota"
+msgstr "Vartotojai informuoti"
 
 msgid "editor.notifyUsers.allUsers"
 msgstr ""
@@ -178,37 +178,37 @@ msgid "editor.notifyUsers.includeToc"
 msgstr "Įtraukti šio numerio turinį:"
 
 msgid "editor.editorAdministration"
-msgstr "Redakcija"
+msgstr "Redaktoriaus nustatymai"
 
 msgid "editor.issues.createIssue"
 msgstr "Kurti numerį"
 
 msgid "editor.issues.editIssue"
-msgstr "Rengti leidinį {$issueIdentification}"
+msgstr "Numerio administravimas: {$issueIdentification}"
 
 msgid "editor.issues.currentIssue"
-msgstr "Naujasis numeris"
+msgstr "Einamasis numeris"
 
 msgid "editor.issues.numArticles"
-msgstr "Straipsniai"
+msgstr "Publikacijos"
 
 msgid "editor.issues.noArticles"
-msgstr "Šiam numeriui nenumatyta jokių straipsnių."
+msgstr "Šiuo metu šiam numeriui nepriskirta jokių publikacijų."
 
 msgid "editor.issues.confirmDelete"
 msgstr "Ar tikrai norite šį numerį ištrinti visam laikui?"
 
 msgid "editor.issues.published"
-msgstr "Paskelbta"
+msgstr "Publikuota"
 
 msgid "editor.issues.unpublished"
-msgstr "Nepaskelbta"
+msgstr "Dar nepaskelbti"
 
 msgid "editor.issues.datePublished"
-msgstr "Paskelbimo data"
+msgstr "Publikavimo data"
 
 msgid "editor.issues.volumeRequired"
-msgstr "Tomas yra privalomas ir turi būti teigiama skaitinė reikšmė."
+msgstr "Būtina nurodyti tomą. Jo reikšmė turi būti teigiamas skaičius."
 
 msgid "editor.issues.numberRequired"
 msgstr "Nurodykite numerį (teigiamą skaičių)."
@@ -217,12 +217,12 @@ msgid "editor.issues.yearRequired"
 msgstr "Metai yra privalomi ir turi būti teigiama skaitinė reikšmė."
 
 msgid "editor.issues.titleRequired"
-msgstr "Užrašykite leidinio pavadinimą."
+msgstr "Būtina nurodyti numerio pavadinimą."
 
 msgid "editor.issues.issueIdentificationRequired"
 msgstr ""
-"Nurodykite leidinio identifikatorių. Prašom pasirinkti bent vieną numerio "
-"identiikatorių."
+"Būtina nurodyti numerio identifikatorių. Pasirinkite bent vieną numerio "
+"identifikavimo parinktį."
 
 msgid "editor.issues.issueIdentification"
 msgstr "Leidinio identifikavimas"
@@ -243,7 +243,7 @@ msgid "editor.issues.remove"
 msgstr "Ištrinti"
 
 msgid "editor.issues.proofed"
-msgstr "Ištaisyta"
+msgstr "Patikrinta"
 
 msgid "editor.issues.removeCoverPage"
 msgstr "Ištrinti viršelio paveikslėlį?"
@@ -255,7 +255,7 @@ msgstr ""
 
 msgid "editor.issues.removeCoverImageFileNotFound"
 msgstr ""
-"Nurodyto ištrinti viršelioatvaizdo nerasta. Gali būti, kad jis jau "
+"Nurodyto ištrinti viršelio atvaizdo nerasta. Gali būti, kad jis jau "
 "ištrintas. Pamėginkite perkrauti puslapį."
 
 msgid "editor.issues.invalidCoverImageFormat"
@@ -263,22 +263,22 @@ msgstr ""
 "Netinkamas viršelio atvaizdo formatas. Jis gali būti .gif, .jpg arba .png."
 
 msgid "editor.issues.styleFile"
-msgstr "Stiliaus sąrašas"
+msgstr "Stilių šablonas"
 
 msgid "editor.issues.invalidStyleFormat"
 msgstr ""
-"Netinkamas stiliaus sąrašo formatas. Patikrinkite, ar pateiktas pakopinių "
-"stilių sąrašas (CSS) yra galimas. (Gali būti atmetamas stilių sąrašas, kurio "
-"pradžioje pateikiamos pastabos.)"
+"Netinkamas stilių šablono formatas. Įsitikinkite, kad įkeltas failas yra "
+"galiojantis CSS failas. (Atkreipkite dėmesį, kad stilių šablonai, kurių "
+"pradžioje yra komentarų, gali būti atmesti.)"
 
 msgid "editor.issues.removeStyleFile"
-msgstr "Pašalinti stilių failą?"
+msgstr "Pašalinti stiliaus šabloną?"
 
 msgid "editor.issues.coverPageCaption"
-msgstr "Viršelio pavadinimas"
+msgstr "Viršelio aprašas"
 
 msgid "editor.issues.showCoverPage"
-msgstr "Sukurti leidinio viršelį iš šių elementų."
+msgstr "Sukurti šio numerio viršelį, įtraukiant šiuos elementus."
 
 msgid "editor.issues.coverPageDisplay"
 msgstr "Rodyti"
@@ -308,16 +308,16 @@ msgstr "Išsaugoti turinio pakeitimus?"
 
 msgid "editor.issues.resetIssueOrder"
 msgstr ""
-"Šio žurnalo numerio skyriai rikiuojami nestandartiškai. <a href=\"{$url}\" "
+"Šio žurnalo numerio numeriai rikiuojami nestandartiškai. <a href=\"{$url}\" "
 "class=\"action\">Atstatyti numatytąjį rikiavimą.</a>"
 
 msgid "editor.issues.resetSectionOrder"
 msgstr ""
-"Šiame numeryje naudojamas pasirinktinės skyrių tvarkos nustatymas. <a href=\""
-"{$url}\" class=\"action\">Atkurti numatytuosius</a>"
+"Šiam numeriui nustatyta individuali skyrių tvarka. <a href=\"{$url}\" class="
+"\"action\">Atkurti numatytąją tvarką</a>"
 
 msgid "editor.issues.issueData"
-msgstr "Numerio duomenys"
+msgstr "Numerio data"
 
 msgid "editor.issues.default"
 msgstr "Numatyta"
@@ -332,7 +332,7 @@ msgid "editor.issues.publishIssue"
 msgstr "Skelbti numerį"
 
 msgid "editor.issues.unpublishIssue"
-msgstr "Numerio neskelbti"
+msgstr "Atšaukti numerio publikavimą"
 
 msgid "editor.issues.previewIssue"
 msgstr "Peržiūrėti numerį"
@@ -341,22 +341,23 @@ msgid "editor.issues.preview"
 msgstr "Peržiūra"
 
 msgid "editor.issues.confirmPublish"
-msgstr "Ar tikrai naująjį numerį norite skelbti?"
+msgstr "Ar tikrai norite paskelbti naują numerį?"
 
 msgid "editor.issues.confirmUnpublish"
-msgstr "Ar tikrai norite šį paskelbtą numerį padaryti neprieinamą?"
+msgstr "Ar tikrai norite atšaukti šio paskelbto numerio publikavimą?"
 
 msgid "editor.issues.confirmSetCurrentIssue"
-msgstr "Ar tikrai norite nustatyti, kad šis numeris būtų naujausias?"
+msgstr "Ar tikrai norite nustatyti šį numerį kaip einamąjį?"
 
 msgid "editor.issues.galleyPublicIdentificationExists"
-msgstr "Toks numerio skilties viešasis identifikatorius jau yra."
+msgstr ""
+"Toks viešasis numerio publikavimo failo identifikatorius jau naudojamas."
 
 msgid "editor.issues.publicArticleIdExists"
 msgstr "Nepavyko išsaugoti viešojo ID straipsniui:"
 
 msgid "editor.issues.noLiveIssues"
-msgstr "Nėra gyvų numerių"
+msgstr "Nėra paskelbtų numerių"
 
 msgid "editor.issues.open"
 msgstr "Atverti"
@@ -365,31 +366,31 @@ msgid "editor.issues.pages"
 msgstr "Puslapiai"
 
 msgid "editor.issues.galleys"
-msgstr "Numerio skiltys"
+msgstr "Numerio rinkmenos"
 
 msgid "editor.issues.galley"
-msgstr "Numerio skiltis"
+msgstr "Numerio rinkmena"
 
 msgid "editor.issues.viewingGalley"
-msgstr "Matomos numerio skiltys"
+msgstr "Peržiūrima numerio rinkmena"
 
 msgid "editor.issues.issueGalleysDescription"
-msgstr "Skelbti skiltis ir pateikti viso numerio turinį."
+msgstr "Publikuoti rinkmenas su visu numerio turiniu."
 
 msgid "editor.issues.noneIssueGalleys"
-msgstr "Paskelbtų numerio skilčių nėra."
+msgstr "Šio numerio publikavimo failai dar nepaskelbti."
 
 msgid "editor.issues.galleyLabelRequired"
-msgstr "Pridėkite numerio skilties žymę."
+msgstr "Būtina nurodyti numerio publikavimo failo pavadinimą."
 
 msgid "editor.issues.galleyLocaleRequired"
-msgstr "Pridėkite numerio skilties lokalę."
+msgstr "Būtina nurodyti numerio publikavimo failo kalbą."
 
 msgid "editor.issues.backToIssueGalleys"
-msgstr "Grįžti į numerio skiltis"
+msgstr "Grįžti į numerio publikavimo failų sąrašą"
 
 msgid "editor.issues.confirmDeleteGalley"
-msgstr "Ar tikrai norite šią numerio skiltį ištrinti?"
+msgstr "Ar tikrai norite ištrinti šį numerio publikavimo failą?"
 
 msgid "editor.issues.identifiers"
 msgstr "Identifikatoriai"
@@ -398,13 +399,13 @@ msgid "editor.navigation.futureIssues"
 msgstr "Būsimi numeriai"
 
 msgid "grid.action.addGalley"
-msgstr "Pridėti skiltį"
+msgstr "Pridėti publikavimo failą"
 
 msgid "grid.action.publish"
-msgstr "Leidinį skelbti"
+msgstr "Publikuoti numerį"
 
 msgid "grid.action.addIssue"
-msgstr "Kurti leidinį"
+msgstr "Sukurti numerį"
 
 msgid "grid.action.viewIssue"
 msgstr "Peržiūrėti"
@@ -413,16 +414,16 @@ msgid "grid.action.previewIssue"
 msgstr "Peržvelgti"
 
 msgid "grid.action.addIssueGalley"
-msgstr "Sukurti numerio skiltį"
+msgstr "Sukurti numerio publikavimo failą"
 
 msgid "grid.action.setCurrentIssue"
-msgstr "Nustatyti kaip naujausią numerį"
+msgstr "Nustatyti kaip einamąjį numerį"
 
 msgid "editor.navigation.issueArchive"
 msgstr "Ankstesni numeriai"
 
 msgid "editor.article.designateReviewVersion"
-msgstr "Nustatyti šį dokumentą kaip versiją recenzuoti"
+msgstr "Pažymėti pirminį failą kaip recenzavimui skirtą versiją"
 
 msgid "editor.article.decision"
 msgstr "Sprendimas"
@@ -431,7 +432,7 @@ msgid "editor.submissions.showBy"
 msgstr "Rodyti pagal"
 
 msgid "editor.submissions.submitMMDD"
-msgstr "Pateikimo mėnuo ir diena"
+msgstr "Pateikti (MM-DD)"
 
 msgid "editor.submissions.activeAssignments"
 msgstr "Esami paskyrimai"
@@ -443,7 +444,7 @@ msgid "editor.submissions.accept"
 msgstr "Priimti"
 
 msgid "editor.submissions.noSubmissions"
-msgstr "Pateiktų straipsnių nėra"
+msgstr "Paraiškų nėra"
 
 msgid "editor.submissions.lastAssigned"
 msgstr "Naujausias"
@@ -452,45 +453,46 @@ msgid "editor.submissions.averageTime"
 msgstr "Savaitės"
 
 msgid "editor.submissions.lastCompleted"
-msgstr "Paskutinį kartą pildyta"
+msgstr "Paskutinis užbaigtas etapas"
 
 msgid "editor.submissions.assignedTo"
-msgstr "Paskirta (kam)"
+msgstr "Priskirta redaktoriui"
 
 msgid "editor.submissions.inSection"
-msgstr "Šiame skyriuje"
+msgstr "Skyriuje"
 
 msgid "editor.issues.invalidAccessDate"
-msgstr "Neteisingai nurodyta atvirosios prieigos data."
+msgstr "Prieigos data neteisinga."
 
 msgid "editor.issues.editIssueGalley"
-msgstr "Redaguoti numerio maketą"
+msgstr "Redaguoti numerio publikavimo failą"
 
 msgid "editor.submission.production.productionReadyFilesDescription"
 msgstr ""
-"Maketo redaktorius paruošia šiuos failus kiekveinai skilčiai ir tada įkelia "
-"tinkamus korektūros <span class=\"pkp_help_title\">taisymus</span>."
+"Maketuotojas/a parengia kiekvieno publikavimo failo versijas ir įkelia jas į "
+"atitinkamą <span class=\"pkp_help_title\">Korektūrų</span> skiltį korektūrai "
+"atlikti."
 
 msgid "editor.submission.selectGalleyFiles"
 msgstr "Pasirinkti maketo failus"
 
 msgid "editor.submission.editorial.finalDraftDescription"
 msgstr ""
-"Galutinę šiame sąraše pateiktų juodraščių versiją kalbos redaktorius išsaugo "
-"kaip suredaguotą versiją ir įkelia žemiau, į skyrelį <span class="
-"\"pkp_help_title\">Kalbos redagavimas</span>."
+"Šiame sąraše esantys galutiniai rankraščio failai kalbos redaktoriaus "
+"suredaguojami, o jų redaguotos versijos įkeliamos žemiau esančioje skiltyje "
+"<span class=\"pkp_help_title\">Kalbos redagavimas</span>."
 
 msgid "editor.submission.proof.manageProofFilesDescription"
 msgstr ""
-"Visi straipsniai, kad ir kuris jų rengimo etapas vyktų, gali būti pateikiami "
-"korektūroms skaityti. Susiraskite langelį „Įtraukti“, nurodykite „Ieškoti“, "
-"ir bus pateikti visi tekstai. Liks įtraukti reikiamus."
+"Failai, jau įkelti bet kuriame pateikties etape, gali būti pridėti prie "
+"korektūros failų sąrašo. Pažymėkite „Įtraukti“ ir spustelėkite „Ieškoti“. "
+"Bus parodyti visi galimi failai, kuriuos galėsite pasirinkti įtraukimui."
 
 msgid "editor.publicIdentificationExistsForTheSameType"
 msgstr ""
-"Šis viešasis identifikatorius {$publicIdentifier} jau naudojamas kitam "
-"tokios pat rūšies objektui nustatyti. Prašom savo žurnalui pasirinkti "
-"unikalų tokios rūšies objektų identifikatorių."
+"Viešasis identifikatorius „{$publicIdentifier}“ jau naudojamas kitam to "
+"paties tipo objektui. Prašome savo žurnale to paties tipo objektams naudoti "
+"unikalius identifikatorius."
 
 msgid "editor.article.coverImage"
 msgstr "Viršelio atvaizdas"

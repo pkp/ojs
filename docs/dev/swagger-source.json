@@ -1391,7 +1391,7 @@
 		"VersionStage": {
 			"type": "string",
 			"enum": ["AO", "PMUR", "VoR"],
-			"description": "Enum for version stages: AO (Author Original), PMUR (Published Manuscript Under Review), VoR (Version of Record)"
+			"description": "Enum for version stages: AO (Author's Original), PMUR (Published Manuscript Under Review), VoR (Version of Record)"
 		},
 		"PublicationVersionInfo": {
 			"type": "object",
@@ -2900,7 +2900,7 @@
 							"versionStage": {
 								"type": "string",
 								"enum": ["AO", "PMUR", "VoR"],
-								"description": "Enum representing the version stage: AO (Author Original), PMUR (Published Manuscript Under Review), VoR (Version of Record)."
+								"description": "Enum representing the version stage: AO (Author's Original), PMUR (Published Manuscript Under Review), VoR (Version of Record)."
 							},
 							"versionIsMinor": {
 								"type": "boolean",
@@ -2938,7 +2938,7 @@
 			"put": {
 				"tags": ["Submissions / Publications"],
 				"summary": "Change publication version",
-				"description": "Change the version number of an existing publication. This endpoint is typically used to promote a publication to a new major or minor version. You can optionally pass a `versionStage` to indicate what version type this is (e.g., Author Original or Version of Record), and whether this is a minor update using `versionIsMinor`.",
+				"description": "Change the version number of an existing publication. This endpoint is typically used to promote a publication to a new major or minor version. You can optionally pass a `versionStage` to indicate what version type this is (e.g., Author's Original or Version of Record), and whether this is a minor update using `versionIsMinor`.",
 				"parameters": [
 				{
 					"name": "submissionId",
@@ -2960,7 +2960,7 @@
 							"versionStage": {
 								"type": "string",
 								"enum": ["AO", "PMUR", "VoR"],
-								"description": "Enum representing the version stage: AO (Author Original), PMUR (Published Manuscript Under Review), VoR (Version of Record)"
+								"description": "Enum representing the version stage: AO (Author's Original), PMUR (Published Manuscript Under Review), VoR (Version of Record)"
 							},
 								"versionIsMinor": {
 								"type": "boolean",

@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/pubmed/filter/ArticlePubMedXmlFilter.php
  *
- * Copyright (c) 2014-2025 Simon Fraser University
- * Copyright (c) 2000-2025 John Willinsky
+ * Copyright (c) 2014-2026 Simon Fraser University
+ * Copyright (c) 2000-2026 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticlePubMedXmlFilter
@@ -99,6 +99,13 @@ class ArticlePubMedXmlFilter extends PersistableFilter
                 // We have a page range or e-location id
                 $articleNode->appendChild($doc->createElement('FirstPage'))->appendChild($doc->createTextNode($startPage));
                 $articleNode->appendChild($doc->createElement('LastPage'))->appendChild($doc->createTextNode($endPage));
+            }
+
+            if ($articleNumber = $publication->getData('articleNumber')) {
+                $articleNumberNode = $doc->createElement('ELocationID');
+                $articleNumberNode->appendChild($doc->createTextNode($articleNumber));
+                $articleNumberNode->setAttribute('EIdType', 'pii');
+                $articleNode->appendChild($articleNumberNode);
             }
 
             if ($doi = $publication->getStoredPubId('doi')) {
@@ -205,13 +212,14 @@ class ArticlePubMedXmlFilter extends PersistableFilter
     public function createJournalNode($doc, $plugin, $journal, $issue, $submission): DOMElement
     {
         $nlmTitle = $plugin->getSetting($journal->getId(), 'nlmTitle');
+        $publication = $submission->getCurrentPublication();
         $journalNode = $doc->createElement('Journal');
 
         $publisherNameNode = $doc->createElement('PublisherName');
-        $publisherNameNode->appendChild($doc->createTextNode($journal->getData('publisherInstitution')));
+        $publisherNameNode->appendChild($doc->createTextNode($publication->getPublisher($journal) ?? ''));
         $journalNode->appendChild($publisherNameNode);
 
-        $journalTitle = $nlmTitle ?? $journal->getName($journal->getPrimaryLocale());
+        $journalTitle = $nlmTitle ?: $publication->getPrimaryContextName($journal);
 
         $journalTitleNode = $doc->createElement('JournalTitle');
         $journalTitleNode->appendChild($doc->createTextNode($journalTitle));
@@ -219,15 +227,10 @@ class ArticlePubMedXmlFilter extends PersistableFilter
         $journalNode->appendChild($journalTitleNode);
 
         // check various ISSN fields to create the ISSN tag
-        if ($journal->getData('printIssn') != '') {
-            $issn = $journal->getData('printIssn');
-        } elseif ($journal->getData('issn') != '') {
-            $issn = $journal->getData('issn');
-        } elseif ($journal->getData('onlineIssn') != '') {
-            $issn = $journal->getData('onlineIssn');
-        } else {
-            $issn = '';
-        }
+        $issn = $publication->getPrintIssn($journal)
+            ?: $journal->getData('issn')
+            ?: $publication->getOnlineIssn($journal)
+            ?: '';
         if ($issn != '') {
             $journalNode->appendChild($doc->createElement('Issn', $issn));
         }
