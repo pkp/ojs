@@ -1,19 +1,20 @@
 # Molnár Tamás <molnart@bibl.u-szeged.hu>, 2021.
+# Faragó-Szilvási Tibor <farago.tibor@konyvtar.mta.hu>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-13T21:07:39+00:00\n"
-"PO-Revision-Date: 2021-09-22 08:45+0000\n"
-"Last-Translator: Molnár Tamás <molnart@bibl.u-szeged.hu>\n"
+"PO-Revision-Date: 2026-10-12 13:39+0000\n"
+"Last-Translator: Faragó-Szilvási Tibor <farago.tibor@konyvtar.mta.hu>\n"
 "Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/ojs/"
-"importexport-native/hu_HU/>\n"
-"Language: hu_HU\n"
+"importexport-native/hu/>\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.importexport.native.displayName"
 msgstr "Eredeti XML Plugin"
@@ -105,3 +106,9 @@ msgstr "A szám azonosító elem hiányzik ennél a cikknél. \"{$articleTitle}\
 
 msgid "plugins.importexport.native.import.error.publishedDateMissing"
 msgstr "A cikk \"{$articleTitle}\" egy számban szerepel, de nincs közzétételi dátuma."
+
+msgid "plugins.importexport.common.error.invalidFileExtension"
+msgstr "A megadott borítókép fájlkiterjesztése érvénytelen."
+
+msgid "plugins.importexport.common.error.coverImageNameUnspecified"
+msgstr "Név megadása nélkül beágyazott borítókép."
