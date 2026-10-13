@@ -25,6 +25,7 @@ use PKP\config\Config;
 use PKP\context\Context;
 use PKP\core\DataObject;
 use PKP\core\PKPApplication;
+use PKP\db\DAORegistry;
 use PKP\doi\Doi;
 use PKP\file\FileManager;
 use PKP\file\TemporaryFileManager;
@@ -32,6 +33,7 @@ use PKP\galley\Galley;
 use PKP\plugins\Plugin;
 use PKP\submission\Representation;
 use PKP\submission\reviewAssignment\ReviewAssignment;
+use PKP\submission\reviewRound\ReviewRoundDAO;
 
 // DataCite API
 define('DATACITE_API_RESPONSE_OK', 201);
@@ -98,6 +100,9 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
         return 'article=>datacite-xml';
     }
 
+    /**
+     * @copydoc PubObjectsExportPlugin::getPeerReviewFilter()
+     */
     public function getPeerReviewFilter()
     {
         return 'peerReview=>datacite-xml';
@@ -448,7 +453,6 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
                 break;
             case $object instanceof ReviewAssignment:
                 $articleId = $object->getSubmissionId();
-                $publication = Repo::publication()->get($articleId);
                 $cache = $this->getCache();
                 $article = null;
 
@@ -457,6 +461,17 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
                 } else {
                     $article = Repo::submission()->get($articleId);
                 }
+
+                $reviewRound = null;
+                if ($cache->isCached('reviewRounds', $object->getReviewRoundId())) {
+                    $reviewRound = $cache->get('reviewRounds', $object->getReviewRoundId());
+                } else {
+                    /** @var ReviewRoundDAO $reviewRoundDao */
+                    $reviewRoundDao = DAORegistry::getDAO('ReviewRoundDAO');
+                    $reviewRound = $reviewRoundDao->getById($object->getReviewRoundId());
+                }
+
+                $publication = Repo::publication()->get($reviewRound->getPublicationId());
 
                 $url = $dispatcher->url(
                     $request,
@@ -470,7 +485,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
                         'reviewId' => $object->getId(),
                     ],
                     null,
-                    true,
+                    false,
                     '',
                 );
                 break;

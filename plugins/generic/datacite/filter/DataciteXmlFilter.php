@@ -267,10 +267,13 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                 $rootNode->appendChild($subjectsNode);
             }
         }
-        // Contributors
-        $contributorsNode = $this->createContributorsNode($doc, $publication);
-        if ($contributorsNode) {
-            $rootNode->appendChild($contributorsNode);
+
+        if (!isset($reviewAssignment)) {
+            // Contributors
+            $contributorsNode = $this->createContributorsNode($doc, $publication);
+            if ($contributorsNode) {
+                $rootNode->appendChild($contributorsNode);
+            }
         }
         // Dates
         $rootNode->appendChild($this->createDatesNode(
@@ -319,33 +322,35 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                 $rootNode->appendChild($formatsNode);
             }
         }
-        // Rights
-        $rightsURL = $publication ? $publication->getData('licenseUrl') : $context->getData('licenseUrl');
-        if (!empty($rightsURL)) {
-            $rightsNode = $doc->createElementNS($deployment->getNamespace(), 'rightsList');
-            $rightsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'rights', htmlspecialchars(strip_tags(Application::get()->getCCLicenseBadge($rightsURL)), ENT_COMPAT, 'UTF-8')));
-            $node->setAttribute('rightsURI', $rightsURL);
-            $rootNode->appendChild($rightsNode);
-        }
-        // Descriptions
+
         if (!isset($reviewAssignment)) {
+            // Rights
+            $rightsURL = $publication ? $publication->getData('licenseUrl') : $context->getData('licenseUrl');
+            if (!empty($rightsURL)) {
+                $rightsNode = $doc->createElementNS($deployment->getNamespace(), 'rightsList');
+                $rightsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'rights', htmlspecialchars(strip_tags(Application::get()->getCCLicenseBadge($rightsURL)), ENT_COMPAT, 'UTF-8')));
+                $node->setAttribute('rightsURI', $rightsURL);
+                $rootNode->appendChild($rightsNode);
+            }
+
+            // Descriptions
             $descriptionsNode = $this->createDescriptionsNode($doc, $issue, $article, $publication, $galley, $galleyFile, $objectLocalePrecedence);
-        }
-        if (isset($descriptionsNode)) {
-            $rootNode->appendChild($descriptionsNode);
-        }
-        // relatedItems
-        if (!isset($reviewAssignment)) {
+
+            if (isset($descriptionsNode)) {
+                $rootNode->appendChild($descriptionsNode);
+            }
+
+            // relatedItems
             $relatedItemsNode = $this->createRelatedItemsNode($doc, $issue, $article, $publication, $publisher, $objectLocalePrecedence);
             if ($relatedItemsNode) {
                 $rootNode->appendChild($relatedItemsNode);
             }
-        }
 
-        // Funding references
-        $fundingReferencesNode = $this->createFundingReferencesNode($doc, $publication, $article);
-        if ($fundingReferencesNode) {
-            $rootNode->appendChild($fundingReferencesNode);
+            // Funding references
+            $fundingReferencesNode = $this->createFundingReferencesNode($doc, $publication, $article);
+            if ($fundingReferencesNode) {
+                $rootNode->appendChild($fundingReferencesNode);
+            }
         }
 
         return $doc;
@@ -466,7 +471,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                     // fall back to its controlled value for "value unavailable, unknown, or not applicable".
                     // https://datacite-metadata-schema.readthedocs.io/en/4.6/appendices/appendix-3/
                     $creators[] = [
-                        'name' => DATACITE_UNKNOWN_ANONYMOUS,
+                        'name' => ':unav',
                     ];
                 }
                 break;
@@ -687,25 +692,26 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                  * The `getTranslationsByPrecedence` method, which is called further down, expects $titles to be an assoc array where the key is the locale key and the value is the localized string for that locale.
                  * Since reviews don't have localized titles/names available, manually go through each locale key and add an entry in the $title for that key.
                  */
-                foreach ($objectLocalePrecedence as $locale) {
-                    // Get Revision Number (round of review)
-                    $revisionNumber = $reviewRound->getRound();
-                    $reviewNumber = Repo::reviewAssignment()->getReviewPositionInRound($reviewAssignment, $allReviewsInRound);
-
-                    // Translate locale using Locale::getBundle so that a `null` value is returned for missing locale
-                    // instead of the ##locale.key## format
-                    $title = Locale::getBundle($locale)
-                        ->translateSingular('submission.doi.review.title', [
-                            'publicationTitle' => $publication->getLocalizedTitle($locale),
-                            'revisionNumber' => $revisionNumber,
-                            'reviewNumber' => $reviewNumber,
-                        ]);
+                foreach (array_keys($publication->getTitles()) as $locale) {
+                    $title = Repo::reviewAssignment()->getReviewTitle($reviewAssignment, $reviewRound, $allReviewsInRound, $publication, $locale);
 
                     if (!$title) {
                         continue;
                     }
 
                     $titles[$locale] = $title;
+                }
+
+                if (empty($titles)) {
+                    $fallback = Repo::reviewAssignment()->getReviewTitle(
+                        $reviewAssignment,
+                        $reviewRound,
+                        $allReviewsInRound,
+                        $publication,
+                        $deployment->getContext()->getPrimaryLocale()
+                    );
+
+                    $titles = $fallback ? [$fallback] : [];
                 }
                 break;
             case (
@@ -772,7 +778,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
 
                 // Last modified date (for review assignments): last modified date.
                 $lastModified = $reviewAssignment->getLastModified();
-                if (!empty($lastModified)) {
+                if ($lastModified) {
                     $dates[DATACITE_DATE_UPDATED] = $lastModified;
                 }
                 break;
@@ -889,7 +895,6 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         } elseif ($resourceType === 'PeerReview') {
             $resourceTypeNode = $doc->createElementNS($deployment->getNamespace(), 'resourceType');
             $resourceTypeNode->setAttribute('resourceTypeGeneral', 'PeerReview');
-
         } else {
             // It is a supplementary file
             $resourceTypeNode = $doc->createElementNS($deployment->getNamespace(), 'resourceType');
