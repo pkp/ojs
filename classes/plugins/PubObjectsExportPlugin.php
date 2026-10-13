@@ -552,6 +552,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
             $exportFilter->setNoValidation($noValidation);
         }
         libxml_use_internal_errors(true);
+        libxml_clear_errors();
         $exportXml = $exportFilter->execute($objects, true);
         $xml = $exportXml->saveXml();
         $errors = array_filter(libxml_get_errors(), function ($a) {

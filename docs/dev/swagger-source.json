@@ -6016,7 +6016,7 @@
 					},
 					"400": {
 						"x-summary": "Request Invalid",
-						"description": "The export could not be completed because of invalid request parameters or other required settings.\n\n|Error Code|Description|\n|---|---|\n|`api.dois.400.invalidPubObjectIncluded`|One or more invalid publication objects were included with the request.|\n|`api.dois.400.noRegistrationAgencyConfigured`|No DOI registration agency has been configured for this journal.|\n|`api.dois.400.xmlExportFailed`|An XML validation error occurred and the XML could not be exported.|",
+						"description": "The export could not be completed because of invalid request parameters or other required settings.\n\n|Error Code|Description|\n|---|---|\n|`api.dois.400.invalidPubObjectIncluded`|One or more invalid publication objects were included with the request.|\n|`api.dois.400.noRegistrationAgencyConfigured`|No DOI registration agency has been configured for this journal.|\n|`api.dois.400.xmlExportFailed`|An XML validation error occurred and the XML could not be exported. The `error` message lists the validation errors.|",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -6413,7 +6413,7 @@
 					},
 					"400": {
 						"x-summary": "Request Invalid",
-						"description": "The export could not be completed because of invalid request parameters or other required settings.\n\n|Error Code|Description|\n|---|---|\n|`api.dois.400.invalidPubObjectIncluded`|One or more invalid publication objects were included with the request.|\n|`api.dois.400.noRegistrationAgencyConfigured`|No DOI registration agency has been configured for this journal.|\n|`api.dois.400.xmlExportFailed`|An XML validation error occurred and the XML could not be exported.|",
+						"description": "The export could not be completed because of invalid request parameters or other required settings.\n\n|Error Code|Description|\n|---|---|\n|`api.dois.400.invalidPubObjectIncluded`|One or more invalid publication objects were included with the request.|\n|`api.dois.400.noRegistrationAgencyConfigured`|No DOI registration agency has been configured for this journal.|\n|`api.dois.400.xmlExportFailed`|An XML validation error occurred and the XML could not be exported. The `error` message lists the validation errors.|",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
