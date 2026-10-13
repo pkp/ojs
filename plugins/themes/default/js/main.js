@@ -17,34 +17,67 @@
 		function toggleDropdowns() {
 			if (window.innerWidth > 992) {
 				$submenus.each(function(i) {
-					var id = 'pkpDropdown' + i;
-					$(this)
+					var id = 'pkpDropdown' + i,
+					$submenu = $(this),
+					$link = $submenu.siblings('a');
+
+					$submenu
 						.addClass('dropdown-menu')
 						.attr('aria-labelledby', id);
-					$(this).siblings('a')
+
+					// The link has already been swapped for a toggle button
+					if ($submenu.siblings('button[data-toggle="dropdown"]').length) {
+						return;
+					}
+
+					$('<button type="button"></button>')
+						.html($link.html())
 						.attr('data-toggle', 'dropdown')
 						.attr('aria-haspopup', true)
 						.attr('aria-expanded', false)
 						.attr('id', id)
-						.attr('href', '#');
+						.data('pkpNavLink', $link)
+						.insertBefore($link);
+					$link.detach();
 				});
 				$('[data-toggle="dropdown"]').dropdown();
 
 			} else {
 				$('[data-toggle="dropdown"]').dropdown('dispose');
 				$submenus.each(function(i) {
-					$(this)
+					var $submenu = $(this),
+					$toggle = $submenu.siblings('button[data-toggle="dropdown"]');
+
+					$submenu
 						.removeClass('dropdown-menu')
 						.removeAttr('aria-labelledby');
-					$(this).siblings('a')
-						.removeAttr('data-toggle')
-						.removeAttr('aria-haspopup')
-						.removeAttr('aria-expanded',)
-						.removeAttr('id')
-						.attr('href', '#');
+
+					if ($toggle.length) {
+						$toggle.replaceWith($toggle.data('pkpNavLink'));
+					}
 				});
 			}
 		}
+
+		// The stylesheet also reveals a submenu while the pointer is over the
+		// toggle or the submenu itself, which bootstrap knows nothing about.
+		// Keep the toggle's expanded state in sync with what is on screen.
+		$nav.on('mouseenter mouseleave', 'li', function(e) {
+			var $toggle = $(this).children('[data-toggle="dropdown"]'),
+			$submenu = $(this).children('ul');
+
+			if (!$toggle.length) {
+				return;
+			}
+
+			if (e.type === 'mouseenter') {
+				$toggle.attr('aria-expanded', true);
+			} else if (!$submenu.hasClass('show')) {
+				// Leave it open if bootstrap opened it on click
+				$toggle.attr('aria-expanded', false);
+			}
+		});
+
 		window.onresize = toggleDropdowns;
 		$().ready(function() {
 			toggleDropdowns();
