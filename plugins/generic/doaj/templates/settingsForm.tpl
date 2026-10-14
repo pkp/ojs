@@ -20,7 +20,7 @@
 	{fbvFormArea id="doajSettingsFormArea"}
 		{fbvFormSection}
 			<p class="pkp_help">{translate key="plugins.importexport.doaj.registrationIntro"}</p>
-			{fbvElement type="text" id="apiKey" value=$apiKey label="plugins.importexport.doaj.settings.form.apiKey" maxlength="50" size=$fbvStyles.size.MEDIUM}
+			{fbvElement type="text" id="apiKey" password=true value=$apiKey label="plugins.importexport.doaj.settings.form.apiKey" maxlength="100" size=$fbvStyles.size.MEDIUM}
 			<span class="instruct">{translate key="plugins.importexport.doaj.settings.form.apiKey.description"}</span><br/>
 		{/fbvFormSection}
 		{fbvFormSection list="true"}

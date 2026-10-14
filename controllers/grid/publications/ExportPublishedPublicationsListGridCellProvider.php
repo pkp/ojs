@@ -72,7 +72,12 @@ class ExportPublishedPublicationsListGridCellProvider extends DataObjectGridCell
                     new LinkAction(
                         'itemWorkflow',
                         new RedirectAction(
-                            Repo::submission()->getWorkflowUrlByUserRoles($submission)
+                            Repo::submission()->getWorkflowUrlByUserRoles(
+                                $submission,
+                                null,
+                                // Open the workflow modal on this publication version
+                                ['workflowMenuKey' => 'publication_' . $publication->getId() . '_titleAbstract']
+                            )
                         ),
                         $title
                     )
@@ -104,7 +109,11 @@ class ExportPublishedPublicationsListGridCellProvider extends DataObjectGridCell
             case 'submissionId':
                 return ['label' => $publication->getData('submissionId')];
             case 'version':
-                return ['label' => $publication->getData('versionMajor') . '.' . $publication->getData('versionMinor')];
+                return ['label' => __('publication.versionStage.display', [
+                    'stage' => $publication->getData('versionStage'),
+                    'majorNumbering' => $publication->getData('versionMajor'),
+                    'minorNumbering' => $publication->getData('versionMinor'),
+                ])];
             case 'title':
                 return ['label' => ''];
             case 'status':

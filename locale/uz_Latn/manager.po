@@ -829,12 +829,6 @@ msgstr ""
 "sahifasi orqali ishtirokchi kutubxonalarda jurnal mazmunini saqlash va "
 "tarqatish uchun LOCKSS-ni yoqing."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"LOCKSS litsenziyasi \"Arxivlash\" jurnali haqida paydo bo'ladi: <a href="
-"\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank"
-"\">LOCKSS License</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "LOCKSS litsenziyasining tavsifi"
 
@@ -854,11 +848,6 @@ msgstr ""
 "CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank\">Publisher Manifest </a> "
 "sahifasi orqali ishtirokchi kutubxonalarda jurnal tarkibini saqlash va "
 "tarqatish uchun CLOCKSS -ni yoqing."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"CLOCKSS litsenziyasi \"Arxivlash\" jurnali haqida: <a href=\"http://clockss."
-"org/\" target=\"_blank\">CLOCKSS License</a> da paydo bo'ladi"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "CLOCKSS litsenziyasining tavsifi"

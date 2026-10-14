@@ -64,6 +64,7 @@ msgstr ""
 "ئاگاداری ئەوە بە کە ئەمە دوای بڵاوکردنەوە لەوانەیە هەندێک کاتی پێویست بێت. "
 "تۆ دەتوانیت بۆ هەمو DOIیە تۆمارنەکراوەکان بگەڕێیت."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "تێستی DataCite بۆ تۆمارکردنی DOI بەکار بهێنە. تکایە ئەمە پێش بڵاوکردنەوە "
@@ -78,10 +79,8 @@ msgstr ""
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr ""
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
-msgstr ""
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
 msgstr ""
 
 msgid "plugins.importexport.datacite.senderTask.name"

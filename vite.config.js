@@ -31,6 +31,7 @@ export default defineConfig(({mode}) => {
 					compilerOptions: {
 						// to keep vue2 behaviour where spaces between html tags are preserved
 						whitespace: 'preserve',
+						isCustomElement: (tag) => tag.startsWith('sciflow-'),
 					},
 				},
 			}),
@@ -56,19 +57,21 @@ export default defineConfig(({mode}) => {
 						src: 'node_modules/chart.js/dist/**/*.umd.js',
 						dest: 'js/build/chart.js',
 					},
+					{
+						src: 'node_modules/mathjax/**/*',
+						dest: 'js/build/mathjax',
+					},
 				],
 			}),
 		],
+		assetsInclude: ['**/*.wasm'],
 		publicDir: false,
 		resolve: {
 			alias: {
 				'@': path.resolve(__dirname, 'lib/ui-library/src'),
 				// use vue version with template compiler
 				vue: 'vue/dist/vue.esm-bundler.js',
-				'@sciflow/editor-start/dist/bundle/sciflow-editor.js': path.resolve(
-					__dirname,
-					'node_modules/@sciflow/editor-start/dist/bundle/sciflow-editor.js',
-				),
+				'pandoc-core': path.resolve(__dirname, 'node_modules/pandoc-wasm/src'),
 			},
 			// https://github.com/vitejs/vite/discussions/15906
 			dedupe: [
@@ -95,8 +98,12 @@ export default defineConfig(({mode}) => {
 				'vue',
 				'vue-chartjs',
 				'vue-draggable-plus',
-				'vue-scrollto',
 				'vue3-highlightjs',
+				'mathjax',
+				'@sciflow/editor-core',
+				'@sciflow/editor-start',
+				'@sciflow/pandoc-ast',
+				'@sciflow/schema-prosemirror',
 			],
 		},
 		build: {
@@ -104,7 +111,7 @@ export default defineConfig(({mode}) => {
 			target: ['chrome66', 'edge79', 'firefox67', 'safari12'],
 			emptyOutDir: false,
 			cssCodeSplit: false,
-			rollupOptions: {
+			rolldownOptions: {
 				input: {
 					build: './js/load.js',
 				},
@@ -120,6 +127,9 @@ export default defineConfig(({mode}) => {
 						const extType = info[info.length - 1];
 						if (/\.(css)$/.test(assetInfo.name)) {
 							return 'styles/build.css';
+						}
+						if (/\.wasm$/.test(assetInfo.name)) {
+							return `js/build/[name].${extType}`;
 						}
 						return `[name].${extType}`;
 					}, // Provide global variables to use in the UMD build

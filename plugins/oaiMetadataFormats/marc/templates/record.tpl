@@ -1,8 +1,8 @@
 {**
  * plugins/oaiMetadataFormats/marc/record.tpl
  *
- * Copyright (c) 2013-2025 Simon Fraser University
- * Copyright (c) 2003-2025 John Willinsky
+ * Copyright (c) 2013-2026 Simon Fraser University
+ * Copyright (c) 2003-2026 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * MARC-formatted metadata record for an article
@@ -13,16 +13,33 @@
 	{if $publication->getData('datePublished')}
 		<fixfield id="008">"{$publication->getData('datePublished')|strtotime|date_format:"%y%m%d %Y"}                        eng  "</fixfield>
 	{/if}
-	{if $journal->getData('onlineIssn')}
+	{if $publication->getOnlineIssn($journal)}
 		<varfield id="022" i1="#" i2="#">
-			<subfield label="$a">{$journal->getData('onlineIssn')|escape}</subfield>
+			<subfield label="$a">{$publication->getOnlineIssn($journal)|escape}</subfield>
 		</varfield>
 	{/if}
-	{if $journal->getData('printIssn')}
+	{if $publication->getPrintIssn($journal)}
 		<varfield id="022" i1="#" i2="#">
-			<subfield label="$a">{$journal->getData('printIssn')|escape}</subfield>
+			<subfield label="$a">{$publication->getPrintIssn($journal)|escape}</subfield>
 		</varfield>
 	{/if}
+	{if $versionString}
+	<varfield id="251" i1=" " i2=" ">
+		<subfield label="a">{$versionString|escape}</subfield>
+	</varfield>
+	{/if}
+	{if $versionSummaryOfChanges}
+	<varfield id="500" i1=" " i2=" ">
+		<subfield label="a">{$versionSummaryOfChanges|escape}</subfield>
+	</varfield>
+	{/if}
+	{if $versionRelation}
+	<varfield id="{$versionRelation->marcField}" i1="0" i2="{$versionRelation->marcRelationIndicator}">
+		<subfield label="i">{$versionRelation->relationLabel|escape}</subfield>
+		<subfield label="o">{$versionRelation->identifier|escape}</subfield>
+	</varfield>
+	{/if}
+
 	<varfield id="042" i1=" " i2=" ">
 		<subfield label="a">dc</subfield>
 	</varfield>
@@ -36,7 +53,7 @@
 			<subfield label="a">{$author->getFullName(false, true, $publicationLocale)|escape}</subfield>
 			{foreach from=$author->getAffiliations() item=$affiliation}
 				{if $affiliation->getRor()}<subfield code="u">{$affiliation->getRor()|escape}</subfield>
-				{else}<subfield code="u">{$affiliation->getLocalizedName($publicationLocale)|escape}</subfield>{/if}
+				{elseif $affiliation->getLocalizedName($publicationLocale)}<subfield code="u">{$affiliation->getLocalizedName($publicationLocale)|escape}</subfield>{/if}
 			{/foreach}
 			{if $author->getUrl()}<subfield label="0">{$author->getUrl()|escape}</subfield>{/if}
 			{if $author->getData('orcid') && $author->getData('orcidIsVerified')}<subfield label="0">{$author->getData('orcid')|escape}</subfield>{/if}
@@ -53,16 +70,18 @@
 		<subfield label="a">{$abstract|escape}</subfield>
 	</varfield>{/if}
 
-	{assign var=publisher value=$journal->getName($journal->getPrimaryLocale())}
-	{if $journal->getData('publisherInstitution')}
-		{assign var=publisher value=$journal->getData('publisherInstitution')}
+	{assign var=publisher value=$publication->getPublisher($journal)}
+	{if !$publisher}
+		{assign var=publisher value=$publication->getPrimaryContextName($journal)}
 	{/if}
 	<varfield id="260" i1=" " i2=" ">
 		<subfield label="b">{$publisher|escape}</subfield>
 	</varfield>
-	<varfield id="260" i1=" " i2=" ">
-		<subfield label="c">{$issue->getDatePublished()}</subfield>
-	</varfield>
+	{if $issue}
+		<varfield id="260" i1=" " i2=" ">
+			<subfield label="c">{$issue->getDatePublished()}</subfield>
+		</varfield>
+	{/if}
 
 	{assign var=identifyType value=$section->getIdentifyType($journal->getPrimaryLocale())}
 	{if $identifyType}<varfield id="655" i1=" " i2="7">
@@ -79,8 +98,10 @@
 	</varfield>
 
 	<varfield id="773" i1="0" i2=" ">
-		<subfield label="t">{$journal->getName($journal->getPrimaryLocale())|escape};</subfield>
-	        <subfield label="g">{$issue->getIssueIdentification()|escape}</subfield>
+		<subfield label="t">{$publication->getPrimaryContextName($journal)|escape};</subfield>
+		{if $relatedParts}
+			<subfield label="g">{$relatedParts|escape}</subfield>
+		{/if}
 	</varfield>
 
 	<varfield id="546" i1=" " i2=" ">

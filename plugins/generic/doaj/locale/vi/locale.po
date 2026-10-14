@@ -14,12 +14,14 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "Plugin xuất DOAJ"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "Tạp chí xuất cho DOAJ."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Liên hệ với DOAJ để đưa vào"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "Nếu bạn muốn đăng ký các bài báo từ trong OJS, vui lòng nhập Khóa API DOAJ "

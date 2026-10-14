@@ -1,15 +1,16 @@
 # Stefan Schneider <mail@stefan-schneider.at>, 2023.
 # Germán Huélamo Bautista <germanhuelamo@gmail.com>, 2024.
+# Stéphanie Louison <stephanie.louison@u-bordeaux-montaigne.fr>, 2026.
+# Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:23+00:00\n"
-"PO-Revision-Date: 2024-05-10 23:21+0000\n"
-"Last-Translator: Germán Huélamo Bautista <germanhuelamo@gmail.com>\n"
-"Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/author/fr_FR/"
-">\n"
-"Language: fr_FR\n"
+"PO-Revision-Date: 2026-09-07 14:43+0000\n"
+"Last-Translator: Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>\n"
+"Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/author/fr/>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,7 +21,7 @@ msgid "author.submit"
 msgstr "Nouvelle soumission"
 
 msgid "author.track"
-msgstr "Soumissions actives"
+msgstr "Contributions en cours"
 
 msgid "author.submit.submitArticle"
 msgstr "Soumettre un article"
@@ -29,7 +30,7 @@ msgid "author.submit.stepsToSubmit"
 msgstr "Les cinq étapes d'une soumission"
 
 msgid "author.submit.startHereTitle"
-msgstr "Commencer une nouvelle soumission"
+msgstr "Avant de commencer"
 
 msgid "author.submit.startHereLink"
 msgstr ""
@@ -58,7 +59,7 @@ msgid "author.submit.start"
 msgstr "Commencer"
 
 msgid "author.submit.upload"
-msgstr "Transférer la soumission"
+msgstr "Déposer le ou les fichiers"
 
 msgid "author.submit.metadata"
 msgstr "Saisir les métadonnées"
@@ -124,12 +125,12 @@ msgid "author.submit.journalSectionDescription"
 msgstr ""
 "Sélectionner la rubrique de la revue la plus appropriée pour cette "
 "soumission (voir Rubriques et politiques dans <a href=\"{$aboutUrl}\" target="
-"\"_new\">À propos</a>de la revue)."
+"\"_new\">À propos</a> de la revue)."
 
 msgid "author.submit.verifyChecklist"
 msgstr ""
-"Vous devez vous assurer que tous les éléments de la liste de vérification de "
-"la soumission sont satisfaits avant de continuer."
+"Vous devez vous assurer que tous les points de la liste de vérification lors "
+"de la soumission sont satisfaits avant de continuer."
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
@@ -137,7 +138,7 @@ msgstr ""
 "pouvoir continuer."
 
 msgid "submission.submit.coverNote"
-msgstr "Commentaires pour le Rédacteur"
+msgstr "Commentaires pour la rédaction"
 
 msgid "author.submit.comments"
 msgstr "Saisir du texte (optionnel)"
@@ -147,20 +148,20 @@ msgstr "Veuillez sélectionner une langue de soumission."
 
 msgid "author.submit.reorderInstructions"
 msgstr ""
-"Réordonner les auteurs pour qu'ils paraissent dans l'ordre dans lequel ils "
-"seront listés lors de la publication."
+"Réordonner les auteur/ices pour qu'ils ou elles apparaissent dans le même "
+"ordre que sur publication."
 
 msgid "author.submit.reorder"
-msgstr "Réordonner le nom de l'auteur"
+msgstr "Réordonner le nom de l'auteur/ice"
 
 msgid "author.submit.selectPrincipalContact"
 msgstr "Contact principal pour la correspondance éditoriale."
 
 msgid "author.submit.addAuthor"
-msgstr "Ajouter un auteur"
+msgstr "Ajouter un/e auteur/ice"
 
 msgid "author.submit.deleteAuthor"
-msgstr "Supprimer un auteur"
+msgstr "Supprimer un/e auteur/ice"
 
 msgid "author.submit.submissionIndexingDescription"
 msgstr ""
@@ -179,11 +180,11 @@ msgstr ""
 "supplémentaires</a>."
 
 msgid "author.submit.form.authorRequired"
-msgstr "Au moins un auteur est obligatoire."
+msgstr "Au moins un/e auteur/ice est obligatoire."
 
 msgid "author.submit.form.authorRequiredFields"
 msgstr ""
-"Les prénom, nom de famille, et courriel de chaque auteur sont obligatoires."
+"Le prénom, nom de famille et courriel de chaque auteur/ice sont obligatoires."
 
 msgid "author.submit.form.titleRequired"
 msgstr "Veuillez saisir le titre de votre article."
@@ -292,8 +293,8 @@ msgstr "Brève description"
 
 msgid "author.submit.suppFile.availableToPeers"
 msgstr ""
-"Présenter le fichier aux évaluateur·rice·s (sans métadonnées), afin de ne "
-"pas compromettre l'anonymat de l'évaluation."
+"Présenter le fichier aux évaluateur/ices (sans métadonnées), afin de ne pas "
+"compromettre l'anonymat de l'évaluation."
 
 msgid "author.submit.suppFile.publisherDescription"
 msgstr "Utiliser uniquement avec des documents officiellement publiés."
@@ -339,19 +340,19 @@ msgstr ""
 "{$journalTitle}."
 
 msgid "author.article.uploadAuthorVersion"
-msgstr "Transférer la version de l'auteur"
+msgstr "Charger la version de l'auteur/ice"
 
 msgid "author.article.copyeditedFile"
 msgstr "Fichier révisé"
 
 msgid "author.article.authorRevisedFile"
-msgstr "Fichier de l'auteur"
+msgstr "Fichier de l'auteur/ice"
 
 msgid "author.submit.authorSubmitLoginMessage"
 msgstr ""
-"Un compte d'utilisateur est obligatoire afin de soumettre à cette revue. Ça "
-"permet aux rédacteurs de faire le suivi de vos soumissions et d'entrer en "
-"contact avec vous quand le statut de votre soumission change, ou si vous "
+"Un compte utilisateur est obligatoire afin de soumettre à cette revue. Ça "
+"permet aux rédacteur/ices de faire le suivi de vos soumissions et d'entrer "
+"en contact avec vous quand le statut de votre soumission change, ou si vous "
 "devez fournir de l'information supplémentaire."
 
 #~ msgid "author.submit.howToSubmit"

@@ -3,8 +3,8 @@
 /**
  * @file classes/core/Application.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2014-2026 Simon Fraser University
+ * Copyright (c) 2003-2026 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class Application
@@ -20,7 +20,6 @@ namespace APP\core;
 use APP\facades\Repo;
 use APP\journal\JournalDAO;
 use APP\payment\ojs\OJSPaymentManager;
-use PKP\core\PKPContainer;
 use PKP\context\Context;
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
@@ -36,6 +35,7 @@ class Application extends PKPApplication
     public const ASSOC_TYPE_JOURNAL = 0x0000100;
     public const ASSOC_TYPE_ISSUE = 0x0000103;
     public const ASSOC_TYPE_ISSUE_GALLEY = 0x0000105;
+    public const ASSOC_TYPE_JATS = 0x0000106;
 
     public const REQUIRES_XSL = false;
 
@@ -53,6 +53,7 @@ class Application extends PKPApplication
                 'ASSOC_TYPE_JOURNAL',
                 'ASSOC_TYPE_ISSUE',
                 'ASSOC_TYPE_ISSUE_GALLEY',
+                'ASSOC_TYPE_JATS',
             ]);
         }
 
@@ -121,10 +122,10 @@ class Application extends PKPApplication
     public function getPluginCategories(): array
     {
         return [
-            // NB: Meta-data plug-ins are first in the list as this
+            // NB: Metadata plug-ins are first in the list as this
             // will make them load (and install) first.
             // This is necessary as several other plug-in categories
-            // depend on meta-data. This is a very rudimentary type of
+            // depend on metadata. This is a very rudimentary type of
             // dependency management for plug-ins.
             'metadata',
             'blocks',
@@ -137,6 +138,16 @@ class Application extends PKPApplication
             'reports',
             'themes'
         ];
+    }
+
+    /**
+     * Get the supported metadata setting names for this application.
+     */
+    public static function getMetadataFields(): array
+    {
+        return array_merge(parent::getMetadataFields(), [
+            'articleNumber',
+        ]);
     }
 
     /**
@@ -165,7 +176,7 @@ class Application extends PKPApplication
             WORKFLOW_STAGE_ID_SUBMISSION,
             WORKFLOW_STAGE_ID_EXTERNAL_REVIEW,
             WORKFLOW_STAGE_ID_EDITING,
-            WORKFLOW_STAGE_ID_PRODUCTION
+            WORKFLOW_STAGE_ID_PRODUCTION,
         ];
     }
 

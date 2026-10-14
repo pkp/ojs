@@ -17,18 +17,22 @@
     "format": "prettier --write ./js/load.js ./lib/pkp/js/load.js ./lib/pkp/js/usage-stats-chart.js ./lib/pkp/js/classes/VueRegistry.js",
     "php-fix": "php lib/pkp/lib/vendor/bin/php-cs-fixer fix --config .php-cs-fixer.php --allow-risky=yes",
     "prepare": "husky install",
-    "postinstall": "copyfiles -f node_modules/swiper/swiper-bundle*.{js,css} plugins/themes/default/js/lib/swiper && copyfiles -f node_modules/altcha/dist/altcha.js lib/pkp/js/lib/altcha"
+    "postinstall": "copyfiles -f node_modules/swiper/swiper-bundle*.{js,css} plugins/themes/default/js/lib/swiper && copyfiles -f node_modules/altcha/dist/altcha.i18n.js lib/pkp/js/lib/altcha"
   },
   "dependencies": {
+    "@atlaskit/pragmatic-drag-and-drop": "^1.7.7",
+    "@atlaskit/pragmatic-drag-and-drop-hitbox": "^1.1.0",
+    "@fastify/deepmerge": "^3.2.0",
     "@headlessui/vue": "^1.7.23",
     "@highlightjs/vue-plugin": "^2.1.2",
     "@lk77/vue3-color": "^3.0.6",
-    "@sciflow/editor-core": "^0.0.0-ci.57",
-    "@sciflow/editor-start": "^0.0.0-ci.57",
+    "@sciflow/editor-core": "^0.1.1",
+    "@sciflow/editor-start": "^0.1.1",
+    "@sciflow/pandoc-ast": "^0.1.1",
     "@tinymce/tinymce-vue": "^6.1.0",
     "@vue-a11y/announcer": "^3.1.5",
     "@vueuse/core": "^10.11.1",
-    "altcha": "^1.4.2",
+    "altcha": "^2.3.0",
     "chart.js": "^4.4.8",
     "clone-deep": "^4.0.1",
     "copyfiles": "^2.4.1",
@@ -41,25 +45,26 @@
     "jquery-ui": "^1.14.1",
     "jquery-validation": "~1.21.0",
     "luxon": "^3.6.1",
+    "mathjax": "^4",
     "ofetch": "^1.4.1",
+    "pandoc-wasm": "^1.1.0",
     "pinia": "^2.3.1",
     "primevue": "^4.3.3",
-    "reka-ui": "2.3.2",
-    "swiper": "^10.3.1",
+    "reka-ui": "^2.8.0",
+    "swiper": "^12.1.2",
     "tiny-emitter": "^2.1.0",
-    "tinymce": "^7.8.0",
+    "tinymce": "^7.9.3",
     "uuid": "^9.0.1",
     "vue": "^3.5.13",
     "vue-chartjs": "^5.3.2",
-    "vue-draggable-plus": "^0.6.0",
-    "vue-scrollto": "^2.20.0"
+    "vue-draggable-plus": "^0.6.0"
   },
   "overrides": {
-    "vite": "npm:rolldown-vite@7.2.6"
+    "vite": "^8.0.0-beta.14"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.11.0",
-    "@vitejs/plugin-vue": "^6.0.1",
+    "@vitejs/plugin-vue": "^6.0.4",
     "@vue/eslint-config-prettier": "^8.0.0",
     "autoprefixer": "^10.4.21",
     "cypress": "^14.5.3",
@@ -78,7 +83,7 @@
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^3.4.17",
-    "vite": "npm:rolldown-vite@7.2.6",
+    "vite": "^8.0.0-beta.14",
     "vite-plugin-static-copy": "^3.1.1"
   },
   "prettier": {

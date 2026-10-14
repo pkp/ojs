@@ -68,14 +68,11 @@ describe('Submission Wizard', function() {
 
         // View submission discussion and check participants
         cy.get('a:contains("Review this submission")').click();
-        cy.get('h4:contains("Pre-Review Discussions")')
-            .parents('.pkp_controllers_grid')
-            .find('a:contains("Comments for the Editor")')
-            .click();
-        cy.get('#participantsListPlaceholder li:contains("Daniel Barnes")');
-        cy.get('#participantsListPlaceholder li:contains("Minoti Inoue")');
-        cy.get('#participantsListPlaceholder li:contains("Carlo Corino")');
-        cy.get('#queryNotesGrid .gridCellContainer').contains(comments);
+        cy.get('[data-cy="discussion-manager"]').contains('button', 'Comments for the Editor').click();
+        cy.get('[data-cy="active-modal"]').contains('Daniel Barnes').should('exist');
+        cy.get('[data-cy="active-modal"]').contains('Minoti Inoue').should('exist');
+        cy.get('[data-cy="active-modal"]').contains('Carlo Corino').should('exist');
+        cy.get('[data-cy="active-modal"]').contains(comments).should('exist');
 
         cy.logout();
     });
@@ -171,7 +168,7 @@ describe('Submission Wizard', function() {
             });
         cy.wait(1500); // Let modal render. Fixes console error, maybe with TinyMCE init
         cy.get('label:contains("Items can only be submitted by Editors and Section Editors.")').click();
-        cy.get('label:contains("Deactivate this section")').click();
+        cy.get('label:contains("Mark this section as inactive")').click();
         cy.get('[role="dialog"] button:contains("Save")').click();
         cy.get('[role="dialog"]').should('not.exist');
 
@@ -279,6 +276,7 @@ describe('Submission Wizard', function() {
             title: 'Massa tincidunt dui ut ornare lectus sit amet est',
             keywords: 'Social Transformation',
             citations: 'Massa tincidunt dui ut ornare lectus sit amet est',
+            dataAvailability: 'Viverra',
             metadata: {
                 autosuggest: {
                     disciplines: 'Faucibus',
@@ -290,9 +288,6 @@ describe('Submission Wizard', function() {
                     rights: 'Aliquet',
                     source: 'Condimentum',
                     type: 'Tincidunt',
-                },
-                tinyMce: {
-                    dataAvailability: 'Viverra',
                 },
             }
         };
@@ -307,7 +302,6 @@ describe('Submission Wizard', function() {
         const forTheEditorFields = [
             'Supporting Agencies',
             'Coverage',
-            'Data Availability Statement',
             'Disciplines',
             'Rights',
             'Source',
@@ -330,7 +324,7 @@ describe('Submission Wizard', function() {
                         agencies: 'require',
                         citations: 'require',
                         coverage: 'require',
-                        dataAvailability: 'require',
+                        dataAvailability: 'request',
                         disciplines: 'require',
                         keywords: 'require',
                         rights: 'require',
@@ -398,6 +392,7 @@ describe('Submission Wizard', function() {
         cy.get('li:contains("' + submission.keywords + '")');
         cy.get('#titleAbstract-keywords-control-en').type('{downarrow}{enter}');
         cy.get('#citations-citationsRaw-control').type(submission.citations);
+        cy.setTinyMceContent('dataAvailability-dataAvailability-control-en', submission.dataAvailability);
 
         cy.get('.pkpSteps button:contains("For the Editors")').click({ force: true });
         Object.keys(submission.metadata.autosuggest).forEach(field => {
@@ -407,9 +402,6 @@ describe('Submission Wizard', function() {
         });
         Object.keys(submission.metadata.string).forEach(field => {
             cy.get('#forTheEditors-' + field + '-control-en').type(submission.metadata.string[field]);
-        });
-        Object.keys(submission.metadata.tinyMce).forEach(field => {
-            cy.setTinyMceContent('forTheEditors-' + field + '-control-en', submission.metadata.tinyMce[field]);
         });
 
         // All errors should be gone and submit should be allowed.
@@ -518,6 +510,8 @@ describe('Submission Wizard', function() {
         cy.get('#titleAbstract-keywords-control-fr_CA').type('{downarrow}{enter}');
         cy.setTinyMceContent('titleAbstract-abstract-control-fr_CA', submission.abstract.fr_CA);
 
+        cy.get('label[for="dataAvailability-dataAvailability-control-fr_CA"]:contains("Data Availability Statement")');
+
         // No abstract requirements in Reviews section
         cy.get('label:contains("Abstract *")').should('not.exist');
         cy.get('*:contains("Word Count: 0/500")').should('not.exist');
@@ -541,7 +535,6 @@ describe('Submission Wizard', function() {
             rights: "Rights",
             source: "Source",
             type: "Type",
-            dataAvailability: "Data Availability Statement",
         }
         Object.keys(metadata).forEach((prop) => {
             cy.get('label[for="forTheEditors-' + prop + '-control-fr_CA"]:contains("' + metadata[prop] + '")');
@@ -598,6 +591,10 @@ describe('Submission Wizard', function() {
             .click();
         cy.get('input[name="givenName-fr_CA"]').type('Carlo', {delay: 0});
         cy.get('input[name="familyName-fr_CA"]').type('Carlo', {delay: 0});
+        cy.contains('a', 'languages completed').click();
+        cy.contains('.pkpFormField--text', 'Type the institution name in French (Canada)')
+            .find('input[name="name"]')
+            .type('University of Bologna', {delay: 0});
         cy.get('[role=dialog]').find('button:contains("Save")').click();
         cy.get('.pkpSteps button:contains("For the Editors")').click({ force: true });
         cy.get('#forTheEditors-subjects-control-fr_CA').type('Sociologie française', {delay: 0});

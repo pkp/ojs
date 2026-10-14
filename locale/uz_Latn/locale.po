@@ -1173,9 +1173,6 @@ msgstr ""
 "(qarang: <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\"> CI &nbsp; siyosati </a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Raqobat manfaatlari"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Ushbu taqdimot haqidagi sharhingizni kiritish (yoki joylashtirish) uchun "
@@ -2200,9 +2197,11 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "{$ SubmitId} yuborilishi qayta ko'rib chiqish uchun yuborildi."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr "{$ reviewerName} {$ roundId} yuborish uchun {$ round} turini rad etdi."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$ reviewerName} {$ roundId} yuborish uchun {$ round} turini ko'rib chiqdi."

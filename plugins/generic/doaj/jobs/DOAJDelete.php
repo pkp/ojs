@@ -54,6 +54,6 @@ class DOAJDelete extends BaseJob
             $msg = __($result[0][0], ['param' => $result[0][1]]);
             throw new JobException($msg);
         }
-        dispatch(new DOAJRegister($this->jsonString, $this->objectId, $this->context))->delay(now()->addMinutes(10));
+        dispatch(new DOAJRegister($this->jsonString, $this->objectId, $this->context));
     }
 }

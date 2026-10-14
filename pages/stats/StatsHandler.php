@@ -190,4 +190,57 @@ class StatsHandler extends PKPStatsHandler
             'filters' => $filters
         ]);
     }
+
+    protected function getTableColumns(): array
+    {
+        $columns = [
+            [
+                'name' => 'title',
+                'label' => __('common.title'),
+            ],
+            [
+                'name' => 'abstractViews',
+                'label' => __('submission.abstractViews'),
+                'value' => 'abstractViews',
+            ],
+            [
+                'name' => 'galleyViews',
+                'label' => __('stats.fileViews'),
+                'value' => 'galleyViews',
+            ],
+            [
+                'name' => 'pdf',
+                'label' => __('stats.pdf'),
+                'value' => 'pdfViews',
+            ],
+            [
+                'name' => 'html',
+                'label' => __('stats.html'),
+                'value' => 'htmlViews',
+            ],
+            [
+                'name' => 'other',
+                'label' => __('common.other'),
+                'value' => 'otherViews',
+            ],
+        ];
+
+        if (app()->get('publicationStats')->isJatsPluginAvailable()) {
+            $columns[] = [
+                'name' => 'jats',
+                'label' => __('stats.jats'),
+                'value' => 'jatsViews',
+            ];
+        }
+
+        $columns[] = [
+            'name' => 'total',
+            'label' => __('stats.total'),
+            'value' => 'total',
+            'orderBy' => 'total',
+            'initialOrderDirection' => true,
+        ];
+
+        return $columns;
+    }
 }

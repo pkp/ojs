@@ -1,0 +1,26 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PKP ojs/plugin-reports-articles\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 21:05+0000\n"
+"PO-Revision-Date: 2026-06-01 21:05+0900\n"
+"Last-Translator: OJS Japanese translators\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "plugins.reports.articles.displayName"
+msgstr "論文レポート"
+
+msgid "plugins.reports.articles.description"
+msgstr "ジャーナルに掲載された論文のCSVレポートを生成します。"
+
+msgid "plugins.reports.articles.nodecision"
+msgstr "判定なし"
+
+msgid "plugins.reports.articles.initialDecline"
+msgstr "却下（査読前）"

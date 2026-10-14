@@ -731,11 +731,6 @@ msgstr ""
 "启用 LOCKSS，在加入 LOCKSS 的图书馆通过<a href=\"{$lockssUrl}\" target="
 "\"_blank\">发布者清单</a>页面保存与传播期刊的内容。"
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"LOCKSS 许可证将显示在“关于期刊”的“归档”下：<a href=\"http://www.lockss.org/"
-"community/publishers-titles-gln/\" target=\"_blank\"> LOCKSS 许可证</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "LOCKSS 许可证说明"
 
@@ -752,11 +747,6 @@ msgid "manager.setup.clockssEnable"
 msgstr ""
 "启用 CLOCKSS ，通过 CLOCKSS 的<a href=\"{$clockssUrl}\" target=\"_blank\">出"
 "版者清单</a> 存储和发布期刊内容到特定的文档库中。"
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"CLOCKSS 协议将出现在归档： <a href=\"http://clockss.org/\" target=\"_blank"
-"\"> CLOCKSS 协议</a> 下的『关于期刊』中"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "CLOCKSS 协议描述"

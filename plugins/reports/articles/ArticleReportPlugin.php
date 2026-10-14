@@ -16,10 +16,8 @@
 
 namespace APP\plugins\reports\articles;
 
-use APP\core\Application;
 use APP\decision\Decision;
 use APP\facades\Repo;
-use PKP\controlledVocab\ControlledVocab;
 use PKP\facades\Locale;
 use PKP\plugins\ReportPlugin;
 use PKP\security\Role;
@@ -151,29 +149,37 @@ class ArticleReportPlugin extends ReportPlugin
                 $sectionTitles[$sectionId] = $section->getLocalizedTitle();
             }
 
-            $subjects = Repo::controlledVocab()->getBySymbolic(
-                ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_SUBJECT,
-                Application::ASSOC_TYPE_PUBLICATION,
-                $submission->getCurrentPublication()->getId()
-            );
+            $subjects = collect($publication->getData('subjects') ?? [])
+                ->map(
+                    fn (array $items): array => collect($items)
+                        ->pluck('name')
+                        ->all()
+                )
+                ->all();
 
-            $disciplines = Repo::controlledVocab()->getBySymbolic(
-                ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_DISCIPLINE,
-                Application::ASSOC_TYPE_PUBLICATION,
-                $submission->getCurrentPublication()->getId()
-            );
+            $disciplines = collect($publication->getData('disciplines') ?? [])
+                ->map(
+                    fn (array $items): array => collect($items)
+                        ->pluck('name')
+                        ->all()
+                )
+                ->all();
 
-            $keywords = Repo::controlledVocab()->getBySymbolic(
-                ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
-                Application::ASSOC_TYPE_PUBLICATION,
-                $submission->getCurrentPublication()->getId()
-            );
+            $keywords = collect($publication->getData('keywords') ?? [])
+                ->map(
+                    fn (array $items): array => collect($items)
+                        ->pluck('name')
+                        ->all()
+                )
+                ->all();
 
-            $agencies = Repo::controlledVocab()->getBySymbolic(
-                ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_AGENCY,
-                Application::ASSOC_TYPE_PUBLICATION,
-                $submission->getCurrentPublication()->getId()
-            );
+            $supportingAgencies = collect($publication->getData('supportingAgencies') ?? [])
+                ->map(
+                    fn (array $items): array => collect($items)
+                        ->pluck('name')
+                        ->all()
+                )
+                ->all();
 
             // Store the submission results
             $results[] = [

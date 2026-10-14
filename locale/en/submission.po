@@ -166,8 +166,26 @@ msgstr ""
 msgid "galley.publicationNotFound"
 msgstr "The publication for this galley could not be found."
 
+msgid "publication.assignToIssue.description"
+msgstr "Choose whether to publish this now or include it in an issue."
+
 msgid "publication.assignToissue"
 msgstr "Assign to Issue"
+
+msgid "publication.pages.description"
+msgstr "Enter page numbers for this publication, if applicable."
+
+msgid "publication.publicationDate"
+msgstr "Publication Date"
+
+msgid "publication.publicationSettings"
+msgstr "Publication Settings"
+
+msgid "publication.publicationSettings.urlPath.description"
+msgstr "Set a custom URL for this publication, or leave blank to use the default."
+
+msgid "publication.section.description"
+msgstr "Choose the journal section where this publication will appear."
 
 msgid "publication.assignedToIssue"
 msgstr ""
@@ -277,6 +295,9 @@ msgstr "Choose how to assign this publication to an issue."
 msgid "publication.assignToIssue.issueDescription"
 msgstr "Select the issue to assign this publication to."
 
+msgid "publication.journalIdentity"
+msgstr "Journal Identity"
+
 msgid "submission.publication"
 msgstr "Publication"
 
@@ -337,6 +358,10 @@ msgstr "The following requirements must be met before this can be published."
 msgid "publication.required.declined"
 msgstr "A declined submission can not be published."
 
+msgid "publication.required.pmurReview"
+msgstr "A PMUR version cannot be published without an associated review round. "
+"Please assign a review round to this publication version before proceeding."
+
 msgid "submission.license.description"
 msgstr ""
 "The license will be set automatically to <a href='{$licenseUrl}' "
@@ -363,7 +388,7 @@ msgid "publication.version.details"
 msgstr "Publication details for version {$version}"
 
 msgid "submission.queries.production"
-msgstr "Production Discussions"
+msgstr "Production Tasks & Discussions"
 
 msgid "editor.submission.decision.backToReview"
 msgstr "Back to Review"
@@ -379,15 +404,15 @@ msgstr ""
 "back to the review stage."
 
 msgid "editor.submission.decision.backToReview.completed"
-msgstr "Sent Back to Review"
+msgstr "Moved to Review"
 
 msgid "editor.submission.decision.backToReview.completed.description"
-msgstr "The submission, {$title}, was sent back to the review stage."
+msgstr "The submission, {$title}, was moved to the review stage."
 
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Send an email to the authors to let them know that their submission is being "
-"sent back to the review stage. Explain why this decision was made and inform "
+"moved to the review stage. Explain why this decision was made and inform "
 "the author of what further review will be undertaken."
 
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
@@ -469,3 +494,8 @@ msgstr ""
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Please select the contributor's role."
 
+msgid "submission.articleNumber"
+msgstr "Article Number"
+
+msgid "submission.articleNumber.description"
+msgstr "The article number can be used in citations and other metadata instead of page numbers."

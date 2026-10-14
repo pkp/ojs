@@ -1,10 +1,10 @@
-# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2022, 2025.
+# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2022, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:17+00:00\n"
-"PO-Revision-Date: 2025-03-01 11:23+0000\n"
+"PO-Revision-Date: 2026-08-27 08:03+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/api/cs/>\n"
 "Language: cs\n"
@@ -27,7 +27,7 @@ msgid "api.submissions.403.cantChangeContext"
 msgstr "Nemůžete změnit záznamy příspěvku."
 
 msgid "api.submissions.403.unpublishedIssues"
-msgstr "Nemáte právo vidět čísla, která nebyla publikována."
+msgstr "Nemáte právo vidět čísla, která nebyla zveřejněna."
 
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "Můžete zobrazit pouze časopisy, které byly povoleny."

@@ -491,23 +491,11 @@ msgstr "PKP PN qoşmasını aktivləşdirin"
 msgid "manager.setup.plnPluginArchiving"
 msgstr "PKP təhlükəsizlik şəbəkəsi (PN)"
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"CLOCKSS lisenziyası Jurnal Haqqında bölməsində, arxivləşdirmə altında "
-"görünəcəkdir: <a href=\"http://www.lockss.org/community/"
-"publishers-titles-gln/\" target=\"_blank\">LOCKSS Lisansı</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "LOCKSS lisenziya təsviri"
 
 msgid "manager.setup.lockssTitle"
 msgstr "LOCKSS"
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"CLOCKSS lisenziyası Jurnal Haqqında bölməsində, Arxivləşdirmə altında "
-"görünəcəkdir: <a href=\"https://clockss.org\" target=\"_blank\">CLOCKSS "
-"Lisansı</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "CLOCKSS Lisenziya Təsviri"

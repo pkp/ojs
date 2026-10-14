@@ -1,8 +1,8 @@
 {**
  * templates/frontend/objects/article_details.tpl
  *
- * Copyright (c) 2014-2025 Simon Fraser University
- * Copyright (c) 2003-2025 John Willinsky
+ * Copyright (c) 2014-2026 Simon Fraser University
+ * Copyright (c) 2003-2026 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @brief View of an Article which displays all details about the article.
@@ -115,10 +115,14 @@
 							</span>
 							{if count($author->getAffiliations()) > 0}
 								<span class="affiliation">
-									{foreach name="affiliations" from=$author->getAffiliations() item="affiliation"}
-										<span>{$affiliation->getLocalizedName()|escape}</span>
-										{if $affiliation->getRor()}<a href="{$affiliation->getRor()|escape}">{$rorIdIcon}</a>{/if}
-										{if !$smarty.foreach.affiliations.last}{translate key="common.commaListSeparator"}{/if}
+									{assign var="renderedAffiliation" value=false}
+									{foreach from=$author->getAffiliations() item="affiliation"}
+										{if $affiliation->getLocalizedName() || $affiliation->getRor()}
+											{if $renderedAffiliation}{translate key="common.commaListSeparator"}{/if}
+											{if $affiliation->getLocalizedName()}<span>{$affiliation->getLocalizedName()|escape}</span>{/if}
+											{if $affiliation->getRor()}<a href="{$affiliation->getRor()|escape}">{$rorIdIcon}</a>{/if}
+											{assign var="renderedAffiliation" value=true}
+										{/if}
 									{/foreach}
 								</span>
 							{/if}
@@ -129,7 +133,7 @@
 										{$contributorRoleName|escape}
 									</span>
 									{if !$contributorRoleName@last}{translate key="common.commaListSeparator"}{/if}
-									{strip}
+									{/strip}
 								{/foreach}
 							</span>
 							{if $author->getData('orcid')}
@@ -144,7 +148,7 @@
 									</a>
 								</span>
 							{/if}
-							{if $author->getData('creditRoles')}
+							{if $author->getData('creditRoles')->isNotEmpty()}
 								<span class="credit_roles">
 								{strip}
 								{foreach $author->getData('creditRoles') as $credit}
@@ -181,7 +185,6 @@
 				</section>
 			{/if}
 
-
 			{* Keywords *}
 			{if !empty($publication->getLocalizedData('keywords'))}
 			<section class="item keywords">
@@ -191,7 +194,7 @@
 				</h2>
 				<span class="value">
 					{foreach name="keywords" from=$publication->getLocalizedData('keywords') item="keyword"}
-						{$keyword|escape}{if !$smarty.foreach.keywords.last}{translate key="common.commaListSeparator"}{/if}
+						{$keyword.name|escape}{if !$smarty.foreach.keywords.last}{translate key="common.commaListSeparator"}{/if}
 					{/foreach}
 				</span>
 			</section>
@@ -336,6 +339,18 @@
 					</ul>
 				</div>
 			{/if}
+
+			{* JATS XML Link *}
+			{if isset($jatsDownloadUrl)}
+				<div class="item jats">
+					<span class="value jats_link">
+						<a class="obj_galley_link xml" href="{$jatsDownloadUrl|escape}">
+							{translate key="publication.jats.download"}
+						</a>
+					</span>
+				</div>
+			{/if}
+
 			{if $supplementaryGalleys}
 				<div class="item galleys">
 					<h3 class="pkp_screen_reader">
@@ -406,9 +421,8 @@
 			{/if}
 
 			{* Issue article appears in *}
-			{if $issue || $section || $categories}
+			{if $issue || $section || $categories || $publication->getData('articleNumber')}
 				<div class="item issue">
-
 					{if $issue}
 						<section class="sub_item">
 							<h2 class="label">
@@ -447,7 +461,50 @@
 							</div>
 						</section>
 					{/if}
+
+					{if $publication->getData('articleNumber')}
+						<section class="sub_item">
+							<h2 class="label">
+								{translate key="submission.articleNumber"}
+							</h2>
+							<div class="value">
+								{$publication->getData('articleNumber')|escape}
+							</div>
+						</section>
+					{/if}
 				</div>
+			{/if}
+
+			{* Funders *}
+			{if $article->getData('funders')->isNotEmpty()}
+			<section class="item funders" id="funding-data">
+				<h2 class="label">
+					{translate key="submission.funders"}
+				</h2>
+				<div class="value">
+					<ul>
+						{foreach from=$article->getData('funders') item=funder}
+							<li>
+								<span class="funder">
+									{$funder->getLocalizedData('name')|escape}
+									{if $funder->ror}<a href="{$funder->ror|escape}">{$rorIdIcon}</a>{/if}
+								</span>
+								{if $funder->grants}
+									<ul>
+										{foreach from=$funder->grants item=grant}
+											<li>
+												{if $grant.grantName}<span>{$grant.grantName|escape}</span><br />{/if}
+												{if $grant.grantNumber}<span>{translate key="submission.funders.funder.grant.number"} {$grant.grantNumber|escape}</span><br />{/if}
+												{if $grant.grantDoi}<span>{translate key="submission.funders.funder.grant.doi"} <a href="https://doi.org/{$grant.grantDoi|escape}">https://doi.org/{$grant.grantDoi|escape}</a></span>{/if}
+											</li>
+										{/foreach}
+									</ul>
+								{/if}
+							</li>
+						{/foreach}
+					</ul>
+				</div>
+			</section>
 			{/if}
 
 			{if $enablePublicComments}

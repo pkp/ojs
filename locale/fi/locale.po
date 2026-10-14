@@ -1181,9 +1181,6 @@ msgstr ""
 "target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">Sidonnaisuuksien ilmoittaminen</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Sidonnaisuudet"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Klikkaa kuvaketta syöttääksesi (tai liittääksesi) arviosi käsikirjoituksesta."
@@ -2183,11 +2180,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Käsikirjoitus {$submissionId} on lähetetty uudelleen arvioitavaksi."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} on kieltäytynyt arvioimasta käsikirjoitusta {$submissionId} "
 "kierroksella {$round}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} on suostunut arvioimaan käsikirjoituksen {$submissionId} "

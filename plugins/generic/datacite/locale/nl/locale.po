@@ -70,6 +70,7 @@ msgstr ""
 "Dit kan even duren (bv. afhankelijk van uw cronjob instellingen). U kan alle "
 "ongeregistreerde DOI's bekijken."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "Gebruik het DataCite test prefix voor de DOI deposit. Vergeet deze test-"
@@ -84,13 +85,11 @@ msgstr ""
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Test DOI voorvoegsel"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
 msgstr ""
 "Een test DOI voorvoegsel is verplicht wanneer de \"gebruik testvoorvoegsel "
 "voor DOI registratie\" is geselecteerd."
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
 
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Automatische registratie bij DataCite"

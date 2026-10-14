@@ -98,7 +98,7 @@
 	$('#reviewerOptinGroup input').on('click', reviewerInterestsToggle);
 
 	var swiper = new Swiper('.swiper', {
-		ally: {
+		a11y: {
 			prevSlideMessage: pkpDefaultThemeI18N.prevSlide,
 			nextSlideMessage: pkpDefaultThemeI18N.nextSlide,
 		},

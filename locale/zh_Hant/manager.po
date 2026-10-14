@@ -714,11 +714,6 @@ msgstr ""
 "允許LOCKSS透過LOCKSS<a href=\"{$lockssUrl}\" target=\"_blank\">Publisher "
 "Manifest</a>頁面於參與的圖書館儲存及安置期刊期刊內容。"
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"LOCKSS許可證將出現於關於期刊頁面內檔案保存下方：<a href=\"http://www.lockss."
-"org/community/publishers-titles-gln/\" target=\"_blank\">LOCKSS許可證</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "LOCKSS許可證說明"
 
@@ -735,11 +730,6 @@ msgid "manager.setup.clockssEnable"
 msgstr ""
 "允許CLOCKSS透過CLOCKSS<a href=\"{$clockssUrl}\" target=\"_blank\">Publisher "
 "Manifest</a>頁面於參與的圖書館儲存及安置期刊期刊內容。"
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"CLOCKSS許可證將出現於關於期刊頁面內檔案保存下方：<a href=\"https://clockss."
-"org\" target=\"_blank\">CLOCKSS許可證</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "CLOCKSS許可證說明"

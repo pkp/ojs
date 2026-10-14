@@ -65,7 +65,7 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
         $doc->appendChild($rootNode);
 
         foreach ($pubObjects as $pubObject) { /** @var Submission|Publication $pubObject */
-            if (is_a($pubObject, 'Submission')) {
+            if (is_a($pubObject, Submission::class)) {
                 $publication = $pubObject->getCurrentPublication();
                 /** @var Submission $article */
                 $article = $pubObject;
@@ -108,19 +108,19 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
                 $recordNode->appendChild($node = $doc->createElement('language', $language));
             }
             // Publisher name (i.e. institution name)
-            $publisher = $context->getData('publisherInstitution');
+            $publisher = $publication->getPublisher($context);
             if (!empty($publisher)) {
                 $recordNode->appendChild($node = $doc->createElement('publisher', htmlspecialchars($publisher, ENT_COMPAT, 'UTF-8')));
             }
             // Journal's title (M)
-            $journalTitle = $context->getName($context->getPrimaryLocale());
+            $journalTitle = $publication->getPrimaryContextName($context);
             $recordNode->appendChild($node = $doc->createElement('journalTitle', htmlspecialchars($journalTitle, ENT_COMPAT, 'UTF-8')));
             // Identification Numbers
-            $issn = $context->getData('printIssn');
+            $issn = $publication->getPrintIssn($context);
             if (!empty($issn)) {
                 $recordNode->appendChild($node = $doc->createElement('issn', $issn));
             }
-            $eissn = $context->getData('onlineIssn');
+            $eissn = $publication->getOnlineIssn($context);
             if (!empty($eissn)) {
                 $recordNode->appendChild($node = $doc->createElement('eissn', $eissn));
             }
@@ -176,7 +176,7 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
             }
             // Authors and affiliations
             $authors = $publication->getData('authors');
-            if (!empty($authors)) {
+            if ($authors->isNotEmpty()) {
                 $authorsNode = $doc->createElement('authors');
                 $recordNode->appendChild($authorsNode);
                 $affilList = $this->createAffiliationsList($authors, $publication);
@@ -216,7 +216,14 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
             $node->setAttribute('format', 'html');
 
             // Keywords
-            $articleKeywords = $publication->getData('keywords');
+            $articleKeywords = collect($publication->getData('keywords') ?? [])
+                ->map(
+                    fn (array $items): array => collect($items)
+                        ->pluck('name')
+                        ->all()
+                )
+                ->all();
+
             if (array_key_exists($publication->getData('locale'), $articleKeywords)) {
                 $keywordsInArticleLocale = $articleKeywords[$publication->getData('locale')];
                 unset($articleKeywords[$publication->getData('locale')]);

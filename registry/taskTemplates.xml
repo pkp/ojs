@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE templates SYSTEM "../lib/pkp/dtd/taskTemplates.dtd">
+<!--
+  * registry/taskTemplates.xml
+  *
+  * Copyright (c) 2014-2026 Simon Fraser University
+  * Copyright (c) 2003-2026 John Willinsky
+  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+  *
+  * XML file including information about default task and discussion templates.
+  -->
+<templates>
+	<template title="mailable.discussionSubmission.name" description="emails.discussion.body" key="DISCUSSION_NOTIFICATION_SUBMISSION" stageId="WORKFLOW_STAGE_ID_SUBMISSION"/>
+	<template title="mailable.discussionReview.name" description="emails.discussion.body" key="DISCUSSION_NOTIFICATION_REVIEW" stageId="WORKFLOW_STAGE_ID_EXTERNAL_REVIEW"/>
+	<template title="mailable.discussionCopyediting.name" description="emails.discussion.body" key="DISCUSSION_NOTIFICATION_COPYEDITING" stageId="WORKFLOW_STAGE_ID_EDITING"/>
+	<template title="mailable.discussionProduction.name" description="emails.discussion.body" key="DISCUSSION_NOTIFICATION_PRODUCTION" stageId="WORKFLOW_STAGE_ID_PRODUCTION"/>
+	<template title="mailable.copyeditRequest.name" description="emails.copyeditRequest.body" key="COPYEDIT_REQUEST" stageId="WORKFLOW_STAGE_ID_EDITING"/>
+	<template title="mailable.editorAssignedManual.name" description="emails.editorAssign.body" key="EDITOR_ASSIGN_SUBMISSION" stageId="WORKFLOW_STAGE_ID_SUBMISSION"/>
+	<template title="mailable.editorAssignedManual.name" description="emails.editorAssignReview.body" key="EDITOR_ASSIGN_REVIEW" stageId="WORKFLOW_STAGE_ID_EXTERNAL_REVIEW"/>
+	<template title="mailable.editorAssignedManual.name" description="emails.editorAssignProduction.body" key="EDITOR_ASSIGN_PRODUCTION" stageId="WORKFLOW_STAGE_ID_PRODUCTION"/>
+	<template title="mailable.layoutRequest.name" description="emails.layoutRequest.body" key="LAYOUT_REQUEST" stageId="WORKFLOW_STAGE_ID_PRODUCTION"/>
+	<template title="mailable.layoutComplete.name" description="emails.layoutComplete.body" key="LAYOUT_COMPLETE" stageId="WORKFLOW_STAGE_ID_PRODUCTION"/>
+</templates>

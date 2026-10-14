@@ -86,7 +86,6 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
         parent::setEnabled($enabled);
         if (!$enabled) {
             $contextId = $this->getCurrentContextId();
-            /** @var \PKP\context\ContextDAO $contextDao */
             $contextDao = Application::getContextDAO();
             $context = $contextDao->getById($contextId);
             if ($context->getData(Context::SETTING_CONFIGURED_REGISTRATION_AGENCY) === $this->getName()) {
@@ -136,6 +135,14 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
     }
 
     /**
+     * @copyDoc IDoiRegistrationAgency::exportPeerReviews()
+     */
+    public function exportPeerReviews(array $reviewAssignments, Context $context): array
+    {
+        return [];
+    }
+
+    /**
      * @param \APP\submission\Submission[] $submissions
      */
     public function depositSubmissions(array $submissions, Context $context): array
@@ -163,6 +170,14 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
             'hasErrors' => !$status,
             'responseMessage' => $responseMessage
         ];
+    }
+
+    /**
+     * @copyDoc IDoiRegistrationAgency::depositPeerReviews()
+     */
+    public function depositPeerReviews(array $peerReviews, Context $context): array
+    {
+        return [];
     }
 
     /**
@@ -254,8 +269,14 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
         }
 
         $doiPrefix = $context->getData(Context::SETTING_DOI_PREFIX);
-        if (empty($doiPrefix)) {
+        $testMode = $this->getSetting($context->getId(), 'testMode');
+        if (!$testMode && empty($doiPrefix)) {
             return false;
+        } elseif ($testMode) {
+            $testDOIPrefix = $this->getSetting($context->getId(), 'testDOIPrefix');
+            if (empty($testDOIPrefix)) {
+                return false;
+            }
         }
 
         return true;

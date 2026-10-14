@@ -224,7 +224,9 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
             }
             // If we have more than one export file we package the files
             // up as a single tar before going on.
-            assert(count($exportedFiles) >= 1);
+            if (empty($exportedFiles)) {
+                throw new Exception('DataCite export: no objects were exported.');
+            }
             if (count($exportedFiles) > 1) {
                 // tar file name: e.g. datacite-20160723-160036-articles-1.tar.gz
                 $finalExportFileName = $this->getExportFileName(
@@ -267,15 +269,18 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
         } else {
             $doi = $object->getDoi();
         }
-        assert(!empty($doi));
+        if (empty($doi)) {
+            throw new Exception('DataCite export: no DOI assigned to the object being deposited.');
+        }
         $testDOIPrefix = null;
         if ($this->isTestMode($context)) {
             $testDOIPrefix = $this->getSetting($context->getId(), 'testDOIPrefix');
-            assert(!empty($testDOIPrefix));
             $doi = preg_replace('#^[^/]+/#', $testDOIPrefix . '/', $doi);
         }
         $url = $this->_getObjectUrl($request, $context, $object);
-        assert(!empty($url));
+        if (empty($url)) {
+            throw new Exception('DataCite export: no URL could be determined for the object being deposited.');
+        }
 
         $dataCiteAPIUrl = DATACITE_API_URL;
         $username = $this->getSetting($context->getId(), 'username');
@@ -287,7 +292,9 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
         }
 
         // Prepare HTTP session.
-        assert(is_readable($filename));
+        if (!is_readable($filename)) {
+            throw new Exception("DataCite export: export file {$filename} is not readable.");
+        }
         $httpClient = Application::get()->getHttpClient();
         try {
             $response = $httpClient->request('POST', $dataCiteAPIUrl . 'metadata', [
@@ -339,7 +346,6 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
      */
     public function updateDepositStatus(DataObject $object, string $status, ?string $failedMsg = null)
     {
-        assert($object instanceof Submission || $object instanceof Issue || $object instanceof Representation);
         if ($object instanceof Submission) {
             $object = $object->getCurrentPublication();
         }
@@ -383,7 +389,6 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
      */
     public function _tarFiles($targetPath, $targetFile, $sourceFiles)
     {
-        assert((bool) $this->_checkForTar());
         // GZip compressed result file.
         $tarCommand = Config::getVar('cli', 'tar') . ' -czf ' . escapeshellarg($targetFile);
         // Do not reveal our internal export path by exporting only relative filenames.
@@ -393,7 +398,6 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
         // Add each file individually so that other files in the directory
         // will not be included.
         foreach ($sourceFiles as $sourceFile) {
-            assert(dirname($sourceFile) . '/' === $targetPath);
             if (dirname($sourceFile) . '/' !== $targetPath) {
                 continue;
             }
@@ -424,7 +428,6 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
             } else {
                 $article = Repo::submission()->get($articleId);
             }
-            assert($article instanceof Submission);
         }
         $url = null;
         switch (true) {

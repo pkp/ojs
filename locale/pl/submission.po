@@ -317,6 +317,7 @@ msgstr "Jesteś pewien, że nie chcesz zaplanować tego do publikacji?"
 msgid "publication.version.details"
 msgstr "Szczegóły publikacji dla wersji {$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Dyskusja w trakcie realizacji"
 
@@ -331,12 +332,15 @@ msgstr ""
 "{$editorName} cofnął decyzję o zaakceptowaniu zgłoszenia. Tekst powrócił do "
 "etapu recenzji."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Wyślij z powrotem do recenzji"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "Zgłoszenie, {$title}, zostało odesłane do etapu recenzji."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Wyślij email do autorów aby powiadomić ich, że zgłoszenie zostało odesłane "

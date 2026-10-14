@@ -1,35 +1,43 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
+# Helgi Sigurbjörnsson <helgi.sigurbjornsson@landsbokasafn.is>, 2026.
 msgid ""
 msgstr ""
-"Language: is_IS\n"
+"PO-Revision-Date: 2026-06-04 12:01+0000\n"
+"Last-Translator: Helgi Sigurbjörnsson <helgi.sigurbjornsson@landsbokasafn.is>"
+"\n"
+"Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-announcementFeed/is/>\n"
+"Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.generic.announcementfeed.displayName"
-msgstr ""
+msgstr "Viðbót fyrir tilkynningastraum"
 
 msgid "plugins.generic.announcementfeed.description"
 msgstr ""
+"Þessi viðbót myndar RSS/Atom-veitustrauma fyrir tilkynningar tímaritsins."
 
 msgid "plugins.generic.announcementfeed.settings"
-msgstr ""
+msgstr "Stillingar"
 
 msgid "plugins.generic.announcementfeed.settings.all"
-msgstr ""
+msgstr "Birta tengla á veitustrauma á öllum síðum tímaritsins."
 
 msgid "plugins.generic.announcementfeed.settings.homepage"
-msgstr ""
+msgstr "Birta tengla á veitustrauma aðeins á heimasíðu og tilkynningasíðu."
 
 msgid "plugins.generic.announcementfeed.settings.announcement"
-msgstr ""
+msgstr "Birta tengla á veitustrauma aðeins á tilkynningasíðu."
 
 msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
-msgstr ""
+msgstr "Afmarka veitustraum við"
 
 msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
-msgstr ""
+msgstr "nýjustu tilkynningar."
 
 msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
 msgstr ""

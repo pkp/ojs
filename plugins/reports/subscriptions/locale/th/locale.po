@@ -1,7 +1,7 @@
-# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024.
+# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-10-20 01:53+0000\n"
+"PO-Revision-Date: 2026-09-15 04:51+0000\n"
 "Last-Translator: Apichaya <apichaya_cc@thonburi-u.ac.th>\n"
 "Language-Team: Thai <http://translate.pkp.sfu.ca/projects/ojs/"
 "reports-subscriptions/th/>\n"
@@ -17,7 +17,8 @@ msgstr "รายงานการสมัครสมาชิก"
 
 msgid "plugins.reports.subscriptions.description"
 msgstr ""
-"ปลั๊กอินนี้จะสร้างรายงาน CSV ที่ประกอบด้วยรายการสมาชิกและข้อมูลของพวกเขา."
+"ส่วนเสริมนี้จัดทำรายงานในรูปแบบ CSV "
+"ซึ่งประกอบด้วยรายการสมาชิกและข้อมูลที่เกี่ยวข้อง"
 
 msgid "plugins.reports.subscriptions.institutionMailingAddress"
 msgstr "ที่อยู่ไปรษณีย์ของสถาบัน"

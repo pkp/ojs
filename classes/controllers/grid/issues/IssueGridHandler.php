@@ -22,6 +22,7 @@
 
 namespace APP\controllers\grid\issues;
 
+use APP\article\ArticleTombstoneManager;
 use APP\controllers\grid\issues\form\IssueAccessForm;
 use APP\controllers\grid\issues\form\IssueForm;
 use APP\controllers\grid\pubIds\form\AssignPublicIdentifiersForm;
@@ -53,6 +54,7 @@ use PKP\notification\NotificationSubscriptionSettingsDAO;
 use PKP\observers\events\MetadataChanged;
 use PKP\plugins\Hook;
 use PKP\plugins\PluginRegistry;
+use PKP\publication\PKPPublication;
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\Role;
 
@@ -379,10 +381,15 @@ class IssueGridHandler extends GridHandler
             $publications = $submission->getData('publications');
             foreach ($publications as $publication) {
                 if ($publication->getData('issueId') === (int) $issue->getId()) {
+                    $wasCurrentPublication = $publication->getId() == $submission->getData('currentPublicationId');
                     Repo::publication()->edit(
                         $publication,
                         ['issueId' => null, 'status' => Publication::STATUS_QUEUED]
                     );
+                    // edit() bypasses unpublish(), so tombstone the OAI identifier(s)
+                    // this now-offline publication was exposing.
+                    $unpublishedPublication = Repo::publication()->get($publication->getId());
+                    (new ArticleTombstoneManager())->reconcileTombstonesOnUnpublish($unpublishedPublication, $wasCurrentPublication, $submission, $journal);
                 }
             }
             $newSubmission = Repo::submission()->get($submission->getId());
@@ -390,8 +397,7 @@ class IssueGridHandler extends GridHandler
         }
 
         Repo::issue()->delete($issue);
-        $currentIssue = Repo::issue()->getCurrent($issue->getJournalId());
-        if ($currentIssue != null && $issue->getId() == $currentIssue->getId()) {
+        if ($journal->getData('currentIssueId') == $issue->getId()) {
             $issues = Repo::issue()->getCollector()
                 ->filterByContextIds([$journal->getId()])
                 ->filterByPublished(true)
@@ -402,7 +408,7 @@ class IssueGridHandler extends GridHandler
             }
         }
 
-        return DAO::getDataChangedEvent($issue->getId());
+        return DAO::getDataChangedEvent();
     }
 
     /**
@@ -559,6 +565,11 @@ class IssueGridHandler extends GridHandler
             }
             $assignPublicIdentifiersForm->execute();
             Repo::issue()->createDoi($issue);
+
+            // Stamp only on first publish, so a republished issue keeps its identity
+            if (!$issue->hasContextIdentity()) {
+                $issue->stampContextIdentity($context);
+            }
         }
 
         if (!$request->checkCSRF()) {
@@ -604,7 +615,7 @@ class IssueGridHandler extends GridHandler
             $submissions = Repo::submission()->getCollector()
                 ->filterByContextIds([$issue->getJournalId()])
                 ->filterByIssueIds([$issue->getId()])
-                ->filterByStatus([Submission::STATUS_SCHEDULED, Submission::STATUS_PUBLISHED])
+                ->filterByCurrentPublicationStatus([PKPPublication::STATUS_SCHEDULED, PKPPublication::STATUS_PUBLISHED])
                 ->getMany();
 
             foreach ($submissions as $submission) { /** @var Submission $submission */

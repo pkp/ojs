@@ -80,11 +80,8 @@ lib/pkp/js/controllers/linkAction/LinkActionHandler.js
 lib/pkp/js/controllers/wizard/WizardHandler.js
 
 # Specific controllers
-lib/pkp/js/controllers/grid/queries/ReadQueryHandler.js
-lib/pkp/js/controllers/grid/queries/QueryFormHandler.js
 lib/pkp/js/controllers/wizard/fileUpload/FileUploadWizardHandler.js
 lib/pkp/js/controllers/wizard/fileUpload/form/FileUploadFormHandler.js
-lib/pkp/js/controllers/grid/navigationMenus/form/NavigationMenuFormHandler.js
 lib/pkp/js/controllers/grid/navigationMenus/form/NavigationMenuItemsFormHandler.js
 lib/pkp/js/controllers/grid/representations/form/RepresentationFormHandler.js
 lib/pkp/js/controllers/grid/settings/user/form/UserDetailsFormHandler.js
@@ -98,6 +95,7 @@ lib/pkp/js/controllers/grid/users/UserGridHandler.js
 lib/pkp/js/controllers/grid/users/reviewer/AdvancedReviewerSearchHandler.js
 lib/pkp/js/controllers/grid/users/reviewer/form/EditReviewFormHandler.js
 lib/pkp/js/controllers/grid/users/reviewer/form/AddReviewerFormHandler.js
+lib/pkp/js/controllers/grid/users/reviewer/form/ReviewerActionFormHandler.js
 lib/pkp/js/controllers/grid/users/stageParticipant/StageParticipantGridHandler.js
 lib/pkp/js/controllers/grid/users/stageParticipant/form/StageParticipantNotifyHandler.js
 lib/pkp/js/controllers/grid/users/stageParticipant/form/AddParticipantFormHandler.js

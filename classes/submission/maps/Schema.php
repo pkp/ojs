@@ -21,7 +21,6 @@ use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\publication\Publication;
 use APP\submission\Submission;
-use Illuminate\Support\Collection;
 use Illuminate\Support\Enumerable;
 use PKP\db\DAORegistry;
 use PKP\decision\DecisionType;
@@ -33,12 +32,15 @@ use PKP\decision\types\InitialDecline;
 use PKP\decision\types\NewExternalReviewRound;
 use PKP\decision\types\RequestRevisions;
 use PKP\decision\types\Resubmit;
+use PKP\decision\types\ReturnToDone;
+use PKP\decision\types\ReturnToWorkflow;
 use PKP\decision\types\RevertDecline;
 use PKP\decision\types\RevertInitialDecline;
 use PKP\decision\types\SendExternalReview;
 use PKP\decision\types\SendToProduction;
 use PKP\plugins\Hook;
 use PKP\security\Role;
+use PKP\stageAssignment\StageAssignment;
 use PKP\submission\PKPSubmission;
 use PKP\submission\reviewRound\ReviewRoundDAO;
 
@@ -50,9 +52,9 @@ class Schema extends \PKP\submission\maps\Schema
     /**
      * @copydoc \PKP\submission\maps\Schema::mapByProperties()
      */
-    protected function mapByProperties(array $props, Submission $submission, bool|Collection $anonymizeReviews = false): array
+    protected function mapByProperties(array $props, Submission $submission, array $reviewsToAnonymize = [], array $submissionsToAnonymizeByAuthor = []): array
     {
-        $output = parent::mapByProperties($props, $submission, $anonymizeReviews);
+        $output = parent::mapByProperties($props, $submission, $reviewsToAnonymize, $submissionsToAnonymizeByAuthor);
 
         if (in_array('urlPublished', $props)) {
             $output['urlPublished'] = $this->request->getDispatcher()->url(
@@ -112,6 +114,18 @@ class Schema extends \PKP\submission\maps\Schema
         $permissions = $this->checkDecisionPermissions($stageId, $submission, $user, $request->getContext()->getId());
         $userHasAccessibleRoles = $user->hasRole([Role::ROLE_ID_SUB_EDITOR, Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN, Role::ROLE_ID_ASSISTANT], $request->getContext()->getId());
 
+        // Done has no stage assignments, so checkDecisionPermissions returns false for canMakeDecision
+        // for assigned sub-editors. Grant decision access to any editor assigned to this submission.
+        if ($stageId === WORKFLOW_STAGE_ID_DONE && !$permissions['canMakeDecision']) {
+            $isAssignedEditor = StageAssignment::withSubmissionIds([$submission->getId()])
+                ->withUserId($user->getId())
+                ->withRoleIds([Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUB_EDITOR])
+                ->exists();
+            if ($isAssignedEditor) {
+                $permissions['canMakeDecision'] = true;
+            }
+        }
+
         if (!$userHasAccessibleRoles || !$isActiveStage || !$permissions['canMakeDecision']) {
             return [];
         }
@@ -163,11 +177,22 @@ class Schema extends \PKP\submission\maps\Schema
                     ];
                     break;
                 case WORKFLOW_STAGE_ID_PRODUCTION:
-                    if ($submission->getData('status') !== Submission::STATUS_PUBLISHED) {
-                        $decisionTypes[] = new BackFromProduction();
-                    }
-
+                    $decisionTypes[] = new BackFromProduction();
                     break;
+                case WORKFLOW_STAGE_ID_DONE:
+                    $decisionTypes = [new ReturnToWorkflow()];
+                    break;
+            }
+        }
+
+        // Offer ReturnToDone in any active stage when the submission was previously in Done
+        // and currently has a published publication (any version stage) for Done to represent.
+        if ($stageId !== WORKFLOW_STAGE_ID_DONE && $submission->getData('stageId') === $stageId) {
+            $hasPublishedPublication = collect($submission->getData('publications'))
+                ->contains(fn (Publication $publication) => $publication->getData('status') === Publication::STATUS_PUBLISHED);
+
+            if ($hasPublishedPublication && Repo::decision()->hasDoneHistory($submission->getId())) {
+                $decisionTypes[] = new ReturnToDone();
             }
         }
 

@@ -820,12 +820,6 @@ msgstr ""
 "ota LOCKSS käyttöön LOCKSS:in <a href=\"{$lockssUrl}\" target=\"_blank"
 "\">Publisher Manifest</a> -sivun kautta."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"LOCKSS-lisenssi näkyy Tietoa julkaisusta sivulla Arkistointi-kohdassa: <a "
-"href=\"http://www.lockss.org/community/publishers-titles-gln/\" target="
-"\"_blank\">LOCKSS-lisenssi</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "LOCKSS-lisenssin kuvaus"
 
@@ -845,11 +839,6 @@ msgstr ""
 "Tallentaaksesi ja jakaaksesi julkaisun sisältöä osallistuvissa kirjastoissa, "
 "ota CLOCKSS käyttöön CLOCKSS:in <a href=\"{$clockssUrl}\" target=\"_blank"
 "\">Publisher Manifest</a> -sivun kautta."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"CLOCKSS-lisenssi näkyy Tietoa julkaisusta sivulla Arkistointi-kohdassa: <a "
-"href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS-lisenssi</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "CLOCKSS-lisenssin kuvaus"

@@ -1,11 +1,12 @@
 # Darius Zviedris <darius.zviedris@lki.lt>, 2025.
+# Vincas Grigas <vincas.grigas@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-09-02 08:41+0000\n"
-"PO-Revision-Date: 2025-10-02 08:45+0000\n"
-"Last-Translator: Darius Zviedris <darius.zviedris@lki.lt>\n"
+"PO-Revision-Date: 2026-08-18 11:10+0000\n"
+"Last-Translator: Vincas Grigas <vincas.grigas@gmail.com>\n"
 "Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "lt/>\n"
 "Language: lt\n"
@@ -797,12 +798,6 @@ msgstr ""
 "dalyvaujančiose bibliotekose per LOCKSS <a href=\"{$lockssUrl}\" target="
 "\"_blank\">leidėjo manifestą</a>."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"LOCKSS licencija bus rodoma skiltyje „Apie žurnalą“ po „Archyvavimas“: <a "
-"href=\"http://www.lockss.org/community/publishers-titles-gln/\" target="
-"\"_blank\">LOCKSS licencija</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "LOCKSS licencijos aprašymas"
 
@@ -821,11 +816,6 @@ msgstr ""
 "Įjunkite CLOCKSS, kad žurnalo turinys būtų saugomas ir platinamas "
 "dalyvaujančiose bibliotekose per CLOCKSS <a href=\"{$clockssUrl}\" target="
 "\"_blank\">leidėjo manifestą</a>."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"A CLOCKSS license will appear in About the Journal under Archiving: <a href="
-"\"http://clockss.org/\" target=\"_blank\">CLOCKSS License</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "CLOCKSS licencijos aprašymas"
@@ -1774,7 +1764,8 @@ msgstr "Prašom pasirinkti numatytąsias parinktis."
 
 msgid "manager.subscriptionTypes.form.membership"
 msgstr ""
-"Turi būti nurodyta narystė (asociacija, organizacija, konsorciumas ar pan."
+"Prenumeratai reikalinga informacija apie narystę (pvz., asociacijoje, "
+"organizacijoje ar konsorciume)"
 
 msgid "manager.subscriptionTypes.form.membershipValid"
 msgstr "Prašom pasirinkti pateiktą langelį."
@@ -2440,18 +2431,24 @@ msgstr "Prenumerata netrukus baigsis"
 
 msgid "mailable.subscriptionExpiresSoon.description"
 msgstr ""
+"Šis el. laiškas automatiškai siunčiamas prenumeratoriui pranešti, kad jo "
+"prenumerata netrukus baigs galioti."
 
 msgid "mailable.subscriptionExpired.name"
 msgstr "Prenumerata pasibaigė"
 
 msgid "mailable.subscriptionExpired.description"
 msgstr ""
+"Šis el. laiškas siunčiamas automatiškai, siekiant informuoti prenumeratorių, "
+"kad jo prenumerata baigė galioti"
 
 msgid "mailable.subscriptionExpiredLast.name"
 msgstr "Prenumerata pasibaigė paskutinį kartą"
 
 msgid "mailable.subscriptionExpiredLast.description"
 msgstr ""
+"Šis el. laiškas automatiškai siunčiamas antrą kartą informuoti "
+"prenumeratorių apie pasibaigusią prenumeratą"
 
 msgid "mailable.subscriptionPurchaseIndividual.name"
 msgstr "Įsigykite individualią prenumeratą"

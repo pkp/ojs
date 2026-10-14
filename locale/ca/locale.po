@@ -1147,9 +1147,6 @@ msgstr ""
 "recerca (vegeu <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">&nbsp;Política de CI</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Conflicte d’interessos"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Feu clic a la icona per introduir (o enganxar) la vostra revisió d’aquesta "
@@ -2174,11 +2171,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "La tramesa {$submissionId} s’ha tornat a trametre per a la revisió."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} ha rebutjat la ronda {$round} de revisió per a la tramesa "
 "{$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} ha acceptat la ronda {$round} de revisió per a la tramesa "

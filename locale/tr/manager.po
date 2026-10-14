@@ -808,12 +808,6 @@ msgstr ""
 "a> sayfasında yer almak için LOCKSS'i etkinleştirin. LOCKSS lisansı \"Dergi "
 "Hakkında\" sayfasında görünecektir."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"CLOCKSS lisansı Dergi Hakkında bölümünde, arşivleme altında görünecektir: <a "
-"href=\"http://www.lockss.org/community/publishers-titles-gln/\" target="
-"\"_blank\">LOCKSS Lisansı</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "LOCKSS Lisans Açıklaması"
 
@@ -833,11 +827,6 @@ msgstr ""
 "Bir CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank\">Publisher Manifest</"
 "a> sayfası aracılığıyla katılımcı kütüphanelerde dergi içeriğini depolamak "
 "ve dağıtmak için CLOCKSS uygulamasını etkinleştirin."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"CLOCKSS lisansı Dergi Hakkında bölümünde, arşivleme altında görünecektir: <a "
-"href=\"https://clockss.org\" target=\"_blank\">CLOCKSS Lisansı</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "CLOCKSS Lisans Açıklaması"

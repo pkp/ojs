@@ -33,7 +33,7 @@ msgid "plugins.importexport.datacite.intro"
 msgstr ""
 "\n"
 "\t\tIf you want to register DOIs with DataCite, please contact the Managing\n"
-"\t\tAgent via the <a href=\"https://datacite.org/contact.html\" target=\""
+"\t\tAgent via the <a href=\"https://datacite.org/contact\" target=\""
 "_blank\">DataCite\n"
 "\t\thomepage</a>, who will refer you to your local DataCite Member. Once you "
 "have\n"
@@ -58,7 +58,7 @@ msgid "plugins.importexport.datacite.settings.form.automaticRegistration.descrip
 msgstr "OJS will deposit DOIs automatically to DataCite. Please note that this may take a short amount of time after publication to process (e.g. depending on your cronjob configuration). You can check for all unregistered DOIs."
 
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
-msgstr "Use the DataCite test prefix for DOI registration. Please do not forget to remove this option for the production."
+msgstr "Use the DataCite test system for DOI registration. Please do not forget to disable this for production."
 
 msgid "plugins.importexport.datacite.settings.form.testUsername"
 msgstr "Test Username"
@@ -70,10 +70,7 @@ msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Test DOI Prefix"
 
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
-msgstr "A test DOI prefix is required when the \"use test prefix for DOI registration\" is selected."
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr "A test username is required when a production username is supplied."
+msgstr "A test DOI prefix is required when using the test system for DOI registration."
 
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "DataCite automatic registration task"
@@ -86,7 +83,7 @@ msgstr ""
 ""
 
 msgid "plugins.generic.datacite.displayName"
-msgstr "Datacite Manager Plugin"
+msgstr "DataCite Manager Plugin"
 
 msgid "plugins.generic.datacite.description"
 msgstr "Handles depositing and exporting DataCite metadata"

@@ -14,6 +14,7 @@
 
 namespace APP\publication;
 
+use APP\article\ArticleTombstoneManager;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\issue\enums\IssueAssignment;
@@ -28,6 +29,9 @@ use PKP\context\Context;
 use PKP\core\Core;
 use PKP\db\DAORegistry;
 use PKP\doi\exceptions\DoiException;
+use PKP\observers\events\PublicationVersioned;
+use PKP\submission\reviewAssignment\ReviewAssignment;
+use PKP\submission\reviewRound\ReviewRoundDAO;
 
 class Repository extends \PKP\publication\Repository
 {
@@ -144,13 +148,18 @@ class Repository extends \PKP\publication\Repository
             $errors['publicationFeeStatus'] = __('editor.article.payment.publicationFeeNotPaid');
         }
 
+        // If publishing a PMUR, check that a review round is associated with it.
+        if ($this->pmurNeedsReviewRound($publication)) {
+            $errors['pmurReview'] = __('publication.required.pmurReview');
+        }
+
         return $errors;
     }
 
     /** @copydoc \PKP\publication\Repository::version() */
-    public function version(Publication $publication, ?VersionStage $versionStage = null, bool $isMinorVersion = true): int
+    public function version(Publication $publication, ?VersionStage $versionStage = null, bool $isMinorVersion = true, ?int $submissionStatus = null): int
     {
-        $newId = parent::version($publication, $versionStage, $isMinorVersion);
+        $newId = parent::version($publication, $versionStage, $isMinorVersion, $submissionStatus);
 
         $context = Application::get()->getRequest()->getContext();
 
@@ -168,7 +177,71 @@ class Repository extends \PKP\publication\Repository
             }
         }
 
+        event(new PublicationVersioned($this->get($newId), $publication, Repo::submission()->get($publication->getData('submissionId')), $context));
+
         return $newId;
+    }
+
+    /** @copydoc \PKP\publication\Repository::publish() */
+    public function publish(Publication $publication, false|int|null $submissionStatus = null): void
+    {
+        // Checked before parent::publish() changes it, so reconcileTombstonesOnPublish()
+        // can tell whether this publish knocked a different (stage, major) pair out of "current".
+        $previousCurrentPublicationId = Repo::submission()->get($publication->getData('submissionId'))
+            ->getData('currentPublicationId');
+
+        parent::publish($publication, $submissionStatus);
+
+        $newPublication = Repo::publication()->get($publication->getId());
+        $submission = Repo::submission()->get($newPublication->getData('submissionId'));
+        $context = $this->getSubmissionContext($submission);
+
+        // A publish that only results in STATUS_SCHEDULED (e.g. assigned to a not-yet-published
+        // issue) doesn't expose anything via OAI yet -- only stamp once it's actually live, so
+        // this doesn't falsely flag this submission's other, unrelated OAI records as changed.
+        if ($newPublication->getData('status') === Publication::STATUS_PUBLISHED) {
+            $submission->stampModified();
+            Repo::submission()->dao->update($submission);
+        }
+
+        (new ArticleTombstoneManager())->reconcileTombstonesOnPublish($newPublication, $submission, $context, $previousCurrentPublicationId);
+    }
+
+    /** @copydoc \PKP\publication\Repository::unpublish() */
+    public function unpublish(Publication $publication, false|int|null $submissionStatus = null)
+    {
+        $submissionBefore = Repo::submission()->get($publication->getData('submissionId'));
+        $wasCurrentPublication = $publication->getId() == $submissionBefore->getData('currentPublicationId');
+        // Checked on the original (pre-clone) publication, so this reflects its status before
+        // parent::unpublish() changes it.
+        $wasPublished = $publication->getData('status') === Publication::STATUS_PUBLISHED;
+
+        parent::unpublish($publication, $submissionStatus);
+
+        $submission = Repo::submission()->get($publication->getData('submissionId'));
+        $context = $this->getSubmissionContext($submission);
+
+        // Unpublishing something that was only ever STATUS_SCHEDULED (never actually live) has
+        // no OAI-visible effect -- nothing to signal to harvesters, and stamping anyway would
+        // falsely flag this submission's other, unrelated OAI records as changed.
+        if ($wasPublished) {
+            $submission->stampModified();
+            Repo::submission()->dao->update($submission);
+        }
+
+        (new ArticleTombstoneManager())->reconcileTombstonesOnUnpublish($publication, $wasCurrentPublication, $submission, $context);
+    }
+
+    /**
+     * Get the context a submission belongs to, preferring the request's
+     * current context to avoid an extra lookup when it's the same one.
+     */
+    protected function getSubmissionContext(Submission $submission): Context
+    {
+        $requestContext = Application::get()->getRequest()->getContext();
+        return $requestContext && $requestContext->getId() === $submission->getData('contextId')
+            ? $requestContext
+            : app()->get('context')->get($submission->getData('contextId'));
     }
 
     /**
@@ -187,12 +260,12 @@ class Repository extends \PKP\publication\Repository
      */
     protected function setStatusOnPublish(Publication $publication)
     {
-        $currentPublicaionStatus = (int) $publication->getData('status');
+        $currentPublicationStatus = (int) $publication->getData('status');
 
-        if (in_array($currentPublicaionStatus, [Publication::STATUS_READY_TO_PUBLISH, Publication::STATUS_READY_TO_SCHEDULE])) {
+        if (in_array($currentPublicationStatus, [Publication::STATUS_READY_TO_PUBLISH, Publication::STATUS_READY_TO_SCHEDULE])) {
             $publication->setData(
                 'status',
-                $currentPublicaionStatus === Publication::STATUS_READY_TO_PUBLISH
+                $currentPublicationStatus === Publication::STATUS_READY_TO_PUBLISH
                     ? Publication::STATUS_PUBLISHED
                     : Publication::STATUS_SCHEDULED
             );
@@ -227,7 +300,7 @@ class Repository extends \PKP\publication\Repository
     }
 
     /** @copydoc \PKP\publication\Repository::delete() */
-    public function delete(Publication $publication)
+    public function delete(Publication $publication, false|int|null $submissionStatus = null): void
     {
         $galleys = Repo::galley()->getCollector()
             ->filterByPublicationIds([$publication->getId()])
@@ -237,13 +310,32 @@ class Repository extends \PKP\publication\Repository
             Repo::galley()->delete($galley);
         }
 
-        parent::delete($publication);
+        // Deleting a published publication removes its OAI record(s), so tombstone
+        // the identifier(s) it was exposing -- same reconciliation as an unpublish.
+        $wasPublished = $publication->getData('status') === Publication::STATUS_PUBLISHED;
+        $wasCurrentPublication = false;
+        if ($wasPublished) {
+            $submissionBefore = Repo::submission()->get($publication->getData('submissionId'));
+            $wasCurrentPublication = $publication->getId() == $submissionBefore->getData('currentPublicationId');
+        }
+
+        parent::delete($publication, $submissionStatus);
+
+        if ($wasPublished) {
+            $submission = Repo::submission()->get($publication->getData('submissionId'));
+            $context = $this->getSubmissionContext($submission);
+
+            $submission->stampModified();
+            Repo::submission()->dao->update($submission);
+
+            (new ArticleTombstoneManager())->reconcileTombstonesOnUnpublish($publication, $wasCurrentPublication, $submission, $context);
+        }
     }
 
     /** @copydoc \PKP\publication\Repository::createDois() */
-    public function createDois(Publication $publication): array
+    public function createDois(Publication $publication, ?Submission $submission = null): array
     {
-        $submission = Repo::submission()->get($publication->getData('submissionId'));
+        $submission ??= Repo::submission()->get($publication->getData('submissionId'));
 
         /** @var JournalDAO $contextDao */
         $contextDao = Application::getContextDAO();
@@ -276,6 +368,42 @@ class Repository extends \PKP\publication\Repository
             }
         }
 
+        // Peer review
+        if ($context->isDoiTypeEnabled(Repo::doi()::TYPE_PEER_REVIEW)) {
+            /** @var ReviewAssignment[] $reviewAssignments */
+            $reviewAssignments = $this->getCompletedReviewAssignments([$publication->getId()]);
+            foreach ($reviewAssignments as $reviewAssignment) {
+                if (!$reviewAssignment->getIsReviewPubliclyVisible()) {
+                    continue;
+                }
+
+                if (empty($reviewAssignment->getData('doiId'))) {
+                    try {
+                        $doiId = Repo::doi()->mintDoi($context);
+                        Repo::reviewAssignment()->edit($reviewAssignment, ['doiId' => $doiId]);
+                    } catch (DoiException $exception) {
+                        $doiCreationFailures[] = $exception;
+                    }
+                }
+            }
+        }
+
+        // Author response
+        if ($context->isDoiTypeEnabled(Repo::doi()::TYPE_AUTHOR_RESPONSE)) {
+            $authorResponses = $this->getReviewAuthorResponses([$publication->getId()]);
+            foreach ($authorResponses as $authorResponse) {
+                if (empty($authorResponses->doiId)) {
+                    try {
+                        $doiId = Repo::doi()->mintDoi($context);
+                        $authorResponse->doiId = $doiId;
+                        $authorResponse->save();
+                    } catch (DoiException $exception) {
+                        $doiCreationFailures[] = $exception;
+                    }
+                }
+            }
+        }
+
         return $doiCreationFailures;
     }
 
@@ -290,16 +418,16 @@ class Repository extends \PKP\publication\Repository
 
         if ($publication->getData('status') == Publication::STATUS_QUEUED) {
             if (!$issue) {
-                // As the is no issue association
-                // if it was previously published and then got unpublished e.g has `date_published`
-                // the it was previously issueless e.g. NO_ISSUE
+                // As there is no issue association,
+                // if it was previously published and then got unpublished e.g., has `date_published`
+                // then it was previously issueless e.g., NO_ISSUE
                 // otherwise we get the default assignment
                 return $publication->getData('datePublished')
                     ? IssueAssignment::NO_ISSUE
                     : IssueAssignment::defaultAssignment($context);
             }
 
-            // There is issue association and based on the assignment will be deduced
+            // There is an issue association and based on the assignment will be deduced
             return $issue->getData('published')
                 ? IssueAssignment::CURRENT_BACK_ISSUES_PUBLISHED
                 : (
@@ -335,5 +463,27 @@ class Repository extends \PKP\publication\Repository
         }
 
         return IssueAssignment::defaultAssignment($context);
+    }
+
+    /**
+     * Checks if a publication is a PMUR and if that PMUR still needs an assigned review round.
+     * Used in pre-publication checks.
+     */
+    private function pmurNeedsReviewRound(Publication $publication): bool
+    {
+        $publicationVersionInfo = $publication->getVersion();
+        if ($publicationVersionInfo === null) {
+            return false;
+        }
+
+        if ($publicationVersionInfo->stage !== VersionStage::PUBLISHED_MANUSCRIPT_UNDER_REVIEW) {
+            return false;
+        }
+
+        /** @var ReviewRoundDAO $reviewRoundDao */
+        $reviewRoundDao = DAORegistry::getDAO('ReviewRoundDAO');
+
+        // PMUR will need review if there are no review rounds associated with this publication.
+        return $reviewRoundDao->getByPublicationId($publication->getId())->wasEmpty();
     }
 }

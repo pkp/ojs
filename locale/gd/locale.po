@@ -1200,9 +1200,6 @@ msgstr ""
 "(faic <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">poileasaidh na còmhstri ùidhean</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Còmhstri ùidhean"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Briog air an ìomhaigheag airson do lèirmheas air an tagradh seo a chur a-"
@@ -2286,11 +2283,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Chaidh an tagradh {$submissionId} a chur airson ath-lèirmheas."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "Dhiùlt {$userName} lèirmheas cuairt {$round} mu choinneamh tagradh "
 "{$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "Ghabh {$reviewerName} ri lèirmheas cuairt {$round} mu choinneamh tagraidh "

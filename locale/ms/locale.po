@@ -1166,9 +1166,6 @@ msgstr ""
 "atau tidak (lihat <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\"> CI&nbsp; Polisi </a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Konflik Kepentingan"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Klik pada ikon untuk memasukkan (atau menampal) ulasan anda mengenai "
@@ -2170,11 +2167,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Penyerahan {$submissionId} telah diserah semula untuk ulasan."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} telah menolak ulasan pusingan {$round} untuk penyerahan "
 "{$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} telah menerima ulasan pusingan {$round} untuk penyerahan "

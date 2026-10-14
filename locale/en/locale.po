@@ -375,6 +375,12 @@ msgstr "Proofread"
 msgid "submission.search"
 msgstr "Article Search"
 
+msgid "submission.task.validation.error.headnote.author"
+msgstr "You can only edit your own discussion message."
+
+msgid "submission.task.validation.error.headnote.editExpired"
+msgstr "This discussion message can only be edited within 1 hour of creation."
+
 msgid "journal.currentIssue"
 msgstr "Current Issue"
 
@@ -1088,9 +1094,6 @@ msgstr "Click on file names to download and review (on screen or by printing) th
 
 msgid "reviewer.article.enterCompetingInterests"
 msgstr "Declare whether or not you have competing interests with regard to this research (see <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
-
-msgid "reviewer.competingInterests"
-msgstr "Competing Interests"
 
 msgid "reviewer.article.enterReviewA"
 msgstr "Click on icon to enter (or paste) your review of this submission."
@@ -1968,10 +1971,10 @@ msgid "log.review.resubmit"
 msgstr "The submission {$submissionId} has been resubmitted for review."
 
 msgid "log.review.reviewDeclined"
-msgstr "{$reviewerName} has declined the round {$round} review for submission {$submissionId}."
+msgstr "The round {$round} review assigned to {$reviewerName} for submission {$submissionId} has been declined."
 
 msgid "log.review.reviewAccepted"
-msgstr "{$reviewerName} has accepted the round {$round} review for submission {$submissionId}."
+msgstr "The round {$round} review assigned to {$reviewerName} for submission {$submissionId} has been accepted."
 
 msgid "log.review.reviewDeclinedByProxy"
 msgstr "{$userName} has declined the round {$round} review for submission {$submissionId} on behalf of {$reviewerName}."

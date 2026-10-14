@@ -1138,9 +1138,6 @@ msgstr ""
 "(ver <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">&nbsp;Política de CI</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Conflito de intereses"
-
 msgid "reviewer.article.enterReviewA"
 msgstr "Faga clic na icona para inserir (ou pegar) a revisión deste envío."
 
@@ -2153,11 +2150,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "O envío {$submissionId} volveuse mandar para a súa revisión."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} rexeitou a rolda {$round} de revisión para o envío "
 "{$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} aceptou a rolda {$round} de revisión para o envío "

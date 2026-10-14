@@ -62,7 +62,7 @@ class DOAJJsonFilter extends PKPImportExportFilter
         // Article JSON example bibJson https://github.com/DOAJ/harvester/blob/9b59fddf2d01f7c918429d33b63ca0f1a6d3d0d0/service/tests/fixtures/article.py
         // S. also https://doaj.github.io/doaj-docs/master/data_models/IncomingAPIArticle
 
-        if (is_a($pubObject, 'Submission')) {
+        if (is_a($pubObject, Submission::class)) {
             $publication = $pubObject->getCurrentPublication();
             /** @var Submission $article */
             $article = $pubObject;
@@ -100,21 +100,21 @@ class DOAJJsonFilter extends PKPImportExportFilter
         $doajArticle = [];
         $doajArticle['bibjson']['journal'] = [];
         // Publisher name (i.e. institution name)
-        $publisher = $context->getData('publisherInstitution');
+        $publisher = $publication->getPublisher($context);
         if (!empty($publisher)) {
             $doajArticle['bibjson']['journal']['publisher'] = $publisher;
         }
         // To-Do: license ???
         // Journal's title (M)
-        $journalTitle = $context->getName($context->getPrimaryLocale());
+        $journalTitle = $publication->getPrimaryContextName($context);
         $doajArticle['bibjson']['journal']['title'] = $journalTitle;
         // Identification Numbers
         $issns = [];
-        $pissn = $context->getData('printIssn');
+        $pissn = $publication->getPrintIssn($context);
         if (!empty($pissn)) {
             $issns[] = $pissn;
         }
-        $eissn = $context->getData('onlineIssn');
+        $eissn = $publication->getOnlineIssn($context);
         if (!empty($eissn)) {
             $issns[] = $eissn;
         }
@@ -206,8 +206,16 @@ class DOAJJsonFilter extends PKPImportExportFilter
         if (!empty($abstract)) {
             $doajArticle['bibjson']['abstract'] = PKPString::html2text($abstract);
         }
+
         // Keywords
-        $keywords = $publication->getData('keywords');
+        $keywords = collect($publication->getData('keywords') ?? [])
+            ->map(
+                fn (array $items): array => collect($items)
+                    ->pluck('name')
+                    ->all()
+            )
+            ->all();
+
         $allowedNoOfKeywords = array_slice($keywords[$publicationLocale] ?? [], 0, 6);
         if (!empty($keywords[$publicationLocale])) {
             $doajArticle['bibjson']['keywords'] = $allowedNoOfKeywords;

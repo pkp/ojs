@@ -1155,9 +1155,6 @@ msgstr ""
 "\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">CI&nbsp;"
 "Policy</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Көзқарастар қарама-қайшылығы"
-
 msgid "reviewer.article.enterReviewA"
 msgstr "Осы мақалаға шолу жасау үшін белгішені басыңыз (немесе қойыңыз)."
 
@@ -2170,11 +2167,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "{$submissionId} қайтадан қарауға жіберілді."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} шолушысы {$submissionId} материалына {$round} шолу кезеңін "
 "қараудан бас тартты."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} шолушысы {$submissionId} материалына {$round} шолу кезеңін "

@@ -1157,9 +1157,6 @@ msgstr ""
 "(lihat<a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Konflik Kepentingan"
-
 msgid "reviewer.article.enterReviewA"
 msgstr "Klik di ikon untuk memasukkan review Anda terhadap naskah ini."
 
@@ -2139,10 +2136,12 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Naskah {$submissionId} telah dikirim ulang untuk review."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} telah menolak ronde {$round} review naskah {$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} telah menerima ronde {$round} review naskah {$submissionId}."

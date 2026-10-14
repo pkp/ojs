@@ -1,8 +1,8 @@
 {**
  * plugins/oaiMetadataFormats/marcxml/record.tpl
  *
- * Copyright (c) 2013-2025 Simon Fraser University
- * Copyright (c) 2003-2025 John Willinsky
+ * Copyright (c) 2013-2026 Simon Fraser University
+ * Copyright (c) 2003-2026 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * MARCXML-formatted metadata record for an article
@@ -15,20 +15,37 @@
 	{if $publication->getData('datePublished')}
 		<controlfield tag="008">"{$publication->getData('datePublished')|strtotime|date_format:"%y%m%d %Y"}                        eng  "</controlfield>
 	{/if}
-	{if $journal->getData('onlineIssn')}
+	{if $publication->getOnlineIssn($journal)}
 		<datafield tag="022" ind1="#" ind2="#">
-			<subfield code="a">{$journal->getData('onlineIssn')|escape}</subfield>
+			<subfield code="a">{$publication->getOnlineIssn($journal)|escape}</subfield>
 		</datafield>
 	{/if}
-	{if $journal->getData('printIssn')}
+	{if $publication->getPrintIssn($journal)}
 		<datafield tag="022" ind1="#" ind2="#">
-			<subfield code="a">{$journal->getData('printIssn')|escape}</subfield>
+			<subfield code="a">{$publication->getPrintIssn($journal)|escape}</subfield>
 		</datafield>
 	{/if}
 	{if $publication->getStoredPubId('doi')}
 	<datafield tag="024" ind1="7" ind2="#">
 		<subfield code="a">{$publication->getStoredPubId('doi')|escape}</subfield>
 		<subfield code="2">doi</subfield>
+	</datafield>
+	{/if}
+
+	{if $versionString}
+	<datafield tag="251" ind1=" " ind2=" ">
+		<subfield code="a">{$versionString|escape}</subfield>
+	</datafield>
+	{/if}
+	{if $versionSummaryOfChanges}
+	<datafield tag="500" ind1=" " ind2=" ">
+		<subfield code="a">{$versionSummaryOfChanges|escape}</subfield>
+	</datafield>
+	{/if}
+	{if $versionRelation}
+	<datafield tag="{$versionRelation->marcField}" ind1="0" ind2="{$versionRelation->marcRelationIndicator}">
+		<subfield code="i">{$versionRelation->relationLabel|escape}</subfield>
+		<subfield code="o">{$versionRelation->identifier|escape}</subfield>
 	</datafield>
 	{/if}
 
@@ -45,7 +62,7 @@
 			<subfield code="a">{$author->getFullName(false, true, $publicationLocale)|escape}</subfield>
 			{foreach from=$author->getAffiliations() item=$affiliation}
 				{if $affiliation->getRor()}<subfield code="u">{$affiliation->getRor()|escape}</subfield>
-				{else}<subfield code="u">{$affiliation->getLocalizedName($publicationLocale)|escape}</subfield>{/if}
+				{elseif $affiliation->getLocalizedName($publicationLocale)}<subfield code="u">{$affiliation->getLocalizedName($publicationLocale)|escape}</subfield>{/if}
 			{/foreach}
 			{if $author->getUrl()}<subfield code="0">{$author->getUrl()|escape}</subfield>{/if}
 			{if $author->getData('orcid') && $author->getData('orcidIsVerified')}<subfield code="0">{$author->getData('orcid')|escape}</subfield>{/if}
@@ -62,16 +79,18 @@
 		<subfield code="a">{$abstract|escape}</subfield>
 	</datafield>{/if}
 
-	{assign var=publisher value=$journal->getName($journal->getPrimaryLocale())}
-	{if $journal->getData('publisherInstitution')}
-		{assign var=publisher value=$journal->getData('publisherInstitution')}
+	{assign var=publisher value=$publication->getPublisher($journal)}
+	{if !$publisher}
+		{assign var=publisher value=$publication->getPrimaryContextName($journal)}
 	{/if}
 	<datafield tag="260" ind1=" " ind2=" ">
 		<subfield code="b">{$publisher|escape}</subfield>
 	</datafield>
-	<dataField tag="260" ind1=" " ind2=" ">
-		<subfield code="c">{$issue->getDatePublished()}</subfield>
-	</dataField>
+	{if $issue}
+		<dataField tag="260" ind1=" " ind2=" ">
+			<subfield code="c">{$issue->getDatePublished()}</subfield>
+		</dataField>
+	{/if}
 
 	{assign var=identifyType value=$section->getIdentifyType($journal->getPrimaryLocale())}
 	{if $identifyType}<datafield tag="655" ind1=" " ind2="7">
@@ -88,8 +107,10 @@
 	</datafield>
 
 	<datafield id="773" i1="0" i2=" ">
-		<subfield label="t">{$journal->getName($journal->getPrimaryLocale())|escape};</subfield>
-	        <subfield label="g">{$issue->getIssueIdentification()|escape}</subfield>
+		<subfield label="t">{$publication->getPrimaryContextName($journal)|escape};</subfield>
+		{if $relatedParts}
+			<subfield label="g">{$relatedParts|escape}</subfield>
+		{/if}
 	</datafield>
 
 	<datafield tag="546" ind1=" " ind2=" ">

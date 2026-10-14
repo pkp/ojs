@@ -68,7 +68,7 @@
 					"approvedAt": {
 						"type": "string",
 						"apiSummary": true,
-						"description": "The date suggestion was approved as reviewer.",
+						"description": "The date the suggestion was approved as a reviewer.",
 						"validation": [
 							"nullable",
 							"date:Y-m-d H:i:s"
@@ -77,20 +77,20 @@
 					"existingUserId": {
 						"type": "integer",
 						"apiSummary": true,
-						"description": "The existing user id if already present as an user.",
+						"description": "The existing user ID, if already present as a user.",
 						"validation": [
 							"nullable"
 						]
 					},
-					"existingReviewerRole": {
+					"hasExistingReviewerRole": {
 						"type": "boolean",
 						"apiSummary": true,
-						"description": "The existing user has reviewer role when already there is an existing user association."
+						"description": "Whether the existing user already has a reviewer role when there is an existing user association."
 					},
 					"reviewerId": {
 						"type": "integer",
 						"apiSummary": true,
-						"description": "The existing user id with reviewer role who as been mapped to this suggestion after the suggestion has made",
+						"description": "The existing user ID with reviewer role who has been mapped to this suggestion after the suggestion was made.",
 						"validation": [
 							"nullable"
 						]

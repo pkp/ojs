@@ -1,8 +1,8 @@
 # Artashes Mirzoyan <amirzoyan@sci.am>, 2022.
-# Tigran Zargaryan <tigran@flib.sci.am>, 2022, 2023, 2025.
+# Tigran Zargaryan <tigran@flib.sci.am>, 2022, 2023, 2025, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-03-03 19:43+0000\n"
+"PO-Revision-Date: 2026-09-08 10:13+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/manager/hy/"
 ">\n"
@@ -824,12 +824,6 @@ msgstr ""
 "գրադարաններում LOCKSS <a href=\"{$lockssUrl}\" target=\"_blank\">Հրատարակչի "
 "մանիֆեստ</a> էջի միջոցով:"
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"LOCKSS արտոնագիրը կհայտնվի Ամսագրի մասին՝ Արխիվացման ներքո՝ <a href=\"http://"
-"www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">LOCKSS "
-"արտոնագիր</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "LOCKSS արտոնագրի նկարագրություն"
 
@@ -849,11 +843,6 @@ msgstr ""
 "Միացրեք CLOCKSS-ը` պահելու և տարածելու ամսագրի բովանդակությունը մասնակից "
 "գրադարաններում CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank"
 "\">Հրատարակչի մանիֆեստ</a> էջի միջոցով:"
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"CLOCKSS արտոնագիրը կհայտնվի Ամսագրի մասին՝ Արխիվացման ներքո՝ <a href="
-"\"https://clockss.org\" target=\"_blank\">CLOCKSS արտոնագիր</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "CLOCKSS արտոնագրի նկարագրություն"
@@ -2546,16 +2535,16 @@ msgstr "Բաժանորդագրության ժամկետը սպառվել է"
 
 msgid "mailable.subscriptionExpired.description"
 msgstr ""
-"Այս էլ․ նամակը ծանուցում է բաժանորդին, որ նրա բաժանորդագրության ժամկետը "
-"լրացել է: Այն տրամադրում է ամսագրի URL-ը և մուտքի հրահանգները:"
+"Այս էլ. նամակն ուղարկվում է ինքնաշխատ կերպով՝ բաժանորդին տեղեկացնելու համար, "
+"որ նրանց բաժանորդագրությունը լրացել է։"
 
 msgid "mailable.subscriptionExpiredLast.name"
 msgstr "Բաժանորդագրության ժամկետը վերջացել է"
 
 msgid "mailable.subscriptionExpiredLast.description"
 msgstr ""
-"Այս էլ․ նամակը ծանուցում է բաժանորդին, որ նրանց բաժանորդագրության ժամկետը "
-"լրացել է: Այն տրամադրում է ամսագրի URL-ը և մուտքի հրահանգները:"
+"Այս էլ. նամակն ուղարկվում է ինքնաշխատ կերպով՝ բաժանորդին երկրորդ անգամ "
+"տեղեկացնելու համար, որ նրա բաժանորդագրությունը լրացել է"
 
 msgid "mailable.subscriptionPurchaseIndividual.name"
 msgstr "Գնեք անհատական բաժանորդագրություն"

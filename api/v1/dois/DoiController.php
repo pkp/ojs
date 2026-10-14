@@ -24,11 +24,12 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
+use PKP\API\v1\dois\PKPDoiController;
 use PKP\context\Context;
 use PKP\doi\Doi;
 use PKP\doi\exceptions\DoiException;
 
-class DoiController extends \PKP\API\v1\dois\PKPDoiController
+class DoiController extends PKPDoiController
 {
     /**
      * @copydoc \PKP\core\PKPBaseController::getGroupRoutes()
@@ -108,7 +109,7 @@ class DoiController extends \PKP\API\v1\dois\PKPDoiController
         $responseData = $agency->exportIssues($issues, $context);
         if (!empty($responseData['xmlErrors'])) {
             return response()->json([
-                'error' => __('api.dois.400.xmlExportFailed')
+                'error' => $this->getXmlExportFailedMessage($responseData['xmlErrors'])
             ], Response::HTTP_BAD_REQUEST);
         }
 
@@ -328,7 +329,7 @@ class DoiController extends \PKP\API\v1\dois\PKPDoiController
 
         // Assign DOIs
         foreach ($ids as $id) {
-            $issue = Repo::issue()->get($id);
+            $issue = Repo::issue()->get($id, $context->getId());
             if ($issue !== null) {
                 $creationFailureResults = Repo::issue()->createDoi($issue);
                 $failedDoiActions = array_merge($failedDoiActions, $creationFailureResults);

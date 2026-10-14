@@ -1092,9 +1092,6 @@ msgstr ""
 "声明您是否有这方面的研究利益冲突 (参阅 <a target=\"_new\" class=\"action\" "
 "href=\"{$competingInterestGuidelinesUrl}\">CI&nbsp;方针</a>)。"
 
-msgid "reviewer.competingInterests"
-msgstr "利益冲突"
-
 msgid "reviewer.article.enterReviewA"
 msgstr "点图标击后，输入（或粘贴）您对本稿件的审稿意见。"
 
@@ -1987,9 +1984,11 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "稿件{$submissionId}已经被重新投稿以进行审阅。"
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr "{$reviewerName}已经婉谢对稿件{$submissionId}进行{$round}审。"
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr "{$reviewerName}已经接受对稿件{$submissionId}进行{$round}审。"
 

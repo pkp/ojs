@@ -1167,9 +1167,6 @@ msgstr ""
 "kapcsolatban (lásd <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Összeférhetetlenség"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Kattintson az ikonra, hogy begépelhesse (vagy beillessze) ehhez az anyaghoz "
@@ -2188,11 +2185,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "{$submissionId} cikk újra el lett küldve szakmai lektorálásra."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} szakmai lektor a {$round} lektorálási körben elutasította a "
 "{$submissionId} cikket."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} szakmai lektor a {$round} lektorálási körben elfogadta a "

@@ -20,6 +20,7 @@ use APP\issue\Issue;
 use APP\submission\Submission;
 use PKP\context\Context;
 use PKP\plugins\IPKPDoiRegistrationAgency;
+use PKP\submission\reviewAssignment\ReviewAssignment;
 
 interface IDoiRegistrationAgency extends IPKPDoiRegistrationAgency
 {
@@ -36,6 +37,11 @@ interface IDoiRegistrationAgency extends IPKPDoiRegistrationAgency
     public function depositSubmissions(array $submissions, Context $context): array;
 
     /**
+     * @param ReviewAssignment[] $peerReviews
+     */
+    public function depositPeerReviews(array $peerReviews, Context $context): array;
+
+    /**
      * @param Issue[] $issues
      *
      */
@@ -46,4 +52,9 @@ interface IDoiRegistrationAgency extends IPKPDoiRegistrationAgency
      *
      */
     public function depositIssues(array $issues, Context $context): array;
+
+    /**
+     * @param ReviewAssignment[] $reviewAssignments
+     */
+    public function exportPeerReviews(array $reviewAssignments, Context $context): array;
 }

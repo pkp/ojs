@@ -1130,9 +1130,6 @@ msgstr ""
 "برای اطلاعات بیشتر لطفاً به آدرس زیر مراجعه کنید:  <a target=\"_new\" class="
 "\"action\" href=\"{$competingInterestGuidelinesUrl}\">سیاست تضاد منافع</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "تضاد منافع"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "بر روی آیکون کلیک کرده و سپس نتیجه داوری خود را در مورد این مقاله وارد کنید"
@@ -2091,11 +2088,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "مقاله {$submissionId} برای داوری مجدداً ثبت شد."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} از انجام داوری دور  {$round} برای مقاله  {$submissionId} سر "
 "باز زد."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} برای داوری دور  {$round}  مقاله  {$submissionId} اظهار "

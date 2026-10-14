@@ -13,6 +13,14 @@ configuration parameters.
 New config.inc.php parameters added for [search]:
     - driver (default value: 'database'): Specifies which Laravel Scout driver should be used for the search engine. See config.TEMPLATE.inc.php for details on supported drivers and configuration.
 
+New config.inc.php section for logging named logs is added, with the following parameters:
+    - log_channel (default value: daily): The default logging channel. One of stack, single, daily, stderr, syslog, errorlog or null.
+    - log_level (default value: debug): The minimum log level to record (debug, info, notice, warning, error, critical, alert or emergency).
+    - log_stacks (default value: daily): The channels the 'stack' channel fans out to (comma-separated). Only used when log_channel = stack.
+    - log_daily_days (default value: 30): The number of daily log files to retain before rotation deletes the oldest. Only applies to the 'daily' channel.
+    - log_formatter (default value: unset): The Monolog formatter class for the file/stream channels. Leave unset for the default human-readable line format.
+    - log_audit (default value: Off): Enable application-level security audit logging (authentication events, privilege and configuration changes, plugin lifecycle, etc.).
+
 
 New Features
 ------------

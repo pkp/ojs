@@ -15,10 +15,6 @@
 namespace APP\migration\upgrade\v3_4_0;
 
 use Illuminate\Support\Collection;
-use PKP\mail\mailables\DiscussionCopyediting;
-use PKP\mail\mailables\DiscussionProduction;
-use PKP\mail\mailables\DiscussionReview;
-use PKP\mail\mailables\DiscussionSubmission;
 
 class I5716_EmailTemplateAssignments extends \PKP\migration\upgrade\v3_4_0\I5716_EmailTemplateAssignments
 {
@@ -40,10 +36,10 @@ class I5716_EmailTemplateAssignments extends \PKP\migration\upgrade\v3_4_0\I5716
     protected function getDiscussionTemplates(): Collection
     {
         return collect([
-            DiscussionSubmission::getEmailTemplateKey(),
-            DiscussionReview::getEmailTemplateKey(),
-            DiscussionCopyediting::getEmailTemplateKey(),
-            DiscussionProduction::getEmailTemplateKey(),
+            'DISCUSSION_NOTIFICATION_SUBMISSION',
+            'DISCUSSION_NOTIFICATION_REVIEW',
+            'DISCUSSION_NOTIFICATION_COPYEDITING',
+            'DISCUSSION_NOTIFICATION_PRODUCTION',
         ]);
     }
 }

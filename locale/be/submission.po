@@ -289,6 +289,7 @@ msgstr ""
 msgid "publication.version.details"
 msgstr ""
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr ""
 
@@ -301,12 +302,15 @@ msgstr ""
 msgid "editor.submission.decision.backToReview.log"
 msgstr ""
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr ""
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr ""
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 

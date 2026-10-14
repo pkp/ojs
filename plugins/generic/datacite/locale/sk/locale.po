@@ -59,6 +59,7 @@ msgstr ""
 "OJS automaticky uloží DOI do DataCite. Upozorňujeme, že to môže trvať krátku "
 "dobu po spracovaní publikácie. Môžete skontrolovať všetky neregistrované DOI."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "Použite testovací prefix DataCite pre registráciu DOI. Nezabudnite túto "
@@ -73,10 +74,8 @@ msgstr ""
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr ""
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
-msgstr ""
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
 msgstr ""
 
 msgid "plugins.importexport.datacite.senderTask.name"

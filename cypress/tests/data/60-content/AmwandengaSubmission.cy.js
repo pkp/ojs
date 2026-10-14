@@ -157,7 +157,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('.pkpFormField:contains("Email")').find('input').type(submission.authors[0].email);
 		cy.get('div[role=dialog]:contains("Add Contributor")').find('button').contains('Save').click();
 		cy.wait(3000);
-		cy.get('button').contains('Order').click();
+		cy.get('.contributorsListPanel button:contains("Order")').click();
 		cy.wait(3000);
 		cy.get('button:contains("Decrease position of Alan Mwandenga")').click();
 		cy.get('button').contains('Save Order').click();
@@ -328,8 +328,8 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('[role="status"]').contains('Saved');
 		//cy.wait(1000);
 
-		// Issue
-		cy.openWorkflowMenu('Unassigned version', 'Issue')
+		// Publication Settings
+		cy.openWorkflowMenu('Unassigned version', 'Publication Settings')
 
 		// Initially set to no issue
 		cy.get('label:Contains("Don\'t Assign To An Issue")').click();
@@ -488,7 +488,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.openWorkflowMenu('Version of Record 1.1', 'Title & Abstract');
 		cy.get('button').contains('Publish');
 
-		// Edit unpublished version's title
+		// Edit new published version's title
 		cy.setTinyMceContent('titleAbstract-title-control-en', 'The Signalling Theory Dividends Version 2');
 		cy.get('button').contains('Save').click();
 		cy.get('[role="status"]').contains('Saved');
@@ -518,7 +518,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('[data-cy="galley-manager"]').contains("PDF Version 2");
 
 		// Edit url path and select issue
-		cy.openWorkflowMenu('Version of Record 1.1', 'Issue')
+		cy.openWorkflowMenu('Version of Record 1.1', 'Publication Settings')
 		cy.wait(2000);
 		cy.get('select[name="issueId"]').select('Vol. 1 No. 2 (2014)');
 		cy.get('[name="urlPath"]').clear();

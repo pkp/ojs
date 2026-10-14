@@ -1008,9 +1008,6 @@ msgstr ""
 "申報您與此研究會否有利益衝突（見<a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">利益衝突聲明</a>）。"
 
-msgid "reviewer.competingInterests"
-msgstr "利益衝突"
-
 msgid "reviewer.article.enterReviewA"
 msgstr "點選圖示進入（或貼上）您為此投稿撰寫的評審。"
 
@@ -1802,9 +1799,11 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "已重新提交投稿{$submissionId}予評審。"
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr "{$reviewerName}已拒絕第{$round}輪評審的投稿{$submissionId}。"
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr "{$reviewerName}已接受第{$round}輪評審的投稿{$submissionId}。"
 

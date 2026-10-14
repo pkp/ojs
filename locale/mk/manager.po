@@ -1,9 +1,9 @@
-# Mirko Spiroski <mspiroski@id-press.eu>, 2021, 2025.
+# Mirko Spiroski <mspiroski@id-press.eu>, 2021, 2025, 2026.
 # Teodora Fildishevska <t.fildishevska@gmail.com>, 2022, 2023.
 # Ana Vucurevic <ana.vucurevic97@yahoo.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-04-02 08:12+0000\n"
+"PO-Revision-Date: 2026-09-15 04:51+0000\n"
 "Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "mk/>\n"
@@ -828,12 +828,6 @@ msgstr ""
 "учесничките библиотеки преку страницата LOCKSS <a href=\"{$lockssUrl}\" "
 "target=\"_blank\">Publisher Manifest</a>."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"Лиценца за LOCKSS ќе се појави во За списанието под Архивирање:\n"
-"<a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target="
-"\"_blank\">LOCKSS Лиценца</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "Опис на лиценцата за LOCKSS"
 
@@ -853,12 +847,6 @@ msgstr ""
 "Овозможете CLOCKSS да складира и дистрибуира содржина на дневник во "
 "учесничките библиотеки преку страница на CLOCKSS <a href=\"{$clockssUrl}\" "
 "target=\"_blank\">Publisher Manifest</a>."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"Лиценца за CLOCKSS ќе се појави во За списанието под Архивирање: <a href="
-"\"https://clockss.org\" target=\"_blank\">\n"
-"CLOCKSS Лиценца</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "Опис на лиценцата на CLOCKSS"
@@ -2538,16 +2526,16 @@ msgstr "Претплатата е Доспеана"
 
 msgid "mailable.subscriptionExpired.description"
 msgstr ""
-"Овој и-меил го известува претплатникот дека нивната претплата е истечена. Ги "
-"обезбедува URL-адресата на списанието и насоки за пристап до истото."
+"Оваа е-пошта е испратена автоматски за да го извести претплатникот дека "
+"неговата претплата е истечена."
 
 msgid "mailable.subscriptionExpiredLast.name"
 msgstr "Претплатат е Последно Доспеана"
 
 msgid "mailable.subscriptionExpiredLast.description"
 msgstr ""
-"Овој и-меил го известува претплатникот дека нивната претплата е истечена. Ја "
-"обезбедува URL-адресата на списанието заедно со упатства за пристап."
+"Оваа е-пошта е испратена автоматски за да го извести претплатникот вториот "
+"пат кога неговата претплата ќе истече"
 
 msgid "mailable.subscriptionPurchaseIndividual.name"
 msgstr "Претплатете се Индивидуално"

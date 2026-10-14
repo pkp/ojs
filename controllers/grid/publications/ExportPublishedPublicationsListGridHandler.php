@@ -104,7 +104,7 @@ class ExportPublishedPublicationsListGridHandler extends GridHandler
         $this->addColumn(
             new GridColumn(
                 'version',
-                'publication.versionStage.versionOfRecord',
+                'publication.versionStage.label',
                 null,
                 null,
                 $cellProvider,
@@ -256,7 +256,8 @@ class ExportPublishedPublicationsListGridHandler extends GridHandler
             $issueId,
             $pubIdStatusSettingName,
             $statusId,
-            $this->getGridRangeInfo($request, $this->getId())
+            $this->getGridRangeInfo($request, $this->getId()),
+            $this->_plugin->getExportableVersionStages()
         );
         return $publications;
     }

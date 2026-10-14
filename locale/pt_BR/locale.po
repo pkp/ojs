@@ -1182,9 +1182,6 @@ msgstr ""
 "\"{$competingInterestGuidelinesUrl}\">Política de conflito de interesses</"
 "a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Conflito de Interesses"
-
 msgid "reviewer.article.enterReviewA"
 msgstr "Clique no ícone para digitar (ou colar) a avaliação da submissão."
 
@@ -2196,11 +2193,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Submissão {$submissionId} enviada novamente para avaliação."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} não está disponível para avaliar a rodada {$round} da "
 "submissão {$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} está disponível para a rodada de avaliação {$round} da "

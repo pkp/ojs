@@ -1172,9 +1172,6 @@ msgstr ""
 "này (xem <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Xung đột lợi ích"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Nhấp vào biểu tượng để nhập (hoặc dán) đánh giá của bạn về bài gửi này."
@@ -2176,11 +2173,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Bài gửi {$submissionId} đã được gửi lại để đánh giá tiếp."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} đã từ chối vòng phản biện {$round} của bài gửi "
 "{$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} đã chấp nhận vòng phản biện {$round} của bài gửi "

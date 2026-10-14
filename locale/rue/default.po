@@ -1,9 +1,10 @@
 # rl <biuro@fimagis.pl>, 2025.
-# Monika Tylawska <monika.tylawska@gmail.com>, 2025.
+# Monika Tylawska <monika.tylawska@gmail.com>, 2025, 2026.
+# Kamil Federyga <kamilfederyga@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-11-13 02:19+0000\n"
-"Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
+"PO-Revision-Date: 2026-07-17 16:34+0000\n"
+"Last-Translator: Kamil Federyga <kamilfederyga@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/default/rue/>"
 "\n"
 "Language: rue\n"
@@ -17,4 +18,178 @@ msgid "section.default.title"
 msgstr "Статі"
 
 msgid "section.default.abbrev"
-msgstr "ста"
+msgstr "СТА"
+
+msgid "default.genres.article"
+msgstr "Зміст статі"
+
+msgid "section.default.policy"
+msgstr "Принципы ділу"
+
+msgid "default.contextSettings.authorGuidelines"
+msgstr ""
+"<p>Просит ся авторів, жебы надсылали зголошыня до того часопису. Вшыткы "
+"надосланы тексты сут вступні оціняны през редактора цілю провіріня, ци "
+"одповідают ціли і тематычному обсягови часопису. Тоты статі, што будут "
+"узнаны за одповідні, пак будут кєруваны до науковой рецензиі, по котрій "
+"остане рішене, ци сут приняты ци одшмарены.</p><p>Перед зголошыньом авторе "
+"мусят мати згоду на публикацию вшелеякых материялів долученых до працы, "
+"такых як знимкы, документы ци зобраны даны. Вшыткы авторе вказаны в "
+"зголошыню мусят ся згодити, жебы подати іх як авторів публикациі. В "
+"окрисленых припадках досліджыня повинны быти затверджены през одповідню "
+"комісию етыкы, згідні з правныма вымогами державы, в котрій досліджыня были "
+"проведены.</p><p>Редактор може одшмарити зголошыня на вступным етапі, кєд не "
+"буде оно выполняло мінімальных стандардів якости. Закля ся зложыт текст, "
+"треба ся упевнити, же проєкт досліджынь як тіж наукова арґументация сут "
+"властиві упорядкуваны і ясно представлены. Наголовок мусит быти короткій, а "
+"резуме незалежні оддавати суть працы. Побільшыт тото шансу, же рецензенты "
+"згодят ся выконати рецензию. Коли рішыш, же зголошыня выполнят тоты вымогы, "
+"скорыстай з поміщеной долов контрольной листы, жебы приготовити свою працу "
+"до зложыня.</p>"
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>Мена і назвиска як тіж адресы електронной почты поданы на сайті того "
+"часопису будут выкорыстуваны выключні до цілів звязаных з діяльністю того "
+"часопису і не будут удоступняны в ниякій інчій ціли ани ниякым інчым "
+"особам.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"Тот часопис дає скорый, одкрытый доступ до своіх змістів, згідні з "
+"принципом, же такій доступ до результатів досліджынь сперат шыршу, ґлобальну "
+"выміну знань."
+
+msgid "default.contextSettings.checklist"
+msgstr ""
+"<p>Вшыткы зголошыня мусят сполняти слідуючы вымогы:</p><ul><li>Зголошыня "
+"сполнят вымогы окрислены во<a href=\"{$submissionGuidelinesUrl}\">Вказівках "
+"для авторів</a>.</li><li>Зголошеный зміст не был скорше публикуваный ани неє "
+"тепер розсмотрюваный през інчый часопис.</li><li>Вшыткы бібліоґрафічны "
+"позициі остали провірены, ци сут правильны і комплетны.</li><li>Вшыткы "
+"табелі і ґрафікы остали понумеруваны і одповідньо описаны.</li><li>Отримано "
+"згоду на публикацию вшыткых знимок, зобраных даных як тіж інчых материялів "
+"долученых до зголошыня.</li></ul>"
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"Заохочаме чытатели до записаня ся до листы выдавничых повідомлінь того "
+"часопису. Жебы ся зареґіструвати треба скорыстати з одсылача <a href=\""
+"{$indexUrl}/{$contextPath}/user/register\">Зареґіструй ся</a>, што находит "
+"ся горі головной стороны часопису. Реґістрация даст можніст отримуваня "
+"електронном почтом спису змісту каждого нового чысла часопису. Тота листа "
+"дозвалят тіж часописови выказати ся певным рівньом спертя і заінтересуваня "
+"зо стороны чытатели. Детальны інформациі находят ся в <a href=\""
+"{$indexUrl}/{$contextPath}/about/submissions#privacyStatement\">Політыці "
+"приватности</a> часопису, котра дає певніст, же мено і назвиско як тіж адрес "
+"електронной почты не будут хоснуваны до інчых цілів."
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"Хочеш зголосити зміст до того часопису? Рекомедуєме запознати ся зо стороном "
+"<a href=\"{$indexUrl}/{$contextPath}/about\">Про часопис</a>, де находят ся "
+"інформациі односячы ся до принципів часпоису, а тіж зо <a href=\""
+"{$indexUrl}/{$contextPath}/about/submissions#authorGuidelines\">Вказівками "
+"для авторів</a>. Перед зложыньом зглошыня авторе мусят ся <a href=\""
+"{$indexUrl}/{$contextPath}/user/register\">зареґіструвати</a> в системі "
+"часопису або – кєд сут уж зареґіструваны – просто <a href=\"{$indexUrl}/"
+"index/login\">ся залоґувати</a> і зачати пятьоетаповый процес зголашаня "
+"статі."
+
+msgid "default.groups.name.manager"
+msgstr "Адміністратор часопису"
+
+msgid "default.groups.plural.editor"
+msgstr "Редакторы часопису"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Менаджер субскрибциі"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Аналіза даных"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Рецнезенты"
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"Заохочуєме науковых бібліотекарів, жебы додати тот часопис до колекциі "
+"електронных часописів доступных в іх бібліотеці. Вартат тіж спомнути, же "
+"система публикациі в одкрытым доступі, котру хоснує тот часопис, остала "
+"запроєктувана з думком про бібліотекы, жебы іх науковы працівникы могли з "
+"нєй корыстати в часописах, котры редаґуют (смотр <a href=\"https://pkp.sfu."
+"ca/ojs\">Open Journal Systems</a>)."
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"Тот часопис выкорыстує систему LOCKSS, жебы створити розпорошену систему "
+"архівізациі в бібліотеках, якы берут участ в проєкті, і дозвалят тым "
+"бібліотекам творити тырвалы архівы часопису для цілів забезпечыня і "
+"одтворюваня засобів. <a href=\"https://www.lockss.org\">Веце...</a>"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"Тот часопис выкорыстує систему CLOCKSS, жебы створити розпорошену систему "
+"архівізациі в бібліотеках, якы берут участ в проєкті, і дозвалят тым "
+"бібліотекам творити тырвалы архівы часопису для цілів забезпечыня і "
+"одтворюваня засобів. <a href=\"https://clockss.org\">Веце...</a>"
+
+msgid "default.groups.plural.manager"
+msgstr "Адміністраторы часопису"
+
+msgid "default.groups.abbrev.manager"
+msgstr "Адмін"
+
+msgid "default.groups.name.editor"
+msgstr "Редактор часопису"
+
+msgid "default.groups.abbrev.editor"
+msgstr "Ред"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Гостинный редактор"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Гостинны редакторы"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "ГРед"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Редактор ділу"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Редакторы ділу"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "РедД"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Менаджеры субскрибциі"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "МенС"
+
+msgid "default.genres.researchInstrument"
+msgstr "Дослідниче нарядя"
+
+msgid "default.genres.researchMaterials"
+msgstr "Дослідничы материялы"
+
+msgid "default.genres.researchResults"
+msgstr "Результаты досліджынь"
+
+msgid "default.genres.transcripts"
+msgstr "Транскрипциі"
+
+msgid "default.genres.dataSet"
+msgstr "Зобраны даны"
+
+msgid "default.genres.sourceTexts"
+msgstr "Джерельны коды"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Рецензент"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "Рец"

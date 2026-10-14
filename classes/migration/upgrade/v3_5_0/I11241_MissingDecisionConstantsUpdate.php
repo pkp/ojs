@@ -30,22 +30,12 @@ class I11241_MissingDecisionConstantsUpdate extends \PKP\migration\upgrade\v3_4_
     {
         return [
             // \PKP\decision\Decision::ACCEPT
-            /**
-             * NOTE : Accept of submission can happen at the
-             * 1. submission stage without going through external review phase
-             * 2. external review stage after going through external review phase
-             */
+            // PRODUCTION added: OJS 3.3 allowed ACCEPT at any stage via "change decision" UI
+            // See https://github.com/pkp/pkp-lib/issues/12357
             [
-                'stage_id' => [WORKFLOW_STAGE_ID_SUBMISSION, WORKFLOW_STAGE_ID_EXTERNAL_REVIEW],
+                'stage_id' => [WORKFLOW_STAGE_ID_SUBMISSION, WORKFLOW_STAGE_ID_EXTERNAL_REVIEW, WORKFLOW_STAGE_ID_PRODUCTION],
                 'current_value' => 1,
                 'updated_value' => 2,
-            ],
-
-            // \PKP\decision\Decision::EXTERNAL_REVIEW
-            [
-                'stage_id' => [WORKFLOW_STAGE_ID_SUBMISSION],
-                'current_value' => 8,
-                'updated_value' => 3,
             ],
 
             // \PKP\decision\Decision::SKIP_EXTERNAL_REVIEW
@@ -101,7 +91,14 @@ class I11241_MissingDecisionConstantsUpdate extends \PKP\migration\upgrade\v3_4_
             return;
         }
 
-        // Upgrading from a 3.4.0-*
+        // If upgrading from 3.4.0-11 or above, then we have a fixed applied also for it
+        // at https://github.com/pkp/pkp-lib/issues/12140
+        // so nothing to do and return
+        if ($currentVersion->major == 3 && $currentVersion->minor == 4 && $currentVersion->build >= 11) {
+            return;
+        }
+
+        // Upgrading from a 3.4.0-10 or below version
         // Need to figure out the first installed date of 3.4.0-*
         // Then need to update the decisions made before the first version of 3.4.0-* installed
         $firstVersionOf34 = DB::table('versions')
@@ -129,6 +126,77 @@ class I11241_MissingDecisionConstantsUpdate extends \PKP\migration\upgrade\v3_4_
                         'updated_at' => Carbon::now(),
                     ])
             );
+
+        // \PKP\decision\Decision::EXTERNAL_REVIEW (8→3) — special handling
+        //
+        // After the buggy I7725 ran, both stranded EXTERNAL_REVIEW rows and
+        // correctly-migrated INITIAL_DECLINE rows share decision=8, stage_id=1.
+        // They are indistinguishable from edit_decisions alone.
+        //
+        // Two-layer disambiguation:
+        //   1. whereExists(review_rounds at EXTERNAL_REVIEW stage) — the submission
+        //      must have actually reached external review
+        //   2. whereNotExists(later decision=8 at same submission/stage) — only
+        //      the MOST RECENT decision=8 per submission is the EXTERNAL_REVIEW;
+        //      all earlier ones were INITIAL_DECLINE
+        //
+        // Why "most recent" instead of checking for REVERT_INITIAL_DECLINE:
+        // OJS 3.3 had a loose workflow that allowed editors to decline a submission
+        // and then send it to review WITHOUT recording a REVERT_INITIAL_DECLINE.
+        // The "most recent" check handles ALL cases: with revert, without revert,
+        // and multiple decline cycles.
+
+        // Collect the IDs of the MOST RECENT decision=8 per submission
+        // (the EXTERNAL_REVIEW row). Done as a separate SELECT because MySQL
+        // does not allow referencing the target table in an UPDATE subquery.
+        $externalReviewIds = DB::table('edit_decisions')
+            ->where('edit_decisions.stage_id', WORKFLOW_STAGE_ID_SUBMISSION)
+            ->where('edit_decisions.decision', 8)
+            ->whereNull('edit_decisions.updated_at')
+            ->where('edit_decisions.date_decided', '<', $firstVersionOf34->date_installed)
+            ->whereExists(function ($query) {
+                $query->select(DB::raw(1))
+                    ->from('review_rounds')
+                    ->whereColumn('review_rounds.submission_id', 'edit_decisions.submission_id')
+                    ->where('review_rounds.stage_id', WORKFLOW_STAGE_ID_EXTERNAL_REVIEW);
+            })
+            ->whereNotExists(function ($query) use ($firstVersionOf34) {
+                // If a LATER decision=8 at stage_id=1 exists for the same submission,
+                // then this row was an earlier INITIAL_DECLINE — not the final
+                // EXTERNAL_REVIEW that triggered the review
+                $query->select(DB::raw(1))
+                    ->from('edit_decisions as later_ed')
+                    ->whereColumn('later_ed.submission_id', 'edit_decisions.submission_id')
+                    ->where('later_ed.decision', 8)
+                    ->where('later_ed.stage_id', WORKFLOW_STAGE_ID_SUBMISSION)
+                    ->whereColumn('later_ed.date_decided', '>', 'edit_decisions.date_decided')
+                    ->where('later_ed.date_decided', '<', $firstVersionOf34->date_installed);
+            })
+            // Layer 3 (idempotency): if this submission ALREADY has a pre-3.4
+            // decision=3 at SUBMISSION, its EXTERNAL_REVIEW was migrated by a
+            // prior application of this logic. Skip it so a genuine INITIAL_DECLINE
+            // is not relabeled. The pre-3.4 date filter keeps a legitimate post-3.4
+            // EXTERNAL_REVIEW (decision=3) from tripping this.
+            ->whereNotExists(function ($query) use ($firstVersionOf34) {
+                $query->select(DB::raw(1))
+                    ->from('edit_decisions as existing_er')
+                    ->whereColumn('existing_er.submission_id', 'edit_decisions.submission_id')
+                    ->where('existing_er.decision', 3)
+                    ->where('existing_er.stage_id', WORKFLOW_STAGE_ID_SUBMISSION)
+                    ->where('existing_er.date_decided', '<', $firstVersionOf34->date_installed);
+            })
+            ->pluck('edit_decision_id');
+
+        $externalReviewIds
+            ->chunk(1000)
+            ->each(function ($chunk) {
+                DB::table('edit_decisions')
+                    ->whereIn('edit_decision_id', $chunk->all())
+                    ->update([
+                        'decision' => 3,
+                        'updated_at' => Carbon::now(),
+                    ]);
+            });
 
         $this->removeUpdatedAtColumn();
     }

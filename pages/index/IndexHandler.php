@@ -22,7 +22,6 @@ use APP\journal\enums\JournalContentOption;
 use APP\journal\JournalDAO;
 use APP\observers\events\UsageEvent;
 use APP\pages\issue\IssueHandler;
-use APP\submission\Submission;
 use APP\template\TemplateManager;
 use PKP\config\Config;
 use PKP\db\DAORegistry;
@@ -90,8 +89,7 @@ class IndexHandler extends PKPIndexHandler
                 $collector = Repo::submission()
                     ->getCollector()
                     ->filterByContextIds([$journal->getId()])
-                    ->filterByLatestPublished(true)
-                    ->filterByStatus([Submission::STATUS_PUBLISHED]);
+                    ->filterByLatestPublished(true);
 
                 $totalPublications = $collector->getCount();
                 $templateMgr->assign('publishedPublications', new \Illuminate\Pagination\LengthAwarePaginator(
@@ -117,12 +115,12 @@ class IndexHandler extends PKPIndexHandler
                 $issue = Repo::issue()->getCurrent($journal->getId(), true);
                 if (isset($issue) && $journal->getData('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE) {
                     // The current issue TOC/cover page should be displayed below the custom home page.
-                    IssueHandler::_setupIssueTemplate($request, $issue);
+                    IssueHandler::setupIssueTemplate($request, $issue);
                 }
             }
 
             $templateMgr->display('frontend/pages/indexJournal.tpl');
-            event(new UsageEvent(Application::ASSOC_TYPE_JOURNAL, $journal));
+            event(new UsageEvent(assocType: Application::ASSOC_TYPE_JOURNAL, context: $journal));
             return;
         } else {
             $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */

@@ -15,12 +15,14 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "DOAJ ekspordi plugin"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "Ekspordi ajakiri DOAJ jaoks."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Kaasamiseks kontakteeru DOAJ-ga"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "Kui soovid registreerida OJS artikleid, palun sisesta oma DOAJ API võti. "

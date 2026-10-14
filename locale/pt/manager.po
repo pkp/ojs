@@ -1,5 +1,5 @@
 # Carla Marques <carla.marques@usdb.uminho.pt>, 2021, 2022, 2023.
-# José Carvalho <jcarvalho@keep.pt>, 2022, 2023.
+# José Carvalho <jcarvalho@keep.pt>, 2022, 2023, 2026.
 # Marisa Mourão <marisa.mourao@usdb.uminho.pt>, 2023.
 # António Moreira <amdsmoreira@gmail.com>, 2025.
 msgid ""
@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:30+00:00\n"
-"PO-Revision-Date: 2025-08-07 13:47+0000\n"
-"Last-Translator: António Moreira <amdsmoreira@gmail.com>\n"
+"PO-Revision-Date: 2026-02-24 03:08+0000\n"
+"Last-Translator: José Carvalho <jcarvalho@keep.pt>\n"
 "Language-Team: Portuguese <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "pt/>\n"
 "Language: pt\n"
@@ -820,12 +820,6 @@ msgstr ""
 "bibliotecas participantes através da página do <a href=\"{$lockssUrl}\" "
 "target=\"_blank\">Manifesto da Editora</a> do LOCKSS."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"Uma licença LOCKSS aparecerá em Sobre a Revista em Arquivamento: <a href="
-"\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank"
-"\">Licença LOCKSS</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "Descrição da licença LOCKSS"
 
@@ -845,11 +839,6 @@ msgstr ""
 "Ativar o CLOCKSS para armazenar e distribuir conteúdo da revista nas "
 "bibliotecas participantes através de uma página CLOCKSS <a href=\""
 "{$clockssUrl}\" target=\"_blank\">Manifest do Editor</a>."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"A licença CLOCKSS aparecerá em Sobre a Revista em Arquivamento: <a href="
-"\"http://clockss.org/\" target=\"_blank\">Licença CLOCKSS</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "Descrição Licença CLOCKSS"
@@ -1151,7 +1140,7 @@ msgid "manager.setup.useEditorialReviewBoard"
 msgstr "Uma equipa editorial/de revisão será utilizado pela revista."
 
 msgid "manager.setup.useThumbnail"
-msgstr "Thumbnail"
+msgstr "Miniatura"
 
 msgid "manager.setup.useImageTitle"
 msgstr "Imagem Título"

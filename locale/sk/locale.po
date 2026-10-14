@@ -1158,9 +1158,6 @@ msgstr ""
 "\"{$competingInterestGuidelinesUrl}\"> Pravidlá upravujúce konflikt záujmov</"
 "a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Konflikt záujmov"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Pre vloženie (alebo nakopírovanie) Vašej recenzie tohto príspevku kliknite "
@@ -2173,11 +2170,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Príspevok {$submissionId} bol znovu odoslaný k recenzii."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$ReviewerName} odmietol recenzné kolo {$round} pre príspevok "
 "{$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} prijal recenzné kolo {$round} pre príspevok {$submissionId}."

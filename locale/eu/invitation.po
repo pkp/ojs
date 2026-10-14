@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-10-06 06:40+0000\n"
-"Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
+"PO-Revision-Date: 2026-05-27 08:22+0000\n"
+"Last-Translator: Informatikaria <informatikaria@ueu.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/invitation/"
 "eu/>\n"
 "Language: eu\n"
@@ -82,3 +82,6 @@ msgstr ""
 
 msgid "acceptInvitation.detailsReview.stepDescription"
 msgstr "Berrikusi xehetasunak OJSn zure rol berriak hasteko"
+
+msgid "invitation.orcid.acceptInvitation.message"
+msgstr "Egiaztatu gabe. Zure ORCID iD OJSko profil-atalean egiazta dezakezu."

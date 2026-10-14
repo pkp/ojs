@@ -12,6 +12,10 @@
  * @ingroup controllers_grid_pubIds
  *
  * @brief Handle exportable representations with pub ids list grid requests.
+ *
+ * @deprecated 3.4 Not embedded in any current
+ *   template; superseded by the submission/publication-level export plugins
+ *   built on PubObjectsExportPlugin.
  */
 
 namespace APP\controllers\grid\pubIds;

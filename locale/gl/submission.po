@@ -316,6 +316,7 @@ msgstr "Estás seguro/a de que non queres que isto se publique?"
 msgid "publication.version.details"
 msgstr "Detalles da publicación da versión {$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Discusións de produción"
 
@@ -331,12 +332,15 @@ msgstr ""
 "{$editorName} reverteu a decisión de aceptar esta presentación e enviouna de "
 "volta á etapa de revisión."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Devolto para revisión"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "O envío, {$title}, foi devolto á fase de revisión."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Envía un correo aos autores para informarlles de que a súa presentación está "

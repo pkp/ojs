@@ -1,0 +1,103 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2026-07-12 11:34+0000\n"
+"Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
+"Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/plugins/datacite/"
+"ky/>\n"
+"Language: ky\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.importexport.datacite.settings.description"
+msgstr ""
+"DataCite экспорт плагинин биринчи жолу колдонуудан мурун конфигурациялаңыз."
+
+msgid "plugins.importexport.datacite.registrationAgency.name"
+msgstr "DataCite"
+
+msgid "plugins.importexport.datacite.displayName"
+msgstr "DataCite Экспорт/Каттоо плагини"
+
+msgid "plugins.importexport.datacite.settings.label"
+msgstr "DataCite жөндөөлөрү"
+
+msgid "plugins.importexport.datacite.settings.form.username"
+msgstr "Колдонуучу аты (символ)"
+
+msgid "plugins.importexport.datacite.description"
+msgstr ""
+"Чыгарылыш, макала, макет жана кошумча файлдын метадайындарын DataCite "
+"форматында экспорттоо же каттоо."
+
+msgid "plugins.importexport.datacite.settings.form.usernameRequired"
+msgstr ""
+"DataCiteден алган колдонуучу атыңызды (символ) киргизиңиз. Колдонуучу атында "
+"эки чекит болбошу керек."
+
+msgid "plugins.importexport.datacite.settings.form.automaticRegistration.description"
+msgstr ""
+"OJS DOIлерди DataCiteге автоматтык түрдө жайгаштырат. Сураныч, басылгандан "
+"кийин муну иштетүү үчүн бир аз убакыт талап кылынышы мүмкүн экенин эске "
+"алыңыз (мисалы, сиздин cronjob конфигурацияңызга жараша). Бардык катталбаган "
+"DOIлерди текшере аласыз."
+
+msgid "plugins.importexport.datacite.settings.form.testMode.description"
+msgstr ""
+"DOI каттоо үчүн DataCite тест системасын колдонуңуз. Сураныч, продукцияда "
+"муну өчүрүүнү унутпаңыз."
+
+msgid "plugins.importexport.datacite.settings.form.testUsername"
+msgstr "Тесттик колдонуучу аты"
+
+msgid "plugins.importexport.datacite.settings.form.testPassword"
+msgstr "Тесттик сырсөз"
+
+msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
+msgstr "Тесттик DOI префикси"
+
+msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
+msgstr ""
+"DOI каттоо үчүн тест системасын колдонууда тесттик DOI префикси талап "
+"кылынат."
+
+msgid "plugins.importexport.datacite.senderTask.name"
+msgstr "DataCite автоматтык каттоо тапшырмасы"
+
+msgid "plugins.importexport.datacite.cliUsage"
+msgstr ""
+"Колдонулушу: {$scriptName} {$pluginName} export [outputFileName] "
+"[journal_path] {issues|articles|galleys} objectId1 [objectId2] "
+"...{$scriptName} {$pluginName} register [journal_path] "
+"{issues|articles|galleys} objectId1 [objectId2] ...\n"
+
+msgid "plugins.generic.datacite.displayName"
+msgstr "DataCite башкаруучу плагини"
+
+msgid "plugins.generic.datacite.description"
+msgstr "DataCite метадайындарын жайгаштырууну жана экспорттоону башкарат"
+
+msgid "plugins.generic.datacite.registrationAgency.name"
+msgstr "DataCite"
+
+msgid "plugins.generic.datacite.deposit.unsuccessful"
+msgstr ""
+"Каттоо ийгиликсиз болду! Сураныч, конфигурацияңызды текшерип, кайра аракет "
+"кылыңыз."
+
+msgid "plugins.importexport.datacite.intro"
+msgstr ""
+"\n"
+"\t\tЭгерде сиз DataCite аркылуу DOIлерди каттагыңыз келсе, <a href=\"https"
+"://datacite.org/contact\" target=\"_blank\">DataCite башкы баракчасы</a> "
+"аркылуу Башкаруучу Агент менен байланышыңыз, ал сизди жергиликтүү DataCite "
+"мүчөсүнө багыттайт. Мүчө уюм менен байланыш түзгөндөн кийин, сизге туруктуу "
+"идентификаторлорду (DOI) түзүү жана байланышкан метадайындарды каттоо үчүн "
+"DataCite кызматына кирүү мүмкүнчүлүгү берилет. Эгерде сиздин өзүңүздүн "
+"колдонуучу атыңыз жана сырсөзүңүз жок болсо, DataCite XML форматына "
+"экспорттой аласыз, бирок OJS ичинен DataCite менен DOIлериңизди каттай "
+"албайсыз. Сураныч, DataCite каттоо кызматынын талаптарына байланыштуу сырсөз "
+"ачык текст түрүндө, б.а. шифрленбестен сакталаарын эске алыңыз.\n"
+"\t"

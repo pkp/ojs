@@ -1,15 +1,20 @@
+# lena bojcic <lenabojcicck@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:34+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:34+00:00\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: sr_RS@latin\n"
+"PO-Revision-Date: 2026-08-09 19:03+0000\n"
+"Last-Translator: lena bojcic <lenabojcicck@gmail.com>\n"
+"Language-Team: Serbian (latin) <http://translate.pkp.sfu.ca/projects/ojs/"
+"author/sr_Latn/>\n"
+"Language: sr_Latn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "author.submit"
 msgstr "Nova predaja članka"
@@ -72,7 +77,8 @@ msgstr "Zahtevaj oslobađanje"
 
 msgid "author.submit.qualifyForWaiver"
 msgstr ""
-"Molim vas da razmislite o oslobađanju od plaćanja cene za podnošenje članka."
+"Molimo vas da razmotrite mogućnost oslobađanja od naknade za podnošenje ovog "
+"članka"
 
 msgid "author.submit.addReasonsForWaiver"
 msgstr ""
@@ -100,7 +106,7 @@ msgid "author.submissions.proofreadingCorrections"
 msgstr "Korektorske ispravke"
 
 msgid "author.submissions.confirmDelete"
-msgstr "Da li ste sigurni da želite da obrišete nezavršenu predaju."
+msgstr "Da li ste sigurni da želite da obrišete nezavršenu prijavu?"
 
 msgid "author.submissions.viewStatus"
 msgstr "Vidi status"
@@ -149,7 +155,7 @@ msgstr "Obriši autora"
 
 msgid "author.submit.submissionIndexingDescription"
 msgstr ""
-"Unesite termine za indeksiranje  (ključne reči); odvojite ih , (termin1, "
+"Unesite termine za indeksiranje rada (ključne reči); odvojite ih , (termin1, "
 "termin2, termin3)."
 
 msgid "author.submit.coverageInstructions"
@@ -176,7 +182,7 @@ msgid "author.submit.form.abstractRequired"
 msgstr "Unesite apstrakt članka."
 
 msgid "author.submit.form.wordCountAlert"
-msgstr "Prešli ste dozvoljen broj reči za apstrakt"
+msgstr "Prekoračili ste maksimalan broj reči za sažetke u rubrici ovog odeljka."
 
 msgid "author.submit.submissionFile"
 msgstr "Fajl predaje"
@@ -188,7 +194,7 @@ msgid "author.submit.replaceSubmissionFile"
 msgstr "Zameni fajl predaje"
 
 msgid "author.submit.noSubmissionFile"
-msgstr "Fajl predaje nije dodat"
+msgstr "Fajl rada nije dodat."
 
 msgid "author.submit.noSubmissionConfirm"
 msgstr "Da li ste sigurni da želite da nastavite bez dodatog fajla predaje?"
@@ -233,7 +239,8 @@ msgstr "Meta podaci dodatnog fajla"
 
 msgid "author.submit.supplementaryFileDataDescription"
 msgstr ""
-"Za indeksiranje dodatnog materijala unesite metapodatke za dodatni fajl"
+"Da biste indeksirali ovaj dodatni materijal, navedite sledeće metapodatke za "
+"otpremljeni dodatni fajl."
 
 msgid "author.submit.supplementaryFileUpload"
 msgstr "Dodatni fajl"
@@ -265,7 +272,6 @@ msgstr "Izvorni tekst"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Kratak opis"
 
-#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr ""
 "Prezentujte fajl recenzentima (bez metapodataka), što neće ugroziti \"slepu "
@@ -299,7 +305,7 @@ msgid "author.suppFile.suppFilePublicIdentificationExists"
 msgstr "Identifikacija javnog dodatnog fajla već postoji."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
-msgstr "Identifikator javnog dodatnog fajla."
+msgstr "Javni identifikator dodatnog fajla"
 
 msgid "author.submit.filesSummary"
 msgstr "Rezime fajlova"

@@ -835,12 +835,6 @@ msgstr ""
 "участвующим библиотекам через страницу <a href=\"{$lockssUrl}\" target="
 "\"_blank\">Манифеста издателя</a> LOCKSS."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"Лицензия LOCKSS появится в разделе «О журнале» под заголовком «Архивация "
-"журнала»: <a href=\"http://www.lockss.org/community/publishers-titles-gln/\" "
-"target=\"_blank\">Лицензия LOCKSS</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "Описание лицензии LOCKSS"
 
@@ -860,12 +854,6 @@ msgstr ""
 "Включить CLOCKSS для хранения и распространения контента журнала по "
 "участвующим библиотекам через страницу <a href=\"{$clockssUrl}\" target="
 "\"_blank\">Манифеста издателя</a> CLOCKSS."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"Лицензия CLOCKSS появится в разделе «О журнале» под заголовком «Архивация "
-"журнала»: <a href=\"http://clockss.org/\" target=\"_blank\">лицензия "
-"CLOCKSS</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "Описание лицензии CLOCKSS"

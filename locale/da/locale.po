@@ -1171,9 +1171,6 @@ msgstr ""
 "(se <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Konkurrerende interesser"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Klik på ikonet for at angive (eller indsætte) din bedømmelse af manuskriptet."
@@ -2182,11 +2179,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Manuskriptet {$submissionId} er fremsendt igen til bedømmelse."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} har afvist rundebedømmelsen {$round} for manuskriptet "
 "{$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} har accepteret rundebedømmelsen {$round} for manuskriptet "

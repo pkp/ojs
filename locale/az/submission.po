@@ -82,6 +82,7 @@ msgstr "Nəşr edilən məqalələrin müəllif hüququnu aşağıdakı qismə t
 msgid "editor.submission.decision.backToReview.description"
 msgstr "Qəbul qərarını ləğv edin və dəyərləndirmə mərhələsinə qayıdın."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "{$title} başlıqlı namizəd məqalə dəyərləndirmə mərhələsinə qaytarıldı."
 
@@ -285,12 +286,14 @@ msgstr "Bunun yayımlanmaq üzrə planlaşdırılmasını istəmədiyinizə əmi
 msgid "publication.version.details"
 msgstr "{$version} versiyası üçün nəşr detalları"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Çap müzakirələri"
 
 msgid "editor.submission.decision.backToReview"
 msgstr "Dəyərləndirməyə qayıdın"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Dəyərləndirmə üçün qaytarın"
 
@@ -337,6 +340,7 @@ msgstr ""
 "{$editorName}, namizəd məqalənin qəbul qərarını ləğv etdi və dəyərləndirmə "
 "mərhələsinə qaytardı."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Namizəd məqalənin dəyərləndirmə mərhələsinə qaytarıldığını bildirmək üçün "

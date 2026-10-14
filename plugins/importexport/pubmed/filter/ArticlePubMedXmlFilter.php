@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/pubmed/filter/ArticlePubMedXmlFilter.php
  *
- * Copyright (c) 2014-2025 Simon Fraser University
- * Copyright (c) 2000-2025 John Willinsky
+ * Copyright (c) 2014-2026 Simon Fraser University
+ * Copyright (c) 2000-2026 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticlePubMedXmlFilter
@@ -101,6 +101,13 @@ class ArticlePubMedXmlFilter extends PersistableFilter
                 $articleNode->appendChild($doc->createElement('LastPage'))->appendChild($doc->createTextNode($endPage));
             }
 
+            if ($articleNumber = $publication->getData('articleNumber')) {
+                $articleNumberNode = $doc->createElement('ELocationID');
+                $articleNumberNode->appendChild($doc->createTextNode($articleNumber));
+                $articleNumberNode->setAttribute('EIdType', 'pii');
+                $articleNode->appendChild($articleNumberNode);
+            }
+
             if ($doi = $publication->getStoredPubId('doi')) {
                 $doiNode = $doc->createElement('ELocationID');
                 $doiNode->appendChild($doc->createTextNode($doi));
@@ -163,7 +170,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter
                     $objectNode = $doc->createElement('Object');
                     $objectNode->setAttribute('Type', 'keyword');
                     $keywordNode = $doc->createElement('Param');
-                    $keywordNode->appendChild($doc->createTextNode($keyword));
+                    $keywordNode->appendChild($doc->createTextNode($keyword['name']));
                     $keywordNode->setAttribute('Name', 'value');
                     $objectNode->appendChild($keywordNode);
                     $objectListNode->appendChild($objectNode);
@@ -173,7 +180,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter
 
             // References
             $rawCitations = $publication->getData('citations');
-            if (!empty($rawCitations)) {
+            if (!$rawCitations->isEmpty()) {
                 $referenceListNode = $doc->createElement('ReferenceList');
                 foreach ($rawCitations as $rawCitation) { /** @var Citation $rawCitation */
                     $referenceNode = $doc->createElement('Reference');
@@ -205,13 +212,14 @@ class ArticlePubMedXmlFilter extends PersistableFilter
     public function createJournalNode($doc, $plugin, $journal, $issue, $submission): DOMElement
     {
         $nlmTitle = $plugin->getSetting($journal->getId(), 'nlmTitle');
+        $publication = $submission->getCurrentPublication();
         $journalNode = $doc->createElement('Journal');
 
         $publisherNameNode = $doc->createElement('PublisherName');
-        $publisherNameNode->appendChild($doc->createTextNode($journal->getData('publisherInstitution')));
+        $publisherNameNode->appendChild($doc->createTextNode($publication->getPublisher($journal) ?? ''));
         $journalNode->appendChild($publisherNameNode);
 
-        $journalTitle = $nlmTitle ?? $journal->getName($journal->getPrimaryLocale());
+        $journalTitle = $nlmTitle ?: $publication->getPrimaryContextName($journal);
 
         $journalTitleNode = $doc->createElement('JournalTitle');
         $journalTitleNode->appendChild($doc->createTextNode($journalTitle));
@@ -219,15 +227,10 @@ class ArticlePubMedXmlFilter extends PersistableFilter
         $journalNode->appendChild($journalTitleNode);
 
         // check various ISSN fields to create the ISSN tag
-        if ($journal->getData('printIssn') != '') {
-            $issn = $journal->getData('printIssn');
-        } elseif ($journal->getData('issn') != '') {
-            $issn = $journal->getData('issn');
-        } elseif ($journal->getData('onlineIssn') != '') {
-            $issn = $journal->getData('onlineIssn');
-        } else {
-            $issn = '';
-        }
+        $issn = $publication->getPrintIssn($journal)
+            ?: $journal->getData('issn')
+            ?: $publication->getOnlineIssn($journal)
+            ?: '';
         if ($issn != '') {
             $journalNode->appendChild($doc->createElement('Issn', $issn));
         }
@@ -276,8 +279,12 @@ class ArticlePubMedXmlFilter extends PersistableFilter
             $authorElement->appendChild($doc->createElement('LastName'))->appendChild($doc->createTextNode(ucfirst($author->getFamilyName($publicationLocale))));
         }
         foreach ($author->getAffiliations() as $affiliation) {
+            $affiliationName = $affiliation->getLocalizedName($publicationLocale);
+            if (trim($affiliationName ?? '') === '') {
+                continue;
+            }
             $affiliationInfoElement = $doc->createElement('AffiliationInfo');
-            $affiliationInfoElement->appendChild($doc->createElement('Affiliation'))->appendChild($doc->createTextNode($affiliation->getLocalizedName($publicationLocale)));
+            $affiliationInfoElement->appendChild($doc->createElement('Affiliation'))->appendChild($doc->createTextNode($affiliationName));
             if ($affiliation->getRor()) {
                 $affiliationInfoElement->appendChild($identifierNode = $doc->createElement('Identifier'))->appendChild($doc->createTextNode($affiliation->getRor()));
                 $identifierNode->setAttribute('Source', 'ROR');

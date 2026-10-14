@@ -4,7 +4,7 @@
 
 Open Journal Systems (OJS) is open source software developed by the [Public Knowledge Project](https://pkp.sfu.ca/) to manage scholarly journals. [Learn More](https://pkp.sfu.ca/software/ojs/)
 
-This project is tested with [BrowserStack](https://www.browserstack.com).
+This project is tested with BrowserStack.
 
 ## Usage
 
@@ -57,7 +57,7 @@ php                  8.2.28     success
 (Note that some PHP environments have different `php.ini` configuration files for web-based and command line invocation. In that case, running the Composer platform check from the command line may not reflect the PHP configuration that is used for web-based invocation.)
 </details>
 
-MySQL 5.7.22+, MariaDB 4.1+ or PostgreSQL 9.5+
+MySQL 5.7.22+, MariaDB 10.3+ or PostgreSQL 9.5+
 
 Linux, or one of the following: BSD, Solaris, Mac OS X, Windows
 

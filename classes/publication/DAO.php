@@ -17,13 +17,15 @@ namespace APP\publication;
 use APP\facades\Repo;
 use APP\plugins\PubObjectsExportPlugin;
 use APP\publication\enums\VersionStage;
-use APP\submission\Submission;
 use Illuminate\Contracts\Database\Query\Builder;
 use Illuminate\Database\Query\JoinClause;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\LazyCollection;
+use PKP\core\interfaces\CollectorInterface;
 use PKP\db\DAOResultFactory;
 use PKP\db\DBResultRange;
 use PKP\identity\Identity;
+use PKP\publication\PKPPublication;
 
 class DAO extends \PKP\publication\DAO
 {
@@ -44,6 +46,7 @@ class DAO extends \PKP\publication\DAO
         'versionStage' => 'version_stage',
         'versionMinor' => 'version_minor',
         'versionMajor' => 'version_major',
+        'updateType' => 'update_type',
         'createdAt' => 'created_at',
         'sourcePublicationId' => 'source_publication_id'
     ];
@@ -51,26 +54,30 @@ class DAO extends \PKP\publication\DAO
     /**
      * @copydoc SchemaDAO::_fromRow()
      */
-    public function fromRow(object $primaryRow): Publication
+    public function fromRow(object $row, array $ids, object $cache, ?CollectorInterface $query = null): Publication
     {
-        $publication = parent::fromRow($primaryRow);
+        $publication = parent::fromRow($row, $ids, $cache, $query);
 
-        $publication->setData(
-            'galleys',
-            Repo::galley()->getCollector()
-                ->filterByPublicationIds([$publication->getId()])
-                ->getMany()
-        );
+        $publication->setData('galleys', LazyCollection::make(function () use ($row, $ids, $cache) {
+            $cache->galleys ??= Repo::galley()->getCollector()->filterByPublicationIds($ids)->getMany()
+                ->collect()
+                ->groupBy(fn ($galley) => $galley->getData('publicationId'), true);
+            yield from $cache->galleys->get($row->publication_id) ?? [];
+        }));
 
         return $publication;
     }
 
     /**
-     * Get all published VoR versions (eventually with a pubId assigned and) matching the specified settings.
-     * Only the latest minor version of a major version will be considered.
+     * Get all published versions (with a pubId assigned) matching the specified settings.
+     * Only the latest minor version of a major version will be considered, per version stage.
+     *
+     * @param VersionStage[]|null $versionStages Which version stages count as exportable. Defaults to VoR only.
+     * @param int[]|null $ids Restrict to these publication IDs, if given.
      */
-    public function getExportable(int $contextId, ?string $pubIdType = null, ?string $title = null, ?string $author = null, ?int $issueId = null, ?string $settingName = null, ?string $settingValue = null, ?DBResultRange $rangeInfo = null): DAOResultFactory
+    public function getExportable(int $contextId, ?string $pubIdType = null, ?string $title = null, ?string $author = null, ?int $issueId = null, ?string $settingName = null, ?string $settingValue = null, ?DBResultRange $rangeInfo = null, ?array $versionStages = null, ?array $ids = null): DAOResultFactory
     {
+        $versionStages ??= [VersionStage::VERSION_OF_RECORD];
         $q = DB::table('publications', 'p')
             ->join('submissions AS s', 's.submission_id', '=', 'p.submission_id')
             ->leftJoin(
@@ -79,7 +86,7 @@ class DAO extends \PKP\publication\DAO
                     ->on('p2.version_stage', '=', 'p.version_stage')
                     ->on('p2.version_major', '=', 'p.version_major')
                     ->on('p.version_minor', '<', 'p2.version_minor')
-                    ->where('p2.status', '=', Submission::STATUS_PUBLISHED)
+                    ->where('p2.status', '=', PKPPublication::STATUS_PUBLISHED)
             )
             ->when(
                 $pubIdType != null,
@@ -109,8 +116,9 @@ class DAO extends \PKP\publication\DAO
                 )
             )
             ->where('s.context_id', '=', $contextId)
-            ->where('p.version_stage', '=', VersionStage::VERSION_OF_RECORD)
+            ->whereIn('p.version_stage', array_map(fn (VersionStage $stage) => $stage->value, $versionStages))
             ->where('p.status', '=', Publication::STATUS_PUBLISHED)
+            ->when($ids !== null, fn (Builder $q) => $q->whereIn('p.publication_id', $ids))
             ->whereNull('p2.publication_id')
             ->when($pubIdType != null, fn (Builder $q) => $q->where('pspidt.setting_name', '=', "pub-id::{$pubIdType}")->whereNotNull('pspidt.setting_value'))
             ->when($title != null, fn (Builder $q) => $q->where('pst.setting_name', '=', 'title')->where('pst.setting_value', 'LIKE', "%{$title}%"))
@@ -126,18 +134,40 @@ class DAO extends \PKP\publication\DAO
                         fn (Builder $q) => $q->whereNull('pss.setting_value'),
                         fn (Builder $q) => $q->when(
                             $settingValue == PubObjectsExportPlugin::EXPORT_STATUS_DEPOSITABLE,
-                            fn (Builder $q) => $q->whereNull('pss.setting_value')->orWhere('pss.setting_value', '=', PubObjectsExportPlugin::EXPORT_STATUS_STALE),
+                            fn (Builder $q) => $q->where(fn (Builder $q) => $q->whereNull('pss.setting_value')->orWhere('pss.setting_value', '=', PubObjectsExportPlugin::EXPORT_STATUS_STALE)),
                             fn (Builder $q) => $q->where('pss.setting_value', '=', $settingValue)
                         )
                     )
                 )
             )
-            ->groupBy('p.publication_id')
+            ->groupBy('p.publication_id', 's.submission_id', 's.locale')
             ->orderByDesc('s.submission_id')
             ->orderByDesc('p.version_major')
-            ->select('p.*');
+            ->select(['p.*', 's.locale AS submission_locale']); // see DAO::fromRow for use of submission_locale
 
         $rows = $this->deprecatedDao->retrieveRange($q, [], $rangeInfo);
-        return new DAOResultFactory($rows, $this, 'fromRow', [], $q, [], $rangeInfo);
+        return new DAOResultFactory($rows, $this, 'fromRowDeprecated', [], $q, [], $rangeInfo);
+    }
+
+    /**
+     * Deprecated; remove when getExportable is refactored
+     */
+    public function fromRowDeprecated(object $row): Publication
+    {
+        return $this->fromRow($row, [$row->publication_id], (object) []);
+    }
+
+    /**
+     * @copydoc \PKP\publication\DAO::whereHasDoi()
+     */
+    protected function whereHasDoi(\Illuminate\Database\Query\Builder $q): \Illuminate\Database\Query\Builder
+    {
+        return parent::whereHasDoi($q)
+            ->orWhereExists(
+                fn (Builder $q) => $q->select(DB::raw(1))
+                    ->from('publication_galleys as g')
+                    ->whereColumn('g.publication_id', '=', 'p.publication_id')
+                    ->whereNotNull('g.doi_id')
+            );
     }
 }

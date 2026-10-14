@@ -777,12 +777,6 @@ msgstr ""
 "فعال سازی LOCKSS برای ذخیره و انتشار محتوای مجله در کتابخانه‌های ثبت‌نام شده "
 "از طریق صفحه <a href=\"{$lockssUrl}\" target=\"_blank\">اظهارات ناشر</a>"
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"گواهی LOCKSS در قسمت درباره مجله و تحت عنوان بایگانی ظاهر می‌شود: <a href="
-"\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\""
-">LOCKSS License</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "توضیح مجوز LOCKSS"
 
@@ -805,11 +799,6 @@ msgid "manager.setup.clockssEnable"
 msgstr ""
 "فعال کردن CLOCKSS برای ذخیره و انتشار محتوای مجله در کتابخانه‌های ثبت شده از "
 "طریق صفحه <a href=\"{$clockssUrl}\" target=\"_blank\">اظهارات ناشر</a>."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"مجوز CLOCKSS در قسمت «درباره مجله» نمایش داده می‌شود: <a href=\"http"
-"://clockss.org/\" target=\"_blank\">مجوز CLOCKSS</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "توضیح مجوز CLOCKSS"

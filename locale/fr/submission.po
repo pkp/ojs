@@ -1,13 +1,15 @@
 # Pierre Couchet <pierre.couchet@gmail.com>, 2023.
 # Olivier Roueff <olivier.roueff@cnrs.fr>, 2023, 2025.
 # Stefan Schneider <mail@stefan-schneider.at>, 2023.
+# Stéphanie Louison <stephanie.louison@u-bordeaux-montaigne.fr>, 2026.
+# Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:24+00:00\n"
-"PO-Revision-Date: 2025-03-07 21:13+0000\n"
-"Last-Translator: Olivier Roueff <olivier.roueff@cnrs.fr>\n"
+"PO-Revision-Date: 2026-10-02 15:20+0000\n"
+"Last-Translator: Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "fr/>\n"
 "Language: fr\n"
@@ -21,7 +23,7 @@ msgid "submission.submit.userGroup"
 msgstr "Soumettre en qualité de …"
 
 msgid "submission.upload.selectComponent"
-msgstr "Sélectionner l'élément de l'article"
+msgstr "Sélectionner un type de document"
 
 msgid "submission.title"
 msgstr "Titre de l'article"
@@ -40,7 +42,7 @@ msgid "submission.submit.newSubmissionMultiple"
 msgstr "Commencer une nouvelle soumission dans"
 
 msgid "submission.submit.newSubmissionSingle"
-msgstr "Nouvelle soumission"
+msgstr "Soumettre"
 
 msgid "grid.action.workflow"
 msgstr "Processus éditorial pour la soumission"
@@ -56,8 +58,8 @@ msgstr "Métadonnées"
 
 msgid "submission.submit.whatNext.description"
 msgstr ""
-"Le journal a été informé de votre soumission et vous a envoyé par courriel "
-"une confirmation à archiver. L'éditeur vous contactera une fois que votre "
+"La revue a été informée de votre soumission. Vous avez dû recevoir une "
+"confirmation par courriel. La rédaction vous contactera une fois que votre "
 "soumission aura été examinée."
 
 msgid "grid.action.galleyInIssueEntry"
@@ -96,10 +98,11 @@ msgstr "Fichiers d'épreuves"
 
 msgid "submission.proofReadingDescription"
 msgstr ""
-"Le responsable de la mise en page transfère ici les fichiers qui sont prêts "
-"pour publication. Utiliser <em>Assigner un vérificateur</em> pour identifier "
-"les auteurs et les autres personnes qui reliront les épreuves et chargerons "
-"les fichiers corrigés pour approbation avant la publication."
+"Le ou la responsable de la mise en page transfère ici les fichiers qui sont "
+"prêts pour publication. Utiliser <em>Assigner un/e vérificateur/ice</em> "
+"pour identifier les auteur/ices et les autres personnes qui reliront les "
+"épreuves et chargerons les fichiers corrigés pour approbation avant la "
+"publication."
 
 msgid "grid.action.approveProof"
 msgstr "Approuver cette version pour inclusion aux épreuves."
@@ -135,7 +138,7 @@ msgid "submission.incomplete"
 msgstr "En attente d'approbation"
 
 msgid "submission.submit.submissionChecklist"
-msgstr "Liste de vérification de la soumission"
+msgstr "Liste de vérification lors de la soumission"
 
 msgid "submission.submit.privacyStatement"
 msgstr "Politique de confidentialité"
@@ -200,25 +203,25 @@ msgstr "Le numéro de cette publication est introuvable."
 
 msgid "publication.publish.confirmation"
 msgstr ""
-"Toutes les exigences de publication ont été remplies. Êtes-vous certain-e de "
+"Toutes les exigences de publication ont été remplies. Êtes-vous certain/e de "
 "vouloir publier ceci ?"
 
 msgid "publication.publish.confirmation.futureIssue"
 msgstr ""
 "Toutes les exigences de publication ont été remplies. Ceci sera publié quand "
-"le {$issue} sera publié. Êtes-vous certain-e de vouloir programmer cette "
+"le {$issue} sera publié. Êtes-vous certain/e de vouloir programmer cette "
 "publication ?"
 
 msgid "publication.publish.confirmation.backIssue"
 msgstr ""
 "Toutes les exigences de publication ont été remplies. Ceci sera publié "
-"immédiatement dans le {$issue}. Êtes-vous certain-e de vouloir publier ceci ?"
+"immédiatement dans le {$issue}. Êtes-vous certain/e de vouloir publier ceci ?"
 
 msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
 "Toutes les exigences de publication ont été remplies. Ceci sera publié "
 "immédiatement car la date de publication a été fixée au {$datePublished}. "
-"Êtes-vous certain-e de vouloir publier ceci ?"
+"Êtes-vous certain/e de vouloir publier ceci ?"
 
 msgid "publication.required.issue"
 msgstr ""
@@ -238,7 +241,7 @@ msgid "publication.selectIssue"
 msgstr "Choisir un numéro pour programmer la publication"
 
 msgid "submission.publication"
-msgstr "Publication"
+msgstr "Métadonnées & Publication"
 
 msgid "publication.status.published"
 msgstr "Publié"
@@ -333,8 +336,9 @@ msgstr ""
 msgid "publication.version.details"
 msgstr "Renseignements de publication pour la version {$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
-msgstr "Discussions sur la production"
+msgstr "Discuter et envoyer des fichiers"
 
 msgid "editor.submission.decision.backToReview"
 msgstr "Retour au journal"
@@ -349,25 +353,29 @@ msgstr ""
 "{$editorName} est revenu sur la décision d'accepter la soumission et renvoie "
 "au stade évaluation."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Renvoyer en évaluation"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "La soumission, {$title}, a été renvoyée à l'étape d'évaluation."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
-"Envoyer un message aux auteurs pour leur faire savoir que leur soumission "
-"est renvoyée au stade d'évaluation. Expliquer les raisons de cette décision "
-"et informer l'auteur de ce qu'une évaluation supplémentaire va être faite."
+"Envoyer un message aux auteur/ices pour leur faire savoir que leur "
+"soumission est renvoyée en évaluation. Expliquer les raisons de cette "
+"décision et informer l'auteur/ice qu'une nouvelle évaluation va être "
+"réalisée."
 
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
-"Envoyer un message aux auteurs pour leur faire savoir que cette soumission "
-"va être envoyée pour évaluation par les pairs. Donner si possible aux "
-"auteurs des indications sur la durée approximative du processus d'évaluation "
-"et sur la date à laquelle les éditeurs les recontacteront. Ce message ne "
-"sera pas envoyé tant que la décision ne sera pas validée."
+"Envoyer un message aux auteur/ices pour leur faire savoir que cette "
+"soumission va être envoyée pour évaluation par des pairs. Pensez à leur "
+"donner si possible des indications sur la durée approximative du processus "
+"d'évaluation et sur la date à laquelle ils/elles seront recontactées. Ce "
+"message ne sera pas envoyé tant que la décision ne sera pas validée."
 
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "Sélectionnez les fichiers à envoyer à l'évaluation."
@@ -401,9 +409,9 @@ msgstr ""
 
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
-"Vous n'êtes pas autorisé(e) à soumettre à cette revue parce que les "
-"auteur(rices) doivent être enregistrées par l'équipe éditoriale. S'il s'agit "
-"selon vous d'une erreur, veuillez contacter <a "
+"Vous n'êtes pas autorisé/e à soumettre une contribution à cette revue parce "
+"que les auteur/ices doivent être enregistrées au préalable par l'équipe "
+"éditoriale. S'il s'agit selon vous d'une erreur, veuillez contacter <a "
 "href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.noSectionAllowed.description"
@@ -427,7 +435,7 @@ msgstr ""
 "Seule l'équipe éditoriale est autorisée à soumettre dans cette rubrique."
 
 msgid "submission.submit.form.authorRequired"
-msgstr "Au moins un auteur est requis."
+msgstr "Au moins un/e auteur/ice est requis/e."
 
 msgid "submission.submit.form.titleRequired"
 msgstr "Inscrire le titre de votre article."

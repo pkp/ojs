@@ -20,9 +20,11 @@ namespace APP\observers\events;
 use APP\core\Application;
 use APP\issue\Issue;
 use APP\issue\IssueGalley;
+use APP\publication\Publication;
 use APP\submission\Submission;
 use Exception;
 use PKP\context\Context;
+use PKP\core\PKPApplication;
 use PKP\submission\Representation;
 use PKP\submissionFile\SubmissionFile;
 
@@ -38,11 +40,12 @@ class UsageEvent extends \PKP\observers\events\UsageEvent
         ?Representation $galley = null,
         ?SubmissionFile $submissionFile = null,
         ?Issue $issue = null,
-        ?IssueGalley $issueGalley = null
+        ?IssueGalley $issueGalley = null,
+        ?Publication $publication = null
     ) {
         $this->issue = $issue;
         $this->issueGalley = $issueGalley;
-        parent::__construct($assocType, $context, $submission, $galley, $submissionFile);
+        parent::__construct($assocType, $context, $submission, $galley, $submissionFile, $publication);
     }
 
     /**
@@ -52,6 +55,17 @@ class UsageEvent extends \PKP\observers\events\UsageEvent
      */
     protected function getCanonicalUrl(): string
     {
+        // Built directly since this fires from the API context, whose router doesn't support
+        // getRequestedOp()/getRequestedArgs() used by getRouterCanonicalUrl().
+        if ($this->assocType === Application::ASSOC_TYPE_JATS) {
+            return $this->request->getDispatcher()->url(
+                $this->request,
+                PKPApplication::ROUTE_API,
+                $this->context->getPath(),
+                "submissions/{$this->submission->getId()}/publications/{$this->publication->getId()}/jats/download"
+            );
+        }
+
         if (in_array($this->assocType, [Application::ASSOC_TYPE_ISSUE, Application::ASSOC_TYPE_ISSUE_GALLEY])) {
             $canonicalUrlPage = $canonicalUrlOp = null;
             $canonicalUrlParams = [];

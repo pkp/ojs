@@ -1,0 +1,87 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2026-04-16 15:24+0000\n"
+"Last-Translator: Đỗ Quang Vinh <doquangving@gmail.com>\n"
+"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/"
+"invitation/vi/>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "acceptInvitation.verifyOrcid.stepDescription"
+msgstr ""
+"Bạn có thể chọn xác minh ORCID iD hoặc bỏ qua. Nếu bỏ qua lúc này, bạn vẫn "
+"có thể xác minh ORCID iD sau trong phần hồ sơ cá nhân trên OJS"
+
+msgid "acceptInvitation.detailsReview.stepDescription"
+msgstr "Xem lại thông tin để bắt đầu vai trò mới của bạn trong OJS"
+
+msgid "userInvitation.search.userNotFound"
+msgstr "Người dùng này không có vai trò trong tạp chí"
+
+msgid "userInvitation.sendMail.stepDescription"
+msgstr ""
+"Gửi email cho người dùng để thông báo về lời mời, các bước tiếp theo, chính "
+"sách GDPR của tạp chí và việc xác minh ORCID"
+
+msgid "acceptInvitation.modal.message"
+msgstr ""
+"Chúc mừng bạn với vai trò mới trong OJS! Bạn có thể sẽ có quyền truy cập vào "
+"các chức năng mới. Nếu cần hỗ trợ để hiểu rõ hệ thống, vui lòng nhấp vào nút "
+"“Trợ giúp” trong hệ thống để được hướng dẫn."
+
+msgid "acceptInvitation.accountDetails.stepLabel"
+msgstr "{$step} - Tạo tài khoản OJS"
+
+msgid "acceptInvitation.modal.title"
+msgstr "Bạn đã được phân công một vai trò mới trong OJS"
+
+msgid "invitation.orcid.acceptInvitation.message"
+msgstr ""
+"Chưa được xác minh. Bạn có thể xác minh ORCID iD trong phần hồ sơ cá nhân "
+"trên OJS."
+
+msgid "invitation.role.masthead"
+msgstr "Tiêu đề tạp chí"
+
+msgid "invitation.wizard.pageTitleDescription"
+msgstr ""
+"Bạn đang mời một người dùng đảm nhận một vai trò trong OJS, đồng thời xuất "
+"hiện trong ban biên tập của tạp chí"
+
+msgid "userInvitation.enterDetails.stepDescription"
+msgstr "Bạn có thể mời họ đảm nhận một vai trò trong OJS"
+
+msgid "userInvitation.modal.message"
+msgstr ""
+"{$email} đã được mời đảm nhận vai trò mới trong OJS. Bạn có thể theo dõi "
+"quyết định của người dùng trên trang Người dùng & Vai trò, thông báo trong "
+"OJS hoặc qua email"
+
+msgid "userInvitation.roleTable.journalMasthead"
+msgstr "Tiêu đề tạp chí"
+
+msgid "userInvitation.search.userFound"
+msgstr "Người dùng đã tồn tại trong tạp chí"
+
+msgid "acceptInvitation.accountDetails.stepDescription"
+msgstr ""
+"Để bắt đầu sử dụng OJS và chấp nhận vai trò mới, bạn cần tạo một tài khoản "
+"trong hệ thống. Vui lòng nhập tên đăng nhập và mật khẩu để đăng ký."
+
+msgid "acceptInvitation.accountDetails.stepName"
+msgstr "Tạo tài khoản OJS"
+
+msgid "acceptInvitation.detailsReview.nextButtonLabel"
+msgstr "Đồng ý và Tiếp tục sử dụng OJS"
+
+msgid "userInvitation.searchUser.stepDescription"
+msgstr ""
+"Tìm kiếm người dùng bằng địa chỉ email, tên đăng nhập hoặc ORCID ID. Vui "
+"lòng nhập ít nhất một thông tin để bắt đầu. Nếu người dùng chưa tồn tại, bạn "
+"có thể mời họ tham gia và đảm nhận vai trò trong tạp chí. Nếu người dùng đã "
+"tồn tại trong hệ thống, bạn có thể xem thông tin và mời họ đảm nhận thêm vai "
+"trò."

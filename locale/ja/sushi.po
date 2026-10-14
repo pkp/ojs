@@ -1,0 +1,32 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PKP ojs/sushi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 21:05+0000\n"
+"PO-Revision-Date: 2026-06-01 21:05+0900\n"
+"Last-Translator: OJS Japanese translators\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "sushi.reports.pr.description"
+msgstr "ジャーナル全体の利用状況を集計したレポートです。"
+
+msgid "sushi.reports.pr_p1.description"
+msgstr "ジャーナル単位の利用状況をメトリック種別ごとに集計したレポートです。"
+
+msgid "sushi.reports.tr.description"
+msgstr "ジャーナル単位の活動状況を示すレポートです。"
+
+msgid "sushi.reports.tr_j3.description"
+msgstr "すべてのメトリック種別について、アクセスタイプ別にジャーナルコンテンツの利用状況を示すレポートです。"
+
+msgid "sushi.reports.ir.description"
+msgstr "論文単位の活動状況を示すレポートです。"
+
+msgid "sushi.reports.ir_a1.description"
+msgstr "論文単位でジャーナル論文のリクエスト数を示すレポートです。"

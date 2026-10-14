@@ -22,7 +22,6 @@ use APP\journal\Journal;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use PKP\galley\Galley;
-use PKP\submission\PKPSubmission;
 
 // Configuration errors.
 define('DOI_EXPORT_CONFIG_ERROR_DOIPREFIX', 0x01);
@@ -51,6 +50,8 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
     /**
      * Get pub ID type
      *
+     * @deprecated 3.4
+     *
      * @return string
      */
     public function getPubIdType()
@@ -60,6 +61,8 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
 
     /**
      * Get pub ID display type
+     *
+     * @deprecated 3.4
      *
      * @return string
      */
@@ -77,7 +80,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
     {
         foreach ($objects as $object) {
             $doiIds = match (true) {
-                $object instanceof Submission => Repo::doi()->getDoisForSubmission($object->getId()),
+                $object instanceof Submission => Repo::doi()->getPublishedDoisForSubmission($object->getId()),
                 $object instanceof Issue => Repo::doi()->getDoisForIssue($object->getId(), true),
             };
             foreach ($doiIds as $doiId) {
@@ -97,6 +100,8 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
      * @param Journal $context
      * @param Issue|Submission|Galley $object
      * @param string $testPrefix
+     *
+     * @deprecated 3.4
      */
     public function saveRegisteredDoi($context, $object, $testPrefix = '10.1234')
     {
@@ -125,6 +130,8 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
      * @param array $submissionIds
      * @param Journal $context
      *
+     * @deprecated 3.4
+     *
      * @return array
      */
     public function getPublishedSubmissions($submissionIds, $context)
@@ -132,7 +139,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
         $allSubmissionIds = Repo::submission()
             ->getCollector()
             ->filterByContextIds([$context->getId()])
-            ->filterByStatus([PKPSubmission::STATUS_PUBLISHED])
+            ->filterByCurrentPublicationStatus([PKPPublication::STATUS_PUBLISHED])
             ->getIds()
             ->toArray();
         $validSubmissionIds = array_intersect($allSubmissionIds, $submissionIds);
@@ -149,6 +156,8 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
      *
      * @param array $issueIds
      * @param Journal $context
+     *
+     * @deprecated 3.4
      *
      * @return array
      */
@@ -169,6 +178,8 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
      *
      * @param array $galleyIds
      * @param Journal $context
+     *
+     * @deprecated 3.4
      *
      * @return array
      */

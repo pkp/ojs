@@ -47,7 +47,7 @@
 			"items": {
 				"type": "string",
 				"validation": [
-					"in:publication,representation,issue"
+					"in:publication,representation,issue,peerReview,authorResponse"
 				]
 			},
 		  	"default": ["publication"]
@@ -58,6 +58,12 @@
 		},
 		"doiIssueSuffixPattern": {
 			"type": "string",
+			"validation": [
+				"nullable"
+			]
+		},
+		"enableArticleNumber": {
+			"type": "boolean",
 			"validation": [
 				"nullable"
 			]

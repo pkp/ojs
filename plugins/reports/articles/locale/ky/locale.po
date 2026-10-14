@@ -1,7 +1,7 @@
-# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024, 2025.
+# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024, 2025, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-11-08 16:37+0000\n"
+"PO-Revision-Date: 2026-01-26 14:55+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/"
 "reports-articles/ky/>\n"
@@ -18,10 +18,10 @@ msgstr "Макалалар боюнча отчет"
 msgid "plugins.reports.articles.description"
 msgstr ""
 "Бул плагин макалалардын тизмесин жана алардын маалыматын камтыган CSV "
-"отчетту ишке ашырат."
+"отчетун түзөт."
 
 msgid "plugins.reports.articles.nodecision"
 msgstr "Чечим жок"
 
 msgid "plugins.reports.articles.initialDecline"
-msgstr "Четке кагуу (Кароо алдындагы этапта)"
+msgstr "Четке кагылды (кароого чейин)"

@@ -1,8 +1,8 @@
 # Germán Huélamo Bautista <germanhuelamo@gmail.com>, 2024.
-# Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>, 2025.
+# Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>, 2025, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-08-14 13:30+0000\n"
+"PO-Revision-Date: 2026-09-05 15:59+0000\n"
 "Last-Translator: Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/fr/>\n"
@@ -71,7 +71,7 @@ msgstr "Image d'arrière-plan de l'en-tête"
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
 msgstr ""
-"Lorsqu'une image de page d'accueil a été téléversée, l'afficher en arrière-"
+"Si une image pour la page d'accueil a été chargée, l'afficher en arrière-"
 "plan de l'en-tête au lieu de sa position habituelle sur la page d'accueil."
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
@@ -82,16 +82,15 @@ msgstr "Options d'affichage des statistiques d'utilisation"
 
 msgid "plugins.themes.default.option.displayStats.none"
 msgstr ""
-"Ne pas afficher aux lecteur·rice·s le tableau des statistiques d'utilisation "
-"des soumissions."
+"Ne pas afficher le tableau des statistiques d'utilisation aux lecteur/ices."
 
 msgid "plugins.themes.default.option.displayStats.bar"
 msgstr ""
-"Utiliser un graphique à barres pour afficher les statistiques d'utilisation."
+"Afficher les statistiques d'utilisation sous forme d'un graphique à barres."
 
 msgid "plugins.themes.default.option.displayStats.line"
 msgstr ""
-"Utiliser un graphique linéaire pour afficher les statistiques d'utilisation."
+"Afficher les statistiques d'utilisation sous forme d'un graphique à linéaire."
 
 msgid "plugins.themes.default.displayStats.monthInitials"
 msgstr "Janv. Févr. Mars Avr. Mai Juin Juil. Août Sept. Oct. Nov. Déc."

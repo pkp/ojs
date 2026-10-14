@@ -1161,9 +1161,6 @@ msgstr ""
 "(იხ. <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">CI პოლიტიკა</a> )."
 
-msgid "reviewer.competingInterests"
-msgstr "ინტერესთა კონფლიქტი"
-
 msgid "reviewer.article.enterReviewA"
 msgstr "დააჭირეთ ხატულას (ან ჩასვით) ამ სტატიაზე რეცენზიის შესატანად."
 
@@ -2173,11 +2170,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "მასალა {$submissionId} კვლავ გაიგზავნა რეცენზიაზე."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "რეცენზენტმა {$reviewerName} უარი თქვა რეცენზირებაზე {$round} რუნდზე "
 "მასალისათვის რეცენზენტის {$submissionId} დავალებით."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "რეცენზენტი {$reviewerName} დაეთანხმა რეცენზირებაზე {$round} რაუნდზე "

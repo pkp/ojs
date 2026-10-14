@@ -18,6 +18,7 @@ use APP\publication\enums\VersionStage;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use PKP\publication\enums\UpdateType;
 
 class OJSMigration extends \PKP\migration\Migration
 {
@@ -245,6 +246,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->enum('version_stage', array_column(VersionStage::cases(), 'value'))->nullable();
             $table->integer('version_minor')->nullable();
             $table->integer('version_major')->nullable();
+            $table->enum('update_type', array_column(UpdateType::cases(), 'value'))->default(UpdateType::NEW_VERSION->value);
             $table->datetime('created_at')->useCurrent();
 
             $table->bigInteger('issue_id')->nullable();
@@ -276,10 +278,6 @@ class OJSMigration extends \PKP\migration\Migration
         Schema::table('review_rounds', function (Blueprint $table) {
             $table->foreign('publication_id')->references('publication_id')->on('publications');
             $table->index(['publication_id'], 'review_rounds_publication_id');
-        });
-        Schema::table('edit_decisions', function (Blueprint $table) {
-            $table->foreign('publication_id', 'edit_decisions_publication_id')->references('publication_id')->on('publications')->onDelete('cascade');
-            $table->index(['publication_id'], 'edit_decisions_publication_id');
         });
 
         // Publication galleys

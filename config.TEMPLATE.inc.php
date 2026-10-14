@@ -49,9 +49,10 @@ session_cookie_name = OJSSID
 ; Session cookie path; if not specified, defaults to the detected base path
 ; session_cookie_path = /
 
-; Number of days to save login cookie for if user selects to remember
-; (set to 0 to force expiration at end of current session)
-session_lifetime = 30
+; Number of days a session remains valid while idle. Fractional days are allowed
+; (e.g. 0.5 = 12 hours, 0.0833 ~ 2 hours); the value is clamped to a minimum of 1 minute.
+; To expire sessions when the browser closes, use session_expire_on_close in [security]
+session_lifetime = 7
 
 ; SameSite configuration for the cookie, see possible values and explanations
 ; at https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite
@@ -154,6 +155,29 @@ name = ojs
 
 ; Database collation
 ; collation = utf8_general_ci
+
+; SSL/TLS Database Connection
+; NOTE: The web installer does not provide options to configure SSL/TLS.
+; If your database server requires encrypted connections, uncomment and
+; configure the settings below BEFORE running the web installer.
+
+; Enable SSL/TLS for the database connection
+; secure = Off
+
+; Path to the CA certificate file for SSL/TLS verification
+; For MySQL/MariaDB: path to the CA certificate (PEM format)
+; For PostgreSQL: path to the root certificate
+; capath = /path/to/ca-cert.pem
+
+; Verify the server's SSL/TLS certificate (default to On when secure is enabled)
+; Set to Off to connect with encryption but skip certificate verification (not recommended for production)
+; verify = On
+
+; Keep the database connection open and reuse it across requests served by
+; the same PHP process (PDO persistent connection). The primary purpose is to
+; run the end-to-end test suites efficiently, where many short requests are
+; served by long-lived PHP processes. Not recommended for production.
+; persistent = Off
 
 ; Enable database debug output (very verbose!)
 debug = Off
@@ -272,6 +296,17 @@ session_check_ip = On
 ; migration of old password hashes.
 encryption = sha1
 
+; When set to On, the session cookie expires when the browser is closed.
+; The server-side session data still persists for session_lifetime days
+; and is cleaned up by garbage collection.
+session_expire_on_close = Off
+
+; Number of days the "remember me" persistent-login cookie remains valid. Fractional
+; days are allowed. Only applies when the user ticks "remember me" at login.
+; To extend login beyond the idle session, set this greater than session_lifetime in
+; [general]; it is an absolute window measured from login (not refreshed on activity).
+remember_me_lifetime = 30
+
 ; The unique salt to use for generating password reset hashes
 salt = "YouMustSetASecretKeyHere!!"
 
@@ -292,6 +327,34 @@ allowed_html = "a[href|target|title],em,strong,cite,code,ul,ol,li[class],dl,dt,d
 allowed_title_html = "b,i,u,sup,sub"
 
 ;N.b.: The implicit_auth parameter has been removed in favor of plugin implementations such as shibboleth
+
+; This setting allows control over how new plugins can be installed. Supported options:
+;  on: Plugins can be installed by upload and through the Plugin Gallery. (This is the default.)
+;  gallery_only: Plugins can only be installed through the Plugin Gallery.
+;  upgrade_only: Plugins can be upgraded only through the Plugin Gallery; no new plugins can be installed
+;  off: Plugins cannot be installed.
+allow_plugin_install = on
+
+; The URLs to use to fetch the plugin gallery plugin list
+; BEWARE: You should not extend the gallery with custom plugin gallery listing that collide with the official ones!
+;plugin_gallery_urls = '["https://pkp.sfu.ca/ojs/xml/plugins.xml"]'
+
+; When set to a value greater than 0, admins must re-authenticate to access the administration area.
+; The authentication remains valid for the specified number of minutes before re-authentication is required again.
+; Set to 0 to disable re-authentication.
+;password_timeout = 0
+
+; When set to On, pass article galley HTML through a filter to remove potentially malicious content.
+filter_galley_html = Off
+
+; When the filter_galley_html option is turned On, only allowed "safe" elements will be permitted.
+; Use the following setting to allow additional elements and attributes.
+; Use e.g. "img[id|style],math" to allow "id" and "style" attributes to the "img"
+; tag, and also to permit the "math" tag. Unspecified attributes will be stripped.
+; allowed_galley_html = "img[id|style],math"
+
+; When the filter_galley_html option is turned On, only specified allowed media hosts are allowed.
+; allowed_media_hosts = '["doi.org", "wikipedia.org"]'
 
 
 ;;;;;;;;;;;;;;;;;;
@@ -377,6 +440,7 @@ search_index_name = "submissions"
 ;opensearch_username = "admin"
 ;opensearch_password = "password"
 ;opensearch_ssl_verification = On
+;opensearch_debug = Off
 
 ; Minimum indexed word length
 min_word_length = 3
@@ -434,6 +498,9 @@ items_per_page = 25
 
 ; Number of page links to display; can be overridden on a per-journal basis
 page_links = 10
+
+; Maximum nesting depth for navigation menu items (default: 2)
+navigation_menu_max_depth = 2
 
 
 ;;;;;;;;;;;;;;;;;;;;
@@ -536,6 +603,54 @@ deprecation_warnings = Off
 log_web_service_info = Off
 
 
+;;;;;;;;;;;;;;;;
+; Log Settings ;
+;;;;;;;;;;;;;;;;
+
+[logs]
+
+; Default logging channel. Available channels:
+;   - stack: Combines multiple channels (configurable via log_stacks; defaults to daily)
+;   - single: Single log file ({files_dir}/logs/app.log)
+;   - daily: Daily rotating log files
+;   - stderr: Output to stderr
+;   - syslog: System log
+;   - errorlog: PHP error log
+;   - null: Discard all logs
+log_channel = daily
+
+; Minimum log level to record. Available levels (in order of severity):
+;   - debug: Detailed debug information
+;   - info: Interesting events
+;   - notice: Normal but significant events
+;   - warning: Exceptional occurrences that are not errors
+;   - error: Runtime errors that do not require immediate action
+;   - critical: Critical conditions
+;   - alert: Action must be taken immediately
+;   - emergency: System is unusable
+log_level = debug
+
+; Channels the 'stack' channel fans out to (comma-separated). Only used when
+; log_channel = stack. Each entry must be one of the channels listed above
+; (single, daily, stderr, syslog, errorlog). Defaults to single.
+log_stacks = daily
+
+; Number of daily log files to retain before rotation deletes the oldest
+; (only applies to the 'daily' channel). Defaults to 30.
+; log_daily_days = 30
+
+; Monolog formatter class for the file/stream channels (single, daily, stderr,
+; syslog). Leave unset for the default human-readable line format (stack traces
+; included). Has no effect on the errorlog or stack channels. See available formatters
+; at https://github.com/Seldaek/monolog/blob/main/doc/02-handlers-formatters-processors.md#formatters
+; log_formatter = Monolog\Formatter\JsonFormatter
+
+; Enable application-level security audit logging (authentication events, privilege
+; and configuration changes, plugin lifecycle, etc.). Disabled by default, set to On
+; to record all audit-log output.
+; log_audit = Off
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;
 ; Job Queues Settings ;
 ;;;;;;;;;;;;;;;;;;;;;;;
@@ -580,6 +695,10 @@ job_runner_max_execution_time = 30
 ; When setting a fixed value in megabytes, this should be less than the
 ; memory_limit the server has configured for PHP.
 job_runner_max_memory = 80
+
+; Prevent multiple web requests from running JobRunner simultaneously.
+; Recommended On for shared/weak hosting. Dedicated servers can disable for throughput.
+job_runner_cross_request_lock = On
 
 ; Controls whether queued jobs should be processed by the task scheduler.
 ; This setting has no effect when the job_runner and the [schedule].task_runner are enabled,
@@ -638,5 +757,3 @@ expiration_days = 3
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 
 [features]
-
-enable_new_discussions = Off

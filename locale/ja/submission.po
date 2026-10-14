@@ -118,14 +118,16 @@ msgid "submission.upload.fileContents"
 msgstr "投稿要素"
 
 msgid "submission.complete"
-msgstr "承認"
+msgstr "完了"
+
 
 msgid "submission.incomplete"
 msgstr "承認待ち"
 
 #, fuzzy
 msgid "submission.submit.submissionChecklist"
-msgstr "投稿チェックリスト"
+msgstr "投稿前の確認リスト"
+
 
 msgid "submission.submit.privacyStatement"
 msgstr "個人情報の扱いについて"
@@ -180,7 +182,7 @@ msgid "publication.invalidSection"
 msgstr "本書のセクションは見つかりませんでした。"
 
 msgid "publication.inactiveSection"
-msgstr "{$section} (Inactive)"
+msgstr ""
 
 msgid "publication.invalidIssue"
 msgstr "本書の巻号は見つかりませんでした。"
@@ -301,6 +303,7 @@ msgstr "本当に公開予約をキャンセルしてよろしいですか？"
 msgid "publication.version.details"
 msgstr "バージョン{$version}の公開詳細"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "制作ディスカッション"
 
@@ -314,12 +317,15 @@ msgid "editor.submission.decision.backToReview.log"
 msgstr "{$editorName} "
 "はこの投稿を採用するという決定を元に戻し、査読段階に戻しました。"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "査読に戻した"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "投稿「{$title}」は査読段階に戻されました。"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "著者にメールを送信して、投稿が査読段階に戻されることを知らせます。この決定が"

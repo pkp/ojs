@@ -18,12 +18,14 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "Plugiciel d'exportation DOAJ"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "Exporter la revue vers DOAJ."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Communiquer avec DOAJ pour intégration"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "Si vous souhaitez enregistrer des articles à partir d'OJS, veuillez entrer "

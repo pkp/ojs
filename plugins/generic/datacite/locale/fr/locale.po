@@ -68,6 +68,7 @@ msgstr ""
 "en fonction de votre configuration cronjob). Vous pouvez vérifier tous les "
 "DOI non enregistrés."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "Utiliser le préfixe de test DataCite pour l'enregistrement des DOI. "
@@ -82,15 +83,11 @@ msgstr "Mot de passe test"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Préfixe DOI test"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
 msgstr ""
 "Un préfixe DOI de test est requis lorsque l'option \"utiliser un préfixe de "
 "test pour l'enregistrement du DOI\" est sélectionnée."
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-"Un nom d'utilisateur de test est requis lorsqu'un nom d'utilisateur de "
-"production est fourni."
 
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Tâche automatique d'enregistrement DataCite"
@@ -104,7 +101,7 @@ msgstr ""
 "galleys} objectId1 [objectId2] ...\n"
 
 msgid "plugins.generic.datacite.displayName"
-msgstr "Plugin Datacite Manager"
+msgstr "Plugin DataCite Manager"
 
 msgid "plugins.generic.datacite.description"
 msgstr "Gestion du dépôt et de l'exportation des métadonnées DataCite"

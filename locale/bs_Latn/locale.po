@@ -1157,9 +1157,6 @@ msgstr ""
 "(vidi <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">smjernice o sukobu interesa</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Sukob interesa"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Kliknite na sličicu na zaslonu kako biste unijeli (ili kopirali iz drugog "
@@ -2204,11 +2201,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Prilog {$submissionId} je iznova podnesen za recenziju."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} je odbio izraditi {$round}. krug recenzije za prilog "
 "{$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} je prihvatio izraditi {$round}. krug recenzije za prilog "

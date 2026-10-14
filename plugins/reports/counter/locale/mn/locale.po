@@ -1,0 +1,48 @@
+# Gantulga <cybermon@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2026-08-13 04:57+0000\n"
+"Last-Translator: Gantulga <cybermon@gmail.com>\n"
+"Language-Team: Mongolian <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-counter/mn/>\n"
+"Language: mn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "Тайлангийн параметрүүд буруу байсан."
+
+msgid "plugins.reports.counter.release"
+msgstr "COUNTER хувилбар"
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "COUNTER тайлан JR1 (R3)"
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "Бүх хэрэглэгчид"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Өгүүллийн тайлан 1"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Сэтгүүлийн тайлан 1"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr ""
+"COUNTER Сэтгүүлийн тайлан 1 (R3): Сар болон сэтгүүлээр бүрэн эхээр нь "
+"бүтээлийг татах хүсэлтийн тоо"
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "Тайлангийн хүсэлт хүчингүй байна."
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "Энэ тайланд ямар ч үр дүн олдсонгүй."
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "Үр дүнг XML хэлбэрээр форматлах боломжгүй."
+
+msgid "plugins.reports.counter"
+msgstr "COUNTER Тайлангууд"

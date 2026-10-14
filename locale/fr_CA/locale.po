@@ -1195,9 +1195,6 @@ msgstr ""
 "recherche (voir <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">Politique de conflits d'intérêts</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Intérêts divergents"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Cliquer sur l'icône pour saisir (ou coller) votre évaluation de cette "
@@ -2241,11 +2238,13 @@ msgid "log.review.resubmit"
 msgstr ""
 "La soumission {$submissionId} a été soumise de nouveau pour évaluation."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} a refusé le cycle {$round} d'évaluation de la soumission "
 "{$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} a accepté le cycle {$round} d'évaluation de la soumission "

@@ -1,0 +1,91 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2026-08-18 11:10+0000\n"
+"Last-Translator: Vincas Grigas <vincas.grigas@gmail.com>\n"
+"Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/"
+"invitation/lt/>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
+"19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
+"1 : 2);\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "acceptInvitation.accountDetails.stepDescription"
+msgstr ""
+"Norėdami pradėti naudotis OJS ir priimti naują vaidmenį, susikurkite paskyrą "
+"įvesdami naudotojo vardą ir slaptažodį."
+
+msgid "acceptInvitation.accountDetails.stepLabel"
+msgstr "{$step} – Sukurti OJS paskyrą"
+
+msgid "acceptInvitation.accountDetails.stepName"
+msgstr "Sukurti OJS paskyrą"
+
+msgid "acceptInvitation.detailsReview.nextButtonLabel"
+msgstr "Sutikti ir tęsti į OJS"
+
+msgid "invitation.orcid.acceptInvitation.message"
+msgstr ""
+"ORCID iD dar nepatvirtintas. Jį galite patvirtinti OJS sistemos profilio "
+"skiltyje."
+
+msgid "userInvitation.enterDetails.stepDescription"
+msgstr "Galite pakviesti juos prisiimti vaidmenį OJS sistemoje"
+
+msgid "userInvitation.roleTable.journalMasthead"
+msgstr "Žurnalo redakciniai duomenys"
+
+msgid "acceptInvitation.modal.title"
+msgstr "Jums OJS sistemoje priskirtas naujas vaidmuo"
+
+msgid "acceptInvitation.modal.message"
+msgstr ""
+"Sveikiname gavus naują vaidmenį OJS sistemoje! Dabar galite turėti prieigą "
+"prie naujų funkcijų. Jei reikia pagalbos, sistemoje spustelėkite mygtuką "
+"„Pagalba“."
+
+msgid "acceptInvitation.detailsReview.stepDescription"
+msgstr ""
+"Peržiūrėkite informaciją, kad galėtumėte pradėti vykdyti naujus vaidmenis "
+"OJS sistemoje"
+
+msgid "acceptInvitation.verifyOrcid.stepDescription"
+msgstr ""
+"Galite patvirtinti savo ORCID iD arba praleisti šį veiksmą. Jei jo "
+"neatliksite dabar, ORCID iD galėsite patvirtinti vėliau savo OJS profilyje"
+
+msgid "invitation.role.masthead"
+msgstr "Žurnalo redakciniai duomenys"
+
+msgid "invitation.wizard.pageTitleDescription"
+msgstr ""
+"Kviečiate naudotoją prisiimti vaidmenį OJS sistemoje ir būti nurodytam "
+"žurnalo redakcinėje informacijoje"
+
+msgid "userInvitation.modal.message"
+msgstr ""
+"Naudotojas {$email} pakviestas į naują vaidmenį OJS sistemoje. Apie jo "
+"sprendimą būsite informuoti puslapyje „Naudotojai ir vaidmenys“, OJS "
+"pranešimuose arba el. paštu"
+
+msgid "userInvitation.search.userFound"
+msgstr "Šis naudotojas jau yra registruotas žurnale"
+
+msgid "userInvitation.search.userNotFound"
+msgstr "Naudotojui šiame žurnale nėra priskirtas joks vaidmuo"
+
+msgid "userInvitation.searchUser.stepDescription"
+msgstr ""
+"Ieškokite naudotojo pagal el. pašto adresą, naudotojo vardą arba ORCID iD. "
+"Norėdami pradėti, įveskite bent vieną paieškos kriterijų. Jei naudotojo "
+"sistemoje nėra, galite pakviesti jį tapti jūsų žurnalo bendruomenės dalimi "
+"ir priskirti vaidmenį. Jei naudotojas jau yra sistemoje, galite peržiūrėti "
+"jo informaciją ir priskirti papildomus vaidmenis."
+
+msgid "userInvitation.sendMail.stepDescription"
+msgstr ""
+"Išsiųskite naudotojui el. laišką, kuriame būtų pateikta informacija apie "
+"kvietimą, tolesnius veiksmus, žurnalo BDAR politiką ir ORCID iD patvirtinimą"

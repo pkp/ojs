@@ -17,6 +17,7 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "Plugin exportu pro DOAJ"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr ""
 "Export časopisu pro DOAJ a odeslání emailu s informacemi o časopisu zástupci "
@@ -25,6 +26,7 @@ msgstr ""
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Kontaktujte DOAJ pro vložení"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "Chcete-li zaregistrovat články z OJS, zadejte prosím klíč DOAJ API. Jinak "

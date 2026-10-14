@@ -7,8 +7,8 @@
 /**
  * @file api/v1/submissions/index.php
  *
- * Copyright (c) 2023 Simon Fraser University
- * Copyright (c) 2023 John Willinsky
+ * Copyright (c) 2023-2026 Simon Fraser University
+ * Copyright (c) 2023-2026 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @ingroup api_v1_submissions
@@ -27,8 +27,20 @@ if (in_array('jats', $urlParts)) {
     return new \PKP\handler\APIHandler(new \PKP\API\v1\jats\PKPJatsController());
 }
 
+if (in_array('dataCitations', $urlParts)) {
+    return new \PKP\handler\APIHandler(new \PKP\API\v1\dataCitations\PKPDataCitationController());
+}
+
+if (in_array('funders', $urlParts)) {
+    return new \PKP\handler\APIHandler(new \PKP\API\v1\funders\PKPFunderController());
+}
+
 if (count($urlParts) >= 8 && $urlParts[7] == 'bodyText') {
     return new \PKP\handler\APIHandler(new \PKP\API\v1\bodyText\PKPBodyTextController());
+}
+
+if (count($urlParts) >= 8 && $urlParts[7] == 'citations') {
+    return new \PKP\handler\APIHandler(new \PKP\API\v1\citations\PKPCitationController());
 }
 
 if (in_array('suggestions', $urlParts)) {
@@ -39,4 +51,11 @@ if (in_array('tasks', $urlParts)) {
     return new \PKP\handler\APIHandler(new \PKP\API\v1\submissions\tasks\EditorialTaskController());
 }
 
+if (in_array('mediaFiles', $urlParts)) {
+    return new \PKP\handler\APIHandler(new \PKP\API\v1\submissions\MediaFilesController());
+}
+
+if (in_array('reviewAssignments', $urlParts)) {
+    return new \PKP\handler\APIHandler(new \PKP\API\v1\submissions\reviewAssignments\ReviewAssignmentController());
+}
 return new \PKP\handler\APIHandler(new \APP\API\v1\submissions\SubmissionController());

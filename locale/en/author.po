@@ -111,7 +111,6 @@ msgstr "No submissions."
 msgid "author.submit.journalSection"
 msgstr "Journal Section"
 
-#, fuzzy
 msgid "author.submit.journalSectionDescription"
 msgstr "Submissions must be made to one of the journal's sections."
 

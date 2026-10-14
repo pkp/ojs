@@ -1180,9 +1180,6 @@ msgstr ""
 "\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">Політика щодо конфлікту інтересів</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Конфлікт інтересів"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Натисніть на зображенні, щоб ввести (або вставити) Вашу рецензію на це "
@@ -2191,11 +2188,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Подання {$submissionId} було повторно надіслано на рецензування."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} не прийняв {$round} раунд рецензування подання "
 "{$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} прийняв {$round} раунд рецензування подання {$submissionId}."

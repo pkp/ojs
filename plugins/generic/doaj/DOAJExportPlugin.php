@@ -129,6 +129,16 @@ class DOAJExportPlugin extends PubObjectsExportPlugin implements HasTaskSchedule
     }
 
     /**
+     * @copydoc Plugin::getEncryptedSettingFields()
+     */
+    public function getEncryptedSettingFields(): array
+    {
+        return [
+            'apiKey',
+        ];
+    }
+
+    /**
      * @copydoc \PKP\plugins\interfaces\HasTaskScheduler::registerSchedules()
      */
     public function registerSchedules(PKPScheduler $scheduler): void

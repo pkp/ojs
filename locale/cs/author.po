@@ -1,10 +1,10 @@
-# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2022, 2023.
+# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2022, 2023, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
-"PO-Revision-Date: 2023-04-22 22:54+0000\n"
+"PO-Revision-Date: 2026-09-04 12:24+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/author/cs/>\n"
 "Language: cs\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "author.submit"
 msgstr "Nový příspěvek"
@@ -94,13 +94,13 @@ msgid "author.submissions.queuedReviewRevisions"
 msgstr "V recenzním řízení: Jsou vyžádány menší úpravy"
 
 msgid "author.submissions.queuedEditingCopyedit"
-msgstr "Redakční úpravy: Vyžádáno copyeditování"
+msgstr "Redakční úpravy: Vyžádána jazyková redakce"
 
 msgid "author.submissions.queuedEditingProofread"
 msgstr "Redakční úpravy: Vyžádána jazyková korektura"
 
 msgid "author.submissions.uploadCopyeditedVersion"
-msgstr "Nahrát copyeditovanou verzi"
+msgstr "Nahrát verzi po jazykové redakci"
 
 msgid "author.submissions.proofreadingCorrections"
 msgstr "Opravy korektur"
@@ -133,7 +133,7 @@ msgstr ""
 "copyrightu."
 
 msgid "submission.submit.coverNote"
-msgstr "Komentáře pro editora"
+msgstr "Komentáře pro redaktora"
 
 msgid "author.submit.comments"
 msgstr "Vložte text (nepovinné)"
@@ -150,7 +150,7 @@ msgid "author.submit.reorder"
 msgstr "Přeuspořádat jméno autora"
 
 msgid "author.submit.selectPrincipalContact"
-msgstr "Hlavní kontakt pro korespondenci s editory."
+msgstr "Hlavní kontakt pro korespondenci s redaktory."
 
 msgid "author.submit.addAuthor"
 msgstr "Přidat autora"
@@ -178,7 +178,7 @@ msgid "author.submit.form.authorRequired"
 msgstr "Je vyžadován alespoň jeden autor."
 
 msgid "author.submit.form.authorRequiredFields"
-msgstr "Je vyžadováno jméno, příjmení a emailová adresa každého autora."
+msgstr "Je vyžadováno jméno, příjmení a e-mailová adresa každého autora."
 
 msgid "author.submit.form.titleRequired"
 msgstr "Vložte, prosím, název vašeho článku."
@@ -328,7 +328,7 @@ msgid "author.article.uploadAuthorVersion"
 msgstr "Nahrát autorovu verzi"
 
 msgid "author.article.copyeditedFile"
-msgstr "Copyeditovaný soubor"
+msgstr "Soubor po jazykové redakci"
 
 msgid "author.article.authorRevisedFile"
 msgstr "Soubor od autora"
@@ -336,6 +336,6 @@ msgstr "Soubor od autora"
 msgid "author.submit.authorSubmitLoginMessage"
 msgstr ""
 "Pro přispívání do tohoto časopisu je vyžadován uživatelský účet. To umožní "
-"našim editorům sledovat vaše příspěvky a kontaktovat Vás v případě, že se "
+"našim redaktorům sledovat vaše příspěvky a kontaktovat Vás v případě, že se "
 "změní stav vašeho příspěvku nebo pokud od vás budou vyžadovány další "
 "informace."

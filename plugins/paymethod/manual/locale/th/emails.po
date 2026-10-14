@@ -1,7 +1,7 @@
-# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024.
+# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-10-20 01:53+0000\n"
+"PO-Revision-Date: 2026-09-15 04:51+0000\n"
 "Last-Translator: Apichaya <apichaya_cc@thonburi-u.ac.th>\n"
 "Language-Team: Thai <http://translate.pkp.sfu.ca/projects/ojs/"
 "paymethod-manual-emails/th/>\n"
@@ -13,23 +13,20 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "emails.manualPaymentNotification.subject"
-msgstr "การแจ้งเตือนการชำระเงินด้วยวิธีการแมนนวล"
+msgstr "แจ้งการชำระเงินด้วยตนเอง"
 
-#, fuzzy
 msgid "emails.manualPaymentNotification.body"
 msgstr ""
-"การชำระเงินด้วยตนเองต้องดำเนินการสำหรับวารสาร {$contextName} และผู้ใช้ "
-"{senderName} (ชื่อผู้ใช้ \" {$senderUsername} \").<br />\n"
+"มีรายการชำระเงินด้วยตนเองที่ต้องดำเนินการสำหรับวารสาร {$contextName} "
+"โดยผู้ใช้ \"{$senderUsername}\"<br />\n"
 "<br />\n"
-"รายการที่ต้องชำระเงินคือ \"{$paymentName}\".<br />\n"
-"ค่าใช้จ่ายคือ {$paymentAmount} ({$paymentCurrencyCode}).<br />\n"
+"รายการที่ชำระคือ &quot;{$paymentName}&quot; <br />\n"
+"จำนวนเงิน {$paymentAmount} ({$paymentCurrencyCode})<br />\n"
 "<br />\n"
-"อีเมลนี้ถูกสร้างโดยปลั๊กอินการชำระเงินด้วยตนเองของ Open Journal Systems."
+"อีเมลฉบับนี้สร้างโดยส่วนเสริมการชำระเงินด้วยตนเองของ Open Journal Systems"
 
 msgid "emails.manualPaymentNotification.description"
-msgstr ""
-"แม่แบบอีเมลนี้ใช้เพื่อแจ้งให้ผู้จัดการวารสารทราบว่ามีการร้องขอการชำระเงินแบบแ"
-"มนนวล"
+msgstr "แม่แบบอีเมลนี้ใช้สำหรับแจ้งผู้จัดการวารสารว่ามีคำขอชำระเงินด้วยตนเอง"
 
 msgid "emailTemplate.variable.manualPaymentPlugin.senderUsername"
-msgstr "ชื่อผู้ใช้ของผู้ที่ทำการชำระเงิน"
+msgstr "ชื่อผู้ใช้ของผู้ที่ดำเนินการชำระเงิน"

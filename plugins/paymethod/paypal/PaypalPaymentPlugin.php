@@ -72,6 +72,16 @@ class PaypalPaymentPlugin extends PaymethodPlugin
     }
 
     /**
+     * @copydoc \PKP\plugins\Plugin::getEncryptedSettingFields()
+     */
+    public function getEncryptedSettingFields(): array
+    {
+        return [
+            'secret',
+        ];
+    }
+
+    /**
      * Add settings to the payments form
      *
      * @param string $hookName
@@ -114,6 +124,8 @@ class PaypalPaymentPlugin extends PaymethodPlugin
             ->addField(new \PKP\components\forms\FieldText('secret', [
                 'label' => __('plugins.paymethod.paypal.settings.secret'),
                 'value' => $this->getSetting($context->getId(), 'secret'),
+                'inputType' => 'password',
+                'autocomplete' => 'off',
                 'groupId' => 'paypalpayment',
             ]));
 

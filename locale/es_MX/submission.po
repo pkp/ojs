@@ -320,6 +320,7 @@ msgstr "¿Está seguro de que no desea que se programe su publicación?"
 msgid "publication.version.details"
 msgstr "Detalles de publicación de la versión {$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Discusiones de producción"
 
@@ -336,12 +337,15 @@ msgstr ""
 "{$editorName} revirtió la decisión de aceptar este envío y lo regreso a la "
 "etapa de revisión."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Enviado de regreso a revisión"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "El envío, {$title}, se regresó de nuevo a la etapa de revisión."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Envíe un correo electrónico a los autores para informarles de que su envío "

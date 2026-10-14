@@ -168,15 +168,18 @@ msgstr "तुम्ही प्रकाशित करू इच्छित
 msgid "publication.version.details"
 msgstr "आवृत्ती {$version} साठी प्रकाशनाचा तपशील"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "प्रकाशनासंबंधी विचारविनिमय"
 
 msgid "editor.submission.decision.backToReview"
 msgstr "पुनर्समीक्षणासाठी"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "समीक्षणाच्या टप्प्यावर परतवले"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "सादरीकरण {$title}, समीक्षणाच्या टप्प्यावर परत पाठवले गेले."
 
@@ -368,6 +371,7 @@ msgstr ""
 "{$editorName} ने हे सादरीकरण स्वीकारण्याचा निर्णय फिरवून ते पुनर्समीक्षणाच्या"
 " टप्प्यावर पाठवले."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "लेखकांना ई-मेलने त्यांचे सादरीकरण समीक्षणाच्या टप्प्यावर परत पाठवले जात आहे "

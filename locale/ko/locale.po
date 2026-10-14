@@ -1058,9 +1058,6 @@ msgstr ""
 msgid "reviewer.article.enterCompetingInterests"
 msgstr ""
 
-msgid "reviewer.competingInterests"
-msgstr ""
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 
@@ -1791,9 +1788,11 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr ""
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 

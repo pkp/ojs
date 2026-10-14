@@ -1,7 +1,7 @@
-# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
+# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-01-03 21:35+0000\n"
+"PO-Revision-Date: 2026-01-26 14:55+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/"
 "generic-driver/ky/>\n"
@@ -13,9 +13,9 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.generic.driver.displayName"
-msgstr "Модул \"Драйвер\""
+msgstr "DRIVER"
 
 msgid "plugins.generic.driver.description"
 msgstr ""
-"OAI-PMH интерфейсин DRIVER Guidelines 2.0 менен шайкеш келтирүү үчүн "
-"кеңейтип, OJS журналдарынын DRIVERге шайкеш келишине жардам берет."
+"DRIVER плагини OAI-PMH интерфейсин DRIVER Нускамалары 2.0 боюнча кеңейтет "
+"жана OJS журналдарынын DRIVER талаптарына шайкеш болушуна жардам берет."

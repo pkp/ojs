@@ -104,18 +104,4 @@ class InformationHandler extends Handler
     {
         $this->index(['sampleCopyrightWording'], $request);
     }
-
-    /**
-     * Initialize the template.
-     *
-     * @param \APP\core\Request $request
-     */
-    public function setupTemplate($request)
-    {
-        parent::setupTemplate($request);
-        if (!$request->getJournal()->getData('restrictSiteAccess')) {
-            $templateMgr = TemplateManager::getManager($request);
-            $templateMgr->setCacheability(TemplateManager::CACHEABILITY_PUBLIC);
-        }
-    }
 }

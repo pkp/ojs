@@ -25,7 +25,7 @@
 	<genre key="DATASET" category="3" dependent="0" supplementary="1" localeKey="default.genres.dataSet" />
 	<genre key="SOURCETEXTS" category="3" dependent="0" supplementary="1" localeKey="default.genres.sourceTexts" />
 	<genre key="MULTIMEDIA" category="1" dependent="1" supplementary="1" localeKey="default.genres.multimedia" />
-	<genre key="IMAGE" category="2" dependent="1" supplementary="0" localeKey="default.genres.image" />
+	<genre key="IMAGE" category="2" dependent="1" supplementary="0" supportsFileVariants="1" localeKey="default.genres.image" />
 	<genre key="STYLE" category="1" dependent="1" supplementary="0" localeKey="default.genres.styleSheet" />
 	<genre key="OTHER" category="3" dependent="0" supplementary="1" localeKey="default.genres.other" />
 </genres>

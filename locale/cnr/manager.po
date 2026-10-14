@@ -797,12 +797,6 @@ msgstr ""
 "koji OJS časopis koji ispunjava nekoliko osnovnih kriterija. PKP PN dodatak "
 "za OJS 3 je trenutno u razvoju i uskoro će bit dostupan u galeriji dodataka."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"LOCKSS licenca će se pojaviti u strani O časopisu odeljku Arhiviranje: <a "
-"href=\"http://www.lockss.org/community/publishers-titles-gln/\" target="
-"\"_blank\">LOCKSS Licenca</a>"
-
 msgid "manager.setup.lockssRegister"
 msgstr ""
 "Identifikujte 6-10 biblioteka koje će registrovati i sačuvati kod sebe "
@@ -836,11 +830,6 @@ msgstr "Prikazivanje sadržaja članka"
 
 msgid "manager.setup.subjectProvideExamples"
 msgstr "Napišite primere ključnih riječi ili tema kao smjernice za autore"
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"CLOCKSS licenca će biti prikazana u O časopisu pod Arhiviranje: <a href="
-"\"http://clockss.org/\" target=\"_blank\">CLOCKSS Licenca</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "Opis CLOCKSS licence"

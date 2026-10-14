@@ -1,19 +1,20 @@
 # Jonas Raoni Soares da Silva <weblate@raoni.org>, 2022.
+# Elisabeth Sawatzky <ejournals.ojs@uni-muenster.de>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:39-07:00\n"
-"PO-Revision-Date: 2022-07-02 13:32+0000\n"
-"Last-Translator: Jonas Raoni Soares da Silva <weblate@raoni.org>\n"
-"Language-Team: English (United States) <http://translate.pkp.sfu.ca/projects/"
-"ojs/manager/en_US/>\n"
-"Language: en_US\n"
+"PO-Revision-Date: 2026-09-07 14:43+0000\n"
+"Last-Translator: Elisabeth Sawatzky <ejournals.ojs@uni-muenster.de>\n"
+"Language-Team: English <http://translate.pkp.sfu.ca/projects/ojs/manager/en/>"
+"\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "manager.distribution.access"
 msgstr "Access"
@@ -53,6 +54,12 @@ msgstr "Use default patterns.<br />%j.v%vi%i for issues<br />%j.v%vi%i.%a for ar
 
 msgid "doi.manager.settings.doiCreationTime.copyedit"
 msgstr "Upon reaching the copyediting stage"
+
+msgid "manager.dois.filters.workflow"
+msgstr "Workflow"
+
+msgid "manager.dois.filters.inEditingOrPublished"
+msgstr "In Copyediting, Production, Published or with DOIs"
 
 msgid "manager.website.archiving"
 msgstr "Archiving"
@@ -613,7 +620,7 @@ msgid "manager.setup.journalHomepageHeaderDescription"
 msgstr "A graphic version of the journal's title and logo (as a .gif, .jpg, or .png file) can be uploaded for the homepage, which will replace the text version that otherwise appears."
 
 msgid "manager.setup.contextInitials"
-msgstr "Journal initials"
+msgstr "Journal Initials"
 
 msgid "manager.setup.selectCountry"
 msgstr "Select the country where this journal is located, or the country of the mailing address for the journal or publisher."
@@ -658,7 +665,7 @@ msgid "manager.setup.journalThumbnail.description"
 msgstr "A small logo or representation of the journal that can be used in lists of journals."
 
 msgid "manager.setup.contextTitle"
-msgstr "Journal title"
+msgstr "Journal Title"
 
 msgid "manager.setup.labelName"
 msgstr "Label name"
@@ -687,9 +694,6 @@ msgstr "LOCKSS and CLOCKSS"
 msgid "manager.setup.lockssEnable"
 msgstr "Enable LOCKSS to store and distribute journal content at participating libraries via a LOCKSS <a href=\"{$lockssUrl}\" target=\"_blank\">Publisher Manifest</a> page."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr "A LOCKSS license will appear in About the Journal under Archiving: <a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">LOCKSS License</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "LOCKSS License Description"
 
@@ -706,11 +710,6 @@ msgstr "LOCKSS"
 
 msgid "manager.setup.clockssEnable"
 msgstr "Enable CLOCKSS to store and distribute journal content at participating libraries via a CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank\">Publisher Manifest</a> page."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"A CLOCKSS license will appear in About the Journal under Archiving: <a href="
-"\"https://clockss.org\" target=\"_blank\">CLOCKSS License</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "CLOCKSS License Description"
@@ -962,6 +961,13 @@ msgstr "Continuous Publication"
 
 msgid "manager.setup.issuelessPublication"
 msgstr "Issueless Publication"
+
+msgid "manager.setup.metadata.articleNumber.description"
+msgstr ""
+"The article number can be used in citations and other metadata instead of page numbers."
+
+msgid "manager.setup.metadata.articleNumber.enable"
+msgstr "Enable article number metadata"
 
 msgid "manager.statistics.statistics"
 msgstr "Journal Statistics"
@@ -2117,21 +2123,20 @@ msgstr "This email notifies a registered reader that the Manager has created a s
 msgid "mailable.subscriptionExpiresSoon.name"
 msgstr "Subscription Expires Soon"
 
-#, fuzzy
 msgid "mailable.subscriptionExpiresSoon.description"
 msgstr "This email is sent automatically to notify a subscriber that their subscription expires soon."
 
 msgid "mailable.subscriptionExpired.name"
 msgstr "Subscription Expired"
 
-#, fuzzy
 msgid "mailable.subscriptionExpired.description"
-msgstr "This Email sent automatically to notify a subscriber that their subscription has expired"
+msgstr ""
+"This Email sent automatically to notify a subscriber that their subscription "
+"has expired."
 
 msgid "mailable.subscriptionExpiredLast.name"
 msgstr "Subscription Expired Last"
 
-#, fuzzy
 msgid "mailable.subscriptionExpiredLast.description"
 msgstr "This email sent automatically to notify a subscriber the second time that their subscription has expired"
 
@@ -2231,3 +2236,6 @@ msgstr "Payment Request"
 
 msgid "mailable.paymentRequest.description"
 msgstr "This automated email is sent to the author to request payment of the publication fee when their submission is accepted."
+
+msgid "manager.setup.enableEnrollmentMasthead.description"
+msgstr "If desired, a masthead can be generated automatically based on user enrollments, including start and end dates. See also Settings > Journal > Masthead."

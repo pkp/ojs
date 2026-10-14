@@ -1145,9 +1145,6 @@ msgstr ""
 "یاخود نا(see <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "بەرژەوەندییە ڕکابەرەکان"
-
 msgid "reviewer.article.enterReviewA"
 msgstr "کلیک لەسەر ئەم ئایکۆنە بکە بۆ نوسینی هەڵسەنگاندنەکەت."
 
@@ -2138,11 +2135,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "توێژینەوەی {$submissionId} دوبارە نێردرایەوە بۆ هەڵسەنگاندن."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "هەڵسەنگێنەر{$reviewerName}بەخشرا لە خولی {$round} بۆ هەڵسەنگاندنی "
 "{$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "هەڵسەنگێنەر{$reviewerName} خولی {$round} پەسەند کرد بۆ هەڵسەنگاندنی "

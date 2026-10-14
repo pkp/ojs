@@ -312,6 +312,7 @@ msgstr "Jeste li sigurni da ne želite ovo zakazati za objavu?"
 msgid "publication.version.details"
 msgstr "Detalji objave za verziju {$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Rasprave o produkciji"
 
@@ -326,12 +327,15 @@ msgstr ""
 "{$editorName} je poništio odluku o prihvaćanju ove prijave i vratio je u "
 "fazu recenzije."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Vraćeno na recenziju"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "Prijava, {$title}, je vraćena u fazu recenzije."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Pošaljite e-mail autorima kako biste ih obavijestili da se njihova prijava "

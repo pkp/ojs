@@ -93,13 +93,19 @@ class DOAJInfoSender extends ScheduledTask
     protected function _getJournals(): array
     {
         $plugin = $this->_plugin;
+        PluginRegistry::loadCategory('generic');
+        $genericPlugin = PluginRegistry::getPlugin('generic', 'doajplugin');
         $contextDao = Application::getContextDAO(); /** @var JournalDAO $contextDao */
         $journalFactory = $contextDao->getAll(true);
 
         $journals = [];
         while ($journal = $journalFactory->next()) { /** @var  Journal $journal */
             $journalId = $journal->getId();
-            if (!$plugin->getSetting($journalId, 'apiKey') || !$plugin->getSetting($journalId, 'automaticRegistration')) {
+            if (
+                ($genericPlugin && !$genericPlugin->getEnabled($journalId)) ||
+                !$plugin->getSetting($journalId, 'apiKey') ||
+                !$plugin->getSetting($journalId, 'automaticRegistration')
+            ) {
                 continue;
             }
             $journals[] = $journal;
