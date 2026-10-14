@@ -832,10 +832,14 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
     /**
      * Create funding references node.
      */
-    public function createFundingReferencesNode(DOMDocument $doc, Publication $publication, Submission $submission): ?DOMNode
+    public function createFundingReferencesNode(DOMDocument $doc, ?Publication $publication, ?Submission $submission): ?DOMNode
     {
         /** @var DataciteExportDeployment $deployment */
         $deployment = $this->getDeployment();
+
+        if (!$publication || !$submission) {
+            return null;
+        }
 
         $funders = $submission->getData('funders');
         if ($funders->isEmpty()) {
