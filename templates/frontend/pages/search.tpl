@@ -34,7 +34,7 @@
 	{capture name="searchFormUrl"}{url path=\APP\core\Application::get()->getRequest()->getRequestedArgs() escape=false}{/capture}
 	{assign var=formUrlParameters value=[]}{* Prevent Smarty warning *}
 	{$smarty.capture.searchFormUrl|parse_url:$smarty.const.PHP_URL_QUERY|default:""|parse_str:$formUrlParameters}
-	<form class="cmp_form" method="get" action="{$smarty.capture.searchFormUrl|strtok:"?"|escape}" role="form">
+	<form class="cmp_form" method="get" action="{$smarty.capture.searchFormUrl|strtok:"?"|escape}" role="search">
 		{foreach from=$formUrlParameters key=paramKey item=paramValue}
 			<input type="hidden" name="{$paramKey|escape}" value="{$paramValue|escape}"/>
 		{/foreach}
