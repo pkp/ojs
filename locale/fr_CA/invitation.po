@@ -20,6 +20,7 @@ msgstr "Cette personne n'a pas de rôle dans cette revue"
 msgid "userInvitation.enterDetails.stepDescription"
 msgstr "Vous pouvez les inviter à assumer un rôle pour la revue"
 
+#, fuzzy
 msgid "userInvitation.modal.message"
 msgstr ""
 "Un nouveau rôle a été proposé à {$email}. Vous pouvez connaître sa décision "
@@ -29,6 +30,7 @@ msgstr ""
 msgid "userInvitation.search.userFound"
 msgstr "Cette personne a déjà un rôle dans cette revue"
 
+#, fuzzy
 msgid "userInvitation.searchUser.stepDescription"
 msgstr ""
 "Recherchez la personne en utilisant son adresse courriel, son nom "

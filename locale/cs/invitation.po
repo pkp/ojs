@@ -63,12 +63,14 @@ msgstr ""
 msgid "invitation.role.masthead"
 msgstr "Tiráž časopisu"
 
+#, fuzzy
 msgid "userInvitation.modal.message"
 msgstr ""
 "{$email} byl pozván do nové role v OJS. O rozhodnutí uživatele můžete být "
 "informováni na stránce Uživatelé a role, ve vašich oznámeních OJS a/nebo ve "
 "vašem e-mailu"
 
+#, fuzzy
 msgid "userInvitation.searchUser.stepDescription"
 msgstr ""
 "Vyhledejte uživatele pomocí jeho e-mailové adresy, uživatelského jména nebo "
