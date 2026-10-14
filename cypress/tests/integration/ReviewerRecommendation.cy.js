@@ -56,6 +56,7 @@ describe('Customize reviewer recommendations test', () => {
 			cy.get('[data-cy="active-modal"]')
 				.contains('button', 'Close')
 				.click({force: true});
+			cy.focused().should('have.attr', 'aria-haspopup', 'menu');
     });
 
     cy.logout();
