@@ -109,7 +109,7 @@ class DoiController extends PKPDoiController
         $responseData = $agency->exportIssues($issues, $context);
         if (!empty($responseData['xmlErrors'])) {
             return response()->json([
-                'error' => __('api.dois.400.xmlExportFailed')
+                'error' => $this->getXmlExportFailedMessage($responseData['xmlErrors'])
             ], Response::HTTP_BAD_REQUEST);
         }
 
