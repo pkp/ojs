@@ -23,6 +23,7 @@ use Illuminate\Database\Query\JoinClause;
 class Collector extends \PKP\submission\Collector
 {
     public ?array $issueIds = null;
+    public ?array $issuePublicationStatuses = null;
     public ?array $sectionIds = null;
     protected ?bool $latestPublished = null;
 
@@ -33,10 +34,16 @@ class Collector extends \PKP\submission\Collector
 
     /**
      * Limit results to submissions assigned to these issues
+     *
+     * @param ?array $publicationStatuses Require the publication in the issue to have one of
+     *   these statuses. Without it a submission matches on any publication in the issue,
+     *   whatever its status. Note this constrains the publication assigned to the issue, not
+     *   the submission's current publication -- those can be different publications.
      */
-    public function filterByIssueIds(array $issueIds): self
+    public function filterByIssueIds(array $issueIds, ?array $publicationStatuses = null): self
     {
         $this->issueIds = $issueIds;
+        $this->issuePublicationStatuses = $publicationStatuses;
         return $this;
     }
 
@@ -72,7 +79,11 @@ class Collector extends \PKP\submission\Collector
             $q->whereIn('s.submission_id', function ($query) {
                 $query->select('p.submission_id')
                     ->from('publications as p')
-                    ->whereIn('p.issue_id', $this->issueIds);
+                    ->whereIn('p.issue_id', $this->issueIds)
+                    ->when(
+                        is_array($this->issuePublicationStatuses),
+                        fn ($query) => $query->whereIn('p.status', $this->issuePublicationStatuses)
+                    );
             });
         }
 
