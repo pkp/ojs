@@ -3,6 +3,7 @@ import Vue from '@vitejs/plugin-vue';
 import path from 'path';
 import {viteStaticCopy} from 'vite-plugin-static-copy';
 import i18nExtractKeys from './lib/pkp/tools/i18nExtractKeys.vite.js';
+import vivliostyleCompat from './lib/pkp/tools/vivliostyleCompat.vite.js';
 
 export default defineConfig(({mode}) => {
 	// its very unclear how the plugin-vue is handling inProduction option
@@ -13,6 +14,7 @@ export default defineConfig(({mode}) => {
 
 	return {
 		plugins: [
+			vivliostyleCompat(),
 			i18nExtractKeys({
 				// existing in tpl files, to be replaced in future
 				extraKeys: [
@@ -56,6 +58,14 @@ export default defineConfig(({mode}) => {
 					{
 						src: 'node_modules/chart.js/dist/**/*.umd.js',
 						dest: 'js/build/chart.js',
+					},
+					{
+						src: 'node_modules/vivliostyle-pdf/public/fonts/*',
+						dest: 'js/build/vivliostyle-pdf/fonts',
+					},
+					{
+						src: 'node_modules/vivliostyle-pdf/public/woff2/*',
+						dest: 'js/build/vivliostyle-pdf/woff2',
 					},
 					{
 						src: 'node_modules/mathjax/**/*',
