@@ -53,7 +53,7 @@ class SkipExternalReview extends PKPSkipExternalReview
         foreach ($actions as $action) {
             switch ($action['id']) {
                 case self::ACTION_PAYMENT:
-                    $this->requestPayment($submission, $editor, $context);
+                    $this->runPaymentAction($action, $submission, $editor, $context);
                     break;
             }
         }
