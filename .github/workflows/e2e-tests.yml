@@ -7,7 +7,7 @@ on:
   push:
     branches: ['*']
   pull_request:
-    branches: ['main']
+    branches: ['ore']
 
 concurrency:
   group: e2e-hook-${{ github.ref }}
@@ -20,7 +20,11 @@ jobs:
       app: ojs
       app_repo: ${{ github.repository }}
       app_ref: ${{ github.sha }}
+      # This is the `ore` branch: its suite is the pkp-e2e branch of the same
+      # name (cut from pkp-e2e main where ore was cut from OJS main, and moved
+      # by matching cherry-picks), not pkp-e2e main, which follows OJS main.
+      e2e_ref: ore
       # The PR's branch name. When a pkp-e2e branch of the same name exists
       # (a "companion" carrying the spec and test updates this change needs),
-      # the suite runs from it instead of pkp-e2e main.
+      # the suite runs from it instead of pkp-e2e ore.
       companion_branch: ${{ github.head_ref || github.ref_name }}
