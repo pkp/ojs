@@ -74,12 +74,14 @@ msgstr "Ovaj korisnik već postoji u časopisu"
 msgid "userInvitation.search.userNotFound"
 msgstr "Ovaj korisnik nema ulogu u ovom časopisu"
 
+#, fuzzy
 msgid "userInvitation.modal.message"
 msgstr ""
 "{$email} je pozvan da preuzme novu ulogu u OJS-u. Informacije o odluci "
 "korisnika možete pratiti na stranici Korisnici i uloge, u svojim OJS "
 "obavijestima i/ili u e-pošti"
 
+#, fuzzy
 msgid "userInvitation.searchUser.stepDescription"
 msgstr ""
 "Pretražite korisnika prema adresi e-pošte, korisničkom imenu ili ORCID iD-u. "
