@@ -43,6 +43,23 @@
 			"type": "boolean",
 			"apiSummary": true
 		},
+		"generatedFrom": {
+			"type": "string",
+			"description": "The source that generated this galley. A value of editor indicates the text editor.",
+			"apiSummary": true
+		},
+		"generatedFromLabel": {
+			"type": "string",
+			"description": "A localized label describing the source that generated the galley.",
+			"apiSummary": true,
+			"readOnly": true
+		},
+		"revisionLabel": {
+			"type": "string",
+			"description": "A localized revision label, empty when the galley file has no previous revisions.",
+			"apiSummary": true,
+			"readOnly": true
+		},
 		"locale": {
 			"type": "string",
 			"description": "The primary locale of this galley.",
