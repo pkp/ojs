@@ -14,28 +14,28 @@
  * @uses $currentTitleKey string Translation key for title of current page.
  *}
 
-<nav class="cmp_breadcrumbs" role="navigation" aria-label="{translate key="navigation.breadcrumbLabel"}">
+<nav class="cmp_breadcrumbs" aria-label="{translate key="navigation.breadcrumbLabel"}">
 	<ol>
 		<li>
 			<a href="{url page="index" router=\PKP\core\PKPApplication::ROUTE_PAGE}">
 				{translate key="common.homepageNavigationLabel"}
 			</a>
-			<span class="separator">{translate key="navigation.breadcrumbSeparator"}</span>
+			<span class="separator" aria-hidden="true">{translate key="navigation.breadcrumbSeparator"}</span>
 		</li>
 		<li>
 			<a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE page="issue" op="archive"}">
 				{translate key="navigation.archives"}
 			</a>
-			<span class="separator">{translate key="navigation.breadcrumbSeparator"}</span>
+			<span class="separator" aria-hidden="true">{translate key="navigation.breadcrumbSeparator"}</span>
 		</li>
-		<li class="current" aria-current="page">
-			<span aria-current="page">
+		<li class="current">
+			<a href="{url op="view" path=$issue->getBestIssueId()}" aria-current="page">
 				{if $currentTitleKey}
 					{translate key=$currentTitleKey}
 				{else}
 					{$currentTitle|escape}
 				{/if}
-			</span>
+			</a>
 		</li>
 	</ol>
 </nav>
