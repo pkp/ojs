@@ -1,13 +1,14 @@
 # Carla Marques <carla.marques@usdb.uminho.pt>, 2022.
 # José Carvalho <jcarvalho@keep.pt>, 2022, 2023.
 # Pedro Calheno Pinto <ppinto@keep.pt>, 2026.
+# Marta Morgado <marta.morgado@usdb.uminho.pt>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:18-08:00\n"
-"PO-Revision-Date: 2026-08-18 18:19+0000\n"
-"Last-Translator: Pedro Calheno Pinto <ppinto@keep.pt>\n"
+"PO-Revision-Date: 2026-10-21 10:59+0000\n"
+"Last-Translator: Marta Morgado <marta.morgado@usdb.uminho.pt>\n"
 "Language-Team: Portuguese <http://translate.pkp.sfu.ca/projects/ojs/emails/"
 "pt/>\n"
 "Language: pt\n"
@@ -106,14 +107,15 @@ msgstr "Novo volume publicado: {$issueIdentification}"
 
 msgid "emails.issuePublishNotify.body"
 msgstr ""
-"<p>Caro {$recipientName},</p><p>É com prazer que anunciamos a publicação <a "
-"href=\"{$issueUrl}\">{$issueIdentification}</a> de {$contextName}. "
+"<p>Caro(a) {$recipientName},</p><p>É com prazer que anunciamos a publicação "
+"do <a href=\"{$issueUrl}\">{$issueIdentification}</a> de {$contextName}. "
 "Convidamos à leitura e partilha deste trabalho nas suas redes.</"
 "p><p>Obrigado aos autores, revisores e editores por todos os contributos, e "
-"aos leitores pelo continuado interesse.</p><p>Obrigado,</p>{$signature}"
+"aos leitores pelo contínuo interesse.</p><p> "
+"{$issueToc}</p><p>Obrigado,</p>{$signature}"
 
 msgid "emails.editorAssign.subject"
-msgstr "Foi designado como editor para uma submissão de {$contextName}"
+msgstr "Foi designado(a) como editor(a) para uma submissão de {$contextName}"
 
 msgid "emails.editorAssign.body"
 msgstr ""
