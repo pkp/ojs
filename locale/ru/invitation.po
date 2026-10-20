@@ -1,2 +1,85 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2026-10-21 10:59+0000\n"
+"Last-Translator: Potatuev Dmitriy <sfedu08@yandex.ru>\n"
+"Language-Team: Russian <http://translate.pkp.sfu.ca/projects/ojs/invitation/"
+"ru/>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "acceptInvitation.detailsReview.nextButtonLabel"
+msgstr "Создать учетную запись и принять приглашение"
+
+msgid "acceptInvitation.accountDetails.stepLabel"
+msgstr "{$step} - Создание учетной записи OJS"
+
+msgid "acceptInvitation.accountDetails.stepName"
+msgstr "Создание учетной записи OJS"
+
+msgid "invitation.wizard.pageTitleDescription"
+msgstr ""
+"Вы приглашаете пользователя на роль в OJS с отображением в выходных данных "
+"журнала"
+
+msgid "acceptInvitation.verifyOrcid.stepDescription"
+msgstr ""
+"Вы можете подтвердить свой ORCID iD или пропустить этот шаг. Если вы решите "
+"пропустить его сейчас, вы сможете подтвердить свой ORCID iD позже в разделе "
+"профиля в OJS"
+
+msgid "acceptInvitation.modal.title"
+msgstr "Вам назначена новая роль в OJS"
+
+msgid "userInvitation.search.userFound"
+msgstr "Пользователь уже существует в журнале"
+
+msgid "userInvitation.search.userNotFound"
+msgstr "Пользователь не имеет роли в этом журнале"
+
+msgid "userInvitation.sendMail.stepDescription"
+msgstr ""
+"Отправьте пользователю электронное письмо, чтобы сообщить ему о приглашении, "
+"дальнейших шагах, политике конфиденциальности журнала (GDPR) и проверке ORCID"
+
+msgid "acceptInvitation.modal.message"
+msgstr ""
+"Вы успешно приняли приглашение и ваша учетная запись создана. Теперь вы "
+"можете приступить к работе с журналом."
+
+msgid "invitation.orcid.acceptInvitation.message"
+msgstr ""
+"Чтобы связать ваш профиль с ORCID, нажмите кнопку ниже. Если вы не хотите "
+"этого делать, просто пропустите этот шаг."
+
+msgid "invitation.role.masthead"
+msgstr "Отображение в выходных данных"
+
+msgid "userInvitation.roleTable.journalMasthead"
+msgstr "Отображение в выходных данных"
+
+msgid "userInvitation.enterDetails.stepDescription"
+msgstr "Вы можете пригласить их занять роль в OJS"
+
+msgid "userInvitation.modal.message"
+msgstr ""
+"{$email} Пользователь успешно приглашен. На указанный адрес электронной "
+"почты отправлено письмо со ссылкой для принятия приглашения."
+
+msgid "userInvitation.searchUser.stepDescription"
+msgstr ""
+"Если пользователь не существует, вы можете пригласить его на роли. Если "
+"пользователь уже существует в системе, вы можете просмотреть его информацию "
+"и пригласить его на дополнительные роли."
+
+msgid "acceptInvitation.accountDetails.stepDescription"
+msgstr ""
+"Чтобы начать работу с OJS и принять новую роль, вам необходимо создать у нас "
+"учетную запись. Для этого введите имя пользователя и пароль."
+
+msgid "acceptInvitation.detailsReview.stepDescription"
+msgstr "Проверьте данные, чтобы начать выполнение своих новых ролей в OJS"
