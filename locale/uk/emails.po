@@ -1,11 +1,11 @@
 # IgorVeha <igor.veha@gmail.com>, 2022.
-# Petro Bilous <petrobilous@ukr.net>, 2023, 2025.
+# Petro Bilous <petrobilous@ukr.net>, 2023, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:19-08:00\n"
-"PO-Revision-Date: 2025-03-22 19:52+0000\n"
+"PO-Revision-Date: 2026-10-21 10:59+0000\n"
 "Last-Translator: Petro Bilous <petrobilous@ukr.net>\n"
 "Language-Team: Ukrainian <http://translate.pkp.sfu.ca/projects/ojs/emails/uk/"
 ">\n"
@@ -107,7 +107,7 @@ msgstr "Щойно опубліковано: {$issueIdentification} \"{$contextN
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "<p>Шановний(-а) {$recipientName}!</p><p>Раді повідомити про опублікування <a "
-"href=\"{$issueUrl}\">{$issueIdentification} \"{$contextName}\"</a>. "
+"href=\"{$issueUrl}\">{$issueIdentification}</a> \"{$contextName}\". "
 "Запрошуємо Вас прочитати та поділитися цією роботою зі своєю науковою "
 "спільнотою.</p><p>Велика подяка нашим авторам, рецензентам і редакторам за "
 "їхній цінний внесок, а нашим читачам за ваш постійний "
