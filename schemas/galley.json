@@ -48,15 +48,9 @@
 			"description": "The source that generated this galley. A value of editor indicates the text editor.",
 			"apiSummary": true
 		},
-		"generatedFromLabel": {
-			"type": "string",
-			"description": "A localized label describing the source that generated the galley.",
-			"apiSummary": true,
-			"readOnly": true
-		},
-		"revisionLabel": {
-			"type": "string",
-			"description": "A localized revision label, empty when the galley file has no previous revisions.",
+		"revisionCount": {
+			"type": "integer",
+			"description": "The number of versions of the galley file, including the original. A value above 1 means the file has been revised.",
 			"apiSummary": true,
 			"readOnly": true
 		},
