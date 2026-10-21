@@ -382,10 +382,7 @@ class ArticleHandler extends Handler
             // The issue may not exist, if this is an editorial user
             // and scheduling hasn't been completed yet for the article.
             $issueAction = new IssueAction();
-            $subscriptionRequired = false;
-            if ($issue) {
-                $subscriptionRequired = $issueAction->subscriptionRequired($issue, $context);
-            }
+            $subscriptionRequired = $issueAction->subscriptionRequired($issue, $context);
 
             $subscribedUser = $issueAction->subscribedUser($user, $context, isset($issue) ? $issue->getId() : null, $article);
             $subscribedDomain = $issueAction->subscribedDomain($request, $context, isset($issue) ? $issue->getId() : null, $article);
@@ -620,13 +617,9 @@ class ArticleHandler extends Handler
 
         // Make sure the reader has rights to view the article/issue.
         if ($this->publication->getData('status') == PKPPublication::STATUS_PUBLISHED) {
-
-            if (!$issue) {
-                return true;
-            }
-
+            // An article published without an issue has $issue null: the same checks apply.
             $subscriptionRequired = $issueAction->subscriptionRequired($issue, $context);
-            $isSubscribedDomain = $issueAction->subscribedDomain($request, $context, $issue->getId(), $submission);
+            $isSubscribedDomain = $issueAction->subscribedDomain($request, $context, $issue?->getId(), $submission);
 
             // Check if login is required for viewing.
             if (!$isSubscribedDomain && !Validation::isLoggedIn() && $context->getData('restrictArticleAccess') && isset($galleyId) && $galleyId) {
@@ -637,12 +630,12 @@ class ArticleHandler extends Handler
             // or if the user is just requesting the abstract
             if ((!$isSubscribedDomain && $subscriptionRequired) && (isset($galleyId) && $galleyId)) {
                 // Subscription Access
-                $subscribedUser = $issueAction->subscribedUser($user, $context, $issue->getId(), $submission);
+                $subscribedUser = $issueAction->subscribedUser($user, $context, $issue?->getId(), $submission);
 
                 $paymentManager = Application::get()->getPaymentManager($context);
 
                 $purchasedIssue = false;
-                if (!$subscribedUser && $paymentManager->purchaseIssueEnabled()) {
+                if (!$subscribedUser && $issue && $paymentManager->purchaseIssueEnabled()) {
                     $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /** @var OJSCompletedPaymentDAO $completedPaymentDao */
                     $purchasedIssue = $completedPaymentDao->hasPaidPurchaseIssue($userId, $issue->getId());
                 }

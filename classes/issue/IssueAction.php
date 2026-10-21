@@ -39,22 +39,27 @@ class IssueAction
      */
 
     /**
-     * Checks if subscription is required for viewing the issue
+     * Checks if subscription is required for viewing the issue, or, with no
+     * issue, an article published without one (which follows the journal's
+     * publishing mode, as a new issue does)
      *
      * @hook IssueAction::subscriptionRequired [[&$journal, &$issue, &$result]]
      */
-    public function subscriptionRequired(Issue $issue, Journal $journal): bool
+    public function subscriptionRequired(?Issue $issue, Journal $journal): bool
     {
-        if ($journal->getId() != $issue->getJournalId()) {
+        if ($issue && $journal->getId() != $issue->getJournalId()) {
             throw new Exception('Issue does not match journal!');
         }
 
         // Check subscription state.
-        $result = $journal->getData('publishingMode') == Journal::PUBLISHING_MODE_SUBSCRIPTION &&
-            $issue->getAccessStatus() != Issue::ISSUE_ACCESS_OPEN && (
-                is_null($issue->getOpenAccessDate()) ||
-                strtotime($issue->getOpenAccessDate()) > time()
-            );
+        $result = $journal->getData('publishingMode') == Journal::PUBLISHING_MODE_SUBSCRIPTION && (
+            !$issue || (
+                $issue->getAccessStatus() != Issue::ISSUE_ACCESS_OPEN && (
+                    is_null($issue->getOpenAccessDate()) ||
+                    strtotime($issue->getOpenAccessDate()) > time()
+                )
+            )
+        );
         Hook::call('IssueAction::subscriptionRequired', [&$journal, &$issue, &$result]);
         return $result;
     }
