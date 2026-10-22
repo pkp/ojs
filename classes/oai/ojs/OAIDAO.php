@@ -308,7 +308,7 @@ class OAIDAO extends PKPOAIDAO
                         'dot.set_spec',
                         'dot.oai_identifier'
                     ])
-                    ->when(isset($journalId), function ($query, $journalId) {
+                    ->when(isset($journalId), function ($query) use ($journalId) {
                         return $query->join('data_object_tombstone_oai_set_objects AS tsoj', function ($join) use ($journalId) {
                             $join->on('tsoj.tombstone_id', '=', 'dot.tombstone_id');
                             $join->where('tsoj.assoc_type', '=', Application::ASSOC_TYPE_JOURNAL);
