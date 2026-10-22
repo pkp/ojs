@@ -238,6 +238,7 @@
 		<!-- Needs to be re-executed on every minor upgrade, the user might still be using an outdated plugin -->
 		<migration class="APP\migration\upgrade\v3_4_0\I9813_QuickSubmitSubmissionProgressType"/>
 		<migration class="PKP\migration\upgrade\v3_4_0\I9822_ChangeUsageStatsTemporaryTablesIndexes"/>
+		<migration class="PKP\migration\upgrade\v3_4_0\I11758_RedispatchRegionCodesFixingJobs"/>
 	</upgrade>
 
 	<upgrade minversion="3.4.0.0" maxversion="3.4.0.10">
