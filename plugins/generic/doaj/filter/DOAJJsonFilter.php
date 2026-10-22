@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/doaj/filter/DOAJJsonFilter.php
  *
- * Copyright (c) 2014-2025 Simon Fraser University
- * Copyright (c) 2000-2025 John Willinsky
+ * Copyright (c) 2014-2026 Simon Fraser University
+ * Copyright (c) 2000-2026 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DOAJJsonFilter
@@ -123,11 +123,11 @@ class DOAJJsonFilter extends PKPImportExportFilter
         }
         // Volume, Number
         $volume = $issue?->getVolume();
-        if (!empty($volume)) {
+        if (!empty($volume) && $issue->getShowVolume()) {
             $doajArticle['bibjson']['journal']['volume'] = $volume;
         }
         $issueNumber = $issue?->getNumber();
-        if (!empty($issueNumber)) {
+        if (!empty($issueNumber) && $issue->getShowNumber()) {
             $doajArticle['bibjson']['journal']['number'] = $issueNumber;
         }
 
@@ -164,8 +164,10 @@ class DOAJJsonFilter extends PKPImportExportFilter
         $startPage = $publication->getStartingPage();
         $endPage = $publication->getEndingPage();
         if (isset($startPage) && $startPage !== '') {
-            $doajArticle['bibjson']['start_page'] = $startPage;
-            $doajArticle['bibjson']['end_page'] = $endPage;
+            $doajArticle['bibjson']['journal']['start_page'] = $startPage;
+            if (isset($endPage) && $endPage !== '') {
+                $doajArticle['bibjson']['journal']['end_page'] = $endPage;
+            }
         }
         // FullText URL
         $request = Application::get()->getRequest();
@@ -192,7 +194,7 @@ class DOAJJsonFilter extends PKPImportExportFilter
                 $author = ['name' => $articleAuthor->getFullName(false, false, $publicationLocale)];
                 $affiliations = $articleAuthor->getLocalizedAffiliationNamesAsString($publicationLocale);
                 if (!empty($affiliations)) {
-                    $author['affiliations'] = $affiliations;
+                    $author['affiliation'] = $affiliations;
                 }
                 if ($articleAuthor->getData('orcid') && $articleAuthor->getData('orcidIsVerified')) {
                     $author['orcid_id'] = $articleAuthor->getData('orcid');
@@ -216,9 +218,8 @@ class DOAJJsonFilter extends PKPImportExportFilter
             )
             ->all();
 
-        $allowedNoOfKeywords = array_slice($keywords[$publicationLocale] ?? [], 0, 6);
         if (!empty($keywords[$publicationLocale])) {
-            $doajArticle['bibjson']['keywords'] = $allowedNoOfKeywords;
+            $doajArticle['bibjson']['keywords'] = $keywords[$publicationLocale];
         }
 
         $json = json_encode($doajArticle);
