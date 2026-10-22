@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/doaj/filter/DOAJJsonFilter.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2000-2021 John Willinsky
+ * Copyright (c) 2014-2026 Simon Fraser University
+ * Copyright (c) 2000-2026 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DOAJJsonFilter
@@ -101,11 +101,11 @@ class DOAJJsonFilter extends PKPImportExportFilter
         }
         // Volume, Number
         $volume = $issue->getVolume();
-        if (!empty($volume)) {
+        if (!empty($volume) && $issue->getShowVolume()) {
             $article['bibjson']['journal']['volume'] = $volume;
         }
         $issueNumber = $issue->getNumber();
-        if (!empty($issueNumber)) {
+        if (!empty($issueNumber) && $issue->getShowNumber()) {
             $article['bibjson']['journal']['number'] = $issueNumber;
         }
 
@@ -141,8 +141,10 @@ class DOAJJsonFilter extends PKPImportExportFilter
         $startPage = $publication->getStartingPage();
         $endPage = $publication->getEndingPage();
         if (isset($startPage) && $startPage !== '') {
-            $article['bibjson']['start_page'] = $startPage;
-            $article['bibjson']['end_page'] = $endPage;
+            $article['bibjson']['journal']['start_page'] = $startPage;
+            if (isset($endPage) && $endPage !== '') {
+                $article['bibjson']['journal']['end_page'] = $endPage;
+            }
         }
         // FullText URL
         $request = Application::get()->getRequest();
@@ -179,9 +181,8 @@ class DOAJJsonFilter extends PKPImportExportFilter
         /** @var SubmissionKeywordDAO */
         $dao = DAORegistry::getDAO('SubmissionKeywordDAO');
         $keywords = $dao->getKeywords($publication->getId(), [$publicationLocale]);
-        $allowedNoOfKeywords = array_slice($keywords[$publicationLocale] ?? [], 0, 6);
         if (!empty($keywords[$publicationLocale])) {
-            $article['bibjson']['keywords'] = $allowedNoOfKeywords;
+            $article['bibjson']['keywords'] = $keywords[$publicationLocale];
         }
 
         $json = json_encode($article);
