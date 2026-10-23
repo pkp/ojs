@@ -60,6 +60,7 @@ msgstr ""
 msgid "invitation.role.masthead"
 msgstr "Žurnalo redakciniai duomenys"
 
+#, fuzzy
 msgid "invitation.wizard.pageTitleDescription"
 msgstr ""
 "Kviečiate naudotoją prisiimti vaidmenį OJS sistemoje ir būti nurodytam "

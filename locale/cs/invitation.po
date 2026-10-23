@@ -55,6 +55,7 @@ msgstr ""
 "rozhodnete tento krok nyní přeskočit, můžete své ORCID iD ověřit později v "
 "sekci svého profilu v OJS"
 
+#, fuzzy
 msgid "invitation.wizard.pageTitleDescription"
 msgstr ""
 "Zvete uživatele, aby převzal roli v OJS a zároveň se objevil v tiráži "

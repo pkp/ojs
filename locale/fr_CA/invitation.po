@@ -85,6 +85,7 @@ msgstr ""
 "Non vérifié. Vous pouvez valider votre identifiant ORCID à partir de votre "
 "profil dans OJS."
 
+#, fuzzy
 msgid "invitation.wizard.pageTitleDescription"
 msgstr ""
 "Vous invitez un utilisateur ou une utilisatrice à jouer un rôle dans OJS et "

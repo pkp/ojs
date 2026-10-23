@@ -66,6 +66,7 @@ msgstr ""
 "otsustate selle praegu vahele jätta, saate oma ORCIDi iD hiljem kinnitada "
 "OJS-i profiili jaotises"
 
+#, fuzzy
 msgid "invitation.wizard.pageTitleDescription"
 msgstr ""
 "Kutsute kasutajat täitma OJS-is rolli ning olema ühtlasi nimetatud ajakirja "

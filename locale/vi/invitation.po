@@ -47,6 +47,7 @@ msgstr ""
 msgid "invitation.role.masthead"
 msgstr "Tiêu đề tạp chí"
 
+#, fuzzy
 msgid "invitation.wizard.pageTitleDescription"
 msgstr ""
 "Bạn đang mời một người dùng đảm nhận một vai trò trong OJS, đồng thời xuất "

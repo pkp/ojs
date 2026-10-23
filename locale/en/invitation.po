@@ -29,7 +29,7 @@ msgid "invitation.role.masthead"
 msgstr "Journal Masthead"
 
 msgid "invitation.wizard.pageTitleDescription"
-msgstr "You are inviting a user to take a role in OJS along with appearing in the journal masthead"
+msgstr "You are inviting a user to take a role in OJS"
 
 msgid "userInvitation.enterDetails.stepDescription"
 msgstr "You can invite them to take up a role in OJS"

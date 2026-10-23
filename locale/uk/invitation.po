@@ -81,6 +81,7 @@ msgstr ""
 msgid "invitation.role.masthead"
 msgstr "Заголовок журналу"
 
+#, fuzzy
 msgid "invitation.wizard.pageTitleDescription"
 msgstr ""
 "Ви запрошуєте користувача взяти участь в OJS, а також з'явитися в заголовку "
