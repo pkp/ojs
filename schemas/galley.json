@@ -43,6 +43,17 @@
 			"type": "boolean",
 			"apiSummary": true
 		},
+		"generatedFrom": {
+			"type": "string",
+			"description": "The source that generated this galley. A value of editor indicates the text editor.",
+			"apiSummary": true
+		},
+		"revisionCount": {
+			"type": "integer",
+			"description": "The number of versions of the galley file, including the original. A value above 1 means the file has been revised.",
+			"apiSummary": true,
+			"readOnly": true
+		},
 		"locale": {
 			"type": "string",
 			"description": "The primary locale of this galley.",

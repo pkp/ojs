@@ -37,6 +37,7 @@
     "clone-deep": "^4.0.1",
     "copyfiles": "^2.4.1",
     "debounce": "^1.2.1",
+    "dompurify": "^3.4.16",
     "dropzone-vue3": "^1.0.2",
     "element-resize-event": "^3.0.6",
     "floating-vue": "^2.0.0",
@@ -50,17 +51,19 @@
     "pandoc-wasm": "^1.1.0",
     "pinia": "^2.3.1",
     "primevue": "^4.3.3",
+    "prosemirror-model": "1.25.8",
     "reka-ui": "^2.8.0",
     "swiper": "^12.1.2",
     "tiny-emitter": "^2.1.0",
     "tinymce": "^7.9.3",
     "uuid": "^9.0.1",
+    "vivliostyle-pdf": "^0.3.3",
     "vue": "^3.5.13",
     "vue-chartjs": "^5.3.2",
     "vue-draggable-plus": "^0.6.0"
   },
   "overrides": {
-    "vite": "^8.0.0-beta.14"
+    "vite": "^8.3.5"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.11.0",
@@ -72,7 +75,7 @@
     "cypress-file-upload": "^5.0.8",
     "cypress-iframe": "^1.0.1",
     "cypress-wait-until": "^2.0.1",
-    "dompurify": "^3.2.5",
+    "esbuild": "^0.27.7",
     "eslint": "^8.57.1",
     "eslint-plugin-vue": "^9.33.0",
     "google-closure-compiler-java": "^20200719.0.0",
@@ -83,7 +86,7 @@
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^3.4.17",
-    "vite": "^8.0.0-beta.14",
+    "vite": "^8.3.5",
     "vite-plugin-static-copy": "^3.1.1"
   },
   "prettier": {
