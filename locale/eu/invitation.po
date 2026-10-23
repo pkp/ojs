@@ -66,12 +66,14 @@ msgstr ""
 msgid "acceptInvitation.detailsReview.nextButtonLabel"
 msgstr "Onartu eta jarraitu OJSn"
 
+#, fuzzy
 msgid "userInvitation.modal.message"
 msgstr ""
 "{$email} rol berrira gonbidatu dute OJSn. Erabiltzailearen erabakiaren berri "
 "Erabiltzaileak eta Rolak orrian, zure OJS jakinarazpenetan eta/edo zure "
 "posta elektronikoan izan dezakezu"
 
+#, fuzzy
 msgid "userInvitation.searchUser.stepDescription"
 msgstr ""
 "Bilatu erabiltzailea bere helbide elektronikoa, erabiltzaile-izena edo ORCID "

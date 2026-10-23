@@ -27,6 +27,7 @@ msgstr ""
 msgid "userInvitation.enterDetails.stepDescription"
 msgstr "Аларды OJSте роль алууга чакыра аласыз"
 
+#, fuzzy
 msgid "userInvitation.modal.message"
 msgstr ""
 "{$email} OJSте жаңы ролго чакырылды. Колдонуучунун чечими жөнүндө «"
@@ -42,6 +43,7 @@ msgstr "Колдонуучу журналда мурунтан бар"
 msgid "userInvitation.search.userNotFound"
 msgstr "Колдонуучунун бул журналда ролу жок"
 
+#, fuzzy
 msgid "userInvitation.searchUser.stepDescription"
 msgstr ""
 "Колдонуучуну электрондук почта дареги, колдонуучу аты же ORCID ID аркылуу "
