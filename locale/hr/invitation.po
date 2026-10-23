@@ -63,6 +63,7 @@ msgstr ""
 "Pošaljite korisniku e-poruku kojom ga/ju informirate o pozivu, sljedećim "
 "koracima, GDPR pravilima časopisa i potvrdi ORCID iD-a"
 
+#, fuzzy
 msgid "invitation.wizard.pageTitleDescription"
 msgstr ""
 "Pozivate korisnika/icu da preuzme ulogu u OJS-u te da bude naveden/a u "

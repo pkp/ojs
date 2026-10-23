@@ -26,6 +26,7 @@ msgstr "Details ansehen, um mit Ihrer neuen Rolle in OJS zu arbeiten"
 msgid "invitation.role.masthead"
 msgstr "Impressum der Zeitschrift"
 
+#, fuzzy
 msgid "invitation.wizard.pageTitleDescription"
 msgstr ""
 "Sie laden eine/n Benutzer/in dazu ein, eine Rolle in OJS anzunehmen, sowie "

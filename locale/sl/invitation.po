@@ -36,6 +36,7 @@ msgstr ""
 msgid "invitation.role.masthead"
 msgstr "Kolofon revije"
 
+#, fuzzy
 msgid "invitation.wizard.pageTitleDescription"
 msgstr ""
 "Uporabnika vabite, da prevzame vlogo v OJS in se pojavi v kolofonu revije"

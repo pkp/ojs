@@ -37,6 +37,7 @@ msgstr ""
 msgid "invitation.role.masthead"
 msgstr "Титул на списанието (заглавна страница с екип на изданието)"
 
+#, fuzzy
 msgid "invitation.wizard.pageTitleDescription"
 msgstr ""
 "Каните потребител да участва в OJS, както и да се появи в титула на "

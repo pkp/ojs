@@ -58,6 +58,7 @@ msgstr ""
 "aukeratu baduzu, zure ORCID iDa OJSko zure profileko atalean egiaztatu ahal "
 "izango duzu geroago"
 
+#, fuzzy
 msgid "invitation.wizard.pageTitleDescription"
 msgstr ""
 "Erabiltzaile bat gonbidatzen ari zara OJSn rol bat hartzera eta "
