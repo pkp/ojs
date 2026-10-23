@@ -54,12 +54,14 @@ msgstr ""
 "i systemet. Om du behöver hjälp med att förstå hur något fungerar kan du "
 "klicka på knappen ”Hjälp”, som finns på flera ställen i systemet."
 
+#, fuzzy
 msgid "userInvitation.modal.message"
 msgstr ""
 "{$email} har blivit inbjuden till en ny roll i OJS. Du kan följa användarens "
 "beslut på sidan Användare och roller, via dina OJS-aviseringar och/eller via "
 "e-post"
 
+#, fuzzy
 msgid "userInvitation.searchUser.stepDescription"
 msgstr ""
 "Sök efter användaren med e-postadress, användarnamn eller ORCID-iD. Ange "
