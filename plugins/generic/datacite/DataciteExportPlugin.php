@@ -304,9 +304,9 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
                     'Content-Type' => 'application/xml;charset=UTF-8',
                 ],
             ]);
-        } catch (\GuzzleHttp\Exception\RequestException $e) {
+        } catch (\GuzzleHttp\Exception\TransferException $e) {
             $returnMessage = $e->getMessage();
-            if ($e->hasResponse()) {
+            if ($e instanceof \GuzzleHttp\Exception\RequestException && $e->hasResponse()) {
                 $returnMessage = $e->getResponse()->getBody() . ' (' . $e->getResponse()->getStatusCode() . ' ' . $e->getResponse()->getReasonPhrase() . ')';
             }
             $this->updateDepositStatus($object, Doi::STATUS_ERROR, $returnMessage);
@@ -323,9 +323,9 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
                 ],
                 'body' => "doi={$doi}\nurl={$url}",
             ]);
-        } catch (\GuzzleHttp\Exception\RequestException $e) {
+        } catch (\GuzzleHttp\Exception\TransferException $e) {
             $returnMessage = $e->getMessage();
-            if ($e->hasResponse()) {
+            if ($e instanceof \GuzzleHttp\Exception\RequestException && $e->hasResponse()) {
                 $returnMessage = $e->getResponse()->getBody() . ' (' . $e->getResponse()->getStatusCode() . ' ' . $e->getResponse()->getReasonPhrase() . ')';
             }
             $this->updateDepositStatus($object, Doi::STATUS_ERROR, $returnMessage);
