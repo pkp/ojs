@@ -47,6 +47,7 @@ msgstr "Танд OJS системд шинэ үүрэг оноолоо"
 msgid "invitation.role.masthead"
 msgstr "Сэтгүүлийн нэрийн товчлол (Masthead)"
 
+#, fuzzy
 msgid "invitation.wizard.pageTitleDescription"
 msgstr ""
 "Та хэрэглэгчийг OJS системд үүрэг гүйцэтгэх болон сэтгүүлийн нэрийн товчлол "

@@ -74,6 +74,7 @@ msgstr "Granska uppgifterna för att aktivera dina nya roller i OJS"
 msgid "invitation.role.masthead"
 msgstr "Tidskriftens redaktionella uppgifter"
 
+#, fuzzy
 msgid "invitation.wizard.pageTitleDescription"
 msgstr ""
 "Du bjuder in en användare att ta en roll i OJS och att visas i tidskriftens "

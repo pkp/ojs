@@ -20,6 +20,7 @@ msgstr "OJS'ye Kabul Et ve Devam Et"
 msgid "invitation.role.masthead"
 msgstr "Dergi Künyesi"
 
+#, fuzzy
 msgid "invitation.wizard.pageTitleDescription"
 msgstr ""
 "OJS’de bir kullanıcıyı rol almaya ve dergi künyesinde görünmeye davet "

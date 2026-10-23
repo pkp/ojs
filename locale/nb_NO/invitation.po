@@ -48,6 +48,7 @@ msgstr "Ikke bekreftet. Du kan bekrefte din ORCID iD fra profilen din i OJS."
 msgid "invitation.role.masthead"
 msgstr "Tidsskriftets kolofonside"
 
+#, fuzzy
 msgid "invitation.wizard.pageTitleDescription"
 msgstr ""
 "Du inviteres til å få en rolle på tidsskriftsplattformen og samtidig bli "

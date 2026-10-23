@@ -65,6 +65,7 @@ msgstr ""
 "pular agora, poderá verificar seu iD ORCID posteriormente na seção de perfil "
 "do OJS"
 
+#, fuzzy
 msgid "invitation.wizard.pageTitleDescription"
 msgstr ""
 "Você está convidando um usuário para assumir um papel no OJS, além de "

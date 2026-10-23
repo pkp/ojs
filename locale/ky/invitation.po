@@ -19,6 +19,7 @@ msgstr ""
 msgid "acceptInvitation.accountDetails.stepLabel"
 msgstr "{$step} - OJS эсебин түзүү"
 
+#, fuzzy
 msgid "invitation.wizard.pageTitleDescription"
 msgstr ""
 "Сиз колдонуучуну OJSте роль алууга чакырып жатасыз жана журналдын титулдук "

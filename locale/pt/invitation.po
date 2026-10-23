@@ -49,6 +49,7 @@ msgstr "O utilizador não tem nenhum papel nesta revista"
 msgid "invitation.role.masthead"
 msgstr "Equipa Editorial da Revista"
 
+#, fuzzy
 msgid "invitation.wizard.pageTitleDescription"
 msgstr ""
 "Está a convidar um utilizador para assumir um papel no OJS e aparecer na "
