@@ -2,7 +2,7 @@
 # Tigran Zargaryan <tigran@flib.sci.am>, 2022, 2023, 2025, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-09-08 10:13+0000\n"
+"PO-Revision-Date: 2026-10-24 09:43+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/manager/hy/"
 ">\n"
@@ -2699,3 +2699,9 @@ msgid "emailTemplate.variable.issue.issueTableOfContents"
 msgstr ""
 "Թողարկման բովանդակության աղյուսակը` ինչպիսին է բոլոր առնչվող ներկայացումների "
 "ցանկը:"
+
+msgid "manager.setup.enableEnrollmentMasthead.description"
+msgstr ""
+"Ցանկության դեպքում, վերնագիր կարող է ստեղծվել ինքնաշխատ կերպով՝ հիմնվելով "
+"օգտատերերի գրանցումների վրա, ներառյալ մեկնարկի և ավարտի ամսաթվերը: Տես նաև "
+"Կարգավորումներ > Ամսագիր > Գլխ-Վերնագիր:"
