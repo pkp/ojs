@@ -72,6 +72,8 @@ class IssuePublishedNotifyUsersTest extends DatabaseTestCase
             ->shouldReceive([
                 'getId' => 1,
                 'getLocalizedData' => '',
+                'getSupportedLocales' => ['en'],
+                'getPrimaryLocale' => 'en',
             ])
             ->withAnyArgs()
             ->getMock();
