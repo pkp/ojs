@@ -279,9 +279,6 @@ msgstr "انتشار"
 msgid "publication.publish.requirements"
 msgstr "پیشنیازهای ذیل باید پیش از انتشار رعایت شود."
 
-msgid "publication.required.declined"
-msgstr "مقاله ارسالی رد شده نمی‌تواند منتشر شد."
-
 msgid "publication.required.reviewStage"
 msgstr "مقاله ثبت شده پیش از انتشار باید در مرحله ویراستاری یا نشر قرار گیرد."
 

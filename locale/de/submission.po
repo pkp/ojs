@@ -297,9 +297,6 @@ msgstr ""
 "Die folgenden Bedingungen müssen erfüllt sein, bevor dies veröffentlicht "
 "werden kann."
 
-msgid "publication.required.declined"
-msgstr "Ein abgelehnter Beitrag kann nicht veröffentlicht werden."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Die Einreichung muss sich im Copyediting oder im Produktionsschritt befinden "

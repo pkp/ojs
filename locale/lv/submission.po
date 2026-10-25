@@ -199,9 +199,6 @@ msgstr "Šīs publikācijas iesniegto materiālu neizdevās atrast."
 msgid "publication.publish"
 msgstr "Publicēt"
 
-msgid "publication.required.declined"
-msgstr "Noraidītu iesniegto materiālu nevar publicēt."
-
 msgid "submission.copyrightHolder.description"
 msgstr ""
 "Pēc publicēšanas autortiesības tiks automātiski piešķirtas {$copyright}."

@@ -292,9 +292,6 @@ msgstr "Publicera"
 msgid "publication.publish.requirements"
 msgstr "Följande krav måste uppfyllas innan den kan publiceras."
 
-msgid "publication.required.declined"
-msgstr "Ett avslaget bidrag kan inte publiceras."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Bidraget måste vara i Manusredigerings- eller Produktionssteget innan det "

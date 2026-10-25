@@ -286,9 +286,6 @@ msgid "publication.publish.requirements"
 msgstr ""
 "Az alábbi feltételeknek kell teljesülnie, mielőtt publikálhatóvá válik."
 
-msgid "publication.required.declined"
-msgstr "Elutasított beküldés nem publikálható."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "A cikknek a technikai szerkesztés vagy előállítás fázisában kell lennie, "

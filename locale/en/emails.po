@@ -602,3 +602,37 @@ msgid "emails.paymentRequestNotification.footer"
 msgstr ""
 "<br><br>—<br>"
 "This is an automated message from <a href=\"{$contextUrl}\">{$contextName}</a>."
+
+msgid "mailable.decision.withdraw.notifyAuthor.name"
+msgstr "Notify Author of Withdrawal"
+
+msgid "mailable.decision.withdraw.notifyAuthor.description"
+msgstr "This email is sent to the author(s) when their submission is withdrawn."
+
+msgid "mailable.decision.revertWithdraw.notifyAuthor.name"
+msgstr "Notify Author of Withdrawal Revert"
+
+msgid "mailable.decision.revertWithdraw.notifyAuthor.description"
+msgstr "This email is sent to the author(s) when a withdrawn submission is returned to the active queue."
+
+msgid "emails.editorDecisionWithdraw.subject"
+msgstr "Your submission has been withdrawn"
+
+msgid "emails.editorDecisionWithdraw.body"
+msgstr ""
+"<p>Dear {$recipientName},</p>"
+"<p>I am writing to inform you that your submission, {$submissionTitle}, has been withdrawn from {$contextName}.</p>"
+"<p>If you have any questions, please contact me from your <a href=\"{$authorSubmissionUrl}\">submission dashboard</a>.</p>"
+"<p>Kind regards,</p>"
+"{$signature}"
+
+msgid "emails.editorDecisionRevertWithdraw.subject"
+msgstr "Your submission has been returned to the active queue"
+
+msgid "emails.editorDecisionRevertWithdraw.body"
+msgstr ""
+"<p>Dear {$recipientName},</p>"
+"<p>I am writing to inform you that the withdrawal of your submission, {$submissionTitle}, has been reverted. Your submission has been returned to the active queue at {$contextName}.</p>"
+"<p>If you have any questions, please contact me from your <a href=\"{$authorSubmissionUrl}\">submission dashboard</a>.</p>"
+"<p>Kind regards,</p>"
+"{$signature}"

@@ -291,9 +291,6 @@ msgstr ""
 "Se deben cumplir los siguientes requisitos antes de que esto pueda ser "
 "publicado."
 
-msgid "publication.required.declined"
-msgstr "Un envío rechazado no puede ser publicado."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "El envío debe estar en las fases de \"corrección\" o de \"producción\" antes "

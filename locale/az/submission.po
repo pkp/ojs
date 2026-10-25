@@ -317,9 +317,6 @@ msgstr ""
 "Bunun nəşr edilə bilməsi üçün aşağıdakı tələblərin yerinə yetirilməsi "
 "lazımdır."
 
-msgid "publication.required.declined"
-msgstr "Rədd edilən bir məqalə nəşr edilə bilməz."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Məqalənin nəşr edilə bilməsi üçün əvvəlcə Kopyalama və ya İstehsal "

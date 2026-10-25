@@ -300,9 +300,6 @@ msgstr ""
 "les conditions suivantes doivent être remplies avant que ceci ne puisse être "
 "publié."
 
-msgid "publication.required.declined"
-msgstr "Une soumission refusée ne peut pas être publiée."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "La soumission doit passer par l'étape d'édition ou de production avant "

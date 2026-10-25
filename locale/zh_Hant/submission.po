@@ -262,9 +262,6 @@ msgstr "出版"
 msgid "publication.publish.requirements"
 msgstr "出版前必須完成以下要求。"
 
-msgid "publication.required.declined"
-msgstr "未能出版被拒的投稿。"
-
 msgid "publication.required.reviewStage"
 msgstr "出版項目出版前必須先經過審稿及製作步驟。"
 

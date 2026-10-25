@@ -266,9 +266,6 @@ msgstr "Nepavyko rasti šiai publikacijai priskirto pateikimo."
 msgid "publication.publish"
 msgstr "Publikuoti"
 
-msgid "publication.required.declined"
-msgstr "Atmestas pateikimas negali būti publikuojamas."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Pateikimas turi būti redagavimo arba gamybos etape, kad jį būtų galima "

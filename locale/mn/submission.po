@@ -274,9 +274,6 @@ msgstr "Энэхүү нийтлэлд харгалзах илгээлт олдс
 msgid "publication.publish.requirements"
 msgstr "Нийтлэхийн өмнө дараах шаардлагуудыг хангасан байх ёстой."
 
-msgid "publication.required.declined"
-msgstr "Татгалзсан илгээлтийг нийтлэх боломжгүй."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Нийтлэхийн өмнө илгээлт Хянан тохиолдуулах (Copyediting) эсвэл Хэвлэлийн "
