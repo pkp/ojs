@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-03-29 11:40+0000\n"
+"PO-Revision-Date: 2026-10-25 23:35+0000\n"
 "Last-Translator: Petro Bilous <petrobilous@ukr.net>\n"
 "Language-Team: Ukrainian <http://translate.pkp.sfu.ca/projects/ojs/"
 "invitation/uk/>\n"
@@ -81,11 +81,8 @@ msgstr ""
 msgid "invitation.role.masthead"
 msgstr "Заголовок журналу"
 
-#, fuzzy
 msgid "invitation.wizard.pageTitleDescription"
-msgstr ""
-"Ви запрошуєте користувача взяти участь в OJS, а також з'явитися в заголовку "
-"журналу"
+msgstr "Ви запрошуєте користувача прийняти на себе роль в OJS"
 
 msgid "invitation.orcid.acceptInvitation.message"
 msgstr ""
