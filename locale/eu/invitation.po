@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-05-27 08:22+0000\n"
+"PO-Revision-Date: 2026-10-25 23:35+0000\n"
 "Last-Translator: Informatikaria <informatikaria@ueu.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/invitation/"
 "eu/>\n"
@@ -58,7 +58,6 @@ msgstr ""
 "aukeratu baduzu, zure ORCID iDa OJSko zure profileko atalean egiaztatu ahal "
 "izango duzu geroago"
 
-#, fuzzy
 msgid "invitation.wizard.pageTitleDescription"
 msgstr ""
 "Erabiltzaile bat gonbidatzen ari zara OJSn rol bat hartzera eta "
