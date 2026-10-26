@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-03-26 07:25+0000\n"
+"PO-Revision-Date: 2026-10-26 17:43+0000\n"
 "Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/invitation/"
 "da/>\n"
@@ -75,11 +75,8 @@ msgstr ""
 "Send brugeren en e-mail for at informere denne om invitationen, de næste "
 "trin, GDPR-politikker for tidsskriftet og ORCID-verifikation"
 
-#, fuzzy
 msgid "invitation.wizard.pageTitleDescription"
-msgstr ""
-"Du inviterer en bruger til at påtage sig en rolle i OJS og samtidig blive "
-"vist i tidsskriftets kolofon"
+msgstr "Du inviterer en bruger til at påtage sig en rolle i OJS"
 
 msgid "userInvitation.roleTable.journalMasthead"
 msgstr "Tidsskriftets kolofon"
