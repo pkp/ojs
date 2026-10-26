@@ -550,13 +550,13 @@
 					{if $publication->getData('licenseUrl')}
 						{if $ccLicenseBadge}
 							{if $publication->getLocalizedData('copyrightHolder')}
-								<p>{translate key="submission.copyrightStatement" copyrightHolder=$publication->getLocalizedData('copyrightHolder') copyrightYear=$publication->getData('copyrightYear')}</p>
+								<p>{translate|escape key="submission.copyrightStatement" copyrightHolder=$publication->getLocalizedData('copyrightHolder') copyrightYear=$publication->getData('copyrightYear')}</p>
 							{/if}
 							{$ccLicenseBadge}
 						{else}
 							<a href="{$publication->getData('licenseUrl')|escape}" class="copyright">
 								{if $publication->getLocalizedData('copyrightHolder')}
-									{translate key="submission.copyrightStatement" copyrightHolder=$publication->getLocalizedData('copyrightHolder') copyrightYear=$publication->getData('copyrightYear')}
+									{translate|escape key="submission.copyrightStatement" copyrightHolder=$publication->getLocalizedData('copyrightHolder') copyrightYear=$publication->getData('copyrightYear')}
 								{else}
 									{translate key="submission.license"}
 								{/if}
