@@ -35,6 +35,9 @@ jobs:
           - php-version: 8.2
             database: pgsql
             test: 'test'
+          - php-version: 8.3
+            database: pgsql
+            test: 'test'
     name: ojs-stable-3_4_0
     steps:
       - uses: pkp/pkp-github-actions@v1
