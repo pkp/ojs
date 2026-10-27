@@ -52,6 +52,7 @@ msgstr ""
 "Peržiūrėkite informaciją, kad galėtumėte pradėti vykdyti naujus vaidmenis "
 "OJS sistemoje"
 
+#, fuzzy
 msgid "acceptInvitation.verifyOrcid.stepDescription"
 msgstr ""
 "Galite patvirtinti savo ORCID iD arba praleisti šį veiksmą. Jei jo "
@@ -66,6 +67,7 @@ msgstr ""
 "Kviečiate naudotoją prisiimti vaidmenį OJS sistemoje ir būti nurodytam "
 "žurnalo redakcinėje informacijoje"
 
+#, fuzzy
 msgid "userInvitation.modal.message"
 msgstr ""
 "Naudotojas {$email} pakviestas į naują vaidmenį OJS sistemoje. Apie jo "
@@ -78,6 +80,7 @@ msgstr "Šis naudotojas jau yra registruotas žurnale"
 msgid "userInvitation.search.userNotFound"
 msgstr "Naudotojui šiame žurnale nėra priskirtas joks vaidmuo"
 
+#, fuzzy
 msgid "userInvitation.searchUser.stepDescription"
 msgstr ""
 "Ieškokite naudotojo pagal el. pašto adresą, naudotojo vardą arba ORCID iD. "
