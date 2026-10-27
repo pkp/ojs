@@ -42,7 +42,9 @@ class Repository extends BaseRepository
 
         if ($submissionFile->getData('assocType') === Application::ASSOC_TYPE_REPRESENTATION) {
             $galley = Repo::galley()->get($submissionFile->getData('assocId'));
-            if (!$galley) {
+            $publication = $galley ? Repo::publication()->get($galley->getData('publicationId')) : null;
+            // The galley must belong to the file's own submission
+            if (!$publication || $publication->getData('submissionId') != $submissionFile->getData('submissionId')) {
                 throw new Exception('Galley not found when adding submission file.');
             }
         }
