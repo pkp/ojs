@@ -209,6 +209,9 @@ describe('Data suite tests', function() {
 		cy.get('span:contains("' + issueTitle + '")').prev('a.show_extras').click();
 		cy.get('tr:contains("' + issueTitle + '")').next().contains('a', 'Unpublish Issue').click();
 		cy.get('button:contains("OK")').click();
+		// The visits below only change the hash and do not reload the page, so
+		// wait for this confirmation to leave before another one opens.
+		cy.get('.pkp_modal_confirmation').should('not.exist');
 		cy.visit('index.php/publicknowledge/manageIssues#future');
 		cy.get('span:contains("' + issueTitle + '")');
 		// define the back issue as the current issue again

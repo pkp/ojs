@@ -76,13 +76,17 @@ describe('Data suite tests', function() {
 		cy.get('#titleAbstract [role="status"]').contains('Saved');
 
 		// Metadata
+		// The workflow page loads its grids a second after it mounts; let that pass
+		// before typing, or the typed keyword can be lost.
+		cy.get('#contributors-grid .pkp_controllers_grid');
 		cy.get('#metadata-button').click();
+		cy.get('#metadata-keywords-control-en_US').should('be.visible').and('be.enabled');
 		cy.get('#metadata-keywords-control-en_US').type('Professional Development', {delay: 0});
-		cy.wait(500);
+		cy.contains('#metadata .autosuggest__results-item', 'Professional Development');
 		cy.get('#metadata-keywords-control-en_US').type('{enter}', {delay: 0});
 		cy.get('#metadata-keywords-selected-en_US').contains('Professional Development');
 		cy.get('#metadata-keywords-control-en_US').type('Social Transformation', {delay: 0});
-		cy.wait(500);
+		cy.contains('#metadata .autosuggest__results-item', 'Social Transformation');
 		cy.get('#metadata-keywords-control-en_US').type('{enter}', {delay: 0});
 		cy.get('#metadata-keywords-selected-en_US').contains('Social Transformation');
 		cy.get('#metadata button').contains('Save').click();

@@ -34,17 +34,18 @@ describe('Data suite tests', function() {
 		cy.assignParticipant('Section editor', 'Minoti Inoue', true);
 
 		// Select pre-existing keywords
+		// The workflow page loads its grids a second after it mounts; let that pass
+		// before typing, or the typed keyword can be lost.
+		cy.get('#contributors-grid .pkp_controllers_grid');
 		cy.get('#publication-button').click();
 		cy.get('#metadata-button').click();
+		cy.get('#metadata-keywords-control-en_US').should('be.visible').and('be.enabled');
 		cy.get('#metadata-keywords-control-en_US').type('pr', {delay: 0, force: true});
-		cy.wait(500);
-		cy.get('li').contains('Professional Development').click({force: true});
-		cy.wait(500);
-		cy.get('#metadata-keywords-control-en_US').type('socia', {delay: 0, force: true});
-		cy.wait(500);
-		cy.contains('Social Transformation');
-		cy.wait(500);
-		cy.get('#metadata-keywords-control-en_US').type('l{downarrow}{downarrow}{enter}', {delay: 0});
+		cy.contains('#metadata .autosuggest__results-item', 'Professional Development').click({force: true});
+		cy.get('#metadata-keywords-selected-en_US').contains('Professional Development');
+		cy.get('#metadata-keywords-control-en_US').type('social', {delay: 0, force: true});
+		cy.contains('#metadata .autosuggest__results-item', 'Social Transformation').click({force: true});
+		cy.get('#metadata-keywords-selected-en_US').contains('Social Transformation');
 		cy.get('#metadata button').contains('Save').click();
 		cy.get('#metadata [role="status"]').contains('Saved');
 		cy.get('#metadata-keywords-selected-en_US').contains('Professional Development');
