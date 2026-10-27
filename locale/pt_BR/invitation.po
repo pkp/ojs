@@ -32,6 +32,7 @@ msgstr "O usuário já existe na revista"
 msgid "userInvitation.search.userNotFound"
 msgstr "O usuário não possui um papel nesta revista"
 
+#, fuzzy
 msgid "userInvitation.searchUser.stepDescription"
 msgstr ""
 "Busque o usuário utilizando o endereço de e-mail, nome de usuário ou ID "
@@ -59,6 +60,7 @@ msgstr ""
 "opções. Se precisar de ajuda para entender o sistema, clique no botão “Ajuda”"
 " disponível em todo o sistema para obter orientações."
 
+#, fuzzy
 msgid "acceptInvitation.verifyOrcid.stepDescription"
 msgstr ""
 "Você pode optar por verificar seu iD ORCID ou pular essa etapa. Se decidir "
@@ -77,6 +79,7 @@ msgstr "Expediente da Revista"
 msgid "userInvitation.enterDetails.stepDescription"
 msgstr "Você pode convidá-los para assumir um papel no OJS"
 
+#, fuzzy
 msgid "userInvitation.modal.message"
 msgstr ""
 "{$email} foi convidado para um novo papel no OJS. Você poderá acompanhar a "
