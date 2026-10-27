@@ -21,14 +21,20 @@ class SubmissionFileDAO extends PKPSubmissionFileDAO {
 	 * @copydoc SchemaDAO::insertObject
 	 */
 	public function insertObject($submissionFile) {
-		parent::insertObject($submissionFile);
-
+		$galley = null;
 		if ($submissionFile->getData('assocType') === ASSOC_TYPE_REPRESENTATION) {
 			$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
 			$galley = $galleyDao->getById($submissionFile->getData('assocId'));
-			if (!$galley) {
+			$publication = $galley ? Services::get('publication')->get($galley->getData('publicationId')) : null;
+			// The galley must belong to the file's own submission
+			if (!$publication || $publication->getData('submissionId') != $submissionFile->getData('submissionId')) {
 				throw new Exception('Galley not found when adding submission file.');
 			}
+		}
+
+		parent::insertObject($submissionFile);
+
+		if ($galley) {
 			$galley->setFileId($submissionFile->getId());
 			$galleyDao->updateObject($galley);
 		}

@@ -226,7 +226,34 @@ class PublicationService extends PKPPublicationService {
 				$newGalley = clone $galley;
 				$newGalley->setData('id', null);
 				$newGalley->setData('publicationId', $newPublication->getId());
-				Services::get('galley')->add($newGalley, $request);
+				$newGalley = Services::get('galley')->add($newGalley, $request);
+
+				// Give the new version its own copy of the galley's file, so that a
+				// change to the file of one version never changes it in another
+				$submissionFile = $galley->getFileId()
+					? Services::get('submissionFile')->get($galley->getFileId())
+					: null;
+				if ($submissionFile) {
+					$newSubmissionFile = clone $submissionFile;
+					$newSubmissionFile->setData('id', null);
+					$newSubmissionFile->setData('assocType', ASSOC_TYPE_REPRESENTATION);
+					$newSubmissionFile->setData('assocId', $newGalley->getId());
+					$newSubmissionFile = Services::get('submissionFile')->add($newSubmissionFile, $request);
+
+					$dependentFiles = Services::get('submissionFile')->getMany([
+						'submissionIds' => [$oldPublication->getData('submissionId')],
+						'fileStages' => [SUBMISSION_FILE_DEPENDENT],
+						'assocTypes' => [ASSOC_TYPE_SUBMISSION_FILE],
+						'assocIds' => [$submissionFile->getId()],
+						'includeDependentFiles' => true,
+					]);
+					foreach ($dependentFiles as $dependentFile) {
+						$newDependentFile = clone $dependentFile;
+						$newDependentFile->setData('id', null);
+						$newDependentFile->setData('assocId', $newSubmissionFile->getId());
+						Services::get('submissionFile')->add($newDependentFile, $request);
+					}
+				}
 			}
 		}
 
