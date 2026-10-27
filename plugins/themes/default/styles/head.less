@@ -244,7 +244,8 @@
 			display: inline-block;
 		}
 
-		a {
+		a,
+		button {
 			display: inline-block;
 			padding-left: @base;
 			padding-right: @base;
@@ -256,6 +257,15 @@
 			&:focus {
 				text-decoration: none;
 			}
+		}
+
+		// Reset the dropdown toggle buttons to match their sibling links
+		button {
+			background: transparent;
+			border: 0;
+			font: inherit;
+			line-height: inherit;
+			cursor: pointer;
 		}
 
 		ul {
@@ -324,10 +334,12 @@
 		text-align: center;
 
 		> li {
-			> a {
+			> a,
+			> button {
 				margin: @half 0.5em 0;
 				padding: @half 0.5em
 					calc(~"@{pkp_nav_primary_row_el_padding} - 2px"); // -2 to account for border size
+				border: 0;
 				border-bottom: 2px solid transparent;
 				color: @text-bg-base;
 				text-decoration: none;
@@ -346,13 +358,15 @@
 			}
 
 			&:first-child {
-				a {
+				a,
+				button {
 					margin-left: -0.5em;
 				}
 			}
 
 			&:last-child {
-				a {
+				a,
+				button {
 					margin-right: -0.5em;
 				}
 			}
@@ -432,13 +446,15 @@
 			text-align: left;
 		}
 
-		a {
+		a,
+		button {
 			padding-top: @half;
 			padding-bottom: @half;
 			line-height: @line-sml;
 		}
 
-		> li > a:focus {
+		> li > a:focus,
+		> li > button:focus {
 			outline: 0;
 			background: @text-bg-base;
 			color: @bg-base;
@@ -461,16 +477,19 @@
 		}
 
 		// Align to the right edge of the container
-		> li:last-child > a {
+		> li:last-child > a,
+		> li:last-child > button {
 			margin-right: -@base;
 		}
 
 		// Show the top-level task count in desktop nav
-		> li > a .task_count {
+		> li > a .task_count,
+		> li > button .task_count {
 			display: inline-block;
 		}
 
-		> li > a:focus .task_count {
+		> li > a:focus .task_count,
+		> li > button:focus .task_count {
 			background: @bg-base;
 			color: @text-bg-base;
 		}
