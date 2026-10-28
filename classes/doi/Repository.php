@@ -36,7 +36,6 @@ use PKP\galley\Galley;
 use PKP\services\PKPSchemaService;
 use PKP\submission\Representation;
 use PKP\submission\reviewAssignment\ReviewAssignment;
-use PKP\submission\reviewRound\authorResponse\AuthorResponse;
 
 class Repository extends \PKP\doi\Repository
 {
@@ -230,17 +229,6 @@ class Repository extends \PKP\doi\Repository
             });
         }
 
-        // Author responses
-        if ($context->isDoiTypeEnabled(self::TYPE_AUTHOR_RESPONSE)) {
-            $authorResponses = Repo::publication()->getReviewAuthorResponses($publicationIds);
-            $authorResponses->each(function (AuthorResponse $authorResponse) use ($context, $doiIds) {
-                $authorResponseDoiId = $authorResponse->doiId;
-                if (!empty($authorResponseDoiId)) {
-                    $doiIds->add($authorResponseDoiId);
-                }
-            });
-        }
-
         return $doiIds->unique()->toArray();
     }
 
@@ -283,17 +271,6 @@ class Repository extends \PKP\doi\Repository
                 $reviewAssignmentDoiId = $reviewAssignment->getData('doiId');
                 if (!empty($reviewAssignmentDoiId)) {
                     $doiIds->add($reviewAssignmentDoiId);
-                }
-            });
-        }
-
-        // Author responses
-        if ($context->isDoiTypeEnabled(self::TYPE_AUTHOR_RESPONSE)) {
-            $authorResponses = Repo::publication()->getReviewAuthorResponses([$publication->getId()]);
-            $authorResponses->each(function (AuthorResponse $authorResponse) use ($doiIds) {
-                $authorResponseDoiId = $authorResponse->doiId;
-                if (!empty($authorResponseDoiId)) {
-                    $doiIds->add($authorResponseDoiId);
                 }
             });
         }
@@ -426,8 +403,6 @@ class Repository extends \PKP\doi\Repository
             self::TYPE_PUBLICATION,
             self::TYPE_REPRESENTATION,
             self::TYPE_PEER_REVIEW,
-            // NB: Author response DOIs currently not supported
-            //            self::TYPE_AUTHOR_RESPONSE,
         ];
     }
 

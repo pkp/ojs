@@ -83,38 +83,6 @@ class DAO extends \PKP\doi\DAO
                                 // Only reviews confirmed by an editor are deposited, see getExportableDOIsPeerReviewIds()
                                 ->where(fn (Builder $q) => $q->whereNotNull('ra.date_considered')->orWhereNotNull('ra.date_acknowledged'));
                         });
-                    })
-                    // Author Response DOIs
-                    ->when(in_array(Repo::doi()::TYPE_AUTHOR_RESPONSE, $enabledDoiTypes), function (Builder $q) {
-                        $q->orWhereIn('d.doi_id', function (Builder $q) {
-                            $q->select('rrar.doi_id')
-                                ->from('review_round_author_responses', 'rrar')
-                                ->leftJoin('review_rounds as rr', 'rrar.review_round_id', '=', 'rr.review_round_id')
-                                ->leftJoin('publications as p', 'rr.publication_id', '=', 'p.publication_id')
-                                ->whereNotNull('rrar.doi_id')
-                                ->where('p.status', '=', PKPPublication::STATUS_PUBLISHED)
-                                // The following `whereExists` and `whereNotExists` check if author response is public.
-                                // At least one eligible review assignment exists
-                                ->whereExists(function (Builder $sq) {
-                                    $sq->select(DB::raw(1))
-                                        ->from('review_assignments', 'ra')
-                                        ->whereColumn('ra.review_round_id', '=', 'rrar.review_round_id')
-                                        ->where('ra.declined', 0)
-                                        ->where('ra.cancelled', 0);
-                                })
-                                // No non-public review assignments exist
-                                ->whereNotExists(function (Builder $sq) {
-                                    $sq->select(DB::raw(1))
-                                        ->from('review_assignments', 'ra')
-                                        ->whereColumn('ra.review_round_id', '=', 'rrar.review_round_id')
-                                        ->where('ra.declined', 0)
-                                        ->where('ra.cancelled', 0)
-                                        ->where(function (Builder $q) {
-                                            $q->where('ra.is_review_publicly_visible', '=', 0)
-                                                ->orWhereNull('ra.is_review_publicly_visible');
-                                        });
-                                });
-                        });
                     });
             });
         $q->whereIn('d.status', [Doi::STATUS_UNREGISTERED, Doi::STATUS_ERROR, Doi::STATUS_STALE]);
