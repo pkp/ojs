@@ -25,6 +25,7 @@ use PKP\core\Core;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\publication\Collector;
+use PKP\submissionFile\SubmissionFile;
 
 class Repository extends \PKP\publication\Repository
 {
@@ -145,7 +146,34 @@ class Repository extends \PKP\publication\Repository
                 if ($isDoiVersioningEnabled) {
                     $newGalley->setData('doiId', null);
                 }
-                Repo::galley()->add($newGalley);
+                $newGalleyId = Repo::galley()->add($newGalley);
+
+                // Give the new version its own copy of the galley's file, so that a
+                // change to the file of one version never changes it in another
+                $submissionFile = $galley->getData('submissionFileId')
+                    ? Repo::submissionFile()->get($galley->getData('submissionFileId'))
+                    : null;
+                if ($submissionFile) {
+                    $newSubmissionFile = clone $submissionFile;
+                    $newSubmissionFile->setData('id', null);
+                    $newSubmissionFile->setData('assocType', Application::ASSOC_TYPE_REPRESENTATION);
+                    $newSubmissionFile->setData('assocId', $newGalleyId);
+                    $newSubmissionFileId = Repo::submissionFile()->add($newSubmissionFile);
+
+                    $dependentFiles = Repo::submissionFile()
+                        ->getCollector()
+                        ->filterBySubmissionIds([$publication->getData('submissionId')])
+                        ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT])
+                        ->filterByAssoc(Application::ASSOC_TYPE_SUBMISSION_FILE, [$submissionFile->getId()])
+                        ->includeDependentFiles()
+                        ->getMany();
+                    foreach ($dependentFiles as $dependentFile) {
+                        $newDependentFile = clone $dependentFile;
+                        $newDependentFile->setData('id', null);
+                        $newDependentFile->setData('assocId', $newSubmissionFileId);
+                        Repo::submissionFile()->add($newDependentFile);
+                    }
+                }
             }
         }
 
