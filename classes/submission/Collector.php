@@ -139,7 +139,6 @@ class Collector extends \PKP\submission\Collector
                 ->leftJoin('publication_galleys as current_g', 'current_g.publication_id', '=', 'current_p.publication_id')
                 ->leftJoin('review_rounds as current_rr', 'current_rr.publication_id', '=', 'current_p.publication_id')
                 ->leftJoin('review_assignments as current_ra', 'current_ra.review_round_id', '=', 'current_rr.review_round_id')
-                ->leftJoin('review_round_author_responses as current_rrar', 'current_rrar.review_round_id', '=', 'current_rr.review_round_id')
                 ->where(function (Builder $q) {
                     $q->when($this->hasDois === true, function (Builder $q) {
                         $q->when(in_array(Repo::doi()::TYPE_PUBLICATION, $this->enabledDoiTypes), function (Builder $q) {
@@ -150,9 +149,6 @@ class Collector extends \PKP\submission\Collector
                         });
                         $q->when(in_array(Repo::doi()::TYPE_PEER_REVIEW, $this->enabledDoiTypes), function (Builder $q) {
                             $q->orWhereNotNull('current_ra.doi_id');
-                        });
-                        $q->when(in_array(Repo::doi()::TYPE_AUTHOR_RESPONSE, $this->enabledDoiTypes), function (Builder $q) {
-                            $q->orWhereNotNull('current_rrar.doi_id');
                         });
                     });
                     $q->when($this->hasDois === false, function (Builder $q) {
@@ -167,9 +163,6 @@ class Collector extends \PKP\submission\Collector
                         });
                         $q->when(in_array(Repo::doi()::TYPE_PEER_REVIEW, $this->enabledDoiTypes), function (Builder $q) {
                             $q->orWhereNull('current_ra.doi_id');
-                        });
-                        $q->when(in_array(Repo::doi()::TYPE_AUTHOR_RESPONSE, $this->enabledDoiTypes), function (Builder $q) {
-                            $q->orWhereNull('current_rrar.doi_id');
                         });
                     });
                 });
@@ -219,41 +212,23 @@ class Collector extends \PKP\submission\Collector
                         )
                     );
 
-                    // Join review-related tables if TYPE_PEER_REVIEW or TYPE_AUTHOR_RESPONSE is enabled
+                    // Join review-related tables if TYPE_PEER_REVIEW is enabled
                     $q->when(
-                        collect($this->enabledDoiTypes)
-                            ->intersect([Repo::doi()::TYPE_PEER_REVIEW, Repo::doi()::TYPE_AUTHOR_RESPONSE])
-                            ->isNotEmpty(),
+                        in_array(Repo::doi()::TYPE_PEER_REVIEW, $this->enabledDoiTypes),
                         function (Builder $q) {
-                            // Join review_rounds (needed for both peer review and author response)
+                            // Join review_rounds (needed for peer review)
                             $q->leftJoin(
                                 'review_rounds as rrOnDoiPage',
                                 'rrOnDoiPage.publication_id',
                                 '=',
                                 'pOnDoiPage.publication_id'
-                            );
-
-                            // Join review_assignments if TYPE_PEER_REVIEW is enabled
-                            $q->when(
-                                in_array(Repo::doi()::TYPE_PEER_REVIEW, $this->enabledDoiTypes),
-                                fn (Builder $q) => $q->leftJoin(
+                            )
+                                ->leftJoin(
                                     'review_assignments as raOnDoiPage',
                                     'raOnDoiPage.review_round_id',
                                     '=',
                                     'rrOnDoiPage.review_round_id'
-                                )
-                            );
-
-                            // Join author responses if TYPE_AUTHOR_RESPONSE is enabled
-                            $q->when(
-                                in_array(Repo::doi()::TYPE_AUTHOR_RESPONSE, $this->enabledDoiTypes),
-                                fn (Builder $q) => $q->leftJoin(
-                                    'review_round_author_responses as rrarOnDoiPage',
-                                    'rrarOnDoiPage.review_round_id',
-                                    '=',
-                                    'rrOnDoiPage.review_round_id'
-                                )
-                            );
+                                );
                         }
                     );
 
@@ -279,12 +254,6 @@ class Collector extends \PKP\submission\Collector
                             in_array(Repo::doi()::TYPE_PEER_REVIEW, $this->enabledDoiTypes),
                             fn (Builder $q) => $q->orWhereNotNull('raOnDoiPage.doi_id')
                         );
-
-                        // OR: author responses that exist (could have DOIs, if enabled)
-                        $q->when(
-                            in_array(Repo::doi()::TYPE_AUTHOR_RESPONSE, $this->enabledDoiTypes),
-                            fn (Builder $q) => $q->orWhereNotNull('rrarOnDoiPage.doi_id')
-                        );
                     });
                 });
         });
@@ -297,8 +266,6 @@ class Collector extends \PKP\submission\Collector
             Repo::doi()::TYPE_PUBLICATION,
             Repo::doi()::TYPE_REPRESENTATION,
             Repo::doi()::TYPE_PEER_REVIEW,
-            // NB: Author response DOIs currently not supported
-            //            Repo::doi()::TYPE_AUTHOR_RESPONSE,
         ];
     }
 
@@ -333,16 +300,6 @@ class Collector extends \PKP\submission\Collector
                             ->from('review_assignments AS ra')
                             ->join('dois AS d', 'ra.doi_id', '=', 'd.doi_id')
                             ->join('review_rounds AS rr', 'ra.review_round_id', '=', 'rr.review_round_id')
-                            ->join('publications AS p', 'rr.publication_id', '=', 'p.publication_id')
-                            ->whereLike('d.doi', "{$this->searchPhrase}%");
-                    });
-                })
-                ->when($context->isDoiTypeEnabled(Repo::doi()::TYPE_AUTHOR_RESPONSE), function (Builder $q) {
-                    $q->union(function (Builder $q) {
-                        $q->select('p.submission_id')
-                            ->from('review_round_author_responses AS rrar')
-                            ->join('dois AS d', 'rrar.doi_id', '=', 'd.doi_id')
-                            ->join('review_rounds AS rr', 'rrar.review_round_id', '=', 'rr.review_round_id')
                             ->join('publications AS p', 'rr.publication_id', '=', 'p.publication_id')
                             ->whereLike('d.doi', "{$this->searchPhrase}%");
                     });
