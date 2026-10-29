@@ -27,6 +27,7 @@ use APP\submission\Submission;
 use DOMDocument;
 use DOMNode;
 use Exception;
+use PKP\affiliation\Affiliation;
 use PKP\author\contributorRole\ContributorRoleIdentifier;
 use PKP\author\contributorRole\ContributorType;
 use PKP\context\Context;
@@ -38,6 +39,8 @@ use PKP\galley\Galley;
 use PKP\i18n\LocaleConversion;
 use PKP\submission\Genre;
 use PKP\submission\GenreDAO;
+use PKP\submission\reviewAssignment\ReviewAssignment;
+use PKP\submission\reviewRound\ReviewRound;
 use PKP\submissionFile\SubmissionFile;
 
 // Title types
@@ -68,12 +71,17 @@ define('DATACITE_RELTYPE_ISNEWVERSIONOF', 'IsNewVersionOf');
 define('DATACITE_RELTYPE_ISPUBLISHEDIN', 'IsPublishedIn');
 define('DATACITE_RELTYPE_ISSUPPLEMENTEDBY', 'IsSupplementedBy');
 define('DATACITE_RELTYPE_REFERENCES', 'References');
+define('DATACITE_RELTYPE_REVIEWS', 'Reviews');
 
 // Description types
 define('DATACITE_DESCTYPE_ABSTRACT', 'Abstract');
 define('DATACITE_DESCTYPE_SERIESINFO', 'SeriesInformation');
 define('DATACITE_DESCTYPE_TOC', 'TableOfContents');
 define('DATACITE_DESCTYPE_OTHER', 'Other');
+
+// Standard values for unknown information
+// Datacite uses code `:unkn` to represent anonymous values on mandatory properties. See https://datacite-metadata-schema.readthedocs.io/en/4/appendices/appendix-3/
+define('DATACITE_UNKNOWN_ANONYMOUS', ':unkn');
 
 class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExportFilter
 {
@@ -111,7 +119,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $cache = $plugin->getCache();
 
         // Get all objects
-        $issue = $article = $galley = $galleyFile = $doi = null;
+        $issue = $article = $galley = $galleyFile = $doi = $reviewAssignment = null;
         if ($pubObject instanceof Issue) {
             $issue = $pubObject;
             if (!$cache->isCached('issues', $issue->getId())) {
@@ -149,7 +157,21 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                 }
             }
             $doi = $galley->getDoi();
+        } elseif ($pubObject instanceof ReviewAssignment) {
+            $reviewAssignment = $pubObject;
+
+            if (!$cache->isCached('reviewAssignments', $reviewAssignment->getId())) {
+                $cache->add($reviewAssignment, null);
+            }
+
+            $doi = $reviewAssignment->getDoi();
+
+            $article = Repo::submission()->get($reviewAssignment->getSubmissionId());
+            if ($article) {
+                $cache->add($article, null);
+            }
         }
+
         if (!$issue) {
             $issueId = $article->getCurrentPublication()->getData('issueId');
             if ($issueId) {
@@ -199,50 +221,90 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $rootNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'identifier', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
         $node->setAttribute('identifierType', DATACITE_IDTYPE_DOI);
         // Creators (mandatory)
-        $rootNode->appendChild($this->createCreatorsNode($doc, $issue, $publication, $galleyFile, $publisher, $objectLocalePrecedence));
+        $rootNode->appendChild($this->createCreatorsNode(
+            doc: $doc,
+            issue: $issue,
+            publication: $publication,
+            galleyFile: $galleyFile,
+            reviewAssignment: $reviewAssignment,
+            publisher: $publisher,
+            objectLocalePrecedence: $objectLocalePrecedence
+        ));
+
         // Title (mandatory)
-        $rootNode->appendChild($this->createTitlesNode($doc, $issue, $publication, $galleyFile, $objectLocalePrecedence));
+        $rootNode->appendChild($this->createTitlesNode(
+            doc: $doc,
+            issue: $issue,
+            publication: $publication,
+            galleyFile: $galleyFile,
+            reviewAssignment: $reviewAssignment,
+            objectLocalePrecedence: $objectLocalePrecedence
+        ));
+
         // Publisher (mandatory)
         $rootNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'publisher', htmlspecialchars($publisher, ENT_COMPAT, 'UTF-8')));
         // Publication Year (mandatory)
         $rootNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'publicationYear', date('Y', strtotime($publicationDate))));
         // Subjects
         $subjects = [];
-        if (!empty($galleyFile) && !empty($genre) && $genre->getSupplementary()) {
-            $subjects = (array) $this->getPrimaryTranslation($galleyFile->getData('subject'), $objectLocalePrecedence);
-        } elseif (!empty($article) && !empty($publication)) {
-            $subjects = array_merge(
-                (array) $this->getPrimaryTranslation($publication->getData('keywords'), $objectLocalePrecedence),
-                (array) $this->getPrimaryTranslation($publication->getData('subjects'), $objectLocalePrecedence)
-            );
-        }
-        if (!empty($subjects)) {
-            $subjects = array_map(static fn ($s) => $s['name'], $subjects);
 
-            $subjectsNode = $doc->createElementNS($deployment->getNamespace(), 'subjects');
-            foreach ($subjects as $subject) {
-                $subjectsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'subject', htmlspecialchars($subject, ENT_COMPAT, 'UTF-8')));
+        if (!isset($reviewAssignment)) {
+            if (!empty($galleyFile) && !empty($genre) && $genre->getSupplementary()) {
+                $subjects = (array)$this->getPrimaryTranslation($galleyFile->getData('subject'), $objectLocalePrecedence);
+            } elseif (!empty($article) && !empty($publication)) {
+                $subjects = array_merge(
+                    (array)$this->getPrimaryTranslation($publication->getData('keywords'), $objectLocalePrecedence),
+                    (array)$this->getPrimaryTranslation($publication->getData('subjects'), $objectLocalePrecedence)
+                );
             }
-            $rootNode->appendChild($subjectsNode);
+            if (!empty($subjects)) {
+                $subjects = array_map(static fn ($s) => $s['name'], $subjects);
+
+                $subjectsNode = $doc->createElementNS($deployment->getNamespace(), 'subjects');
+                foreach ($subjects as $subject) {
+                    $subjectsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'subject', htmlspecialchars($subject, ENT_COMPAT, 'UTF-8')));
+                }
+                $rootNode->appendChild($subjectsNode);
+            }
         }
-        // Contributors
-        $contributorsNode = $this->createContributorsNode($doc, $publication);
-        if ($contributorsNode) {
-            $rootNode->appendChild($contributorsNode);
+
+        if (!isset($reviewAssignment)) {
+            // Contributors
+            $contributorsNode = $this->createContributorsNode($doc, $publication);
+            if ($contributorsNode) {
+                $rootNode->appendChild($contributorsNode);
+            }
         }
         // Dates
-        $rootNode->appendChild($this->createDatesNode($doc, $issue, $article, $publication, $galleyFile, $publicationDate));
+        $rootNode->appendChild($this->createDatesNode(
+            doc: $doc,
+            issue: $issue,
+            article: $article,
+            publication: $publication,
+            galleyFile: $galleyFile,
+            reviewAssignment: $reviewAssignment,
+            publicationDate: $publicationDate
+        ));
+
         // Language
         $rootNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'language', LocaleConversion::toBcp47($objectLocalePrecedence[0])));
         // Resource Type
-        $resourceTypeNode = $this->createResourceTypeNode($doc, $issue, $article, $galley, $galleyFile);
+        $resourceTypeNode = $this->createResourceTypeNode(
+            doc: $doc,
+            issue: $issue,
+            article: $article,
+            galley: $galley,
+            galleyFile: $galleyFile,
+            reviewAssignment: $reviewAssignment
+        );
+
         if ($resourceTypeNode) {
             $rootNode->appendChild($resourceTypeNode);
         }
         // Alternate Identifiers
-        $rootNode->appendChild($this->createAlternateIdentifiersNode($doc, $issue, $article, $galley));
+        $rootNode->appendChild($this->createAlternateIdentifiersNode($doc, $issue, $article, $galley, $reviewAssignment));
         // Related Identifiers
-        $relatedIdentifiersNode = $this->createRelatedIdentifiersNode($doc, $issue, $article, $publication, $galley);
+        $relatedIdentifiersNode = $this->createRelatedIdentifiersNode($doc, $issue, $article, $publication, $galley, $reviewAssignment);
         if ($relatedIdentifiersNode) {
             $rootNode->appendChild($relatedIdentifiersNode);
         }
@@ -260,28 +322,35 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                 $rootNode->appendChild($formatsNode);
             }
         }
-        // Rights
-        $rightsURL = $publication ? $publication->getData('licenseUrl') : $context->getData('licenseUrl');
-        if (!empty($rightsURL)) {
-            $rightsNode = $doc->createElementNS($deployment->getNamespace(), 'rightsList');
-            $rightsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'rights', htmlspecialchars(strip_tags(Application::get()->getCCLicenseBadge($rightsURL)), ENT_COMPAT, 'UTF-8')));
-            $node->setAttribute('rightsURI', $rightsURL);
-            $rootNode->appendChild($rightsNode);
-        }
-        // Descriptions
-        $descriptionsNode = $this->createDescriptionsNode($doc, $issue, $article, $publication, $galley, $galleyFile, $objectLocalePrecedence);
-        if ($descriptionsNode) {
-            $rootNode->appendChild($descriptionsNode);
-        }
-        // relatedItems
-        $relatedItemsNode = $this->createRelatedItemsNode($doc, $issue, $article, $publication, $publisher, $objectLocalePrecedence);
-        if ($relatedItemsNode) {
-            $rootNode->appendChild($relatedItemsNode);
-        }
-        // Funding references
-        $fundingReferencesNode = $this->createFundingReferencesNode($doc, $publication, $article);
-        if ($fundingReferencesNode) {
-            $rootNode->appendChild($fundingReferencesNode);
+
+        if (!isset($reviewAssignment)) {
+            // Rights
+            $rightsURL = $publication ? $publication->getData('licenseUrl') : $context->getData('licenseUrl');
+            if (!empty($rightsURL)) {
+                $rightsNode = $doc->createElementNS($deployment->getNamespace(), 'rightsList');
+                $rightsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'rights', htmlspecialchars(strip_tags(Application::get()->getCCLicenseBadge($rightsURL)), ENT_COMPAT, 'UTF-8')));
+                $node->setAttribute('rightsURI', $rightsURL);
+                $rootNode->appendChild($rightsNode);
+            }
+
+            // Descriptions
+            $descriptionsNode = $this->createDescriptionsNode($doc, $issue, $article, $publication, $galley, $galleyFile, $objectLocalePrecedence);
+
+            if (isset($descriptionsNode)) {
+                $rootNode->appendChild($descriptionsNode);
+            }
+
+            // relatedItems
+            $relatedItemsNode = $this->createRelatedItemsNode($doc, $issue, $article, $publication, $publisher, $objectLocalePrecedence);
+            if ($relatedItemsNode) {
+                $rootNode->appendChild($relatedItemsNode);
+            }
+
+            // Funding references
+            $fundingReferencesNode = $this->createFundingReferencesNode($doc, $publication, $article);
+            if ($fundingReferencesNode) {
+                $rootNode->appendChild($fundingReferencesNode);
+            }
         }
 
         return $doc;
@@ -306,7 +375,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
     /**
      * Create creators node.
      */
-    public function createCreatorsNode(DOMDocument $doc, ?Issue $issue, ?Publication $publication, ?SubmissionFile $galleyFile, string $publisher, array $objectLocalePrecedence): DOMNode
+    public function createCreatorsNode(DOMDocument $doc, ?Issue $issue, ?Publication $publication, ?SubmissionFile $galleyFile, ?ReviewAssignment $reviewAssignment, string $publisher, array $objectLocalePrecedence): DOMNode
     {
         /** @var DataciteExportDeployment $deployment */
         $deployment = $this->getDeployment();
@@ -314,6 +383,42 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $plugin = $deployment->getPlugin();
         $creators = [];
         switch (true) {
+            case (isset($reviewAssignment)):
+                if (!$publication) {
+                    throw new Exception('DataCite export: Cannot export/deposit review assignment because the associated publication is missing.');
+                }
+
+                $locale = $publication->getData('locale');
+                $reviewer = Repo::user()->get($reviewAssignment->getReviewerId(), true);
+
+                if (empty($reviewer)) {
+                    throw new Exception('DataCite export: Cannot export/deposit review assignment because the associated reviewer is missing.');
+                }
+
+                $affiliation = $reviewer->getAffiliation($locale);
+                $isOpenReview = $reviewAssignment->getReviewMethod() === ReviewAssignment::SUBMISSION_REVIEW_METHOD_OPEN;
+
+                $name = null;
+                $affiliations = [];
+                $orcid = null;
+
+                if ($isOpenReview) {
+                    $name = $reviewer->getFullName(false, true, $locale);
+                    $affiliations = $affiliation ? [$affiliation] : null;
+                    $orcid = $reviewer->getData('orcidIsVerified') ? $reviewer->getData('orcid') : null;
+                } else {
+                    // DataCite has no concept of an anonymous creator; use its
+                    // controlled value for "known to be unknown" instead.
+                    // https://datacite-metadata-schema.readthedocs.io/en/4.6/appendices/appendix-3/
+                    $name = DATACITE_UNKNOWN_ANONYMOUS;
+                }
+
+                $creators[] = [
+                    'name' => $name,
+                    'orcid' => $orcid,
+                    'affiliations' => $affiliations,
+                ];
+                break;
             case (isset($galleyFile) && ($genre = $plugin->getCache()->get('genres', $galleyFile->getData('genreId'))) && $genre->getSupplementary()):
                 // Check whether we have a supp file creator set...
                 $creator = $this->getPrimaryTranslation($galleyFile->getData('creator'), $objectLocalePrecedence);
@@ -342,7 +447,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                     // https://datacite-metadata-schema.readthedocs.io/en/4.6/appendices/appendix-3/
                     if ($contributorType === ContributorType::ANONYMOUS->getName()) {
                         $creators[] = [
-                            'name' => ':unkn',
+                            'name' => DATACITE_UNKNOWN_ANONYMOUS,
                         ];
                     } elseif ($contributorType === ContributorType::ORGANIZATION->getName()) {
                         $creators[] = [
@@ -404,16 +509,22 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
             if (!empty($creator['affiliations'])) {
                 // Currently affiliations are only there for Publication objects
                 foreach ($creator['affiliations'] as $affiliation) {
-                    $institutionName = $affiliation->getLocalizedName($publication->getData('locale'));
+                    $institutionName =
+                        isset($reviewAssignment) ? $affiliation  // Reviewer's affiliation is already a localized string
+                            : $affiliation->getLocalizedName($publication->getData('locale'));
                     if (trim($institutionName ?? '') === '') {
                         continue;
                     }
                     $node = $doc->createElementNS($deployment->getNamespace(), 'affiliation');
-                    $ror = $affiliation->getRor();
-                    if ($ror) {
-                        $node->setAttribute('affiliationIdentifier', $ror);
-                        $node->setAttribute('affiliationIdentifierScheme', 'ROR');
-                        $node->setAttribute('schemeURI', 'https://ror.org');
+
+                    if ($affiliation instanceof Affiliation) {
+                        $ror = $affiliation->getRor();
+
+                        if ($ror) {
+                            $node->setAttribute('affiliationIdentifier', $ror);
+                            $node->setAttribute('affiliationIdentifierScheme', 'ROR');
+                            $node->setAttribute('schemeURI', 'https://ror.org');
+                        }
                     }
                     $node->appendChild($doc->createTextNode($institutionName));
                     $creatorNode->appendChild($node);
@@ -544,6 +655,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         ?Issue $issue,
         ?Publication $publication,
         ?SubmissionFile $galleyFile,
+        ?ReviewAssignment $reviewAssignment,
         array $objectLocalePrecedence
     ): DOMNode {
         /** @var DataciteExportDeployment $deployment */
@@ -553,6 +665,55 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         // Get an array of localized titles.
         $alternativeTitle = null;
         switch (true) {
+            case isset($reviewAssignment):
+                $titles = [];
+                $cache = $plugin->getCache();
+                $reviewRound = null;
+
+                if ($cache->isCached('reviewRounds', $reviewAssignment->getReviewRoundId())) {
+                    $reviewRound = $cache->get('reviewRounds', $reviewAssignment->getReviewRoundId());
+                } else {
+                    $reviewRoundDao = DAORegistry::getDAO('ReviewRoundDAO');
+                    /** @var ReviewRound $reviewRound */
+                    $reviewRound = $reviewRoundDao->getById($reviewAssignment->getReviewRoundId());
+                    $cache->add($reviewRound, null);
+                }
+
+                // Get all reviews in the round
+                $allReviewsInRound = Repo::reviewAssignment()
+                    ->getCollector()
+                    ->filterByReviewRoundIds([$reviewRound->getId()])
+                    ->filterByIsPubliclyVisible(true)
+                    ->filterByIsConfirmedByEditor(true)
+                    ->getMany()
+                    ->all();
+
+                /**
+                 * The `getTranslationsByPrecedence` method, which is called further down, expects $titles to be an assoc array where the key is the locale key and the value is the localized string for that locale.
+                 * Since reviews don't have localized titles/names available, manually go through each locale key and add an entry in the $title for that key.
+                 */
+                foreach (array_keys($publication->getTitles()) as $locale) {
+                    $title = Repo::reviewAssignment()->getReviewTitle($reviewAssignment, $reviewRound, $allReviewsInRound, $publication, $locale);
+
+                    if (!$title) {
+                        continue;
+                    }
+
+                    $titles[$locale] = $title;
+                }
+
+                if (empty($titles)) {
+                    $fallback = Repo::reviewAssignment()->getReviewTitle(
+                        $reviewAssignment,
+                        $reviewRound,
+                        $allReviewsInRound,
+                        $publication,
+                        $deployment->getContext()->getPrimaryLocale()
+                    );
+
+                    $titles = $fallback ? [$fallback] : [];
+                }
+                break;
             case (
                 isset($galleyFile) &&
                 ($genre = $plugin->getCache()->get('genres', $galleyFile->getData('genreId'))) &&
@@ -593,7 +754,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
     /**
      * Create a date node list.
      */
-    public function createDatesNode(DOMDocument $doc, ?Issue $issue, ?Submission $article, ?Publication $publication, ?SubmissionFile $galleyFile, string $publicationDate): DOMNode
+    public function createDatesNode(DOMDocument $doc, ?Issue $issue, ?Submission $article, ?Publication $publication, ?SubmissionFile $galleyFile, ?ReviewAssignment $reviewAssignment, string $publicationDate): DOMNode
     {
         /** @var DataciteExportDeployment $deployment */
         $deployment = $this->getDeployment();
@@ -601,6 +762,26 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $plugin = $deployment->getPlugin();
         $dates = [];
         switch (true) {
+            case isset($reviewAssignment):
+                // Submitted date (for review assignments): date completed by reviewer
+                $dateCompleted = $reviewAssignment->getDateCompleted();
+                $dates[DATACITE_DATE_SUBMITTED] = $dateCompleted;
+
+                // Accepted date (for review assignment): date editor considered/acknowledged the review
+                $dateAccepted = $reviewAssignment->getDateConsidered() ?: $reviewAssignment->getDateAcknowledged();
+
+                if (!$dateAccepted) {
+                    throw new Exception('DataCite export: cannot export review assignment ' . $reviewAssignment->getId() . ' because it was never confirmed by an editor.');
+                }
+
+                $dates[DATACITE_DATE_ACCEPTED] = $dateAccepted;
+
+                // Last modified date (for review assignments): last modified date.
+                $lastModified = $reviewAssignment->getLastModified();
+                if ($lastModified) {
+                    $dates[DATACITE_DATE_UPDATED] = $lastModified;
+                }
+                break;
             case isset($galleyFile):
                 $genre = $plugin->getCache()->get('genres', $galleyFile->getData('genreId'));
                 if ($genre->getSupplementary()) {
@@ -674,7 +855,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
     /**
      * Create a resource type node.
      */
-    public function createResourceTypeNode(DOMDocument $doc, ?Issue $issue, ?Submission $article, ?Galley $galley, ?SubmissionFile $galleyFile): DOMNode
+    public function createResourceTypeNode(DOMDocument $doc, ?Issue $issue, ?Submission $article, ?Galley $galley, ?SubmissionFile $galleyFile, ?ReviewAssignment $reviewAssignment): DOMNode
     {
         /** @var DataciteExportDeployment $deployment */
         $deployment = $this->getDeployment();
@@ -682,6 +863,9 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $plugin = $deployment->getPlugin();
         $resourceTypeNode = null;
         switch (true) {
+            case isset($reviewAssignment):
+                $resourceType = 'PeerReview';
+                break;
             case isset($galley):
                 if (!$galley->getData('urlRemote')) {
                     $genre = $plugin->getCache()->get('genres', $galleyFile->getData('genreId'));
@@ -708,6 +892,9 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         } elseif ($resourceType == 'Journal Issue') {
             $resourceTypeNode = $doc->createElementNS($deployment->getNamespace(), 'resourceType', $resourceType);
             $resourceTypeNode->setAttribute('resourceTypeGeneral', 'Text');
+        } elseif ($resourceType === 'PeerReview') {
+            $resourceTypeNode = $doc->createElementNS($deployment->getNamespace(), 'resourceType');
+            $resourceTypeNode->setAttribute('resourceTypeGeneral', 'PeerReview');
         } else {
             // It is a supplementary file
             $resourceTypeNode = $doc->createElementNS($deployment->getNamespace(), 'resourceType');
@@ -719,7 +906,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
     /**
      * Generate alternate identifiers node list.
      */
-    public function createAlternateIdentifiersNode(DOMDocument $doc, ?Issue $issue, ?Submission $article, ?Galley $galley): DOMNode
+    public function createAlternateIdentifiersNode(DOMDocument $doc, ?Issue $issue, ?Submission $article, ?Galley $galley, ?ReviewAssignment $reviewAssignment): DOMNode
     {
         $deployment = $this->getDeployment();
         $context = $deployment->getContext();
@@ -734,6 +921,9 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         }
         if ($galley) {
             $proprietaryId .= '-g' . $galley->getId();
+        }
+        if ($reviewAssignment) {
+            $proprietaryId .= '-r' . $reviewAssignment->getId();
         }
         $alternateIdentifiersNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'alternateIdentifier', $proprietaryId));
         $node->setAttribute('alternateIdentifierType', DATACITE_IDTYPE_PROPRIETARY);
@@ -756,11 +946,24 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
     /**
      * Generate related identifiers node list.
      */
-    public function createRelatedIdentifiersNode(DOMDocument $doc, ?Issue $issue, ?Submission $article, ?Publication $publication, ?Galley $galley): ?DOMNode
+    public function createRelatedIdentifiersNode(DOMDocument $doc, ?Issue $issue, ?Submission $article, ?Publication $publication, ?Galley $galley, ?ReviewAssignment $reviewAssignment): ?DOMNode
     {
         $deployment = $this->getDeployment();
         $relatedIdentifiersNode = $doc->createElementNS($deployment->getNamespace(), 'relatedIdentifiers');
         switch (true) {
+            case isset($reviewAssignment):
+                if (!$publication) {
+                    throw new Exception('DataCite export: Cannot export/deposit review assignment because the associated publication is missing.');
+                }
+                // Reviews: publication/article
+                $publicationDoi = $publication->getDoi();
+
+                if ($publicationDoi) {
+                    $relatedIdentifiersNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'relatedIdentifier', htmlspecialchars($publicationDoi, ENT_COMPAT, 'UTF-8')));
+                    $node->setAttribute('relatedIdentifierType', DATACITE_IDTYPE_DOI);
+                    $node->setAttribute('relationType', DATACITE_RELTYPE_REVIEWS);
+                }
+                break;
             case isset($galley):
                 // Part of: article.
                 $doi = $publication->getStoredPubId('doi');
