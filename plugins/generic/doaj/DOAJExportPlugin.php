@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/doaj/DOAJExportPlugin.php
  *
- * Copyright (c) 2014-2025 Simon Fraser University
- * Copyright (c) 2003-2025 John Willinsky
+ * Copyright (c) 2014-2026 Simon Fraser University
+ * Copyright (c) 2003-2026 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DOAJExportPlugin
@@ -170,7 +170,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin implements HasTaskSchedule
         try {
             $response = $httpClient->request(
                 'DELETE',
-                DOAJ_API_URL . DOAJ_API_OPERATION . '/' . $doajId,
+                DOAJ_API_URL . DOAJ_API_OPERATION . '/' . rawurlencode($doajId),
                 [
                     'query' => ['api_key' => $apiKey, 'article_id' => $doajId],
                 ]
