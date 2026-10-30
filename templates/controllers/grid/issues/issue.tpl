@@ -18,6 +18,7 @@
 		<li><a href="{url router=PKP\core\PKPApplication::ROUTE_COMPONENT op="issueToc" issueId=$issueId}">{translate key="issue.toc"}</a></li>
 		<li><a href="{url router=PKP\core\PKPApplication::ROUTE_COMPONENT op="editIssueData" issueId=$issueId}">{translate key="editor.issues.issueData"}</a></li>
 		<li><a href="{url router=PKP\core\PKPApplication::ROUTE_COMPONENT op="issueGalleys" issueId=$issueId}">{translate key="editor.issues.galleys"}</a></li>
+		<li><a href="{url router=PKP\core\PKPApplication::ROUTE_COMPONENT op="issueEditors" issueId=$issueId}">{translate key="issue.editors"}</a></li>
 		{if $enableIdentifiers}
 			<li id="identifiersTab"><a href="{url router=PKP\core\PKPApplication::ROUTE_COMPONENT op="identifiers" issueId=$issueId}">{translate key="editor.issues.identifiers"}</a></li>
 		{/if}

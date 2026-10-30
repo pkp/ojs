@@ -23,6 +23,7 @@
 namespace APP\controllers\grid\issues;
 
 use APP\article\ArticleTombstoneManager;
+use APP\components\forms\issue\IssueEditorsForm;
 use APP\controllers\grid\issues\form\IssueAccessForm;
 use APP\controllers\grid\issues\form\IssueForm;
 use APP\controllers\grid\pubIds\form\AssignPublicIdentifiersForm;
@@ -74,6 +75,7 @@ class IssueGridHandler extends GridHandler
                 'uploadFile', 'deleteCoverImage',
                 'issueToc',
                 'issueGalleys',
+                'issueEditors',
                 'deleteIssue', 'publishIssue', 'unpublishIssue', 'setCurrentIssue',
                 'identifiers', 'updateIdentifiers', 'clearPubId', 'clearIssueObjectsPubIds',
                 'access', 'updateAccess',
@@ -504,6 +506,29 @@ class IssueGridHandler extends GridHandler
         $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         $templateMgr->assign('issue', $issue);
         return new JSONMessage(true, $templateMgr->fetch('controllers/grid/issues/issueToc.tpl'));
+    }
+
+    /**
+     * Display the issue editors form
+     *
+     * @param array $args
+     * @param Request $request
+     *
+     * @return JSONMessage JSON object
+     */
+    public function issueEditors($args, $request)
+    {
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
+        $issueApiUrl = $request->getDispatcher()->url($request, Application::ROUTE_API, $request->getContext()->getPath(), 'issues/' . $issue->getId());
+        $issueEditorsForm = new IssueEditorsForm($issueApiUrl, $issue);
+
+        $templateMgr = TemplateManager::getManager($request);
+        $templateMgr->assign('issueEditorsData', [
+            'components' => [
+                IssueEditorsForm::FORM_ISSUE_EDITORS => $issueEditorsForm->getConfig(),
+            ],
+        ]);
+        return new JSONMessage(true, $templateMgr->fetch('controllers/grid/issues/issueEditors.tpl'));
     }
 
     /**
