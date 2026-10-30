@@ -36,6 +36,7 @@ use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\security\authorization\UserRolesRequiredPolicy;
 use PKP\security\Role;
+use PKP\services\PKPSchemaService;
 use PKP\submission\GenreDAO;
 use PKP\userGroup\UserGroup;
 
@@ -46,6 +47,9 @@ class IssueController extends PKPBaseController
 
     /** @var int The maximum number of issues to return in one request */
     public const MAX_COUNT = 100;
+
+    /** @var string[] The issue props that can be edited through the API */
+    public const EDITABLE_PROPS = ['editors'];
 
     /**
      * @copydoc \PKP\core\PKPBaseController::getHandlerPath()
@@ -90,6 +94,17 @@ class IssueController extends PKPBaseController
 
         Route::get('assignmentOptions', $this->getAssignmentOptions(...))
             ->name('issue.getAssignmentOptions');
+
+        Route::middleware([
+            self::roleAuthorizer([
+                Role::ROLE_ID_MANAGER,
+                Role::ROLE_ID_SITE_ADMIN,
+            ]),
+        ])->group(function () {
+            Route::put('{issueId}', $this->edit(...))
+                ->name('issue.edit')
+                ->whereNumber('issueId');
+        });
     }
 
     /**
@@ -104,7 +119,7 @@ class IssueController extends PKPBaseController
 
         $illuminateRequest = $args[0]; /** @var \Illuminate\Http\Request $illuminateRequest */
 
-        if (static::getRouteActionName($illuminateRequest) === 'get') {
+        if (in_array(static::getRouteActionName($illuminateRequest), ['get', 'edit'])) {
             $this->addPolicy(new OjsIssueRequiredPolicy($request, $args));
         }
 
@@ -260,6 +275,58 @@ class IssueController extends PKPBaseController
                 'error' => __('api.404.resourceNotFound'),
             ], Response::HTTP_NOT_FOUND);
         }
+
+        $data = Repo::issue()->getSchemaMap()->map(
+            $issue,
+            $context,
+            $this->getUserGroups($context->getId()),
+            $this->getGenres($context->getId())
+        );
+
+        return response()->json($data, Response::HTTP_OK);
+    }
+
+    /**
+     * Edit an issue
+     *
+     * Only the props in EDITABLE_PROPS can be edited through the API. The
+     * remaining issue data is still managed by the issue grid forms.
+     */
+    public function edit(Request $illuminateRequest): JsonResponse
+    {
+        $context = $this->getRequest()->getContext();
+
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
+
+        if (!$issue) {
+            return response()->json([
+                'error' => __('api.404.resourceNotFound'),
+            ], Response::HTTP_NOT_FOUND);
+        }
+
+        $params = $this->convertStringsToSchema(PKPSchemaService::SCHEMA_ISSUE, $illuminateRequest->input());
+        $params = array_intersect_key($params, array_flip(self::EDITABLE_PROPS));
+
+        if (isset($params['editors'])) {
+            // Fill in missing fields and drop rows where no name was entered
+            $editors = array_map(
+                fn (array $editor): array => array_merge(['givenName' => '', 'familyName' => '', 'orcid' => ''], array_map(trim(...), $editor)),
+                $params['editors']
+            );
+            $params['editors'] = array_values(array_filter(
+                $editors,
+                fn (array $editor): bool => $editor['givenName'] !== '' || $editor['familyName'] !== ''
+            ));
+        }
+
+        $errors = Repo::issue()->validate($issue, $params, $context->getSupportedFormLocales(), $context->getPrimaryLocale());
+
+        if (!empty($errors)) {
+            return response()->json($errors, Response::HTTP_BAD_REQUEST);
+        }
+
+        Repo::issue()->edit($issue, $params);
+        $issue = Repo::issue()->get($issue->getId());
 
         $data = Repo::issue()->getSchemaMap()->map(
             $issue,

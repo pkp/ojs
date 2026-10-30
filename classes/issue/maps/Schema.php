@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/issue/maps/Schema.php
  *
@@ -133,6 +134,13 @@ class Schema extends \PKP\core\maps\Schema
                     }
 
                     $output[$prop] = $retVal;
+                    break;
+                case 'editors':
+                    $editors = [];
+                    foreach (is_array($issue->getData($prop)) ? $issue->getData($prop) : [] as $editor) {
+                        $editors[] = array_merge(['givenName' => '', 'familyName' => '', 'orcid' => ''], $editor);
+                    }
+                    $output[$prop] = $editors;
                     break;
                 case 'galleys':
                     $data = [];
