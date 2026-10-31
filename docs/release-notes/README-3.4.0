@@ -46,6 +46,31 @@ New config.inc.php parameters added for emails:
     - default (default value: sendmail), being the default mailer driver to be used for email delivery
     - sendmail_path (default value: "/usr/sbin/sendmail -bs"), being the path to the sendmail program on the server
 
+3.4.0-12 Build
+--------------
+	#10813: Wrong translation between actual date of data point in statistics views and date label
+	#13426: [Plugin Gallery] | Search filtering results in data about the wrong plugin being presented
+	#13432: [Publisher Library] | Ensure that access policies are applied to the publisher library
+	#13434: [Email Log] | Ensure email ID and submission IDs correlate
+	#13437: [Login] | Properly escape user disable reason when presenting to the user
+	#13438: [API] | Ensure at least partial user administration level when serving user information via API
+	#13442: [API] | Ensure writeOnly / apiSummary are used correctly in user and author/contributor API endpoints
+	#13482: Validate user group IDs when enrolling/creating reviewers in editorial workflow
+	#13494: Ensure merge target has appropriate administration level
+	#13513: Editorial report email: "Active submissions" counts are not limited to the journal
+	#13560: Improve hygeine of public file management
+	#13566: A journal's own OAI address leaves out its deleted records and lists the first journal's instead
+	#13571: Properly json_encode LessCSS base URL
+	#13581: Ensure files match parent ID expectations
+	#13599: [DOAJ Export] | DOAJ deposit drops page numbers and author affiliations
+	#13608: Updating a plugin can overwrite the OJS core version
+	#13616: Disable isEvalSupported in pdf.js to avoid CVE-2024-4367
+	#13621: Escape the submission title in the reviewer's page title
+	#13623: Properly escape copyright statement
+	#13637: Revise/fix galley file revision policies
+	#13650: [Plugins] | Tighten API validation for plugin-defined schema properties
+	#13663: Ensure matching IDs
+
 3.4.0-11 Build
 --------------
 	#12163: [Controlled Vocabularies] | Publication metadata - Suggestions for Controlled Vocabulary entires are fetched from all existing submissions, even rejected and in editing
