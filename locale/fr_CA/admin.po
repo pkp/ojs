@@ -1,11 +1,11 @@
 # Marie-Hélène Vézina [UdeMontréal] <marie-helene.vezina@umontreal.ca>, 2022, 2023.
-# Nicolas Dickner <dickner.nicolas@uqam.ca>, 2025.
+# Nicolas Dickner <dickner.nicolas@uqam.ca>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
-"PO-Revision-Date: 2025-04-16 13:34+0000\n"
+"PO-Revision-Date: 2026-10-09 03:14+0000\n"
 "Last-Translator: Nicolas Dickner <dickner.nicolas@uqam.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
 "admin/fr_CA/>\n"
@@ -30,8 +30,8 @@ msgstr ""
 
 msgid "admin.languages.confirmDisable"
 msgstr ""
-"Êtes-vous certain-e de vouloir désactiver cette langue ? Ceci affectera "
-"toute revue hébergée utilisant actuellement cette langue."
+"Voulez-vous vraiment désactiver cette langue ? Ceci affectera toute revue "
+"hébergée utilisant actuellement cette langue."
 
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr ""

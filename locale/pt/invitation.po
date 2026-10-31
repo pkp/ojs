@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-08-18 18:19+0000\n"
-"Last-Translator: Pedro Calheno Pinto <ppinto@keep.pt>\n"
+"PO-Revision-Date: 2026-10-29 14:06+0000\n"
+"Last-Translator: Carla Marques <carla.marques@usdb.uminho.pt>\n"
 "Language-Team: Portuguese <http://translate.pkp.sfu.ca/projects/ojs/"
 "invitation/pt/>\n"
 "Language: pt\n"
@@ -50,11 +50,8 @@ msgstr "O utilizador não tem nenhum papel nesta revista"
 msgid "invitation.role.masthead"
 msgstr "Equipa Editorial da Revista"
 
-#, fuzzy
 msgid "invitation.wizard.pageTitleDescription"
-msgstr ""
-"Está a convidar um utilizador para assumir um papel no OJS e aparecer na "
-"equipa editorial da revista"
+msgstr "Está a convidar um utilizador para assumir um papel no OJS"
 
 msgid "userInvitation.roleTable.journalMasthead"
 msgstr "Equipa Editorial da Revista"

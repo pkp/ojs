@@ -1,32 +1,31 @@
+# Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-31 02:16+0000\n"
-"Last-Translator: Paul Heckler <paul.d.heckler@gmail.com>\n"
-"Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/importexport-"
-"doaj/fr/>\n"
-"Language: fr_FR\n"
+"PO-Revision-Date: 2026-10-28 07:45+0000\n"
+"Last-Translator: Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>\n"
+"Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-doaj/fr/>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.importexport.doaj.displayName"
 msgstr "Module d'exportation DOAJ"
 
-#, fuzzy
 msgid "plugins.importexport.doaj.description"
-msgstr "Exporter la revue pour DOAJ."
+msgstr "Exporter les métadonnées des articles vers DOAJ."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Contacter DOAJ pour inclusion"
 
-#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "Si vous souhaitez enregistrer des articles depuis OJS, veuillez entrer votre "
-"clé API DOAJ. À défaut, vous pourrez toujours exporter au format XML DOAJ, "
-"mais vous ne pourrez pas enregistrer vos articles avec DOAJ depuis OJS."
+"clé API DOAJ. À défaut, l'export du format XML DOAJ reste possible, mais "
+"vous devez faire l'enregistrement chez DOAJ manuellement."
 
 msgid "plugins.importexport.doaj.settings.form.apiKey"
 msgstr "Clé API DOAJ"
