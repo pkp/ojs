@@ -1,0 +1,366 @@
+# Zokirov Sanjar Ikromjon o'g'li <phd-2019@mail.ru>, 2026.
+# Obloqulov Shoyim <obloqulovshoyim1@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2026-01-14 15:28+0000\n"
+"Last-Translator: Zokirov Sanjar Ikromjon o'g'li <phd-2019@mail.ru>\n"
+"Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/submission/uz/>\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "submission.submit.userGroup"
+msgstr "... ролида юбориш"
+
+msgid "submission.upload.selectComponent"
+msgstr "Мақола компонентини танланг"
+
+msgid "submission.title"
+msgstr "Мақола номи"
+
+msgid "submission.title.tip"
+msgstr ""
+"Тақдим этиш тури одатда «тасвир», «матн» ёки бошқа мультимедиа турларидан "
+"бири, жумладан «дастурий таъминот» ёки «интерактив» бўлиши мумкин. "
+"Илтимос, тақдимотингиз учун энг мосини танланг. Мисолларни <a target="
+"\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/"
+"generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/"
+"generic.shtml#type</a> саҳифасида топиш мумкин."
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "... да янги юборишни бошлаш"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Янги ариза юбориш"
+
+msgid "grid.action.workflow"
+msgstr "Ариза топшириш иш жараёни"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Аннотация {$wordCount} ёки ундан кам сўздан иборат бўлиши керак."
+
+msgid "submission.submit.noContext"
+msgstr "Ушбу материал журнали топилмади."
+
+msgid "submission.issueEntry"
+msgstr "Метамаълумотлар"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"Журнал сизнинг аризангиз тўғрисида хабардор қилинди ва сизнинг "
+"аризаларингиз учун электрон почта орқали тасдиқлов юборилди. Муҳаррир "
+"сизнинг аризангизни кўриб чиққач, у сиз билан боғланади."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Галлей нашрда пайдо бўлади"
+
+msgid "grid.action.issueEntry"
+msgstr "Ушбу материалнинг метамаълумотларини кўриш"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "«{$galleyFormatName}» мақола галлейи мавжуд."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "«{$galleyFormatName}» мақола галлейи мавжуд эмас."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Материалнинг оммавий идентификаторлари янгиланди."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Форматни тасдиқлаш"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Ушбу галлей <em>энди ўқувчиларга тақдим этилмайди</em>.</p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Ушбу галлей <em>ўқувчиларга тақдим этилади</em>.</p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Ушбу галлейни фойдаланиш учун очиш"
+
+msgid "submission.galleyFiles"
+msgstr "Галлей файллари"
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"Саҳифаловчи муҳаррир нашрга тайёр файлларни шу ерда юклайди. "
+"Муаллифларни ва бошқаларни галлейларингизни текшириш учун тайинлаш ва "
+"нашрдан олдин тасдиқлаш учун қайта кўриб чиқилган файлларни юклаш "
+"учун <em>Аудитор тайинлаш</em> функциясидан фойдаланинг."
+
+msgid "grid.action.approveProof"
+msgstr "Ушбу далилнинг галлейларга киритилишини маъқуллаш."
+
+msgid "grid.action.pageProofApproved"
+msgstr "Ушбу далил галлейларга қўшиш учун тасдиқланган."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Сарлавҳа ва Аннотация"
+
+msgid "submission.submit.upload.description"
+msgstr ""
+"Ушбу аризага тегишли файлларни, жумладан мақола, мультимедиа, маълумотлар "
+"тўплами, иллюстрациялар ва бошқаларни юкланг."
+
+msgid "submission.pageProofs"
+msgstr "Текшириш"
+
+msgid "workflow.review.externalReview"
+msgstr "Тақриз"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Тақдим этилган материал нашри метамаълумотлари янгиланди."
+
+msgid "submission.upload.fileContents"
+msgstr "Мақола компоненти"
+
+msgid "submission.complete"
+msgstr "Тасдиқланган"
+
+msgid "submission.incomplete"
+msgstr "Тасдиқлаш кутилмоқда"
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Ариза текшириш рўйхати"
+
+msgid "submission.submit.privacyStatement"
+msgstr "Махфийлик баёноти"
+
+msgid "submission.submit.contributorRole"
+msgstr "Иштирокчининг роли"
+
+msgid "submission.citationFormat.notFound"
+msgstr "Сўралган иқтибос форматини олиб бўлмади."
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Ушбу спецификациялар журналлар мазмунини тавсифлаш учун "
+"фойдаланиладиган халқаро стандарт бўлган Dublin Core метамаълумотлар "
+"тўпламига асосланади."
+
+msgid "section.any"
+msgstr "Ҳар қандай бўлим"
+
+msgid "submission.sectionOptions"
+msgstr "Бўлим параметрлари"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} та элемент"
+
+msgid "catalog.category.heading"
+msgstr "Барча элементлар"
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"Бу нашрнинг галлейларини таҳрир қилиб бўлмайди, чунки у аллақачон чоп "
+"этилган."
+
+msgid "galley.publicationNotFound"
+msgstr "Бу галлей учун нашр топилмади."
+
+msgid "publication.assignToissue"
+msgstr "Нашр сонига тайинлаш"
+
+msgid "publication.assignedToIssue"
+msgstr "Нашр сонига тайинланди"
+
+msgid "publication.changeIssue"
+msgstr "Нашр сонини ўзгартириш"
+
+msgid "publication.datePublished.description"
+msgstr "Нашр санаси у чоп этилганда автоматик равишда ўрнатилади. Агар мақола аввал бошқа жойда нашр этилган бўлса ва сиз ушбу санани кўрсатишингиз керак бўлса, уни қўлда киритинг."
+
+msgid "publication.invalidSection"
+msgstr "Ушбу мақола учун бўлим топилмади."
+
+msgid "publication.inactiveSection"
+msgstr "{$section} (Фаол бўлмаган бўлим)"
+
+msgid "publication.invalidIssue"
+msgstr "Ушбу мақола учун нашр сони топилмади."
+
+msgid "publication.publish.confirmation"
+msgstr "Барча нашр талаблари бажарилди. Ҳақиқатан ҳам ушбу мақолани нашр қилмоқчимисиз?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr "Барча нашр талаблари бажарилди. Ушбу мақола {$issue} нашр этилганда чоп этилади. Ҳақиқатан ҳам буни режалаштирмоқчимисиз?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr "Барча нашр талаблари бажарилди. Ушбу мақола дарҳол {$issue} таркибида нашр этилади. Ҳақиқатан ҳам нашр қилмоқчимисиз?"
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr "Барча нашр талаблари бажарилди. Ушбу мақола {$datePublished} санаси билан нашр этилади. Ҳақиқатан ҳам нашр қилмоқчимисиз?"
+
+msgid "publication.required.issue"
+msgstr "Мақола нашр этилишидан олдин у бирон бир нашр сонига тайинланиши керак."
+
+msgid "publication.publishedIn"
+msgstr "Нашр қилинган жой: <a href=\"{$issueUrl}\">{$issueName}</a>"
+
+msgid "publication.scheduledIn"
+msgstr "Нашр қилиниши режалаштирилган: <a href=\"{$issueUrl}\">{$issueName}</a>"
+
+msgid "publication.unscheduledIn"
+msgstr "Бу мақола ҳали бирорта нашр сони учун режалаштирилмаган."
+
+msgid "publication.selectIssue"
+msgstr "Нашр қилишни режалаштириш учун нашр сонини танланг"
+
+msgid "submission.publication"
+msgstr "Нашр"
+
+msgid "publication.status.published"
+msgstr "Нашр этилган"
+
+msgid "submission.status.scheduled"
+msgstr "Режалаштирилган"
+
+msgid "publication.status.unscheduled"
+msgstr "Режалаштирилмаган"
+
+msgid "submission.publications"
+msgstr "Нашрлар"
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr "Муаллифлик ҳуқуқи йили мақола нашр сонида чоп этилганда автоматик белгиланади."
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr "Муаллифлик ҳуқуқи йили нашр этилган сана асосида автоматик белгиланади."
+
+msgid "publication.datePublished"
+msgstr "Нашр этилган сана"
+
+msgid "publication.editDisabled"
+msgstr "Ушбу версия нашр этилган ва уни таҳрирлаб бўлмайди."
+
+msgid "publication.event.published"
+msgstr "Мақола нашр этилди."
+
+msgid "publication.event.scheduled"
+msgstr "Мақола нашрга режалаштирилди."
+
+msgid "publication.event.unpublished"
+msgstr "Мақола нашрдан олинди."
+
+msgid "publication.event.versionPublished"
+msgstr "Янги версия нашр этилди."
+
+msgid "publication.event.versionScheduled"
+msgstr "Янги версия нашрга режалаштирилди."
+
+msgid "publication.event.versionUnpublished"
+msgstr "Версия нашрдан олинди."
+
+msgid "publication.invalidSubmission"
+msgstr "Ушбу нашр учун ариза топилмади."
+
+msgid "publication.publish"
+msgstr "Нашр этиш"
+
+msgid "publication.publish.requirements"
+msgstr "Нашр этишдан олдин қуйидаги талаблар бажарилиши керак:"
+
+msgid "publication.required.declined"
+msgstr "Рад этилган мақолани нашр этиб бўлмайди."
+
+msgid "publication.required.reviewStage"
+msgstr "Мақола нашр этилишидан олдин «Таҳрирлаш» (Copyediting) ёки «Саҳифалаш» (Production) босқичида бўлиши керак."
+
+msgid "submission.license.description"
+msgstr "Ушбу мақола нашр этилганда лицензия автоматик равишда <a href=\"{$licenseUrl}\" target=\"_blank\">{$licenseName}</a> шаклида ўрнатилади."
+
+msgid "submission.copyrightHolder.description"
+msgstr "Нашр этилгандан сўнг муаллифлик ҳуқуқи автоматик равишда {$copyright} зиммасига юкланади."
+
+msgid "submission.copyrightOther.description"
+msgstr "Нашр этилган мақолалар учун муаллифлик ҳуқуқини қуйидаги томонга ўтказиш"
+
+msgid "publication.unpublish"
+msgstr "Нашрдан олиш"
+
+msgid "publication.unpublish.confirm"
+msgstr "Ҳақиқатан ҳам ушбу мақолани нашрдан олмоқчимисиз?"
+
+msgid "publication.unschedule.confirm"
+msgstr "Ҳақиқатан ҳам ушбу мақолани нашр режасидан олиб ташламоқчимисиз?"
+
+msgid "publication.version.details"
+msgstr "{$version} версияси учун нашр тафсилотлари"
+
+msgid "submission.queries.production"
+msgstr "Саҳифалаш жараёни бўйича муҳокамалар"
+
+msgid "editor.submission.decision.backToReview"
+msgstr "Тақризга қайтариш"
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr "Ушбу аризани қайта кўриб чиқиш (тақриз) босқичига қайтариш."
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr "{$editorName} ушбу аризани тақриз босқичига қайтарди."
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Ариза тақриз босқичига қайтарилди"
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "Ариза, {$title}, кўриб чиқиш (тақриз) босқичига қайтарилди."
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr "Муаллифларга уларнинг аризаси қайта кўриб чиқиш босқичига қайтарилгани ҳақида хабар юбориш. Нима учун бундай қарорга келинганини тушунтиринг ва муаллифдан қандай кейинги ҳаракатлар талаб қилинишини билдиринг."
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr "Муаллифларга ушбу ариза ташқи тақризга юборилаётгани ҳақида хабар юборинг."
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Тақриз босқичига ўтказиладиган файлларни танланг."
+
+msgid "doi.submission.issueMissing.publication"
+msgstr "Мақола учун DOI яратиб бўлмади. У ҳали бирорта нашр сонига бириктирилмаган."
+
+msgid "doi.submission.issueMissing.representation"
+msgstr "Мақола файли (galley) учун DOI яратиб бўлмади. У ҳали бирорта нашр сонига бириктирилмаган."
+
+msgid "doi.submission.incorrectContext"
+msgstr "Мақола учун DOI яратиб бўлмади. Ушбу контекстда (журналда) DOI тизими фаоллаштирилмаган."
+
+msgid "submission.layout.viewGalley"
+msgstr "Файлни кўриш (Galley)"
+
+msgid "galley.cantEditPublished"
+msgstr "Нашр этилган файлни (galley) таҳрирлаб бўлмайди."
+
+msgid "submission.copyright.description"
+msgstr "Илтимос, ушбу мақола учун муаллифлик ҳуқуқи шартларини ўқинг ва тасдиқланг."
+
+msgid "submission.wizard.notAllowed.description"
+msgstr "Сизга мақола топширишга рухсат берилмаган."
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr "Мақола топшириш учун очиқ бўлимлар мавжуд эмас."
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr "{$section} бўлими ҳозирда ёпиқ."
+
+msgid "submission.sectionNotFound"
+msgstr "Ушбу мақола учун бўлим топилмади."
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr "Ушбу бўлимга фақат таҳририят аъзолари мақола жойлаштириши мумкин."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Камида битта муаллиф кўрсатилиши шарт."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Мақола номини киритинг."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Мақола аннотациясини киритинг."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "Аннотация жуда узун. Илтимос, уни белгиланган сўзлар сонигача қисқартиринг."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Иштирокчи ролини танланг."
