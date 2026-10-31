@@ -1,8 +1,8 @@
 OJS 3.3.0 Release Notes
-Git tag: 3_3_0-23
+Git tag: 3_3_0-24
 
-Release date: September 18, 2026
-================================
+Release date: October 30, 2026
+==============================
 
 Configuration Changes
 ---------------------
@@ -29,6 +29,25 @@ configuration parameters.
   - email.smtp_oauth_refreshtoken
 - The setting general.session_samesite (default value: Lax) has been added to control the "SameSite" setting for the session cookie.
 - The setting security.force_ssl, when enabled, will also set the "Secure" flag for the session cookie.
+
+3.3.0-24 Build
+--------------
+	#13426: [Plugin Gallery] | Search filtering results in data about the wrong plugin being presented
+	#13434: [Email Log] | Ensure email ID and submission IDs correlate
+	#13437: [Login] | Properly escape user disable reason when presenting to the user
+	#13438: [API] | Ensure at least partial user administration level when serving user information via API
+	#13482: Validate user group IDs when enrolling/creating reviewers in editorial workflow
+	#13494: Ensure merge target has appropriate administration level
+	#13560: Improve hygeine of public file management
+	#13571: Properly json_encode LessCSS base URL
+	#13581: Ensure files match parent ID expectations
+	#13599: [DOAJ Export] | DOAJ deposit drops page numbers and author affiliations
+	#13608: Updating a plugin can overwrite the OJS core version
+	#13616: Disable isEvalSupported in pdf.js to avoid CVE-2024-4367
+	#13621: Escape the submission title in the reviewer's page title
+	#13623: Properly escape copyright statement
+	#13637: Revise/fix galley file revision policies
+	#13663: Ensure matching IDs
 
 3.3.0-23 Build
 --------------
