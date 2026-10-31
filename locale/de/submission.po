@@ -1,12 +1,13 @@
 # Pia Piontkowitz <pia.piontkowitz@rub.de>, 2021, 2023, 2025.
 # Andres Quast <quast@hbz-nrw.de>, 2022.
+# Sebastian Wolf <bibliothekswelt@htmlwolf.de>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
-"PO-Revision-Date: 2025-10-27 16:55+0000\n"
-"Last-Translator: Pia Piontkowitz <pia.piontkowitz@rub.de>\n"
+"PO-Revision-Date: 2026-10-23 09:10+0000\n"
+"Last-Translator: Sebastian Wolf <bibliothekswelt@htmlwolf.de>\n"
 "Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "de/>\n"
 "Language: de\n"
@@ -132,7 +133,6 @@ msgstr "Warte auf Freigabe"
 msgid "submission.submit.submissionChecklist"
 msgstr "Einreichungs-Checkliste"
 
-#, fuzzy
 msgid "submission.submit.privacyStatement"
 msgstr "Datenschutzerklärung"
 

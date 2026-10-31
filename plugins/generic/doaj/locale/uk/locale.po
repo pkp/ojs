@@ -1,10 +1,10 @@
-# Petro Bilous <petrobilous@ukr.net>, 2023.
+# Petro Bilous <petrobilous@ukr.net>, 2023, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:05:41+00:00\n"
-"PO-Revision-Date: 2023-04-29 14:49+0000\n"
+"PO-Revision-Date: 2026-10-23 17:00+0000\n"
 "Last-Translator: Petro Bilous <petrobilous@ukr.net>\n"
 "Language-Team: Ukrainian <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-doaj/uk/>\n"
@@ -12,23 +12,25 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.13.1\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.importexport.doaj.displayName"
 msgstr "Плагін експорту DOAJ"
 
-#, fuzzy
 msgid "plugins.importexport.doaj.description"
-msgstr "Експортувати журнал у DOAJ."
+msgstr ""
+"Експортувати метадані статті в Directory of Open Access Journals (DOAJ)."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Контактувати з DOAJ щодо включення"
 
-#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
-msgstr "Якщо ви хочете зареєструвати статті одразу з OJS, будь ласка, введіть свій ключ API DOAJ. Якщо у вас немає ключа API DOAJ, ви все одно зможете експортувати в DOAJ XML, але ви не можете зареєструвати свої DOI в DOAJ з OJS."
+msgstr ""
+"Щоб реєструвати статті в DOAJ безпосередньо з OJS, введіть свій ключ API для "
+"DOAJ. Без ключа API ви все одно зможете експортувати статті у форматі DOAJ "
+"XML, але подавати їх до DOAJ вам доведеться самостійно."
 
 msgid "plugins.importexport.doaj.settings.form.apiKey"
 msgstr "Ключ DOAJ API"

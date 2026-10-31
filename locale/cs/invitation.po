@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-09-03 15:03+0000\n"
+"PO-Revision-Date: 2026-10-24 09:43+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/invitation/cs/"
 ">\n"
@@ -56,11 +56,8 @@ msgstr ""
 "rozhodnete tento krok nyní přeskočit, můžete své ORCID iD ověřit později v "
 "sekci svého profilu v OJS"
 
-#, fuzzy
 msgid "invitation.wizard.pageTitleDescription"
-msgstr ""
-"Zvete uživatele, aby převzal roli v OJS a zároveň se objevil v tiráži "
-"časopisu"
+msgstr "Zvete uživatele, aby přijal roli v systému OJS"
 
 msgid "invitation.role.masthead"
 msgstr "Tiráž časopisu"
