@@ -1,8 +1,8 @@
 OJS 3.5.0 LTS Release Notes
-Git tag: 3_5_0-5
+Git tag: 3_5_0-6
 
-Release date: June 30, 2026
-===========================
+Release date: October 31, 2026
+==============================
 
 Configuration Changes
 ---------------------
@@ -39,6 +39,117 @@ The following (previously optional) settings have been removed from the config.i
         - api_url
     - In the [orcidProfilePlugin] section:
         - orcid_redirect_base_url
+
+3.5.0-6 Build (LTS)
+-------------------
+	#9347: [ A11Y] The asterisk "*" on titles and labels are being read by screenreader and might become a annoying distraction
+	#9357: [A11Y] In the reference text area, there is an invalid state WAI-ARIA
+	#10813: Wrong translation between actual date of data point in statistics views and date label
+	#11565: Create a phpUnit test for adding Title Abbreviation to PubMed exports
+	#11892: Update DOAJ Documentation
+	#12074: Security | Adopt Laravel encryption tools for internal credential storage
+	#12163: [Controlled Vocabularies] | Publication metadata - Suggestions for Controlled Vocabulary entires are fetched from all existing submissions, even rejected and in editing
+	#12267: [Orcid] | Overwrite of Orcid redirect base url via config setting not ported from OJS 3.3 plugin version
+	#12347: [Editorial Workflow] | File revision history has confusing/wrong event log of previous file at new revision upload
+	#12375: Redirect loop for cookie less browsers/tools
+	#12414: [JATS XML] | Metadata - JATS formatting tags are not being converted for titles and abstracts
+	#12676: Create OJS account | Create OJS account, new user cannot accept invitation if journal does not appear publicly on site
+	#12696: [A11Y] Editorial View - Action link text in expanded row menus is too small
+	#12702: [JATS XML] | Upload file - Submission > Publication > Jats XML, unauthorization issue for admin and section editor when uploading JATS files
+	#12736: [Submission List] | Editorial View - Dashboard Table, when using the column sort by id it appears to rotate through 3 types but it isn't reflected in the URL persistance value
+	#12780: [Login As] | Editorial workflow - Submission in Review, user with disabled state will cause a 500 error when login as feature is used
+	#12784: [Remove User] | Settings Workflow Section - Users & Roles, When a user is searched on different users & roles table listing page the user is not being displayed in the search table
+	#12792: [Emails] | User invitation email: Accept/Decline buttons invisible in Outlook (white-on-white)
+	#12874: Review invitation locale file
+	#12917: OAI query with date causes  error 500 response (OJS 3.5, postgres)
+	#12939: Fix misleading DOAJ plugin description under Tools
+	#12961: [Mail] | Invite User, Using log email config setting breaks user invitation process
+	#13005: [Create New Versions] | Editorial Workflow Section - Notifications, The notification for a new version sent to the author is showing unauthorized.
+	#13013: Ensure author reordering checks specified author IDs for appropriateness
+	#13014: Properly escape galley title in PDF viewer plugin
+	#13018: Fix ROR API to stop trusting client-submitted institution data
+	#13024: Pass plugin category through whitelist before loading
+	#13030: Constrain file extension in native import plugin
+	#13034: Validate library file IDs against context IDs when deleting library files
+	#13039: [OPS Galley Options] | Author Workflow Section - Publication > Galley Page, author is unable to have access to modify existing Galley files
+	#13041: [Schedule Task] | Web based task runner may miss task executing without last run tracking
+	#13044: [OPS Contributors] | Author Workflow Section - Publication > Contributors Page, author is unable to have access to contributors options pre publication
+	#13050: Manage Emails loads a mailable class that is not in pkp-lib
+	#13065: Remove max attempt hard gate on job tries when not running via worker daemon
+	#13114: [DataCite] | Export does not work for articles without an abstract
+	#13125: Bulk delete of incomplete submissions returns 404 on stable-3_5_0: fix from #12742 was not backported
+	#13127: [Invitations] Intermittent "route .../invitations/null/invite could not be found" error when sending invitations - OJS 3.5.0-5
+	#13128: [Email Templates] | Registration validation email - {$activateUrl} is not a clickable link
+	#13132: [UI] | Reset Password page shows the locale key in the browser tab
+	#13139: Locale::lookup() receives more than 100 language tags and causes TypeError on PHP 8.4
+	#13141: Invitations to a role should not be CCable/BCCable
+	#13154: [API] | Apply consistent anonymization in submissions API
+	#13155: [Email Templates] | ORCID Emails - Author name and article title missing
+	#13162: [Main Feature] | Review Form Edit sends email with incorrect due dates
+	#13181: Invitation accept/decline URLs name the wrong journal when the invitation is sent from a queued job
+	#13184: [Bulk Mail] | Send Email (Users & Roles) shows 0 users in the confirmation, but emails are actually sent
+	#13188: [Toast Notification] | Editorial Workflow Section - Submission page Panels, closing the toast notifications also close the current open panels in the submission workflow.
+	#13218: Editiorial Masthead/History pages show no users — getSortedMastheadUserGroups() keyed by index, not user group ID
+	#13225: [Mail] | Issue published notification article and PDF links do not resolve
+	#13235: Properly escape submission title in HTML article galley plugin
+	#13267: [Reviewer] | "View All Submission Details" shows "Array, Array" for Keywords, Subjects and Discipline, Supporting Agencies don't render
+	#13274: Author affiliation upgrade to 3.5 maps affiliation strings to multiple RORs
+	#13280: [OAI Metadata] | OAI MARC and MARC21 render subjects as "Array" (and never output disciplines)
+	#13283: Restore degraded ORCID functionality in 3.5
+	#13293: Limit access to review exports to Managers, Sub Editors, and Assistants
+	#13294: Review submission ID / file ID cross-checking in SubmissionDocumentsFilesGridHandler
+	#13299: [Invitations] Validate user group context
+	#13305: [OJS] Review PDF export fails with a read-only vendor directory
+	#13313: [Users & Roles] | Editorial Workflow Section - Edit User Page, disabled user causing error when trying to edit in users & roles
+	#13335: Limit image extensions by purpose
+	#13343: Authors should not be able to confirm open reviews
+	#13344: Ensure article cover images are image files
+	#13348: [Auth|Session] | Session helpers (session(), Session facade, csrf_token()) read a second, never-started session store
+	#13358: [Submission] | Workflow Section - Files Grid Throws PHP Warning
+	#13366: [Locale] | UI-language lists show identical names for locales that differ only by script
+	#13370: Improve control over masthead presentation
+	#13376: [Users & Roles] | Invite user to a role - The email sent uses the user email and not the name.
+	#13378: [JATS XML] | Editorial Workflow Section - JATS XML Page, Manually adding some html tags are not being escaped like others
+	#13383: vocabs API returns 500 (TypeError) when a controlled vocabulary entry has no name in the requested locale
+	#13387: [Disabled User] | Reader Workflow Section - Editorial Masthead Page, When a user has been disabled and should appear on the masthead it is throwing a 500 error page
+	#13412: Users XML import: empty or invalid role dates fail the import, and roles are duplicated on re-import
+	#13426: [Plugin Gallery] | Search filtering results in data about the wrong plugin being presented
+	#13432: [Publisher Library] | Ensure that access policies are applied to the publisher library
+	#13434: [Email Log] | Ensure email ID and submission IDs correlate
+	#13437: [Login] | Properly escape user disable reason when presenting to the user
+	#13438: [API] | Ensure at least partial user administration level when serving user information via API
+	#13440: [API] | Update sub editor role and masthead behaviour
+	#13442: [API] | Ensure writeOnly / apiSummary are used correctly in user and author/contributor API endpoints
+	#13449: [PubMed Plugin] | PubMed files lose the journal's title once the PubMed tool's Settings are saved with no NLM abbreviation
+	#13461: Copyediting: "Upload/Select Files" on "Copyedited Files" opens a window titled "Upload Review File"
+	#13472: Editorial dashboard: three inaccuracies in the reviewer popovers (day count, overdue review, cancelled request)
+	#13482: Validate user group IDs when enrolling/creating reviewers in editorial workflow
+	#13487: Ensure reviewer invitations belong to the current submission
+	#13489: Rich text editor | Settings - Navigation Menu Items, multilingual TinyMCE fields stay greyed out with the loading indicator
+	#13494: Ensure merge target has appropriate administration level
+	#13495: Ensure authorId is properly set when storing affiliations
+	#13512: Context files (images/icons/CSS) should be checked for type in journal setting uploads
+	#13513: Editorial report email: "Active submissions" counts are not limited to the journal
+	#13517: [ORCID] | Improve ORCID data in invitation process
+	#13533: [CI] | Increase Cypress page load timeout for the install step in the data suite tests
+	#13553: User menu "Dashboard" links back to the site homepage for the site admin
+	#13560: Improve hygeine of public file management
+	#13564: 3.5: an editor opening "Notes" on a copied file gets a blank tab, and the file's notes cannot be read or added
+	#13566: A journal's own OAI address leaves out its deleted records and lists the first journal's instead
+	#13571: Properly json_encode LessCSS base URL
+	#13581: Ensure files match parent ID expectations
+	#13599: [DOAJ Export] | DOAJ deposit drops page numbers and author affiliations
+	#13607: [JATS] | Metadata - Remove contrib-group of editors in JATS XML
+	#13608: Updating a plugin can overwrite the OJS core version
+	#13615: Update pdf.js to latest release
+	#13621: Escape the submission title in the reviewer's page title
+	#13623: Properly escape copyright statement
+	#13631: [OMP] | Cover images - Properly handle file names
+	#13637: Revise/fix galley file revision policies
+	#13650: [Plugins] | Tighten API validation for plugin-defined schema properties
+	#13663: Ensure matching IDs
+	pkp/citationStyleLanguage#128: Plugin settings should have a default selection for author/translator roles
+	pkp/jatsTemplate#117: Port JWT fix from 3.6 to 3.5
 
 3.5.0-5 Build (LTS)
 -------------------
