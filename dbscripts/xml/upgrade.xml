@@ -125,6 +125,7 @@
 	<upgrade minversion="3.4.0.0" maxversion="3.4.9.9">
 		<migration class="APP\migration\upgrade\v3_4_0\I9813_QuickSubmitSubmissionProgressType"/>
 		<migration class="APP\migration\upgrade\v3_5_0\I11241_MissingDecisionConstantsUpdate"/>
+		<migration class="PKP\migration\upgrade\v3_4_0\I11758_RedispatchRegionCodesFixingJobs"/>
 	</upgrade>
 
 	<upgrade minversion="3.1.0.0" maxversion="3.4.9.9">
@@ -189,6 +190,7 @@
 		<migration class="APP\migration\upgrade\v3_5_0\I12357_FixDecisionConstantsMissedStageId"/>
 		<migration class="APP\migration\upgrade\v3_5_0\I13128_FixEmailUrlLinks"/>
         <migration class="PKP\migration\upgrade\v3_5_0\I13283_RestoreDegradedOrcidFunctionality"/>
+		<migration class="PKP\migration\upgrade\v3_4_0\I11758_RedispatchRegionCodesFixingJobs"/>
 	</upgrade>
 
 	<upgrade minversion="3.5.0.0" maxversion="3.5.9.9">
