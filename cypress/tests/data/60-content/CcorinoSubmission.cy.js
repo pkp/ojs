@@ -80,7 +80,7 @@ describe('Data suite: Ccorino', function() {
 
 		cy.logout();
 		cy.findSubmissionAsEditor('dbarnes', null, familyName);
-		cy.get('[data-cy="workflow-secondary-items"] h2').contains("Recommendation");
+		cy.get('[data-cy="workflow-secondary-items"] h3').contains("Recommendation");
 		cy.get('[data-cy="workflow-secondary-items"] p').contains("Accept Submission");
 	});
 })
