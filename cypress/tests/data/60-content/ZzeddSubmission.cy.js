@@ -337,7 +337,7 @@ describe('Data suite tests', function() {
 		cy.get('h3').contains('For the Editors (French (Canada))')
         
         suggestions.forEach(function(suggestion) {
-			cy.get('h3')
+			cy.get('.submissionWizard__reviewPanel h3')
                 .contains('Reviewer Suggestions')
                 .parents('.submissionWizard__reviewPanel')
                 .contains(suggestion.fullname);
