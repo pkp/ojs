@@ -126,10 +126,14 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 
 			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
-			$newFileName = 'article_' . $submission->getId() . '_cover_' . $locale . $publicFileManager->getImageExtension($temporaryFile->getFileType());
-			$journal = $request->getJournal();
-			$publicFileManager->copyJournalFile($journal->getId(), $temporaryFile->getFilePath(), $newFileName);
-			$submission->setCoverImage($newFileName, $locale);
+			$extension = $temporaryFile ? $publicFileManager->getImageExtension($temporaryFile->getFileType()) : false;
+			// Temporary file must exist, and cover images must actually be images.
+			if ($temporaryFile && $extension) {
+				$newFileName = 'article_' . $submission->getId() . '_cover_' . $locale . $extension;
+				$journal = $request->getJournal();
+				$publicFileManager->copyJournalFile($journal->getId(), $temporaryFile->getFilePath(), $newFileName);
+				$submission->setCoverImage($newFileName, $locale);
+			}
 		}
 
 		$submission->setCoverImageAltText($this->getData('coverImageAltText'), $locale);

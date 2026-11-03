@@ -107,7 +107,8 @@ class IssueForm extends Form {
 
 			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
-			if (!$publicFileManager->getImageExtension($temporaryFile->getFileType())) {
+			if (!$temporaryFile || !$publicFileManager->getImageExtension($temporaryFile->getFileType())) {
+				// Temporary file must exist, and cover images must actually be images.
 				$this->addError('coverImage', __('editor.issues.invalidCoverImageFormat'));
 			}
 		}
@@ -231,11 +232,14 @@ class IssueForm extends Form {
 
 			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
-			$newFileName = 'cover_issue_' . $issue->getId() . '_' . $locale . $publicFileManager->getImageExtension($temporaryFile->getFileType());
-			$journal = $request->getJournal();
-			$publicFileManager->copyJournalFile($journal->getId(), $temporaryFile->getFilePath(), $newFileName);
-			$issue->setCoverImage($newFileName, $locale);
-			$issueDao->updateObject($issue);
+			$extension = $temporaryFile ? $publicFileManager->getImageExtension($temporaryFile->getFileType()) : false;
+			if ($temporaryFile && $extension) {
+				$newFileName = 'cover_issue_' . $issue->getId() . '_' . $locale . $extension;
+				$journal = $request->getJournal();
+				$publicFileManager->copyJournalFile($journal->getId(), $temporaryFile->getFilePath(), $newFileName);
+				$issue->setCoverImage($newFileName, $locale);
+				$issueDao->updateObject($issue);
+			}
 		}
 
 		$issue->setCoverImageAltText($this->getData('coverImageAltText'), $locale);
