@@ -2987,6 +2987,184 @@
 				}
 			}
 		},
+		"/submissions/{submissionId}/publications/{publicationId}/bodyText": {
+			"post": {
+				"tags": [
+					"Submissions / Publications"
+				],
+				"summary": "Create or revise an HTML galley from body text.",
+				"description": "Accepts the editor's body text exported as HTML and creates or revises the HTML galley file together with its metadata and references.",
+				"consumes": [
+					"text/html"
+				],
+				"parameters": [
+					{
+						"name": "submissionId",
+						"description": "Submission ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "publicationId",
+						"description": "Publication ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "body",
+						"description": "Exported HTML document. Whitespace-only content is rejected.",
+						"in": "body",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"example": "<!DOCTYPE html><html><body><p>Article body text.</p></body></html>"
+						}
+					}
+				],
+				"responses": {
+					"201": {
+						"x-summary": "Success",
+						"description": "Details of the created or revised HTML galley. This status is returned for both creation and revision.",
+						"schema": {
+							"$ref": "#/definitions/Galley"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The request body is empty or contains only whitespace.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to create a galley for this submission or access this publication. Only managers, site administrators, sub editors and assistants with access to the production stage are allowed.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The submission or publication could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"415": {
+						"x-summary": "Unsupported Media Type",
+						"description": "The request Content-Type must be text/html.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"422": {
+						"x-summary": "Export Rejected",
+						"description": "The existing galley references a missing or unrelated submission file, an image references a local submission file not attached to this body text, or an image URL uses an unsupported type.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"500": {
+						"x-summary": "Export Failed",
+						"description": "An unexpected error prevented the HTML galley from being stored.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/submissions/{submissionId}/publications/{publicationId}/bodyText/pdf": {
+			"post": {
+				"tags": [
+					"Submissions / Publications"
+				],
+				"summary": "Create or revise a PDF galley from a PDF generated from the body text.",
+				"description": "Accepts the editor's body text exported as PDF and creates or revises the PDF galley file together with its metadata and references.",
+				"consumes": [
+					"application/pdf"
+				],
+				"parameters": [
+					{
+						"name": "submissionId",
+						"description": "Submission ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "publicationId",
+						"description": "Publication ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "body",
+						"description": "Raw PDF bytes beginning with the %PDF- header.",
+						"in": "body",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"format": "binary"
+						}
+					}
+				],
+				"responses": {
+					"201": {
+						"x-summary": "Success",
+						"description": "Details of the created or revised PDF galley. This status is returned for both creation and revision.",
+						"schema": {
+							"$ref": "#/definitions/Galley"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The request body does not begin with the PDF header.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to create a galley for this submission or access this publication. Only managers, site administrators, sub editors and assistants with access to the production stage are allowed.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The submission or publication could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"415": {
+						"x-summary": "Unsupported Media Type",
+						"description": "The request Content-Type must be application/pdf.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"422": {
+						"x-summary": "Export Rejected",
+						"description": "The existing galley references a missing submission file or a file belonging to another submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"500": {
+						"x-summary": "Export Failed",
+						"description": "An unexpected error prevented the PDF galley from being stored.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
 		"/submissions/{submissionId}/publications/{publicationId}/publish": {
 			"put": {
 				"tags": [
