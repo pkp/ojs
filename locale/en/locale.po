@@ -489,6 +489,12 @@ msgstr "Issues"
 msgid "issue.title"
 msgstr "Title"
 
+msgid "issue.editors"
+msgstr "Issue Editors"
+
+msgid "issue.editors.description"
+msgstr "The editors of this issue. They will be displayed on the issue's table of contents. An ORCID iD must be entered in the full URL format, e.g. https://orcid.org/0000-0002-1825-0097."
+
 msgid "issue.viewIssueIdentification"
 msgstr "View {$identification}"
 

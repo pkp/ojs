@@ -92,6 +92,33 @@
 			"readOnly": true,
 			"$ref": "#/definitions/Doi"
 		},
+		"editors": {
+			"type": "array",
+			"description": "A list of the editors of this issue.",
+			"multilingual": false,
+			"apiSummary": true,
+			"validation": [
+				"nullable"
+			],
+			"items": {
+				"type": "object",
+				"properties": {
+					"givenName": {
+						"type": "string"
+					},
+					"familyName": {
+						"type": "string"
+					},
+					"orcid": {
+						"type": "string",
+						"validation": [
+							"nullable",
+							"orcid"
+						]
+					}
+				}
+			}
+		},
 		"galleys": {
 			"type": "array",
 			"readOnly": true,
