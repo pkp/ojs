@@ -129,6 +129,9 @@ msgstr "Date Published is not valid. The date must be in the format YYYY-MM-DD."
 msgid "editor.issues.datePublished.requiredWhenPublished"
 msgstr "Date Published is required when the issue is published."
 
+msgid "editor.issues.resetPublicationDatePublished"
+msgstr "Reset Article published dates to match Issue date"
+
 msgid "editor.issues.volumeRequired"
 msgstr "Volume is required and must be a positive, numeric value."
 

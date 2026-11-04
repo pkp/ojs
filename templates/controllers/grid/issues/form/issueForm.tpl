@@ -49,6 +49,7 @@
 			        {assign var=notPublishedDescription value=""}
 			    {/if}
 				{fbvElement type="text" id="datePublished" value=$datePublished size=$fbvStyles.size.SMALL class="datepicker" autocomplete="off" label=$notPublishedDescription}
+				{fbvElement type="checkbox" label="editor.issues.resetPublicationDatePublished" id="resetPublicationDatePublished" inline=true value=1}
 			{/fbvFormSection}
 		{/fbvFormArea}
 
