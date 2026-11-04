@@ -1,0 +1,444 @@
+# Komronbek Tufliyev <komronbek773@gmail.com>, 2024.
+# Shoyim Obloqulov <obloqulovshoyim1@gmail.com>, 2024.
+
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-01-30 11:06+0000\n"
+"Last-Translator: Komronbek Tufliyev <komronbek773@gmail.com>\n"
+"Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/editor/uz/>\n"
+"Language: uz@cyrillic\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "editor.home"
+msgstr "Муҳаррир бош саҳифаси"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Тақдим этиш ва нашр қилиш"
+
+msgid "editor.submissionQueue"
+msgstr "Аризалар навбати"
+
+msgid "editor.submissionArchive"
+msgstr "Аризалар архиви"
+
+msgid "editor.publishing"
+msgstr "Нашриёт"
+
+msgid "editor.publishedIssues"
+msgstr "Нашр этилган сонлар"
+
+msgid "editor.allSections"
+msgstr "Барча бўлимлар"
+
+msgid "editor.allEditors"
+msgstr "Барча муҳаррирлар"
+
+msgid "editor.me"
+msgstr "Мен"
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"“{$publicIdentifier}” умумий идентификатори бошқа объект (сон, мақола, "
+"галлея ёки файл) учун аллақачон мавжуд. Илтимос, журналингизда ноёб "
+"идентификаторларни танланг."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Архивда аризалар йўқ."
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr ""
+"Архивланган аризаларга ўзгартиришлар сақлансинми? "
+"Ўчириш учун белгиланган аризалар тизимдан бутунлай ўчириб ташланади."
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Ҳақиқатан ҳам бу қарорни қайд этишни хоҳлайсизми?"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr ""
+"Муаллифни хабардор қилиш хати юборилгандан ёки «Электрон почтани ўтказиб юбориш» "
+"тугмаси босилгандан сўнг, ушбу ариза архивланади."
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"Таҳрирлашга жўнатишдан олдин, муаллифга қарор ҳақида хабар бериш "
+"ва юбориладиган версияни танлаш учун «Муаллифни хабардор қилиш» "
+"ҳаволасидан фойдаланинг."
+
+msgid "editor.notifyUsers"
+msgstr "Фойдаланувчиларни хабардор қилиш"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Барча ўқувчилар ({$count} фойдаланувчи)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Барча чоп этилган муаллифлар ({$count} фойдаланувчи)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Барча якка тартибдаги обуначилар"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Барча ташкилий обуначилар"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Фойдаланувчиларни хабардор қилиш жараёнида..."
+
+msgid "editor.usersNotified"
+msgstr "Фойдаланувчилар хабардор қилинди"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr "Ушбу сайт билан боғлиқ барча фойдаланувчилар ({$count} фойдаланувчи)"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr "Ушбу журналнинг янгиликларига қизиққан фойдаланувчилар ({$count} фойдаланувчи)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Ушбу соннинг мундарижасини илова қилиш:"
+
+msgid "editor.editorAdministration"
+msgstr "Муҳаррир маъмурияти"
+
+msgid "editor.issues.createIssue"
+msgstr "Янги сон яратиш"
+
+msgid "editor.issues.editIssue"
+msgstr "Сонни таҳрирлаш: {$issueIdentification}"
+
+msgid "editor.issues.currentIssue"
+msgstr "Жорий сон"
+
+msgid "editor.issues.numArticles"
+msgstr "Мақолалар сони"
+
+msgid "editor.issues.noArticles"
+msgstr "Ҳозирда ушбу сонда мақолалар йўқ."
+
+msgid "editor.issues.confirmDelete"
+msgstr "Ҳақиқатан ҳам ушбу сонни бутунлай ўчириб ташламоқчимисиз?"
+
+msgid "editor.issues.published"
+msgstr "Нашр этилган"
+
+msgid "editor.issues.unpublished"
+msgstr "Нашр этилмаган"
+
+msgid "editor.issues.datePublished"
+msgstr "Нашр этилган сана"
+
+msgid "editor.issues.volumeRequired"
+msgstr "Жилд (Volume) кўрсатилиши шарт ва у ижобий бутун сон бўлиши керак."
+
+msgid "editor.issues.numberRequired"
+msgstr "Сон (Number) кўрсатилиши шарт ва у ижобий бутун сон бўлиши керак."
+
+msgid "editor.issues.yearRequired"
+msgstr "Йил кўрсатилиши шарт ва у ижобий бутун сон бўлиши керак."
+
+msgid "editor.issues.titleRequired"
+msgstr "Сон учун сарлавҳа керак."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr "Соннинг идентификация маълумотлари кўрсатилиши керак."
+
+msgid "editor.issues.issueIdentification"
+msgstr "Сонни идентификация қилиш"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Оммавий сон идентификатори"
+
+msgid "editor.issues.description"
+msgstr "Тавсиф"
+
+msgid "editor.issues.accessStatus"
+msgstr "Кириш ҳолати"
+
+msgid "editor.issues.accessDate"
+msgstr "Очиқ кириш санаси"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Кечиктирилган очиқ киришни ёқиш"
+
+msgid "editor.issues.coverPage"
+msgstr "Муқова расми"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Рухсат этилган форматлар: .gif, .jpg ёки .png)"
+
+msgid "editor.issues.uploaded"
+msgstr "Юкланган"
+
+msgid "editor.issues.remove"
+msgstr "Ўчириш"
+
+msgid "editor.issues.proofed"
+msgstr "Текширилган"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Муқова расмини ўчиришми?"
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr "Бошқа контекстдаги муқова расмини ўчиришга рухсат берилмаган."
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr "Ўчирилмоқчи бўлган муқова расмининг файл номи мос келмади."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr "Ўчириш учун муқова расми топилмади."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "Муқова расмининг формати нотўғри. Рухсат этилган форматлар: .gif, .jpg ёки .png."
+
+msgid "editor.issues.styleFile"
+msgstr "Стиль файли (CSS)"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr "Стиль файли формати нотўғри. Бу ҳақиқий CSS файли эканлигига ишонч ҳосил қилинг."
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Стиль файлини ўчириш"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Муқова изоҳи"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Ушбу сон учун махсус муқова яратиш."
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Кўрсатиш"
+
+msgid "editor.issues.openAccess"
+msgstr "Очиқ кириш"
+
+msgid "editor.issues.subscription"
+msgstr "Обуна"
+
+msgid "editor.issues.identification"
+msgstr "Идентификация"
+
+msgid "editor.issues.access"
+msgstr "Кириш"
+
+msgid "editor.issues.cover"
+msgstr "Муқова"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr "Ушбу сонни ўчириб ташлаш барча боғлиқ мақола ва файлларни ҳам ўчириши мумкин. Давом этасизми?"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr "Сонлар тартибини қайта тиклаш"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr "Бўлимлар тартибини қайта тиклаш"
+
+msgid "editor.issues.issueData"
+msgstr "Сон маълумотлари"
+
+msgid "editor.issues.saveChanges"
+msgstr "Мундарижадаги ўзгаришларни сақлашми?"
+
+msgid "editor.issues.default"
+msgstr "Стандарт"
+
+msgid "editor.issues.order"
+msgstr "Тартиб"
+
+msgid "editor.issues.publicId"
+msgstr "Оммавий ID"
+
+msgid "editor.issues.publishIssue"
+msgstr "Сонни нашр этиш"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Сонни нашрдан қайтариб олиш"
+
+msgid "editor.issues.previewIssue"
+msgstr "Сонни олдиндан кўриш"
+
+msgid "editor.issues.preview"
+msgstr "Олдиндан кўриш"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Ҳақиқатан ҳам ушбу сонни нашр этмоқчимисиз?"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Ҳақиқатан ҳам ушбу нашр этилган сонни нашрдан олиб ташламоқчимисиз?"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Ҳақиқатан ҳам ушбу сонни «Жорий сон» сифатида белгиламоқчимисиз?"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Мақола учун оммавий ID аллақачон мавжуд."
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Жонли нашрлар йўқ"
+
+msgid "editor.issues.open"
+msgstr "Очиқ"
+
+msgid "editor.issues.pages"
+msgstr "Саҳифалар"
+
+msgid "editor.issues.galleys"
+msgstr "Соннинг галлеялари"
+
+msgid "editor.issues.galley"
+msgstr "Галлея"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Сон галлеясини кўриш"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Бутун сон учун галлеяларни юкланг (масалан, бутун соннинг PDF файли)."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Ушбу сон учун галлеялар юкланмаган."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Галлея ёрлиғи (масалан, PDF) кўрсатилиши шарт."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Галлея тили кўрсатилиши шарт."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Оммавий галлея идентификатори аллақачон мавжуд."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Сон галлеяларига қайтиш"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Ҳақиқатан ҳам ушбу галлеяни ўчириб ташламоқчимисиз?"
+
+msgid "editor.issues.identifiers"
+msgstr "Идентификаторлар"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Келажакдаги сонлар"
+
+msgid "grid.action.addGalley"
+msgstr "Галлея қўшиш"
+
+msgid "grid.action.publish"
+msgstr "Нашр этиш"
+
+msgid "grid.action.addIssue"
+msgstr "Сон яратиш"
+
+msgid "grid.action.viewIssue"
+msgstr "Кўриш"
+
+msgid "grid.action.previewIssue"
+msgstr "Олдиндан кўриш"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Сон галлеясини яратиш"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Жорий сон этиб белгилаш"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Сонлар архиви"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Асл файлни тақриз версияси сифатида белгилаш"
+
+msgid "editor.article.decision"
+msgstr "Қарор"
+
+msgid "editor.submissions.showBy"
+msgstr "Кўрсатиш тартиби:"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Топширилган сана (ОО-КК)"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Фаол топшириқлар"
+
+msgid "editor.submissions.invite"
+msgstr "Таклиф қилиш"
+
+msgid "editor.submissions.accept"
+msgstr "Қабул қилиш"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Аризалар йўқ"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Охирги марта тайинланган"
+
+msgid "editor.submissions.averageTime"
+msgstr "Ўртача вақт (ҳафталарда)"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Охирги марта якунланган"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Тайинланган шахс"
+
+msgid "issues.submissions.issueIds"
+msgstr "Сонлар бўйича аризалар"
+
+msgid "editor.submissions.inSection"
+msgstr "Бўлимда"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Нашр версиясини кўрсатиш"
+
+msgid "editor.article.publishVersion"
+msgstr "Версияни нашр этиш"
+
+msgid "editor.article.viewMetadata"
+msgstr "Метамаълумотларни кўриш"
+
+msgid "editor.article.editMetadata"
+msgstr "Метамаълумотларни таҳрирлаш"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Нашр учун режалаштириш"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Нашр этиш учун тайинланади"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr "Нашр тўлови тўланмаган. Хабар бериш учун муаллифга электрон хат юборинг."
+
+msgid "editor.article.payment.requestPayment"
+msgstr "Тўловни талаб қилиш"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr "Ўчирилмоқчи бўлган муқова расми файли топилмади."
+
+msgid "grid.action.removeArticle"
+msgstr "Мақолани сондан олиб ташлаш"
+
+msgid "editor.article.remove"
+msgstr "Олиб ташлаш"
+
+msgid "editor.article.remove.confirm"
+msgstr "Ҳақиқатан ҳам ушбу мақолани ушбу сондан олиб ташламоқчимисиз? Мақола навбатдаги бошқа сон учун қолдирилади."
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Кириш санаси нотўғри."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Сон галлеясини таҳрирлаш"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr "Ишлаб чиқаришга тайёр файллар тавсифи."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Галлея файлларни танлаш"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr "Якуний лойиҳа файллар тавсифи."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr "Корректорлик файлларни бошқариш."
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr "Бир хил турдаги объект учун оммавий идентификатор аллақачон мавжуд."
+
+msgid "editor.article.coverImage"
+msgstr "Муқова расми"

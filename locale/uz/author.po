@@ -13,105 +13,100 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "author.submit"
-msgstr "Янги ариза юбориш"
+msgstr ""
 
 msgid "author.track"
-msgstr "Фаол мақолалар"
+msgstr ""
 
 msgid "author.submit.submitArticle"
-msgstr "Мақола юборинг"
+msgstr ""
 
 msgid "author.submit.stepsToSubmit"
-msgstr "Бешинчи қадам"
+msgstr ""
 
 msgid "author.submit.startHereTitle"
-msgstr "Янги тақдимотни бошланг"
+msgstr ""
 
 msgid "author.submit.startHereLink"
 msgstr ""
 
 msgid "author.submit.step1"
-msgstr "1.Қадам. Аризани жўнатишни бошланг"
+msgstr ""
 
 msgid "author.submit.step2"
-msgstr "2.Қадам. Юклаш якунланмоқда"
+msgstr ""
 
 msgid "author.submit.step3"
-msgstr "3.Қадам. Мақола маълумотларини киритинг"
+msgstr ""
 
 msgid "author.submit.step4"
-msgstr "4.Қадам. Қўшимча файлларни юклаш"
+msgstr ""
 
 msgid "author.submit.step4a"
-msgstr "4.Қадам. Қўшимча файлларни юклаш"
+msgstr ""
 
 msgid "author.submit.step5"
-msgstr "5.Қадам. Тасдиқлаш"
+msgstr ""
 
 msgid "author.submit.start"
-msgstr "Бошлаш"
+msgstr ""
 
 msgid "author.submit.upload"
-msgstr "Юклаш"
+msgstr ""
 
 msgid "author.submit.metadata"
-msgstr "Маълумотни киритинг"
+msgstr ""
 
 msgid "author.submit.supplementaryFiles"
-msgstr "Қўшимча файлларни юклаш"
+msgstr ""
 
 msgid "author.submit.nextSteps"
-msgstr "Кейинги қадам"
+msgstr ""
 
 msgid "author.submit.notAccepting"
-msgstr "Бу журнал ҳозирда мақолаларни қабул қилмаяпти."
+msgstr ""
 
 msgid "author.submit.requestWaiver"
-msgstr "Ўчиришни сўраш"
+msgstr ""
 
 msgid "author.submit.qualifyForWaiver"
 msgstr ""
-"Илтимос, ушбу мақола учун мақола топшириш тўловидан воз кечишни ўйлаб кўринг"
 
 msgid "author.submit.addReasonsForWaiver"
 msgstr ""
-"Илтимос, нима учун тўловлардан воз кечиш кераклигини кўрсатиш учун қуйидаги "
-"шарҳлар майдонидан фойдаланинг."
 
 msgid "author.submit.mustEnterWaiverReason"
 msgstr ""
-"Агар сиз воз кечиш учун ариза бераётган бўлсангиз, берилган майдонга сабабни "
-"киритишингиз керак."
 
 msgid "author.submissions.queuedReviewSubsequent"
-msgstr "Кўриб чиқиш босқичида"
+msgstr ""
 
 msgid "author.submissions.queuedReviewRevisions"
-msgstr "Кўриб чиқишда: Таҳрир қилиш керак"
+msgstr ""
 
 msgid "author.submissions.queuedEditingCopyedit"
-msgstr "Таҳрирлашда: Нусхалаш сўралган"
+msgstr ""
 
 msgid "author.submissions.queuedEditingProofread"
-msgstr "Таҳрирлашда: Текшириш талаб қилинади"
+msgstr ""
 
 msgid "author.submissions.uploadCopyeditedVersion"
-msgstr "Нусхаланган версияни юкланг"
+msgstr ""
 
 msgid "author.submissions.proofreadingCorrections"
 msgstr ""
 
 msgid "author.submissions.confirmDelete"
-msgstr "Ҳақиқатан ҳам бу тоʻлиқ боʻлмаган юборишни оʻчириб ташламоқчимисиз?"
+msgstr ""
 
 msgid "author.submissions.viewStatus"
-msgstr "Ҳолатни кўриш"
+msgstr ""
 
 msgid "author.submissions.noSubmissions"
-msgstr "Мақола йўқ"
+msgstr ""
 
 msgid "author.submit.journalSection"
-msgstr "Журнал бўлими"
+msgstr ""
 
 msgid "author.submit.journalSectionDescription"
 msgstr ""
@@ -121,11 +116,9 @@ msgstr ""
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
-"Давом этишдан олдин Муаллифлик ҳуқуқи эслатмаси шартларига рози бўлишингиз "
-"керак."
 
 msgid "submission.submit.coverNote"
-msgstr "Муҳаррир учун шарҳлар"
+msgstr ""
 
 msgid "author.submit.comments"
 msgstr ""
@@ -296,17 +289,13 @@ msgid "author.article.uploadAuthorVersion"
 msgstr ""
 
 msgid "author.article.copyeditedFile"
-msgstr "Нусхаланган файл"
+msgstr ""
 
 msgid "author.article.authorRevisedFile"
-msgstr "Муаллиф файли"
+msgstr ""
 
 msgid "author.submit.authorSubmitLoginMessage"
 msgstr ""
-"Ушбу журнални топшириш учун фойдаланувчи ҳисоби талаб қилинади. Бу бизнинг "
-"муҳаррирларимизга юборилган хабарларингизни кузатиб бориш ва агар сизнинг "
-"аризангиз ҳолати оʻзгарганда ёки сиздан қоʻшимча маʼлумот талаб этилса, сиз "
-"билан богʻланиш имконини беради."
 
 #~ msgid "author.submit.copyrightNoticeAgree"
 #~ msgstr ""
