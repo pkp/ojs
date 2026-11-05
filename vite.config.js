@@ -61,6 +61,12 @@ export default defineConfig(({mode}) => {
 						src: 'node_modules/mathjax/**/*',
 						dest: 'js/build/mathjax',
 					},
+					// MathJax loads glyphs outside its embedded font data on demand,
+					// from cdn.jsdelivr.net unless pointed at this copy (see loadMathJax)
+					{
+						src: 'node_modules/@mathjax/mathjax-newcm-font/svg/dynamic/*.js',
+						dest: 'js/build/mathjax-fonts/mathjax-newcm-font/svg/dynamic',
+					},
 				],
 			}),
 		],
