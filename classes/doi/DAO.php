@@ -25,6 +25,7 @@ use Illuminate\Support\Facades\DB;
 use PKP\context\Context;
 use PKP\doi\Doi;
 use PKP\publication\PKPPublication;
+use PKP\submission\reviewAssignment\DAO as ReviewAssignmentsDAO;
 
 class DAO extends \PKP\doi\DAO
 {
@@ -81,7 +82,7 @@ class DAO extends \PKP\doi\DAO
                                 // Peer reviews should be public to be considered
                                 ->where('ra.is_review_publicly_visible', '=', 1)
                                 // Only reviews confirmed by an editor are deposited, see getExportableDOIsPeerReviewIds()
-                                ->where(fn (Builder $q) => $q->whereNotNull('ra.date_considered')->orWhereNotNull('ra.date_acknowledged'));
+                                ->where(fn (Builder $q) => ReviewAssignmentsDAO::whereConfirmedByEditor($q));
                         });
                     })
                     // Author Response DOIs
