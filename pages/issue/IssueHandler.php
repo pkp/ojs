@@ -205,6 +205,10 @@ class IssueHandler extends Handler
      */
     public function download($args, $request)
     {
+        if (!$this->getGalley()) {
+            throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
+        }
+
         if ($this->userCanViewGalley($request)) {
             $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
             $galley = $this->getGalley();
