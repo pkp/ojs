@@ -307,7 +307,10 @@ class OAIDAO extends PKPOAIDAO
                 'p.version_major AS version_major',
                 'p.version_stage AS version_stage',
             ])
-            ->join('publications AS p', 'a.current_publication_id', '=', 'p.publication_id')
+            ->join('publications AS p', function ($join) {
+                $join->on('a.current_publication_id', '=', 'p.publication_id');
+                $join->on('p.submission_id', '=', 'a.submission_id');
+            })
             ->leftJoin('issues AS i', 'i.issue_id', '=', 'p.issue_id')
             ->join('sections AS s', 's.section_id', '=', 'p.section_id')
             ->join('journals AS j', 'j.journal_id', '=', 'a.context_id')
