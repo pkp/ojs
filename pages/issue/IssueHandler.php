@@ -196,6 +196,10 @@ class IssueHandler extends Handler
      */
     public function download($args, $request)
     {
+        if (!$this->getGalley()) {
+            $this->getDispatcher()->handle404();
+        }
+
         if ($this->userCanViewGalley($request)) {
             $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
             $galley = $this->getGalley();
