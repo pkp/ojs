@@ -175,9 +175,9 @@ class DOAJExportPlugin extends PubObjectsExportPlugin implements HasTaskSchedule
                     'query' => ['api_key' => $apiKey, 'article_id' => $doajId],
                 ]
             );
-        } catch (\GuzzleHttp\Exception\RequestException $e) {
+        } catch (\GuzzleHttp\Exception\TransferException $e) {
             $returnMessage = $e->getMessage();
-            if ($e->hasResponse()) {
+            if ($e instanceof \GuzzleHttp\Exception\RequestException && $e->hasResponse()) {
                 $returnMessage = $e->getResponse()->getBody() . ' (' . $e->getResponse()->getStatusCode() . ' ' . $e->getResponse()->getReasonPhrase() . ')';
             }
             $this->updateStatus($object, PubObjectsExportPlugin::EXPORT_STATUS_ERROR, $returnMessage);
@@ -222,9 +222,9 @@ class DOAJExportPlugin extends PubObjectsExportPlugin implements HasTaskSchedule
                     'json' => json_decode($jsonString)
                 ]
             );
-        } catch (\GuzzleHttp\Exception\RequestException $e) {
+        } catch (\GuzzleHttp\Exception\TransferException $e) {
             $returnMessage = $e->getMessage();
-            if ($e->hasResponse()) {
+            if ($e instanceof \GuzzleHttp\Exception\RequestException && $e->hasResponse()) {
                 $returnMessage = $e->getResponse()->getBody() . ' (' . $e->getResponse()->getStatusCode() . ' ' . $e->getResponse()->getReasonPhrase() . ')';
             }
             $this->updateStatus($object, PubObjectsExportPlugin::EXPORT_STATUS_ERROR, $returnMessage);
