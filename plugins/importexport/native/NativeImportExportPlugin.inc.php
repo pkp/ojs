@@ -310,7 +310,20 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		assert(count($nativeImportFilters) == 1); // Assert only a single unserialization filter
 		$importFilter = array_shift($nativeImportFilters);
 		$importFilter->setDeployment($deployment);
-		return $importFilter->execute($importXml);
+
+		// Import the file as a unit: a failure while writing one of the objects must
+		// not leave the others (or a partially imported submission) behind.
+		$connection = \Illuminate\Database\Capsule\Manager::connection();
+		$connection->beginTransaction();
+		try {
+			$result = $importFilter->execute($importXml);
+			$connection->commit();
+		} catch (\Throwable $e) {
+			$connection->rollBack();
+			throw $e;
+		}
+
+		return $result;
 	}
 
 	/**
