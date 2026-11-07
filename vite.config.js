@@ -58,6 +58,14 @@ export default defineConfig(({mode}) => {
 						dest: 'js/build/chart.js',
 					},
 					{
+						src: 'node_modules/vivliostyle-pdf/public/fonts/*',
+						dest: 'js/build/vivliostyle-pdf/fonts',
+					},
+					{
+						src: 'node_modules/vivliostyle-pdf/public/woff2/*',
+						dest: 'js/build/vivliostyle-pdf/woff2',
+					},
+					{
 						src: 'node_modules/mathjax/**/*',
 						dest: 'js/build/mathjax',
 					},
