@@ -268,7 +268,10 @@ class OAIDAO extends PKPOAIDAO
                 'j.journal_id AS journal_id',
                 's.section_id AS section_id',
             ])
-            ->join('publications AS p', 'a.current_publication_id', '=', 'p.publication_id')
+            ->join('publications AS p', function ($join) {
+                $join->on('a.current_publication_id', '=', 'p.publication_id');
+                $join->on('p.submission_id', '=', 'a.submission_id');
+            })
             ->join('publication_settings AS psissue', function ($join) {
                 $join->on('psissue.publication_id', '=', 'p.publication_id');
                 $join->where('psissue.setting_name', '=', DB::raw('\'issueId\''));
