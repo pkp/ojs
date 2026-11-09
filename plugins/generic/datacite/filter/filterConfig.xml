@@ -19,12 +19,12 @@
 			description="plugins.importexport.datacite.description"
 			inputType="class::APP\issue\Issue"
 			outputType="xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)" />
-		<!-- DataCite XML article output -->
+		<!-- DataCite XML publication output -->
 		<filterGroup
-			symbolic="article=>datacite-xml"
+			symbolic="publication=>datacite-xml"
 			displayName="plugins.importexport.datacite.displayName"
 			description="plugins.importexport.datacite.description"
-			inputType="class::APP\submission\Submission"
+			inputType="class::APP\publication\Publication"
 			outputType="xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)" />
 		<!-- DataCite XML galley output -->
 		<filterGroup
@@ -40,12 +40,12 @@
 			inGroup="issue=>datacite-xml"
 			class="APP\plugins\generic\datacite\filter\DataciteXmlFilter"
 			isTemplate="0" />
-		<!-- DataCite XML article output -->
+		<!-- DataCite XML publication output -->
 		<filter
-			inGroup="article=>datacite-xml"
+			inGroup="publication=>datacite-xml"
 			class="APP\plugins\generic\datacite\filter\DataciteXmlFilter"
 			isTemplate="0" />
-		<!-- DataCite XML article output -->
+		<!-- DataCite XML galley output -->
 		<filter
 			inGroup="galley=>datacite-xml"
 			class="APP\plugins\generic\datacite\filter\DataciteXmlFilter"
