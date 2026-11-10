@@ -17,12 +17,14 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "Útflutningsviðbót fyrir DOAJ"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "Flytja út tímarit fyrir DOAJ."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Hafa samband við DOAJ vegna skráningar"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "Ef þú vilt skrá greinar beint úr OJS skaltu slá inn DOAJ API-lykilinn þinn. "

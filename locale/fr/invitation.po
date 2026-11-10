@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-09-17 15:02+0000\n"
+"PO-Revision-Date: 2026-10-28 07:45+0000\n"
 "Last-Translator: Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/invitation/"
 "fr/>\n"
@@ -37,6 +37,7 @@ msgstr ""
 msgid "acceptInvitation.modal.title"
 msgstr "Un nouveau rôle vous a été attribué"
 
+#, fuzzy
 msgid "acceptInvitation.verifyOrcid.stepDescription"
 msgstr ""
 "Vous pouvez choisir de vérifier votre identifiant ORCID ou sauter cette "
@@ -44,14 +45,17 @@ msgstr ""
 "identifiant depuis votre profil utilisateur."
 
 msgid "invitation.role.masthead"
-msgstr "Équipe éditoriale"
+msgstr "Responsabilités"
 
 msgid "invitation.wizard.pageTitleDescription"
-msgstr "Vous invitez une personne à prendre un rôle dans votre revue"
+msgstr ""
+"Vous invitez une personne à prendre un rôle et à apparaître dans la page "
+"Responsabilités de votre revue"
 
 msgid "userInvitation.enterDetails.stepDescription"
 msgstr "Vous pouvez l'inviter à prendre un rôle"
 
+#, fuzzy
 msgid "userInvitation.modal.message"
 msgstr ""
 "Un nouveau rôle dans votre revue a été proposé à {$email}. Vous pouvez "
@@ -59,7 +63,7 @@ msgstr ""
 "notifications OJS et/ou par courriel"
 
 msgid "userInvitation.roleTable.journalMasthead"
-msgstr "Équipe éditoriale"
+msgstr "Responsabilités"
 
 msgid "userInvitation.search.userFound"
 msgstr "L'utilisateur/ice existe déjà dans cette revue"
@@ -67,6 +71,7 @@ msgstr "L'utilisateur/ice existe déjà dans cette revue"
 msgid "userInvitation.search.userNotFound"
 msgstr "Cette personne n'a aucun rôle dans cette revue"
 
+#, fuzzy
 msgid "userInvitation.searchUser.stepDescription"
 msgstr ""
 "Vérifiez si la personne existe déjà dans la base de données à l'aide de son "

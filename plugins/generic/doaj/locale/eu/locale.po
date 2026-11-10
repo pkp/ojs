@@ -18,6 +18,7 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "DOAJ esportatzeko plugina"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr ""
 "Aldizkaria esportatu DOAJerako eta DOAJen ordezkariei aldizkariari buruzko "
@@ -26,6 +27,7 @@ msgstr ""
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Sartzeko, jarri harremanetan DOAJ-ekin"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "OJS barrutik artikuluak erregistratu nahi badituzu, sartu zure DOAJ API "

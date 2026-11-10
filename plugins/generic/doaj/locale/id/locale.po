@@ -17,12 +17,14 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "Plugin Ekspor DOAJ"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "Ekspor Jurnal untuk DOAJ."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Kontak DOAJ untuk pencantuman"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "Jika Anda ingin mendaftarkan artikel melalui aplikasi OJS, mohon masukkan "

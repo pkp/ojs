@@ -3,8 +3,8 @@
 /**
  * @file classes/plugins/PubObjectsExportPlugin.php
  *
- * Copyright (c) 2014-2025 Simon Fraser University
- * Copyright (c) 2003-2025 John Willinsky
+ * Copyright (c) 2014-2026 Simon Fraser University
+ * Copyright (c) 2003-2026 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class PubObjectsExportPlugin
@@ -552,6 +552,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
             $exportFilter->setNoValidation($noValidation);
         }
         libxml_use_internal_errors(true);
+        libxml_clear_errors();
         $exportXml = $exportFilter->execute($objects, true);
         $xml = $exportXml->saveXml();
         $errors = array_filter(libxml_get_errors(), function ($a) {
@@ -665,6 +666,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
             $schema->properties->{$fieldName} = (object) [
                 'type' => 'string',
                 'apiSummary' => true,
+                'writeDisabledInApi' => true,
                 'validation' => ['nullable'],
             ];
         }

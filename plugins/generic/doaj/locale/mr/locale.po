@@ -15,12 +15,14 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "DOAJ स्थलांतरासाठी (एक्स्पोर्ट) प्लगइन"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "नियतकालिक DOAJ साठी स्थलांतरीत (एक्स्पोर्ट) करा."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "DOAJ मध्ये समावेश करण्यासाठी संपर्क साधा"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "जर तुम्हाला OJS मधून लेखांची नोंदणी करायची असेल, तर कृपया तुमची DOAJ API key "

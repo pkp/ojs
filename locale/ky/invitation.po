@@ -19,6 +19,7 @@ msgstr ""
 msgid "acceptInvitation.accountDetails.stepLabel"
 msgstr "{$step} - OJS эсебин түзүү"
 
+#, fuzzy
 msgid "invitation.wizard.pageTitleDescription"
 msgstr ""
 "Сиз колдонуучуну OJSте роль алууга чакырып жатасыз жана журналдын титулдук "
@@ -27,6 +28,7 @@ msgstr ""
 msgid "userInvitation.enterDetails.stepDescription"
 msgstr "Аларды OJSте роль алууга чакыра аласыз"
 
+#, fuzzy
 msgid "userInvitation.modal.message"
 msgstr ""
 "{$email} OJSте жаңы ролго чакырылды. Колдонуучунун чечими жөнүндө «"
@@ -42,6 +44,7 @@ msgstr "Колдонуучу журналда мурунтан бар"
 msgid "userInvitation.search.userNotFound"
 msgstr "Колдонуучунун бул журналда ролу жок"
 
+#, fuzzy
 msgid "userInvitation.searchUser.stepDescription"
 msgstr ""
 "Колдонуучуну электрондук почта дареги, колдонуучу аты же ORCID ID аркылуу "
@@ -73,6 +76,7 @@ msgstr ""
 msgid "acceptInvitation.modal.title"
 msgstr "Сизге OJSте жаңы роль дайындалды"
 
+#, fuzzy
 msgid "acceptInvitation.verifyOrcid.stepDescription"
 msgstr ""
 "ORCID iD ырастоону тандасаңыз болот же өткөрүп жиберсеңиз болот. Эгер азыр "

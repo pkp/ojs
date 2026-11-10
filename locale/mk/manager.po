@@ -3,7 +3,7 @@
 # Ana Vucurevic <ana.vucurevic97@yahoo.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-09-15 04:51+0000\n"
+"PO-Revision-Date: 2026-10-25 23:35+0000\n"
 "Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "mk/>\n"
@@ -2645,3 +2645,9 @@ msgstr ""
 
 msgid "emailTemplate.variable.issue.issueTableOfContents"
 msgstr "Содржина на бројот како листа од сите придружни поднесоци."
+
+msgid "manager.setup.enableEnrollmentMasthead.description"
+msgstr ""
+"Ако сакате, може автоматски да се генерира насловната страница врз основа на "
+"пријавувањата на корисниците, вклучувајќи ги датумите на почеток и крај. "
+"Види и Поставки > Журнал > Насловна страница."

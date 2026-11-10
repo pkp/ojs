@@ -2,7 +2,7 @@
 # Vincas Grigas <vincas.grigas@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-08-18 14:39+0000\n"
+"PO-Revision-Date: 2026-09-25 08:59+0000\n"
 "Last-Translator: Vincas Grigas <vincas.grigas@gmail.com>\n"
 "Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "lt/>\n"
@@ -19,7 +19,7 @@ msgid "author.submit"
 msgstr "Naujas straipsnis"
 
 msgid "author.track"
-msgstr "Aktyvūs pateikimai"
+msgstr "Aktyvios paraiškos"
 
 msgid "author.submit.step4a"
 msgstr "4a etapas. Papildomų failų įkėlimas"
@@ -49,7 +49,7 @@ msgid "author.submit.submitArticle"
 msgstr "Pateikti straipsnį"
 
 msgid "author.submit.stepsToSubmit"
-msgstr "Penki straipsnio teikimo etapai"
+msgstr "Penki straipsnio pateikimo etapai"
 
 msgid "author.submit.startHereTitle"
 msgstr "Teikti naują straipsnį"
@@ -66,7 +66,7 @@ msgid "author.submit.step2"
 msgstr "2 etapas. Teksto įkėlimas"
 
 msgid "author.submit.step3"
-msgstr "3 etapas. Teksto metaduomenų pateikimas"
+msgstr "3 etapas. Paraiškos metaduomenų pateikimas"
 
 msgid "author.submit.step4"
 msgstr "4 etapas. Papildomų failų įkėlimas"
@@ -128,7 +128,7 @@ msgid "author.submissions.proofreadingCorrections"
 msgstr "Korektūros taisymai"
 
 msgid "author.submissions.confirmDelete"
-msgstr "Ar tikrai norite ištrinti nebaigtą pateikti straipsnį?"
+msgstr "Ar tikrai norite ištrinti nebaigtą pateikti paraišką?"
 
 msgid "author.submissions.viewStatus"
 msgstr "Rodyti būseną"

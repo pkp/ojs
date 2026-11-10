@@ -108,19 +108,19 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
                 $recordNode->appendChild($node = $doc->createElement('language', $language));
             }
             // Publisher name (i.e. institution name)
-            $publisher = $context->getData('publisherInstitution');
+            $publisher = $publication->getPublisher($context);
             if (!empty($publisher)) {
                 $recordNode->appendChild($node = $doc->createElement('publisher', htmlspecialchars($publisher, ENT_COMPAT, 'UTF-8')));
             }
             // Journal's title (M)
-            $journalTitle = $context->getName($context->getPrimaryLocale());
+            $journalTitle = $publication->getPrimaryContextName($context);
             $recordNode->appendChild($node = $doc->createElement('journalTitle', htmlspecialchars($journalTitle, ENT_COMPAT, 'UTF-8')));
             // Identification Numbers
-            $issn = $context->getData('printIssn');
+            $issn = $publication->getPrintIssn($context);
             if (!empty($issn)) {
                 $recordNode->appendChild($node = $doc->createElement('issn', $issn));
             }
-            $eissn = $context->getData('onlineIssn');
+            $eissn = $publication->getOnlineIssn($context);
             if (!empty($eissn)) {
                 $recordNode->appendChild($node = $doc->createElement('eissn', $eissn));
             }

@@ -17,6 +17,29 @@
 				"$ref": "#/definitions/SubmissionSummary"
 			}
 		},
+		"contextAbbreviation": {
+			"type": "string",
+			"multilingual": true,
+			"writeDisabledInApi": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"contextName": {
+			"type": "string",
+			"multilingual": true,
+			"writeDisabledInApi": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"contextPrimaryLocale": {
+			"type": "string",
+			"writeDisabledInApi": true,
+			"validation": [
+				"nullable"
+			]
+		},
 		"coverImage": {
 			"type": "string",
 			"multilingual": true,
@@ -54,13 +77,6 @@
 			"multilingual": true,
 			"apiSummary": true
 		},
-		"doiObject": {
-			"type": "object",
-			"description": "DOI object for this issue",
-			"apiSummary": true,
-			"readOnly": true,
-			"$ref": "#/definitions/Doi"
-		},
 		"doiId": {
 			"type": "integer",
 			"description": "Reference to the DOI for this issue",
@@ -68,6 +84,13 @@
 			"validation": [
 				"nullable"
 			]
+		},
+		"doiObject": {
+			"type": "object",
+			"description": "DOI object for this issue",
+			"apiSummary": true,
+			"readOnly": true,
+			"$ref": "#/definitions/Doi"
 		},
 		"galleys": {
 			"type": "array",
@@ -100,6 +123,14 @@
 			"type": "string",
 			"apiSummary": true
 		},
+		"onlineIssn": {
+			"type": "string",
+			"writeDisabledInApi": true,
+			"validation": [
+				"nullable",
+				"issn"
+			]
+		},
 		"openAccessDate": {
 			"type": "string",
 			"validation": [
@@ -108,6 +139,14 @@
 		},
 		"originalStyleFileName": {
 			"type": "string"
+		},
+		"printIssn": {
+			"type": "string",
+			"writeDisabledInApi": true,
+			"validation": [
+				"nullable",
+				"issn"
+			]
 		},
 		"published": {
 			"type": "boolean",
@@ -118,6 +157,20 @@
 			"apiSummary": true,
 			"validation": [
 				"url"
+			]
+		},
+		"publisher": {
+			"type": "string",
+			"writeDisabledInApi": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"publisherLocation": {
+			"type": "string",
+			"writeDisabledInApi": true,
+			"validation": [
+				"nullable"
 			]
 		},
 		"sections": {

@@ -16,7 +16,10 @@
 namespace APP\components\forms\publication;
 
 use APP\facades\Repo;
+use APP\journal\Journal;
+use APP\publication\Publication;
 use PKP\components\forms\FieldAutosuggestPreset;
+use PKP\components\forms\FieldHTML;
 use PKP\components\forms\FieldRichTextarea;
 use PKP\components\forms\FieldSelect;
 use PKP\components\forms\FieldText;
@@ -28,6 +31,7 @@ class IssueEntryForm extends FormComponent
 {
     public const FORM_ISSUE_ENTRY = 'issueEntry';
 
+    public const GROUP_JOURNAL_IDENTITY = 'journalIdentity';
     public const GROUP_PLACEMENT = 'placement';
     public const GROUP_PUBLICATION_TIMING = 'publicationTiming';
     public const GROUP_VERSION_AND_UPDATES = 'versionAndUpdates';
@@ -64,6 +68,8 @@ class IssueEntryForm extends FormComponent
             ->addGroup(['id' => self::GROUP_VERSION_AND_UPDATES, 'label' => __('publication.versionAndUpdates')])
             ->addGroup(['id' => self::GROUP_DISPLAY, 'label' => __('publication.display')])
             ->addGroup(['id' => self::GROUP_ACCESS, 'label' => __('publication.access')]);
+
+        $this->addStampedIdentityField($publication, $publicationContext);
 
         // Section options
         $sections = Repo::section()->getSectionList($publicationContext->getId());
@@ -171,5 +177,53 @@ class IssueEntryForm extends FormComponent
                 'value' => $publication->getData('urlPath'),
                 'size' => 'large',
             ]));
+    }
+
+    /**
+     * Add the journal identity stamped at publication as a read-only list.
+     * Nothing is added for a publication without a stamp.
+     */
+    protected function addStampedIdentityField(Publication $publication, Journal $context): void
+    {
+        $parts = [];
+
+        if ($publication->hasContextIdentity()) {
+            $parts[] = '<li><strong>' . htmlspecialchars(__('semicolon', ['label' => __('manager.setup.contextTitle')])) . '</strong> '
+                . htmlspecialchars($publication->getPrimaryContextName($context)) . '</li>';
+        }
+        if ($publication->getData('contextAbbreviation') && ($abbreviation = $publication->getPrimaryContextAbbreviation($context))) {
+            $parts[] = '<li><strong>' . htmlspecialchars(__('semicolon', ['label' => __('manager.setup.journalAbbreviation')])) . '</strong> '
+                . htmlspecialchars($abbreviation) . '</li>';
+        }
+        if ($onlineIssn = $publication->getData('onlineIssn')) {
+            $parts[] = '<li><strong>' . htmlspecialchars(__('semicolon', ['label' => __('manager.setup.onlineIssn')])) . '</strong> '
+                . htmlspecialchars($onlineIssn) . '</li>';
+        }
+        if ($printIssn = $publication->getData('printIssn')) {
+            $parts[] = '<li><strong>' . htmlspecialchars(__('semicolon', ['label' => __('manager.setup.printIssn')])) . '</strong> '
+                . htmlspecialchars($printIssn) . '</li>';
+        }
+        if ($publisher = $publication->getData('publisher')) {
+            $parts[] = '<li><strong>' . htmlspecialchars(__('semicolon', ['label' => __('manager.setup.publisher')])) . '</strong> '
+                . htmlspecialchars($publisher) . '</li>';
+        }
+        if ($publisherLocation = $publication->getData('publisherLocation')) {
+            $parts[] = '<li><strong>' . htmlspecialchars(__('semicolon', ['label' => __('manager.setup.publisherLocation')])) . '</strong> '
+                . htmlspecialchars($publisherLocation) . '</li>';
+        }
+
+        if (empty($parts)) {
+            return;
+        }
+
+        $this->addGroup(
+            ['id' => self::GROUP_JOURNAL_IDENTITY, 'label' => __('publication.identity')]
+        );
+        $this->addField(new FieldHTML('journalIdentity', [
+            'groupId' => self::GROUP_JOURNAL_IDENTITY,
+            'label' => __('publication.journalIdentity'),
+            'description' => __('publication.identityAtPublication.description')
+                . '<ul>' . implode('', $parts) . '</ul>',
+        ]));
     }
 }

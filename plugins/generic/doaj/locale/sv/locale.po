@@ -14,12 +14,14 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "DOAJ exportplugin"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "Exportera tidskrift för DOAJ."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Kontakta DOAJ för inkludering"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "Om du vill registrera artiklar inifrån OJS, fyll i din DOAJ API-nyckel. Om "

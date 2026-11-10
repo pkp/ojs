@@ -348,6 +348,7 @@ class OAIDAO extends PKPOAIDAO
 
         // Records for each published (major) version of record, exposed via the latest
         // minor version of each major, for journals with DOI versioning.
+        $versionQuery = null;
         if (!empty($versioningJournalIds)) {
             $versionQuery = DB::table('submissions AS a')
                 ->select([
@@ -414,7 +415,6 @@ class OAIDAO extends PKPOAIDAO
                 ->when($submissionId && !$publicationId, function ($query) {
                     return $query->whereColumn('p.publication_id', '=', 'a.current_publication_id');
                 });
-            $query->union($versionQuery);
         }
 
         $tombstoneQuery = DB::table('data_object_tombstones AS dot')
@@ -426,7 +426,7 @@ class OAIDAO extends PKPOAIDAO
                 'dot.set_spec',
                 'dot.oai_identifier'
             ])
-            ->when(isset($journalId), function ($query, $journalId) {
+            ->when(isset($journalId), function ($query) use ($journalId) {
                 return $query->join('data_object_tombstone_oai_set_objects AS tsoj', function ($join) use ($journalId) {
                     $join->on('tsoj.tombstone_id', '=', 'dot.tombstone_id');
                     $join->where('tsoj.assoc_type', '=', Application::ASSOC_TYPE_JOURNAL);
@@ -470,8 +470,11 @@ class OAIDAO extends PKPOAIDAO
         // same journal_id and submission_id. Add a deterministic tiebreaker so
         // offset-based resumption-token pagination stays stable across requests:
         // publication_id disambiguates live version rows, tombstone_id the tombstones.
+        // PostgreSQL types UNION columns pairwise from the left: the tombstone branch's typed
+        // columns must come before the version branch's NULLs.
         return $query
             ->union($tombstoneQuery)
+            ->when($versionQuery, fn (Builder $query) => $query->union($versionQuery))
             ->orderBy(DB::raw($orderBy . ', publication_id, tombstone_id'));
     }
 }

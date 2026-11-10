@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-08-18 18:19+0000\n"
-"Last-Translator: Pedro Calheno Pinto <ppinto@keep.pt>\n"
+"PO-Revision-Date: 2026-10-29 14:06+0000\n"
+"Last-Translator: Carla Marques <carla.marques@usdb.uminho.pt>\n"
 "Language-Team: Portuguese <http://translate.pkp.sfu.ca/projects/ojs/"
 "invitation/pt/>\n"
 "Language: pt\n"
@@ -26,6 +26,7 @@ msgstr "Reveja os detalhes para iniciar os seus novos papéis no OJS"
 msgid "acceptInvitation.modal.title"
 msgstr "Recebeu um novo papel no OJS"
 
+#, fuzzy
 msgid "acceptInvitation.verifyOrcid.stepDescription"
 msgstr ""
 "Pode optar por verificar o seu iD ORCID ou saltar esta etapa. Se decidir "
@@ -50,9 +51,7 @@ msgid "invitation.role.masthead"
 msgstr "Equipa Editorial da Revista"
 
 msgid "invitation.wizard.pageTitleDescription"
-msgstr ""
-"Está a convidar um utilizador para assumir um papel no OJS e aparecer na "
-"equipa editorial da revista"
+msgstr "Está a convidar um utilizador para assumir um papel no OJS"
 
 msgid "userInvitation.roleTable.journalMasthead"
 msgstr "Equipa Editorial da Revista"
@@ -68,12 +67,14 @@ msgstr ""
 "Para começar a usar o OJS e aceitar o novo papel, terá de criar uma conta "
 "connosco. Para isso, insira um nome de utilizador e uma senha."
 
+#, fuzzy
 msgid "userInvitation.modal.message"
 msgstr ""
 "{$email} foi convidado para um novo papel no OJS. Poderá ser atualizado "
 "sobre a decisão do utilizador na página Utilizadores & Papéis, nas suas "
 "notificações do OJS e/ou no seu e-mail"
 
+#, fuzzy
 msgid "userInvitation.searchUser.stepDescription"
 msgstr ""
 "Procure o utilizador usando o seu endereço de e-mail, nome de utilizador ou "

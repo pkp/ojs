@@ -1,8 +1,8 @@
 # Artashes Mirzoyan <amirzoyan@sci.am>, 2022.
-# Tigran Zargaryan <tigran@flib.sci.am>, 2022, 2023, 2025.
+# Tigran Zargaryan <tigran@flib.sci.am>, 2022, 2023, 2025, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-03-03 19:43+0000\n"
+"PO-Revision-Date: 2026-10-21 10:59+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/emails/hy/>"
 "\n"

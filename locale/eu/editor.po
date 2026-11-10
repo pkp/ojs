@@ -1,5 +1,5 @@
 # Josu Acosta <josuacostacalvo@gmail.com>, 2023.
-# Informatikaria <informatikaria@ueu.eus>, 2025.
+# Informatikaria <informatikaria@ueu.eus>, 2025, 2026.
 # Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
 # Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2025.
 msgid ""
@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2025-10-02 09:37+0000\n"
-"Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
+"PO-Revision-Date: 2026-10-25 23:35+0000\n"
+"Last-Translator: Informatikaria <informatikaria@ueu.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/editor/eu/>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
@@ -285,7 +285,7 @@ msgid "editor.issues.previewIssue"
 msgstr "Zenbakiaren aurrebista"
 
 msgid "editor.issues.preview"
-msgstr "(Aurrebista)"
+msgstr "Aurrebista"
 
 msgid "editor.issues.confirmPublish"
 msgstr "Ziur zaude zenbaki berria argitaratu nahi duzula?"
@@ -423,7 +423,7 @@ msgid "editor.article.editMetadata"
 msgstr "Bertsioaren metadatuak editatu"
 
 msgid "editor.article.scheduleForPublication"
-msgstr "Argitaratzeko programatu:"
+msgstr "Argitaratzeko programatu"
 
 msgid "editor.article.scheduleForPublication.toBeAssigned"
 msgstr "Esleitzeko"

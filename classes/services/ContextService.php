@@ -115,7 +115,7 @@ class ContextService extends \PKP\services\PKPContextService
                     $newContext,
                     $params['journalThumbnail'][$localeKey],
                     'journalThumbnail',
-                    $request->getUser()->getId(),
+                    $request->getUser(),
                     $localeKey,
                     true
                 );

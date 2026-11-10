@@ -86,6 +86,20 @@ class NativeXmlPublicationFilter extends \PKP\plugins\importexport\native\filter
     }
 
     /**
+     * @copydoc \PKP\plugins\importexport\native\filter\NativeXmlPKPPublicationFilter::inheritImportedIdentity()
+     *
+     * Only from an issue imported with the same XML: an existing issue's identity says nothing
+     * about when the imported article was published.
+     */
+    protected function inheritImportedIdentity(Publication $publication): void
+    {
+        $importedIssueIds = $this->getDeployment()->getProcessedObjectsIds(Application::ASSOC_TYPE_ISSUE) ?? [];
+        if (in_array($publication->getData('issueId'), $importedIssueIds)) {
+            $publication->inheritContextIdentityFromIssue();
+        }
+    }
+
+    /**
      * Handle an element whose parent is the submission element.
      *
      * @param DOMElement $n
@@ -106,6 +120,15 @@ class NativeXmlPublicationFilter extends \PKP\plugins\importexport\native\filter
             case 'covers':
                 $nativeFilterHelper = new NativeFilterHelper();
                 $nativeFilterHelper->parsePublicationCovers($this, $n, $publication);
+                break;
+            case 'onlineIssn':
+                $publication->setData('onlineIssn', $n->textContent);
+                break;
+            case 'printIssn':
+                $publication->setData('printIssn', $n->textContent);
+                break;
+            case 'publisher':
+                $publication->setData('publisher', $n->textContent);
                 break;
             default:
                 parent::handleChildElement($n, $publication);

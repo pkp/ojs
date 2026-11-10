@@ -1,12 +1,13 @@
 # Molnár Tamás <molnart@bibl.u-szeged.hu>, 2021.
 # Fülöp Tiffany <tiffany.fulop@ek.szte.hu>, 2023.
+# Marton Horvath <horvath.marton.g@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-13T21:04:23+00:00\n"
-"PO-Revision-Date: 2023-04-28 14:09+0000\n"
-"Last-Translator: Fülöp Tiffany <tiffany.fulop@ek.szte.hu>\n"
+"PO-Revision-Date: 2026-10-30 17:37+0000\n"
+"Last-Translator: Marton Horvath <horvath.marton.g@gmail.com>\n"
 "Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/ojs/editor/hu/"
 ">\n"
 "Language: hu\n"
@@ -14,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "editor.home"
 msgstr "Szerkesztői Főoldal"
@@ -718,3 +719,16 @@ msgstr "Borítókép"
 
 #~ msgid "editor.article.removeCoverPage"
 #~ msgstr "Eltávolítja a borítóképet?"
+
+msgid "editor.issues.datePublished.invalid"
+msgstr ""
+"A megjelenés dátuma érvénytelen. A dátumot ÉÉÉÉ-HH-NN formátumban kell "
+"megadni."
+
+msgid "editor.issues.datePublished.requiredWhenPublished"
+msgstr "A folyóiratszám közzétételekor kötelező megadni a megjelenés dátumát."
+
+msgid "editor.issues.datePublished.notPublished.description"
+msgstr ""
+"Ha üresen hagyja, a dátum automatikusan beállításra kerül a folyóiratszám "
+"közzétételekor."

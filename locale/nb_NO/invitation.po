@@ -37,6 +37,7 @@ msgstr ""
 msgid "acceptInvitation.modal.title"
 msgstr "Du har fått en ny rolle i OJS"
 
+#, fuzzy
 msgid "acceptInvitation.verifyOrcid.stepDescription"
 msgstr ""
 "Du kan velge å bekrefte din ORCID iD, eller hoppe over det. Hvis du velger å "
@@ -48,6 +49,7 @@ msgstr "Ikke bekreftet. Du kan bekrefte din ORCID iD fra profilen din i OJS."
 msgid "invitation.role.masthead"
 msgstr "Tidsskriftets kolofonside"
 
+#, fuzzy
 msgid "invitation.wizard.pageTitleDescription"
 msgstr ""
 "Du inviteres til å få en rolle på tidsskriftsplattformen og samtidig bli "
@@ -56,6 +58,7 @@ msgstr ""
 msgid "userInvitation.enterDetails.stepDescription"
 msgstr "Du kan invitere dem til å ta en rolle på tidsskriftsplattformen"
 
+#, fuzzy
 msgid "userInvitation.modal.message"
 msgstr ""
 "{$email} har blitt invitert til en ny rolle på tidsskriftsplattformen. Du "
@@ -71,6 +74,7 @@ msgstr "Brukeren finnes allerede hos tidsskriftet"
 msgid "userInvitation.search.userNotFound"
 msgstr "Brukeren har ikke en rolle i dette tidsskriftet"
 
+#, fuzzy
 msgid "userInvitation.searchUser.stepDescription"
 msgstr ""
 "Søk etter brukeren ved å bruke deres e-post adresse, brukernavn eller ORCID "

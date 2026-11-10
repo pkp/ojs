@@ -52,6 +52,7 @@ abstract class PubObjectsExportGenericPlugin extends GenericPlugin
         }
         Hook::add('Publication::publish', $this->handlePublicationPublishing(...));
         Hook::add('Publication::unpublish', $this->handlePublicationUnpublishing(...));
+        Hook::add('Publication::identityRestamped', $this->handleIdentityRestamped(...));
 
         return true;
     }
@@ -116,17 +117,8 @@ abstract class PubObjectsExportGenericPlugin extends GenericPlugin
             in_array($newPublication->getData($this->exportPlugin->getDepositStatusSettingName()), $updatableStatuses)) {
             if ($newPublication->getData('versionMinor') != '0') {
 
-                $lastMinorPublications = Repo::publication()->getCollector()
-                    ->filterBySubmissionIds([$newPublication->getData('submissionId')])
-                    ->filterByVersionStage($newPublication->getData('versionStage'))
-                    ->filterByVersionMajor($newPublication->getData('versionMajor'))
-                    ->filterByStatus([PKPPublication::STATUS_PUBLISHED])
-                    ->orderByVersion()
-                    ->getMany()
-                    ->last(); // minor versions are sorted ASC, so get only the last
-
                 // if it is the last published minor version
-                if ($newPublication->getId() == $lastMinorPublications->getId()) {
+                if ($newPublication->getId() == $this->getLastPublishedMinorVersion($newPublication)?->getId()) {
 
                     // This will be the case if a new minor version, of a version that is already registered, is published
                     // (Because the settings are copied at versioning, this version will also have the status registered).
@@ -172,14 +164,7 @@ abstract class PubObjectsExportGenericPlugin extends GenericPlugin
             in_array($newPublication->getData($this->exportPlugin->getDepositStatusSettingName()), $updatableStatuses) &&
             $newPublication->getData('versionMinor') != '0') {
 
-            $lastMinorPublication = Repo::publication()->getCollector()
-                ->filterBySubmissionIds([$newPublication->getData('submissionId')])
-                ->filterByVersionStage($newPublication->getData('versionStage'))
-                ->filterByVersionMajor($newPublication->getData('versionMajor'))
-                ->filterByStatus([PKPPublication::STATUS_PUBLISHED])
-                ->orderByVersion()
-                ->getMany()
-                ->last(); // minor versions are sorted ASC, so get only the last
+            $lastMinorPublication = $this->getLastPublishedMinorVersion($newPublication);
 
             if ($lastMinorPublication && (int) $newPublication->getData('versionMinor') > (int) $lastMinorPublication->getData('versionMinor')) {
                 // it was the last published minor version
@@ -195,4 +180,54 @@ abstract class PubObjectsExportGenericPlugin extends GenericPlugin
         return Hook::CONTINUE;
     }
 
+    /**
+     * Handle a publication whose identity metadata was re-stamped by the stampIdentityMetadata CLI tool:
+     * mark it stale like when publishing. With DOI versioning, only the last published minor version is
+     * deposited, so only that one is marked. Without, the submission is marked if this is its current publication.
+     *
+     * The context is passed in because the CLI has no request context.
+     *
+     * @return bool Hook processing status
+     */
+    public function handleIdentityRestamped($hookName, $params): bool
+    {
+        [$publication, $context] = $params;
+        if (!$this->getEnabled($context->getId())) {
+            return Hook::CONTINUE;
+        }
+
+        $updatableStatuses = [
+            PubObjectsExportPlugin::EXPORT_STATUS_REGISTERED,
+            PubObjectsExportPlugin::EXPORT_STATUS_MARKEDREGISTERED
+        ];
+        $statusSettingName = $this->exportPlugin->getDepositStatusSettingName();
+        if ($context->getData(Context::SETTING_DOI_VERSIONING)) {
+            if (in_array($publication->getData($statusSettingName), $updatableStatuses) &&
+                $publication->getId() == $this->getLastPublishedMinorVersion($publication)?->getId()) {
+                $this->exportPlugin->markStale($publication);
+            }
+        } else {
+            $submission = Repo::submission()->get($publication->getData('submissionId'));
+            if ($submission->getData('currentPublicationId') === $publication->getId() &&
+                in_array($submission->getData($statusSettingName), $updatableStatuses)) {
+                $this->exportPlugin->markStale($submission);
+            }
+        }
+        return Hook::CONTINUE;
+    }
+
+    /**
+     * Get the last published minor version of the publication's version.
+     */
+    protected function getLastPublishedMinorVersion(PKPPublication $publication): ?PKPPublication
+    {
+        return Repo::publication()->getCollector()
+            ->filterBySubmissionIds([$publication->getData('submissionId')])
+            ->filterByVersionStage($publication->getData('versionStage'))
+            ->filterByVersionMajor($publication->getData('versionMajor'))
+            ->filterByStatus([PKPPublication::STATUS_PUBLISHED])
+            ->orderByVersion()
+            ->getMany()
+            ->last(); // minor versions are sorted ASC, so get only the last
+    }
 }

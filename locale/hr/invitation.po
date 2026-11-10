@@ -41,6 +41,7 @@ msgstr ""
 msgid "invitation.role.masthead"
 msgstr "Impresum časopisa"
 
+#, fuzzy
 msgid "acceptInvitation.verifyOrcid.stepDescription"
 msgstr ""
 "Možete potvrditi svoj ORCID iD ili preskočiti taj korak. Ako ga sada "
@@ -63,6 +64,7 @@ msgstr ""
 "Pošaljite korisniku e-poruku kojom ga/ju informirate o pozivu, sljedećim "
 "koracima, GDPR pravilima časopisa i potvrdi ORCID iD-a"
 
+#, fuzzy
 msgid "invitation.wizard.pageTitleDescription"
 msgstr ""
 "Pozivate korisnika/icu da preuzme ulogu u OJS-u te da bude naveden/a u "
@@ -74,12 +76,14 @@ msgstr "Ovaj korisnik već postoji u časopisu"
 msgid "userInvitation.search.userNotFound"
 msgstr "Ovaj korisnik nema ulogu u ovom časopisu"
 
+#, fuzzy
 msgid "userInvitation.modal.message"
 msgstr ""
 "{$email} je pozvan da preuzme novu ulogu u OJS-u. Informacije o odluci "
 "korisnika možete pratiti na stranici Korisnici i uloge, u svojim OJS "
 "obavijestima i/ili u e-pošti"
 
+#, fuzzy
 msgid "userInvitation.searchUser.stepDescription"
 msgstr ""
 "Pretražite korisnika prema adresi e-pošte, korisničkom imenu ili ORCID iD-u. "

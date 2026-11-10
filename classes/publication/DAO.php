@@ -134,7 +134,7 @@ class DAO extends \PKP\publication\DAO
                         fn (Builder $q) => $q->whereNull('pss.setting_value'),
                         fn (Builder $q) => $q->when(
                             $settingValue == PubObjectsExportPlugin::EXPORT_STATUS_DEPOSITABLE,
-                            fn (Builder $q) => $q->whereNull('pss.setting_value')->orWhere('pss.setting_value', '=', PubObjectsExportPlugin::EXPORT_STATUS_STALE),
+                            fn (Builder $q) => $q->where(fn (Builder $q) => $q->whereNull('pss.setting_value')->orWhere('pss.setting_value', '=', PubObjectsExportPlugin::EXPORT_STATUS_STALE)),
                             fn (Builder $q) => $q->where('pss.setting_value', '=', $settingValue)
                         )
                     )
@@ -155,5 +155,19 @@ class DAO extends \PKP\publication\DAO
     public function fromRowDeprecated(object $row): Publication
     {
         return $this->fromRow($row, [$row->publication_id], (object) []);
+    }
+
+    /**
+     * @copydoc \PKP\publication\DAO::whereHasDoi()
+     */
+    protected function whereHasDoi(\Illuminate\Database\Query\Builder $q): \Illuminate\Database\Query\Builder
+    {
+        return parent::whereHasDoi($q)
+            ->orWhereExists(
+                fn (Builder $q) => $q->select(DB::raw(1))
+                    ->from('publication_galleys as g')
+                    ->whereColumn('g.publication_id', '=', 'p.publication_id')
+                    ->whereNotNull('g.doi_id')
+            );
     }
 }

@@ -10,6 +10,8 @@
     --swiper-theme-color: @bg-base;
     --swiper-navigation-size: @triple;
     --swiper-navigation-sides-offset: @half;
+    // Swiper 12 colours arrows from this variable (bundle CSS loads after the theme)
+    --swiper-navigation-color: @text-light;
 }
 
 .swiper-wrapper {
@@ -37,10 +39,10 @@
 .swiper-button-next {
     background: transparent;
     border: none;
-    color: @lift;
+    color: var(--swiper-navigation-color);
 
     &:focus-visible {
-        outline: 2px solid @lift;
+        outline: 2px solid var(--swiper-navigation-color);
         outline-offset: @half;
     }
 }

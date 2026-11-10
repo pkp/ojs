@@ -17,6 +17,7 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "Mòdul d'exportació DOAJ"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr ""
 "Exporta la revista al DOAJ i envia informació sobre la revista al "
@@ -25,6 +26,7 @@ msgstr ""
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Contacta amb el DOAJ per a l'inclusió"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "Si desitgeu registrar articles des del mateix OJS, introduïu la vostra clau "

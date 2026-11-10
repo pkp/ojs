@@ -17,12 +17,14 @@ msgstr ""
 msgid "plugins.importexport.doaj.displayName"
 msgstr "DOAJ导出插件"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.description"
 msgstr "将期刊导出到DAOJ，并且将期刊信息电邮给DAOJ的成员。"
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "联系DOAJ列入"
 
+#, fuzzy
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "如果您想从 OJS 中注册文章，请输入您的 DOAJ API 密钥。 否则，您仍然可以导出为 "

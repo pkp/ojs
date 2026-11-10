@@ -3,8 +3,8 @@
 /**
  * @file pages/index/IndexHandler.php
  *
- * Copyright (c) 2014-2025 Simon Fraser University
- * Copyright (c) 2003-2025 John Willinsky
+ * Copyright (c) 2014-2026 Simon Fraser University
+ * Copyright (c) 2003-2026 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class IndexHandler
@@ -68,7 +68,7 @@ class IndexHandler extends PKPIndexHandler
 
         if ($journal) {
             $activeTheme = $templateMgr->getTemplateVars('activeTheme');
-            $journalContentOptions = $activeTheme->getOption('journalContentOrganization');
+            $journalContentOptions = $activeTheme?->getOption('journalContentOrganization');
             if (!is_array($journalContentOptions)) {
                 $journalContentOptions = JournalContentOption::default($journal);
             }
