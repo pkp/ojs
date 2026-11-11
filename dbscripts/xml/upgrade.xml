@@ -176,6 +176,7 @@
 		<migration class="PKP\migration\upgrade\v3_5_0\I10962_UpdateEmailTemplateVariables"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I12133_FixCategorySort"/>
         <migration class="PKP\migration\upgrade\v3_5_0\I13283_RestoreDegradedOrcidFunctionality"/>
+		<migration class="PKP\migration\upgrade\v3_5_0\I13778_RepairRenamedLocaleDefaults"/>
 		<code function="downloadIPGeoDB" />
 		<note file="docs/release-notes/README-3.5.0" />
 	</upgrade>
@@ -192,6 +193,7 @@
 		<migration class="PKP\migration\upgrade\v3_5_0\I12792_FixInvitationEmailButtons"/>
 		<migration class="APP\migration\upgrade\v3_5_0\I13128_FixEmailUrlLinks"/>
         <migration class="PKP\migration\upgrade\v3_5_0\I13283_RestoreDegradedOrcidFunctionality"/>
+		<migration class="PKP\migration\upgrade\v3_5_0\I13778_RepairRenamedLocaleDefaults"/>
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
