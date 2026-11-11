@@ -13,7 +13,7 @@ describe('Data suite tests', function() {
 		var username = 'admin';
 		cy.login(username, 'admin');
 
-		cy.get('li.profile a:contains("' + username + '")').click();
+		cy.get('#navigationUser').find('a:visible, button:visible').contains(username).click();
 		cy.get('li.profile a:contains("Dashboard")').click();
 		cy.get('nav').contains('Tools').click();
 		cy.get('a:contains("Native XML Plugin")').click();
@@ -41,7 +41,7 @@ describe('Data suite tests', function() {
 		var username = 'admin';
 		cy.login(username, 'admin');
 
-		cy.get('li.profile a:contains("' + username + '")').click();
+		cy.get('#navigationUser').find('a:visible, button:visible').contains(username).click();
 		cy.get('li.profile a:contains("Dashboard")').click();
 		cy.get('nav').contains('Tools').click();
 		// The a:contains(...) syntax ensures that it will wait for the
