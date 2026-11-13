@@ -98,7 +98,7 @@ describe('Data suite tests', function() {
 
 	it('Tests context settings form', function() {
 		cy.login('admin', 'admin');
-		cy.get('#navigationUser').find('a:visible, button:visible').contains('admin').click();
+		cy.get('#navigationUser').contains('admin').click();
 		cy.get('a').contains('Dashboard').click();
 		cy.get('nav').contains('Settings').click();
 		// Ensure submenu item click despite animation
@@ -126,7 +126,7 @@ describe('Data suite tests', function() {
 
 	it('Tests contact settings form', function() {
 		cy.login('admin', 'admin');
-		cy.get('#navigationUser').find('a:visible, button:visible').contains('admin').click();
+		cy.get('#navigationUser').contains('admin').click();
 		cy.get('a').contains('Dashboard').click();
 		cy.get('nav').contains('Settings').click();
 		// Ensure submenu item click despite animation
