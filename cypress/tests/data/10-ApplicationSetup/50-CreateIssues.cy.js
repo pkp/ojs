@@ -10,7 +10,7 @@
 describe('Data suite tests', function() {
 	it('Creates issues', function() {
 		cy.login('admin', 'admin');
-		cy.get('a').contains('admin').click();
+		cy.get('#navigationUser').contains('admin').click();
 		cy.get('a').contains('Dashboard').click();
 		cy.get('nav').contains('Content').click();
 		// Ensure submenu item click despite animation
