@@ -59,7 +59,7 @@ describe('Data suite tests', function() {
 
 	it('Tests the settings wizard', function() {
 		cy.login('admin', 'admin');
-		cy.get('#navigationUser').find('a:visible, button:visible').contains('admin').click();
+		cy.get('#navigationUser').contains('admin').click();
 		cy.get('a').contains('Dashboard').click();
 		cy.get('nav').contains('Administration').click();
 		cy.get('a').contains('Hosted Journals').click();
