@@ -46,10 +46,15 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat
         /** @var Publication $publication */
         $publication = $article->getCurrentPublication();
 
-        $publicationLocale = $publication->getData('locale');
-
         /* @var Journal $journal */
         $journal = $record->getData('journal');
+
+        // A publication without a locale returns every abstract of every language.
+        $publicationLocale = $publication->getData('locale');
+        if (!$publicationLocale) {
+            $abstracts = array_filter((array) $publication->getData('abstract'));
+            $publicationLocale = $abstracts ? key($abstracts) : $journal->getPrimaryLocale();
+        }
 
         $templateMgr = TemplateManager::getManager();
         $templateMgr->assign([
