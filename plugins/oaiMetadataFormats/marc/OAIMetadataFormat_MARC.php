@@ -49,10 +49,16 @@ class OAIMetadataFormat_MARC extends OAIMetadataFormat
             stripAssocArray((array) $article->getSubject(null))
         );
 
+        // A submission without a locale returns every abstract of every language.
+        $locale = $article->getLocale();
+        if (!$locale) {
+            $abstracts = array_filter((array) $article->getAbstract(null));
+            $locale = $abstracts ? key($abstracts) : $journal->getPrimaryLocale();
+        }
         $templateMgr->assign([
             'subject' => isset($subjects[$journal->getPrimaryLocale()]) ? $subjects[$journal->getPrimaryLocale()] : '',
-            'abstract' => PKPString::html2text($article->getAbstract($article->getLocale())),
-            'language' => LocaleConversion::get3LetterIsoFromLocale($article->getLocale())
+            'abstract' => PKPString::html2text((string) $article->getAbstract($locale)),
+            'language' => LocaleConversion::get3LetterIsoFromLocale($locale)
         ]);
 
         $plugin = PluginRegistry::getPlugin('oaiMetadataFormats', 'OAIFormatPlugin_MARC');
