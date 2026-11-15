@@ -274,7 +274,7 @@ class OAIDAO extends PKPOAIDAO
                 $join->where('psissue.setting_name', '=', DB::raw('\'issueId\''));
                 $join->where('psissue.locale', '=', DB::raw('\'\''));
             })
-            ->join('issues AS i', DB::raw('CAST(i.issue_id AS CHAR(20))'), '=', 'psissue.setting_value')
+            ->join('issues AS i', 'i.issue_id', '=', DB::raw('CAST(psissue.setting_value AS UNSIGNED)'))
             ->join('sections AS s', 's.section_id', '=', 'p.section_id')
             ->join('journals AS j', 'j.journal_id', '=', 'a.context_id')
             ->where('i.published', '=', 1)
