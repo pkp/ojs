@@ -1,0 +1,20 @@
+@props([
+    'actions' => '',
+    'title' => '',
+])
+
+<div class="notice @if($actions) notice-with-actions @endif">
+    <div class="notice-content">
+        @if ($title)
+            <div class="notice-title">
+                {!! $title !!}
+            </div>
+        @endif
+        {{ $slot }}
+    </div>
+    @if($actions)
+        <div class="notice-actions">
+            {{ $actions }}
+        </div>
+    @endif
+</div>

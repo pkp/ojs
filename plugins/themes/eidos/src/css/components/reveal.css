@@ -1,0 +1,38 @@
+/**
+ * Styles for the reveal component
+ *
+ * @see /src/js/reveal.js
+ */
+.reveal {
+  position: relative;
+  overflow-y: hidden;
+}
+
+.reveal[data-open="true"] {
+  overflow: visible;
+  max-height: none !important;
+}
+
+.reveal-link {
+  @apply tab-focus;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: var(--color-page-background);
+  box-shadow: 0 -2rem 2rem 2rem var(--color-page-background);
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  font-family: var(--font-actions);
+  font-weight: 700;
+  color: var(--color-button-text);
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 0.15em;
+  }
+}
+
+.reveal[data-open="true"] .reveal-link {
+  display: none;
+}

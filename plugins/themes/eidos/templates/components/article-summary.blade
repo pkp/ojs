@@ -1,0 +1,150 @@
+{{--
+ * Article summary
+ *
+ * Used in issue tables of content, search results, and when browsing
+ * by category. Accepts a number of params to modify behavior.
+ *
+ * @see APP\plugins\themes\eidos\classes\components\ArticleSummary
+ --}}
+
+@props([
+    /**
+     * The article to display
+     */
+    'submission',
+
+    /**
+     * The <h*> level for the title
+     */
+    'heading',
+
+    /**
+     * Pass a context path if this submission is not in the
+     * current context.
+     *
+     * For example, used when showing search results at the
+     * site level.
+     */
+    'contextPath' => null,
+
+    /**
+     * Whether or not to show a download button with the galleys
+     */
+    'showGalleys' => true,
+
+    /**
+     * Whether or not to show the article cover image
+     */
+    'showCover' => false,
+
+    /**
+     * Whether or not to show the abstract
+     */
+    'showAbstract' => false,
+
+    /**
+     * To show the article's section, pass an array of Section
+     * objects
+     */
+    'sections' => null,
+])
+
+@php
+    $publication = $submission->getCurrentPublication();
+    /**
+     * Get the URL to the article landing page
+     */
+    $url = ViewHelper::url([
+        'page' => 'article',
+        'op' => 'view',
+        'path' => $submission->getBestId(),
+        'context' => $contextPath,
+    ]);
+
+    /**
+     * Get the primary and supplementary galleys
+     */
+    $primaryGalleys = [];
+    $supplementaryGalleys = [];
+    if ($showGalleys) {
+        $galleys = $publication->getData('galleys');
+        if (!is_array($primaryFileGenreIds)) {
+            $showGalleys = false;
+        } else {
+            foreach ($galleys as $galley) {
+                if ($galley->getData('urlRemote') || in_array($galley->getFile()->getGenreId(), $primaryFileGenreIds)) {
+                    $primaryGalleys[] = $galley;
+                } else if (in_array($galley->getId(), $supplementaryFileGenreIds)) {
+                    $supplementaryGalleys[] = $galley;
+                }
+            }
+        }
+    }
+
+    /**
+     * Get the cover image
+     */
+    $coverImageUrl = '';
+    $coverImageAltText = '';
+    if ($showCover) {
+        $coverImage = $publication->getLocalizedData('coverImage');
+        if ($coverImage) {
+            $coverImageUrl = $publication->getLocalizedCoverImageUrl($submission->getData('contextId'));
+            $coverImageAltText = $coverImage['altText'] ?? '';
+        }
+    }
+@endphp
+
+<div {{ $attributes->merge(['class' => 'article-summary']) }}>
+    @if ($coverImageUrl)
+        <img
+            class="article-summary-cover"
+            src="{{ $coverImageUrl }}"
+            alt="{{ $coverImageAltText }}"
+        >
+    @endif
+    <div class="article-summary-content">
+        @php
+            $section = $sections
+                ? $sections->first(fn($section) => $section->getId() === $publication->getData('sectionId'))
+                : null;
+            $sectionName = $section?->getLocalizedIdentifyType();
+            if (!$sectionName) {
+                $sectionName = $section?->getLocalizedTitle();
+            }
+        @endphp
+        @if ($sectionName)
+            <div class="article-summary-section">
+                {{ $sectionName }}
+            </div>
+        @endif
+        <a
+            class="article-summary-link tab-focus"
+            href="{{ $url }}"
+        >
+            <{{ $heading }} class="article-summary-title">
+                {!! ViewHelper::sanitizeHtml($publication->getLocalizedFullTitle(null, 'html')) !!}
+            </{{ $heading }}>
+            <div class="article-summary-authors">
+                {{ $publication->getAuthorString(true) }}
+            </div>
+        </a>
+        @if ($showAbstract && $publication->getLocalizedData('abstract'))
+            <div class="article-summary-abstract html-text">
+                {!! ViewHelper::sanitizeHtml($publication->getLocalizedData('abstract')) !!}
+            </div>
+        @endif
+    </div>
+    @if (count($primaryGalleys) || count($supplementaryGalleys))
+        <div class="article-summary-galley-root">
+            <x-article.download
+                :primaryGalleys="$primaryGalleys"
+                jatsDownloadUrl=""
+                :supplementaryGalleys="$supplementaryGalleys"
+                :publication="$publication"
+                :submission="$submission"
+                :galleyContextPath="$contextPath"
+            />
+        </div>
+    @endif
+</div>

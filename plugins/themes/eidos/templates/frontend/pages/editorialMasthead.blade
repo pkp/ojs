@@ -1,0 +1,63 @@
+<x-layout.basic
+    title="{{ __('common.editorialMasthead') }}"
+    pageId="masthead"
+>
+    <div class="html-text">
+        <section class="page-masthead-section">
+            @foreach($mastheadRoles as $mastheadRole)
+                @if(array_key_exists($mastheadRole->id, $mastheadUsers))
+                    <h2>
+                        {{ $mastheadRole->getLocalizedData('name') }}
+                    </h2>
+                    <ul class="plain-list">
+                        @foreach($mastheadUsers[$mastheadRole->id] as $mastheadUser)
+                            <li>
+                                <x-masthead-user
+                                    name="{{ $mastheadUser['user']->getFullName() }}"
+                                    orcid="{{ $mastheadUser['user']->getData('orcid') }}"
+                                    hasVerifiedOrcid="$mastheadUser['user']->hasVerifiedOrcid()"
+                                    affiliation="{{ $mastheadUser['user']->getLocalizedData('affiliation') }}"
+                                    dateStart="{{ $mastheadUser['dateStart'] }}"
+                                    dateEnd="{{ $mastheadUser['dateEnd'] }}"
+                                />
+                            </li>
+                        @endforeach
+                    </ul>
+                @endif
+            @endforeach
+            <p>
+                {!!
+                    __('about.editorialMasthead.linkToEditorialHistory', [
+                        'url' => ViewHelper::url(['page' => 'about', 'op' => 'editorialHistory'])
+                    ])
+                !!}
+            </p>
+        </section>
+
+        @if($reviewers->count())
+            <section class="page-masthead-section">
+                <h2>
+                    {{ __('common.editorialMasthead.peerReviewers') }}
+                </h2>
+                <p>
+                    {{ __('common.editorialMasthead.peerReviewers.description', ['year' => $previousYear]) }}
+                </p>
+                <ul class="plain-list">
+                    @foreach($reviewers as $reviewer)
+                        <li>
+                            <x-masthead-user
+                                name="{{ $reviewer->getFullName() }}"
+                                orcid="{{
+                                    $reviewer->getData('orcid') && $reviewer->getData('orcidAccessToken')
+                                        ? $reviewer->getData('orcid')->getData('orcid')
+                                        : ''
+                                }}"
+                                affiliation="{{ $reviewer->getLocalizedData('affiliation') }}"
+                            />
+                        </li>
+                    @endforeach
+                </ul>
+            </section>
+        @endif
+    </div>
+</x-layout.basic>

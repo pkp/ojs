@@ -1,0 +1,30 @@
+@props([
+    /**
+     * Leave empty to use a <div> instead of <a>
+     */
+    'href' => '',
+
+    /**
+     * Truncate text instead of wrapping
+     * to multiple lines.
+     */
+    'truncate' => false,
+])
+
+@php $el = $href ? 'a' : 'div'; @endphp
+
+<{{ $el }}
+    @if($href)
+        href="{{ $href }}"
+    @endif
+    {{
+        $attributes->merge([
+            'class' => 'arrow-link' . ($truncate ? ' arrow-link-truncate' : ''),
+        ])
+    }}
+>
+    <span class="arrow-link-text">
+        {{ $slot }}
+    </span>
+    @include('components/icons/arrow-right')
+</{{ $el }}>

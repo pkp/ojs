@@ -1,0 +1,9 @@
+<x-layout.basic
+    title="{{ __('about.aboutContext') }}"
+    description="{{ ViewHelper::html2text($currentContext->getLocalizedData('description')) }}"
+    pageId="about"
+>
+    <div class="html-text">
+        {!! ViewHelper::sanitizeHtml($currentContext->getLocalizedData('about')) !!}
+    </div>
+</x-layout.basic>

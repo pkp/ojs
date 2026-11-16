@@ -1,0 +1,15 @@
+.galley-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.galley-link svg {
+  flex-shrink: 0;
+}
+
+.galley-link-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
