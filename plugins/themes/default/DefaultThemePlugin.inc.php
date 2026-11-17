@@ -161,13 +161,15 @@ class DefaultThemePlugin extends ThemePlugin {
 
 			$homepageImage = $context->getLocalizedData('homepageImage');
 
-			$homepageImageUrl = $publicFilesDir . '/' . $homepageImage['uploadName'];
+			if (!empty($homepageImage['uploadName'])) {
+				$homepageImageUrl = $publicFilesDir . '/' . $homepageImage['uploadName'];
 
-			$this->addStyle(
-				'homepageImage',
-				'.pkp_structure_head { background: center / cover no-repeat url("' . $homepageImageUrl . '");}',
-				['inline' => true]
-			);
+				$this->addStyle(
+					'homepageImage',
+					'.pkp_structure_head { background: center / cover no-repeat url("' . $homepageImageUrl . '");}',
+					['inline' => true]
+				);
+			}
 		}
 
 		// Load jQuery from a CDN or, if CDNs are disabled, from a local copy.
