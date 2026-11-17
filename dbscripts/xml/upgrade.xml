@@ -189,6 +189,7 @@
 		<migration class="APP\migration\upgrade\v3_5_0\I12357_FixDecisionConstantsMissedStageId"/>
 		<migration class="APP\migration\upgrade\v3_5_0\I13128_FixEmailUrlLinks"/>
         <migration class="PKP\migration\upgrade\v3_5_0\I13283_RestoreDegradedOrcidFunctionality"/>
+		<migration class="APP\migration\upgrade\v3_5_0\I13562_RepairWeblateUILocales"/>
 	</upgrade>
 
 	<upgrade minversion="3.5.0.0" maxversion="3.5.9.9">
