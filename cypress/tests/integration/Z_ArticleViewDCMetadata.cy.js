@@ -358,7 +358,7 @@ describe('Article View Metadata - DC Plugin', function() {
 
 		// Login as admin
 		cy.login('admin', 'admin');
-		cy.get('a').contains('admin').click();
+		cy.get('#navigationUser').contains('admin').click();
 		cy.get('a').contains('Dashboard').click();
 
 		// Enable metadata settings
