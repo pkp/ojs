@@ -51,12 +51,6 @@ class DoiSetupSettingsForm extends PKPDoiSetupSettingsForm
                 'label' => __('submission.peerReview'),
                 'allowedBy' => [],
             ],
-            // NB: Functionality for author response DOIs exists but is not currently supported
-            //             [
-            //                 'value' => Repo::doi()::TYPE_AUTHOR_RESPONSE,
-            //                 'label' => __('submission.reviewRound.authorResponse'),
-            //                'allowedBy' => [],
-            //             ],
         ];
         Hook::call('DoiSetupSettingsForm::getObjectTypes', [&$this->objectTypeOptions]);
         if ($this->enabledRegistrationAgency === null) {
@@ -85,10 +79,5 @@ class DoiSetupSettingsForm extends PKPDoiSetupSettingsForm
                 'groupId' => self::DOI_CUSTOM_SUFFIX_GROUP,
                 'description' => __('doi.manager.settings.doiSuffixUserDefine.notSupported'),
             ]));
-        //            ->addField(new FieldHTML('authorResponseCustomSuffixMessage', [
-        //                'label' => __('submission.reviewRound.authorResponse'),
-        //                'groupId' => self::DOI_CUSTOM_SUFFIX_GROUP,
-        //                'description' => __('doi.manager.settings.doiSuffixUserDefine.notSupported'),
-        //            ]));
     }
 }

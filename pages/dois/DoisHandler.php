@@ -38,7 +38,6 @@ class DoisHandler extends PKPDoisHandler
                 Repo::doi()::TYPE_PUBLICATION,
                 Repo::doi()::TYPE_REPRESENTATION,
                 Repo::doi()::TYPE_PEER_REVIEW,
-                Repo::doi()::TYPE_AUTHOR_RESPONSE,
             ])
         ) > 0) {
             $submissionDoiListPanel = new DoiListPanel(
@@ -95,7 +94,6 @@ class DoisHandler extends PKPDoisHandler
                         Repo::doi()::TYPE_PUBLICATION,
                         Repo::doi()::TYPE_REPRESENTATION,
                         Repo::doi()::TYPE_PEER_REVIEW,
-                        Repo::doi()::TYPE_AUTHOR_RESPONSE,
                     ])
                 ) > 0,
                 'displayIssuesTab' => in_array(Repo::doi()::TYPE_ISSUE, $enabledDoiTypes),
