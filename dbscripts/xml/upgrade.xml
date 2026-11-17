@@ -192,6 +192,7 @@
 		<migration class="PKP\migration\upgrade\v3_5_0\I12792_FixInvitationEmailButtons"/>
 		<migration class="APP\migration\upgrade\v3_5_0\I13128_FixEmailUrlLinks"/>
         <migration class="PKP\migration\upgrade\v3_5_0\I13283_RestoreDegradedOrcidFunctionality"/>
+		<migration class="APP\migration\upgrade\v3_5_0\I13562_RepairWeblateUILocales"/>
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
