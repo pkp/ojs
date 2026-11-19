@@ -104,3 +104,12 @@ msgstr "Next slide"
 
 msgid "plugins.themes.default.prevSlide"
 msgstr "Previous slide"
+
+msgid "plugins.themes.default.skipTo.buttonLabel"
+msgstr "Skip to content"
+
+msgid "plugins.themes.default.skipTo.landmarkGroupLabel"
+msgstr "Page regions"
+
+msgid "plugins.themes.default.skipTo.headingGroupLabel"
+msgstr "Page headings"
