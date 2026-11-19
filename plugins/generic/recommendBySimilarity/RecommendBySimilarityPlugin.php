@@ -82,13 +82,21 @@ class RecommendBySimilarityPlugin extends GenericPlugin
             ->searchPhrase($searchPhrase, static::MAX_SEARCH_KEYWORDS);
 
         $offset = ($rangeInfo->getPage() - 1) * $rangeInfo->getCount();
-        $submissionCount = $collector->getCount();
 
-        $submissions = $collector
-            ->limit($rangeInfo->getCount())
-            ->offset($offset)
+        // Run the ranked search only once: its ids provide both the total and the current page
+        $submissionIds = $collector
             ->orderBy(Collector::ORDERBY_SEARCH_RANKING)
-            ->getMany();
+            ->getIds();
+        $submissionCount = $submissionIds->count();
+
+        // Load the current page by id, keeping the ranking order, as a non-lazy collection
+        $pageIds = $submissionIds->slice($offset, $rangeInfo->getCount())->values()->all();
+        $pageSubmissions = $pageIds
+            ? Repo::submission()->getCollector()->filterByContextIds([$context->getId()])->filterBySubmissionIds($pageIds)->getMany()->collect()
+            : collect();
+        $submissions = collect($pageIds)
+            ->mapWithKeys(fn ($submissionId) => [$submissionId => $pageSubmissions->get($submissionId)])
+            ->filter();
 
         // Load the linked issues
         $issues = Repo::issue()->getCollector()
