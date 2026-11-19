@@ -18,10 +18,7 @@ namespace APP\install;
 
 use APP\core\Application;
 use APP\template\TemplateManager;
-use Illuminate\Support\Facades\Schema;
-use PKP\db\DAORegistry;
 use PKP\install\Installer;
-use PKP\navigationMenu\NavigationMenuItemDAO;
 use PKP\submissionFile\SubmissionFile;
 
 class Upgrade extends Installer
@@ -69,36 +66,6 @@ class Upgrade extends Installer
         $request = Application::get()->getRequest();
         $templateMgr = TemplateManager::getManager($request);
         $templateMgr->clearCssCache();
-        return true;
-    }
-
-    /**
-     * If StaticPages table exists we should port the data as NMIs
-     *
-     * @return bool
-     */
-    public function migrateStaticPagesToNavigationMenuItems()
-    {
-        if (Schema::hasTable('static_pages')) {
-            $contextDao = Application::getContextDAO();
-            $navigationMenuItemDao = DAORegistry::getDAO('NavigationMenuItemDAO'); /** @var NavigationMenuItemDAO $navigationMenuItemDao */
-
-            $staticPagesDao = new \APP\plugins\generic\staticPages\classes\StaticPagesDAO();
-
-            $contexts = $contextDao->getAll();
-            while ($context = $contexts->next()) {
-                $contextStaticPages = $staticPagesDao->getByContextId($context->getId())->toAssociativeArray();
-                foreach ($contextStaticPages as $staticPage) {
-                    $retNMIId = $navigationMenuItemDao->portStaticPage($staticPage);
-                    if ($retNMIId) {
-                        $staticPagesDao->deleteById($staticPage->getId());
-                    } else {
-                        error_log('WARNING: The StaticPage "' . $staticPage->getLocalizedTitle() . '" uses a path (' . $staticPage->getPath() . ') that conflicts with an existing Custom Navigation Menu Item path. Skipping this StaticPage.');
-                    }
-                }
-            }
-        }
-
         return true;
     }
 
