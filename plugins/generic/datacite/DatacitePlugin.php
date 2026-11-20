@@ -20,6 +20,7 @@ use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\plugins\generic\datacite\classes\DataciteSettings;
 use APP\plugins\IDoiRegistrationAgency;
+use APP\publication\Publication;
 use Illuminate\Support\Collection;
 use PKP\context\Context;
 use PKP\doi\RegistrationAgencySettings;
@@ -115,20 +116,7 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
         $exportPlugin = $this->_getExportPlugin();
         $xmlErrors = [];
 
-        $items = [];
-
-        foreach ($submissions as $submission) {
-            if (in_array(Repo::doi()::TYPE_PUBLICATION, $context->getEnabledDoiTypes())) {
-                $items[] = $submission;
-            }
-            if (in_array(Repo::doi()::TYPE_REPRESENTATION, $context->getEnabledDoiTypes())) {
-                foreach ($submission->getCurrentPublication()->getData('galleys') as $galley) {
-                    if ($galley->getDoi()) {
-                        $items[] = $galley;
-                    }
-                }
-            }
-        }
+        $items = $this->_getSubmissionItems($submissions, $context);
 
         $temporaryFileId = $exportPlugin->exportAsDownload($context, $items, null, $xmlErrors);
         return ['temporaryFileId' => $temporaryFileId, 'xmlErrors' => $xmlErrors];
@@ -150,26 +138,81 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
         $exportPlugin = $this->_getExportPlugin();
         $responseMessage = '';
 
-        $items = [];
-
-        foreach ($submissions as $submission) {
-            if (in_array(Repo::doi()::TYPE_PUBLICATION, $context->getEnabledDoiTypes())) {
-                $items[] = $submission;
-            }
-            if (in_array(Repo::doi()::TYPE_REPRESENTATION, $context->getEnabledDoiTypes())) {
-                foreach ($submission->getCurrentPublication()->getData('galleys') as $galley) {
-                    if ($galley->getDoi()) {
-                        $items[] = $galley;
-                    }
-                }
-            }
-        }
+        $items = $this->_getSubmissionItems($submissions, $context);
 
         $status = $exportPlugin->exportAndDeposit($context, $items, $responseMessage);
         return [
             'hasErrors' => !$status,
             'responseMessage' => $responseMessage
         ];
+    }
+
+    /**
+     * Fetch publications and galleys for a submissions
+     *
+     * @param \APP\submission\Submission[] $submissions
+     */
+    private function _getSubmissionItems(array $submissions, Context $context): array
+    {
+        $items = [];
+        $enabledDoiTypes = $context->getEnabledDoiTypes();
+
+        foreach ($submissions as $submission) {
+            // Without DOI versioning, only the current publication is deposited.
+            // With DOI versioning, the latest minor publication of each version stage and major version is deposited.
+            // $galleyPublications includes also publications without a DOI
+            if (!$context->getData(Context::SETTING_DOI_VERSIONING)) {
+                $publications = $galleyPublications = [$submission->getCurrentPublication()];
+            } else {
+                $publications = [];
+                $majorPublications = Repo::doi()->getLatestMinorPublicationsForDoiDeposit($submission->getData('publications'));
+                foreach ($majorPublications as $latestMinorPublications) {
+                    foreach ($latestMinorPublications as $publication) {
+                        $publications[] = $publication;
+                    }
+                }
+                $galleyPublications = $this->_getLatestMinorPublishedPublications($submission->getData('publications'));
+            }
+
+            // If publication DOIs are enabled, include publications
+            if (in_array(Repo::doi()::TYPE_PUBLICATION, $enabledDoiTypes)) {
+                foreach ($publications as $publication) {
+                    $items[] = $publication;
+                }
+            }
+
+            // If representation DOIs are enabled, include galleys with a DOI also for publications without a DOI
+            if (in_array(Repo::doi()::TYPE_REPRESENTATION, $enabledDoiTypes)) {
+                foreach ($galleyPublications as $publication) {
+                    foreach ($publication->getData('galleys') as $galley) {
+                        if ($galley->getDoi()) {
+                            $items[] = $galley;
+                        }
+                    }
+                }
+            }
+        }
+
+        return $items;
+    }
+
+    /**
+     * Get the latest minor published publication of each version stage and major version,
+     * whether or not the publication itself has a DOI.
+     */
+    private function _getLatestMinorPublishedPublications(iterable $publications): array
+    {
+        $latest = [];
+        foreach ($publications as $publication) {
+            if ($publication->getData('status') != Publication::STATUS_PUBLISHED) {
+                continue;
+            }
+            $key = $publication->getData('versionStage') . '-' . $publication->getData('versionMajor');
+            if (!isset($latest[$key]) || $publication->getData('versionMinor') > $latest[$key]->getData('versionMinor')) {
+                $latest[$key] = $publication;
+            }
+        }
+        return array_values($latest);
     }
 
     /**
