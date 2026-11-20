@@ -88,7 +88,7 @@
 						</div>
 					</div>
 					<div class="sr-only">
-						<table class="-screenReader" role="region" aria-live="polite">
+						<table class="-screenReader">
 							<caption v-if="timelineType === 'files'">{translate key="stats.downloads.timelineInterval"}</caption>
 							<caption v-else>{translate key="stats.views.timelineInterval"}</caption>
 							<thead>
