@@ -128,7 +128,7 @@ class HomepageBlocksRegistry extends \PKP\view\HomepageBlocksRegistry
                     $count = Repo::submission()
                         ->getCollector()
                         ->filterByStatus([Submission::STATUS_PUBLISHED])
-                        ->filterByContextIds([$context ? $context->getId() : '*'])
+                        ->filterByContextIds([$context?->getId() ?? Application::SITE_CONTEXT_ID_ALL])
                         ->getCount();
 
                     // Round to nearest round number based on how
@@ -182,7 +182,7 @@ class HomepageBlocksRegistry extends \PKP\view\HomepageBlocksRegistry
                     $issues = Repo::issue()
                         ->getCollector()
                         ->filterByPublished(true)
-                        ->filterByContextIds([$context?->getId() ?? '*'])
+                        ->filterByContextIds([$context?->getId() ?? Application::SITE_CONTEXT_ID_ALL])
                         ->orderBy(IssueCollector::ORDERBY_DATE_PUBLISHED)
                         ->limit(10)
                         ->getMany();
