@@ -1,0 +1,9 @@
+@if ($publication->getData('articleNumber'))
+    <x-metadata-blocks.default
+        slug="article-number"
+        title="{{ __('submission.articleNumber') }}"
+        :$headingTag
+    >
+        {{ $publication->getData('articleNumber') }}
+    </x-metadata-blocks.default>
+@endif
