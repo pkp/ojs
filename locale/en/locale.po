@@ -501,6 +501,9 @@ msgstr "Number"
 msgid "issue.vol"
 msgstr "Vol."
 
+msgid "issue.pagesAbbreviated"
+msgstr "pp."
+
 msgid "issue.no"
 msgstr "No."
 
