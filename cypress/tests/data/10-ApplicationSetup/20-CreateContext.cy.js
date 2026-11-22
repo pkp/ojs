@@ -71,7 +71,9 @@ describe('Data suite tests', function() {
 		cy.get('#appearance [role="status"]').contains('Saved');
 
 		cy.get('button[id="languages-button"]').click();
+		cy.intercept('POST', '**/save-language-setting*').as('saveFormLocale');
 		cy.get('input[id^="select-cell-fr_CA-formLocale"]').click();
+		cy.wait('@saveFormLocale');
 		cy.get('a[id^=component-grid-settings-languages-submissionlanguagegrid-addLanguageModal-button]').click();
 		cy.get('#locale-fr_CA').should('exist').click();
 		cy.get('#addLanguageForm button[name="submitFormButton"]').click();
