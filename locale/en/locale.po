@@ -2132,6 +2132,9 @@ msgstr "This submission is currently awaiting approval before it will appear in 
 msgid "notification.type.approveSubmissionTitle"
 msgstr "Awaiting approval."
 
+msgid "notification.type.formatNeedsApprovedSubmission"
+msgstr "This article will not be listed in the issue until it has been published. To publish it, click on the Publication tab."
+
 msgid "user.profile.form.showOtherContexts"
 msgstr "Register with other journals"
 
