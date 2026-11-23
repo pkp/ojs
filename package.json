@@ -4,13 +4,16 @@
   "version": "3.6.0",
   "author": "Public Knowledge Project",
   "private": true,
+  "workspaces": [
+    "plugins/themes/eidos"
+  ],
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
   },
   "scripts": {
     "dev": "vite build --watch --mode development",
     "dev:frontend": "vite build --watch --mode development --config vite.config.frontend.js",
-    "build": "npm run build:backend && npm run build:frontend",
+    "build": "npm run build:backend && npm run build:frontend && npm run build -w eidos",
     "build:backend": "vite build",
     "build:frontend": "vite build --config vite.config.frontend.js",
     "lint": "eslint --fix ./js/load.js ./lib/pkp/js/load.js ./lib/pkp/js/usage-stats-chart.js ./lib/pkp/js/classes/VueRegistry.js",
