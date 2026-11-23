@@ -341,7 +341,7 @@
 			{/if}
 
 			{* JATS XML Link *}
-			{if isset($jatsDownloadUrl)}
+			{if $jatsDownloadUrl}
 				<div class="item jats">
 					<span class="value jats_link">
 						<a class="obj_galley_link xml" href="{$jatsDownloadUrl|escape}">
