@@ -15,7 +15,7 @@
 		{if $activeTheme && $activeTheme->getOption('showDescriptionInJournalIndex')}
 			<a href="#homepageAbout">{translate key="navigation.skip.about"}</a>
 		{/if}
-		{if $numAnnouncementsHomepage && $announcements|@count}
+		{if $numAnnouncementsHomepage && !empty($announcements)}
 			<a href="#homepageAnnouncements">{translate key="navigation.skip.announcements"}</a>
 		{/if}
 		{if $issue}
