@@ -1,6 +1,6 @@
-@if($categories && $categories->count())
+@if($homepageCategories && $homepageCategories->count())
     @php
-        $layout = $categories->count() > $maxCategoriesAsBlocks ? 'list' : 'block';
+        $layout = $homepageCategories->count() > $maxCategoriesAsBlocks ? 'list' : 'block';
     @endphp
     <x-homepage-blocks.default
         slug="categories"
@@ -17,7 +17,7 @@
             @endif
         </div>
         <ul class="homepage-block-categories-list">
-            @foreach ($categories as $category)
+            @foreach ($homepageCategories as $category)
                 @php $url = ViewHelper::url(['page' => 'catalog', 'op' => 'category', 'path' => $category->getPath()]); @endphp
                 <li class="homepage-block-categories-list-item">
                     <a

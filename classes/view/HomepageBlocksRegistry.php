@@ -164,7 +164,7 @@ class HomepageBlocksRegistry extends \PKP\view\HomepageBlocksRegistry
                     $categories = $this->getCategories($context);
                     $templateMgr = TemplateManager::getManager(Application::get()->getRequest());
                     $templateMgr->assign([
-                        'categories' => $categories,
+                        'homepageCategories' => $categories,
                         'maxCategoriesAsBlocks' => 9,
                         'browseByCategoryTitle' => __('submissions.browseByCategory'),
                         'browseByCategoryDescription' => __('submissions.browseByCategory.description', [
