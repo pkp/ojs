@@ -1,8 +1,9 @@
 <div class="article-tab-comments">
     @php
+        $userCommentsInitConfig['loginUrl'] = str_replace(urlencode('#public-comments'), urlencode('?section=comments#add-comment'), $userCommentsInitConfig['loginUrl']);
         $json = json_encode($userCommentsInitConfig);
         $json = str_replace('{{', '{ {', $json);
         $json = str_replace('}}', '} }', $json);
     @endphp
-    <pkp-comments v-bind='{!! $json !!}'></pkp-comments>
+    <pkp-comments-section v-bind='{!! $json !!}'></pkp-comments>
 </div>
