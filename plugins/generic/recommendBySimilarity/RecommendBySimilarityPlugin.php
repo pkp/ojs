@@ -20,16 +20,20 @@ use APP\handler\Handler;
 use APP\submission\Collector;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
+use Illuminate\Support\Facades\Cache;
 use PKP\controlledVocab\ControlledVocab;
 use PKP\core\PKPApplication;
 use PKP\facades\Locale;
 use PKP\plugins\GenericPlugin;
 use PKP\plugins\Hook;
+use PKP\publication\PKPPublication;
 
 class RecommendBySimilarityPlugin extends GenericPlugin
 {
     private const DEFAULT_RECOMMENDATION_COUNT = 10;
     private const MAX_SEARCH_KEYWORDS = 20;
+    private const CACHE_LIFETIME = 30 * 24 * 60 * 60; // 30 days
+    private const MAX_CACHED_PAGE = 10;
 
     /**
      * @copydoc Plugin::register()
@@ -72,7 +76,8 @@ class RecommendBySimilarityPlugin extends GenericPlugin
 
         // Retrieve the article.
         $submission = Repo::submission()->get($submissionId);
-        if ($submission->getData('status') != Submission::STATUS_PUBLISHED) {
+        // Readers see the current publication, so use its status rather than the submission's workflow status
+        if ($submission->getCurrentPublication()?->getData('status') != PKPPublication::STATUS_PUBLISHED) {
             return $searchTerms;
         }
 
@@ -82,7 +87,8 @@ class RecommendBySimilarityPlugin extends GenericPlugin
                 ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
                 Application::ASSOC_TYPE_PUBLICATION,
                 $submission->getCurrentPublication()->getId(),
-                [Locale::getLocale(), $submission->getData('locale'), Locale::getPrimaryLocale()]
+                [Locale::getLocale(), $submission->getData('locale'), Locale::getPrimaryLocale()],
+                asEntryData: false
             )
         );
         foreach ($allSearchTerms as $localeSearchTerms) {
@@ -98,6 +104,27 @@ class RecommendBySimilarityPlugin extends GenericPlugin
      * @see templates/article/footer.tpl
      */
     private function buildTemplate(): ?string
+    {
+        $request = Application::get()->getRequest();
+        $page = max(1, (int) $request->getUserVar('articlesBySimilarityPage'));
+
+        // Deep pages are rarely requested, so don't let them fill the cache
+        if ($page > static::MAX_CACHED_PAGE) {
+            return $this->buildTemplateCacheMiss();
+        }
+
+        // The similarity search is expensive, so cache the rendered block. The host is part of the key because the block contains absolute URLs.
+        $submissionId = TemplateManager::getManager($request)->getTemplateVars('article')->getId();
+        $cacheKey = 'recommendBySimilarity-' . implode('-', [$request->getServerHost(), (int) $request->getContext()?->getId(), $submissionId, $page, Locale::getLocale()]);
+
+        // Cache::remember() does not store null, so cache an empty block as ''
+        return Cache::remember($cacheKey, static::CACHE_LIFETIME, fn () => (string) $this->buildTemplateCacheMiss());
+    }
+
+    /**
+     * Run the similarity search and render the block, or return null if the linked submission has no keywords
+     */
+    private function buildTemplateCacheMiss(): ?string
     {
         $templateManager = TemplateManager::getManager(Application::get()->getRequest());
         $submissionId = $templateManager->getTemplateVars('article')->getId();
@@ -119,7 +146,7 @@ class RecommendBySimilarityPlugin extends GenericPlugin
             ->getCollector()
             ->excludeIds([$submissionId])
             ->filterByContextIds([$context->getId()])
-            ->filterByLatestPublished(true)
+            ->filterByCurrentPublicationStatus([PKPPublication::STATUS_PUBLISHED])
             ->searchPhrase($searchPhrase, static::MAX_SEARCH_KEYWORDS);
 
         $offset = ($rangeInfo->getPage() - 1) * $rangeInfo->getCount();
