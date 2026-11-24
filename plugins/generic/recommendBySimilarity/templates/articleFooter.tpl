@@ -16,23 +16,32 @@
 			{foreach from=$articlesBySimilarity->submissions item=submission}
 				{assign var=publication value=$submission->getCurrentPublication()}
 				{assign var=issue value=$articlesBySimilarity->issues->get($publication->getData('issueId'))}
-
-				<li>
-					{foreach from=$publication->getData('authors') item=author}
-						{$author->getFullName()|escape},
+				{capture assign="author"}{strip}
+					{foreach from=$article->getCurrentPublication()->getData('authors') item="author" name="authors"}
+						{$author->getFullName()|escape}{if !$smarty.foreach.authors.last}{translate key="common.commaListSeparator"}{/if}
 					{/foreach}
+				{/strip}{/capture}
+				{capture assign="title"}{strip}
 					<a href="{url router=PKP\core\PKPApplication::ROUTE_PAGE journal=$currentContext->getPath() page="article" op="view" path=$submission->getBestId() urlLocaleForPage=""}">
 						{$publication->getLocalizedFullTitle(null, 'html')|strip_unsafe_html}
 					</a>
-					{if $issue},
+				{/strip}{/capture}
+				{capture assign="issue"}{strip}
 					<a href="{url router=PKP\core\PKPApplication::ROUTE_PAGE journal=$currentContext->getPath() page="issue" op="view" path=$issue->getBestIssueId() urlLocaleForPage=""}">
-						{$currentContext->getLocalizedName()|escape}: {$issue->getIssueIdentification()|escape}
+						{$issue->getIssueIdentification()|escape}
 					</a>
-					{/if}
+				{/capture}
+				<li>
+					{translate
+						key="plugins.generic.recommendBySimilarity.publishedIn"
+						author=$author
+						title=$title
+						issue=$issue
+					}
 				</li>
 			{/foreach}
 		</ul>
-		<p id="articlesBySimilarityPages">
+		<div id="articlesBySimilarityPages">
 			{include
 				file="frontend/components/pagination.tpl"
 				prevUrl=$articlesBySimilarity->previousUrl
@@ -41,7 +50,7 @@
 				showingEnd=$articlesBySimilarity->end
 				total=$articlesBySimilarity->total
 			}
-		</p>
+		</div>
 		<p id="articlesBySimilaritySearch">
 			{capture assign="articlesBySimilaritySearchLink"}{strip}
 				<a href="{url page="search" op="search" query=$articlesBySimilarity->query}">
