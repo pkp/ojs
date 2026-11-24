@@ -313,11 +313,13 @@ class Collector extends \PKP\submission\Collector
             // 2 - Ensures that the union clause can be safely used if the query with the union clause is the only one that is executed.
             $query->selectRaw('NULL AS submission_id')->whereRaw('1 = 0');
             $query->when($context->isDoiTypeEnabled(Repo::doi()::TYPE_REPRESENTATION), function (Builder $q) {
-                $q->select('p.submission_id')
-                    ->from('publication_galleys AS g')
-                    ->join('dois AS d', 'g.doi_id', '=', 'd.doi_id')
-                    ->join('publications AS p', 'g.publication_id', '=', 'p.publication_id')
-                    ->whereLike('d.doi', "{$this->searchPhrase}%");
+                $q->union(function (Builder $q) {
+                    $q->select('p.submission_id')
+                        ->from('publication_galleys AS g')
+                        ->join('dois AS d', 'g.doi_id', '=', 'd.doi_id')
+                        ->join('publications AS p', 'g.publication_id', '=', 'p.publication_id')
+                        ->whereLike('d.doi', "{$this->searchPhrase}%");
+                });
             })
                 ->when($context->isDoiTypeEnabled(Repo::doi()::TYPE_PUBLICATION), function (Builder $q) {
                     $q->union(function (Builder $q) {
