@@ -416,22 +416,6 @@ class Repository extends \PKP\publication\Repository
             }
         }
 
-        // Author response
-        if ($context->isDoiTypeEnabled(Repo::doi()::TYPE_AUTHOR_RESPONSE)) {
-            $authorResponses = $this->getReviewAuthorResponses([$publication->getId()]);
-            foreach ($authorResponses as $authorResponse) {
-                if (empty($authorResponses->doiId)) {
-                    try {
-                        $doiId = Repo::doi()->mintDoi($context);
-                        $authorResponse->doiId = $doiId;
-                        $authorResponse->save();
-                    } catch (DoiException $exception) {
-                        $doiCreationFailures[] = $exception;
-                    }
-                }
-            }
-        }
-
         return $doiCreationFailures;
     }
 
