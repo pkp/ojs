@@ -26,6 +26,8 @@ export default defineConfig(({mode}) => {
 				// use vue version with template compiler
 				vue: 'vue/dist/vue.esm-bundler.js',
 			},
+			// https://github.com/vitejs/vite/discussions/15906
+			dedupe: ['pinia', 'vue'],
 		},
 		build: {
 			sourcemap: mode === 'development' ? 'inline' : false,
