@@ -231,9 +231,9 @@ class ArticleHandler extends Handler
         $this->setupTemplate($request);
 
         // Get the earliest published publication
-        $firstPublication = $article->getData('publications')->reduce(function ($a, $b) {
-            return empty($a) || strtotime((string) $b->getData('datePublished')) < strtotime((string) $a->getData('datePublished')) ? $b : $a;
-        }, 0);
+        $firstPublication = collect($article->getPublishedPublications())
+            ->sortBy(fn ($publication) => strtotime((string) $publication->getData('datePublished')))
+            ->first();
         $templateMgr->assign([
             'firstPublication' => $firstPublication,
         ]);
