@@ -22,7 +22,10 @@
 }
 
 .pkp_site_name_wrapper {
-	height: @nav-menu-height;
+	display: flex;
+	align-items: center;
+	min-height: @nav-menu-height;
+	height: auto;
 
 	@media (min-width: @screen-desktop) {
 		height: auto;
@@ -31,16 +34,13 @@
 
 // Site logo/name
 .pkp_site_name {
-	position: absolute;
-	left: @nav-menu-height;
-	right: 0;
 	margin-top: 0;
 	margin-bottom: 0;
+	margin-left: @nav-menu-height;
 	padding-left: @base;
 	text-align: left;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+	overflow: visible;
+	overflow-wrap: anywhere;
 	color: @text-bg-base;
 	font-family: @font-site-title;
 	font-size: @font-sml;
@@ -77,7 +77,7 @@
 		font-family: @font-site-title;
 		font-size: @font-sml;
 		font-weight: @bold;
-		line-height: @nav-menu-height;
+		line-height: @line-base;
 		color: @text-bg-base;
 		text-decoration: none;
 
@@ -201,6 +201,7 @@
 		width: 100%;
 		left: auto;
 		right: auto;
+		margin-left: 0;
 		padding: 0;
 		white-space: normal;
 		font-size: 2em; // Prevents extra vertical space after logos

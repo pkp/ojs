@@ -10,8 +10,10 @@
 	.categories_listing {
 		&:extend(.pkp_unstyled_list);
 		display: flex;
-  		justify-content: center;
-  		font-size: @font-bump;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 0.5em;
+		font-size: @font-bump;
 
 		li {
 			display: list-item;
@@ -24,6 +26,7 @@
 
 		a {
 			text-decoration: none;
+			overflow-wrap: anywhere;
 		}
 	}
 }
