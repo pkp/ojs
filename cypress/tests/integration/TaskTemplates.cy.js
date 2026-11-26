@@ -33,7 +33,7 @@ describe('Tasks & Discussions Templates', function() {
 		cy.contains(templateName)
 			.closest('tr')
 			.find('button[aria-label="More Actions"]')
-			.click({force: true});
+			.click();
 
 		cy.contains('button', actionName).click({force: true});
 	}
