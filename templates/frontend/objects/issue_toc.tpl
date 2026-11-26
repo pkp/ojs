@@ -56,6 +56,29 @@
 			</div>
 		{/if}
 
+		{* Issue editors *}
+		{if $issue->getData('editors')}
+			<div class="editors">
+				<span class="label">
+					{translate key="issue.editors"}:
+				</span>
+				<ul class="value">
+					{foreach from=$issue->getData('editors') item=editor}
+						<li>
+							{$editor.givenName|escape} {$editor.familyName|escape}
+							{if $editor.orcid}
+								<span class="orcid">
+									<a href="{$editor.orcid|escape}" target="_blank">
+										{$editor.orcid|escape}
+									</a>
+								</span>
+							{/if}
+						</li>
+					{/foreach}
+				</ul>
+			</div>
+		{/if}
+
 		{* PUb IDs (eg - URN) *}
 		{foreach from=$pubIdPlugins item=pubIdPlugin}
 			{assign var=pubId value=$issue->getStoredPubId($pubIdPlugin->getPubIdType())}
