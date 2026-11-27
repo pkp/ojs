@@ -22,6 +22,7 @@ use APP\core\Application;
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\issue\Issue;
+use APP\submission\Submission;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
@@ -221,6 +222,7 @@ class IssueForm extends Form
             'coverImageAltText',
             'datePublished',
             'urlPath',
+            'resetPublicationDatePublished',
         ]);
 
         $form = $this;
@@ -284,6 +286,20 @@ class IssueForm extends Form
             Repo::issue()->add($issue);
             if (Repo::doi()->assignOnItemCreation($journal)) {
                 Repo::issue()->createDoi($issue);
+            }
+        }
+
+        // Reset Article publication dates if requested
+        if ($this->getData('resetPublicationDatePublished')) {
+            $submissions = Repo::submission()
+                ->getCollector()
+                ->filterByContextIds([$issue->getJournalId()])
+                ->filterByIssueIds([$issue->getId()])
+                ->filterByStatus([Submission::STATUS_PUBLISHED, Submission::STATUS_SCHEDULED])
+                ->getMany();
+
+            foreach ($submissions as $submission) {
+                Repo::publication()->edit($submission->getCurrentPublication(), ['datePublished' => $issue->getDatePublished()]);
             }
         }
 
