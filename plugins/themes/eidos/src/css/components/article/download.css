@@ -14,6 +14,7 @@
     width: var(--reka-popover-trigger-width);
     max-height: var(--reka-popover-content-available-height);
     padding: 0.75rem;
+    z-index: 10;
   }
 }
 

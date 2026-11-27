@@ -1,6 +1,5 @@
 .metadata-block-id-peer-review {
   position: relative;
-  z-index: -1;
 
   & .metadata-block-content {
     max-width: 25rem;
