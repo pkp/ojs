@@ -87,7 +87,7 @@
 
 @media (min-width: 640px) {
 
-  .article-sidebar-top:has(.article-sidebar-cite):has(.article-sidebar-share) {
+  .article-sidebar-top:has(.article-sidebar-cite-button):has(.article-sidebar-share) {
     display: grid;
     grid-template-columns: 1fr 1fr;
 

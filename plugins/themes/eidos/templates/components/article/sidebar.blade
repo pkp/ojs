@@ -28,22 +28,24 @@
             :submission="$article"
         />
         @if ($citeConfig)
-            <x-dialog
-                class="article-sidebar-cite"
-                :showClose="true"
-                triggerClass="article-sidebar-cite-button"
-            >
-                <x-slot:trigger>
-                    @include('components/icons/cite')
-                    <span class="article-sidebar-cite-button-text">
-                        {{ __('plugins.themes.eidos.cite') }}
-                    </span>
-                </x-slot:trigger>
-                <x-slot:title>
-                    {{ __('submission.howToCite') }}
-                </x-slot:title>
-                <pkp-cite-body v-bind='@json($citeConfig)'></pkp-cite-body>
-            </x-dialog>
+            @php
+                $dialogConfig = [
+                    'title' => __('submission.howToCite'),
+                    'showCloseButton' => true,
+                    'size' => 'large',
+                    'bodyComponent' => 'PkpCiteBody',
+                    'bodyProps' => $citeConfig,
+                ];
+                $json = json_encode($dialogConfig);
+                $json = str_replace('{{', '{ {', $json);
+                $json = str_replace('}}', '} }', $json);
+            @endphp
+            <button class="article-sidebar-cite-button" data-cite='{!! $json !!}'>
+                @include('components/icons/cite')
+                <span class="article-sidebar-cite-button-text">
+                    {{ __('plugins.themes.eidos.cite') }}
+                </span>
+            </button>
         @endif
         @if ($shareOptions)
             <x-dropdown

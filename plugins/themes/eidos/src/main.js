@@ -5,6 +5,7 @@ import swiper from './js/swiper'
 import mobileMenu from './js/mobile-menu'
 import reveal from './js/reveal'
 import tabTrigger from './js/tab-trigger'
+import dialogTriggers from './js/dialogTriggers'
 
 /**
  * Custom CSS for the theme
@@ -21,4 +22,5 @@ document.addEventListener('DOMContentLoaded',function() {
   mobileMenu.init()
   reveal.init()
   tabTrigger.init()
+  dialogTriggers.init()
 })
