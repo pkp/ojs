@@ -1,0 +1,2035 @@
+# Shoyim Obloqulov <obloqulovshoyim1@gmail.com>
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2026-01-14 13:01+0000\n"
+"Last-Translator: Shoyim Obloqulov <obloqulovshoyim1@gmail.com>\n"
+"Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/manager/"
+"uz_UZ@cyrillic/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Weblate\n"
+"Language: uz_UZ@cyrillic\n"
+
+msgid "manager.distribution.access"
+msgstr "Кириш ҳуқуқи"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr "Мақола учун муаллифлик ҳуқуқи йили сифатида нима олинишини танланг. Бу созлама ҳар бир мақола учун алоҳида ўзгартирилиши мумкин."
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Нашрнинг чиқиш санасидан фойдаланиш"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Мақола нашр этилган санадан фойдаланиш"
+
+msgid "manager.distribution.publication"
+msgstr "Нашр қилиш"
+
+msgid "manager.distribution.publishingMode"
+msgstr "Нашр қилиш режими"
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "OJS журнал таркибини онлайн нашр қилиш учун ишлатилмайди."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "Журнал ўз мазмунига очиқ киришни таъминлайди."
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr "Журнал ўз мазмунига кириш учун обуна талаб қилади."
+
+msgid "manager.setup.enableDois.description"
+msgstr "Ушбу журналда нашр этилган материалларга Рақамли объект идентификаторларини (DOI) тайинлашни ёқиш."
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr "DOI тайинланадиган объектларни танланг."
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr "DOI суффикси андозаси: %j.v%vi%i (масалан: журнал.том.сон.мақола)"
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "Таҳрирлаш босқичида (Copyedit)"
+
+msgid "manager.website.archiving"
+msgstr "Архивлаш"
+
+msgid "manager.files.note"
+msgstr "Эслатма: Файллар браузери журнал билан боғлиқ файлларни бевосита бошқариш имконини беради."
+
+msgid "manager.journalManagement"
+msgstr "Журнални бошқариш"
+
+msgid "manager.language.ui"
+msgstr "Фойдаланувчи интерфейси"
+
+msgid "manager.language.submissions"
+msgstr "Материалларни топшириш"
+
+msgid "manager.language.forms"
+msgstr "Шакллар"
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr "Бу ҳаракат ушбу тил учун мавжуд бўлган барча маҳаллий созламаларни алмаштиради."
+
+msgid "manager.languages.languageInstructions"
+msgstr "OJS кўп тилли тизим бўлиб, фойдаланувчиларга саҳифа тилини ўзгартириш имконини беради."
+
+msgid "manager.languages.noneAvailable"
+msgstr "Афсус, бошқа тиллар мавжуд эмас. Янги тил қўшиш учун сайт администраторига мурожаат қилинг."
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Бу журнал сайти учун асосий тил бўлади."
+
+msgid "manager.managementPages"
+msgstr "Бошқарув саҳифалари"
+
+msgid "manager.payment.action"
+msgstr "Ҳаракат"
+
+msgid "manager.payment.addPayment"
+msgstr "Тўлов қўшиш"
+
+msgid "manager.payment.amount"
+msgstr "Миқдор"
+
+msgid "manager.payment.authorFees"
+msgstr "Муаллифлик тўловлари"
+
+msgid "manager.payment.authorFeesDescription"
+msgstr "Муаллифлардан олинадиган тўловлар миқдорини киритинг."
+
+msgid "manager.payment.currencymessage"
+msgstr "OJS валюта конвертациясини амалга оширмайди. Тўлов валютаси обуна валютасига мос келишига ишонч ҳосил қилинг."
+
+msgid "manager.payment.description"
+msgstr "Тавсиф"
+
+msgid "manager.payment.details"
+msgstr "Тафсилотлар"
+
+msgid "manager.payment.editSubscription"
+msgstr "Обунани таҳрирлаш"
+
+msgid "manager.payment.enable"
+msgstr "Ёқиш"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "Тўлов турлари"
+
+msgid "manager.payment.form.numeric"
+msgstr "Барча қийматлар мусбат сон бўлиши керак."
+
+msgid "manager.payment.generalFees"
+msgstr "Умумий тўловлар"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr "Ушбу тўловлар журнал сиёсатида кўрсатилади."
+
+msgid "manager.payment.generalOptions"
+msgstr "Умумий созламалар"
+
+msgid "manager.payment.noPayments"
+msgstr "Тўловлар мавжуд эмас"
+
+msgid "manager.payment.notFound"
+msgstr "Топилмади"
+
+msgid "manager.payment.options"
+msgstr "Тўлов созламалари"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr "Бу функция журнал менежери томонидан бошқариладиган обуна тўловларини ёқади."
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Ушбу обунани ўчиришни тасдиқлайсизми?"
+
+msgid "manager.payment.options.enablePayments"
+msgstr "Журнал учун тўловларни ёқиш. Тўлов қилиш учун фойдаланувчи тизимга кириши керак."
+
+msgid "manager.payment.options.fee"
+msgstr "Тўлов"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "Тўлов тавсифи"
+
+msgid "manager.payment.options.feeName"
+msgstr "Тўлов номи"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "Аъзолик тўлови"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "Фақат PDF версияларга киришни чеклаш"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "Мақолани нашр этиш тўлови"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "Мақолани сотиб олиш"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Сонни сотиб олиш"
+
+msgid "manager.payment.options.text"
+msgstr "Тўлов усули тавсифи"
+
+msgid "manager.payment.paymentId"
+msgstr "Тўлов ID"
+
+msgid "manager.payment.paymentMethod"
+msgstr "Тўлов усули"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr "Қуйидаги плагинлардан бири орқали тўлов усулини созлашингиз мумкин."
+
+msgid "manager.payment.paymentMethods"
+msgstr "Тўлов усуллари"
+
+msgid "manager.payment.paymentType"
+msgstr "Тўлов тури"
+
+msgid "manager.payment.readerFees"
+msgstr "Ўқувчилар учун тўловлар"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr "Танланган созламалар журнал сиёсатида ва тўлов талаб қилинадиган жойларда кўринади."
+
+msgid "manager.payment.records"
+msgstr "Тўлов ёзувлари"
+
+msgid "manager.paymentTypes"
+msgstr "Тўлов турлари"
+
+msgid "manager.payment.userName"
+msgstr "Фойдаланувчи номи"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "Рўйхатдан ўтган барча фойдаланувчилар"
+
+msgid "manager.people.allJournals"
+msgstr "Барча журналлар"
+
+msgid "manager.people.allSiteUsers"
+msgstr "Сайтнинг барча фойдаланувчилари"
+
+msgid "manager.people.showNoRole"
+msgstr "Роли бўлмаганларни кўрсатиш"
+
+msgid "manager.people.allUsers"
+msgstr "Барча фойдаланувчилар"
+
+msgid "manager.people.confirmRemove"
+msgstr "Ушбу фойдаланувчини журналдан ўчиришни тасдиқлайсизми? У барча роллардан маҳрум қилинади."
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "Шаблонни танланг"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "Мавжуд фойдаланувчини рўйхатга олиш"
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "Журнал билан синхронлаш"
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr "Бирлаштириладиган фойдаланувчини танланг (масалан, битта шахсда иккита ҳисоб бўлса)."
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr "Ҳаракатлар ва ҳуқуқлар ўтказиладиган асосий фойдаланувчини танланг."
+
+msgid "manager.people.roleEnrollment"
+msgstr "Рол тайинлаш: {$role}"
+
+msgid "manager.people.syncUserDescription"
+msgstr "Бу функция фойдаланувчиларни бошқа журналдаги роллари билан синхронлаштириш имконини беради."
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "Аннотация талаб қилинмайди"
+
+msgid "manager.sections.assigned"
+msgstr "Ушбу бўлим муҳаррирлари"
+
+msgid "manager.sections.confirmDelete"
+msgstr "Ушбу бўлимни бутунлай ўчиришни тасдиқлайсизми?"
+
+msgid "manager.sections.alertDelete"
+msgstr "Бўлимни ўчиришдан олдин ундаги мақолаларни бошқа бўлимга ўтказиш керак."
+
+msgid "manager.sections.create"
+msgstr "Бўлим яратиш"
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr "Ушбу бўлимга муҳаррир қўшинг, токи у мақолаларни кўриб чиқиш ва таҳрирлашни бошқара олсин."
+
+msgid "manager.sections.editorRestriction"
+msgstr "Материаллар фақат муҳаррирлар томонидан топширилиши мумкин."
+
+msgid "manager.sections.editors"
+msgstr "Бўлим муҳаррирлари"
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr "Камида битта бўлим фаол бўлиши шарт."
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "Бўлим учун қисқартма ном керак."
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr "Камида битта бўлим муҳаррири учун рухсатномани белгиланг."
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "Тўғри тақриз шаклини танлаганингизга ишонч ҳосил қилинг."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "Бўлим номи керак."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr "Мундарижада муаллиф номларини яшириш"
+
+msgid "manager.sections.hideTocTitle"
+msgstr "Бўлим номини мундарижада яшириш"
+
+msgid "manager.sections.identifyType"
+msgstr "Бўлимдаги материал тури (масалан: Илмий мақола)"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr "Мисол: \"Тақриз қилинган мақола\", \"Китоб шарҳи\" ва ҳ.к."
+
+msgid "manager.sections.indexed"
+msgstr "Индексация қилинадиган"
+
+msgid "manager.sections.noneCreated"
+msgstr "Ҳеч қандай бўлим яратилмаган."
+
+msgid "manager.sections.open"
+msgstr "Материал қабул қилиш учун очиқ"
+
+msgid "manager.sections.policy"
+msgstr "Бўлим сиёсати"
+
+msgid "manager.sections.readingTools"
+msgstr "Мутолаа воситалари"
+
+msgid "manager.sections.reviewed"
+msgstr "Тақриз қилинадиган"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "Индексацияга киритилмайди"
+
+msgid "manager.sections.submissionReview"
+msgstr "Тақриз қилинмайди"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "Ушбу бўлимга юборилган мақолалар"
+
+msgid "manager.sections.unassigned"
+msgstr "Мавжуд бўлим муҳаррирлари"
+
+msgid "manager.sections.wordCount"
+msgstr "Сўзлар сони"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "Аннотациядаги сўзлар сони чегараси (0 - чегарасиз)"
+
+msgid "manager.setup"
+msgstr "Созламалар"
+
+msgid "manager.setup.homepageContent"
+msgstr "Бош саҳифа мазмуни"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr "Бош саҳифада кўрсатиладиган элементларни танланг."
+
+msgid "manager.setup.useStyleSheet"
+msgstr "CSS услублар жадвали"
+
+msgid "manager.setup.contextName"
+msgstr "Журнал номи"
+
+msgid "manager.setup.pageHeader"
+msgstr "Саҳифа сарлавҳаси"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "Мазмун"
+
+msgid "manager.setup.addAboutItem"
+msgstr "\"Журнал ҳақида\" бўлимига янги банд қўшиш"
+
+msgid "manager.setup.addChecklistItem"
+msgstr "Назорат рўйхати бандини қўшиш"
+
+msgid "manager.setup.addItem"
+msgstr "Элемент қўшиш"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "\"Журнал ҳақида\" саҳифаси учун янги банд"
+
+msgid "manager.setup.addNavItem"
+msgstr "Меню бандини қўшиш"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "Тақризчилар маълумотлар базасига ҳавола қўшиш"
+
+msgid "manager.setup.addSponsor"
+msgstr "Ҳомий ташкилот қўшиш"
+
+msgid "manager.setup.alternateHeader"
+msgstr "Муқобил сарлавҳа"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr "Матнли сарлавҳа ўрнига HTML код ишлатиш мумкин."
+
+msgid "manager.setup.announcements"
+msgstr "Эълонлар"
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Эълонлар учун кириш матни"
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr "Эълонлар саҳифасида кўринадиган матн."
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(Журнал ҳақида бўлимида кўрсатиш)"
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr "Тақризчилардан манфаатлар тўқнашуви йўқлиги ҳақида баёнот талаб қилиш."
+
+msgid "manager.setup.history"
+msgstr "Журнал тарихи"
+
+msgid "manager.setup.historyDescription"
+msgstr "Журналнинг ташкил этилиш тарихи ва ўзгаришлар ҳақида матн."
+
+msgid "manager.setup.currentIssue"
+msgstr "Жорий сон"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "5-қадам. Ташқи кўринишни созлаш"
+
+msgid "manager.setup.details"
+msgstr "Тафсилотлар"
+
+msgid "manager.setup.details.description"
+msgstr "Ном, ISSN, контактлар, ҳомийлар ва қидирув тизимлари."
+
+msgid "manager.setup.disableUserRegistration"
+msgstr "Фойдаланувчиларни мустақил рўйхатдан ўтишини тақиқлаш (фақат менежер томонидан)."
+
+msgid "manager.setup.discipline"
+msgstr "Илмий йўналишлар"
+
+msgid "manager.setup.disciplineDescription"
+msgstr "Журнал қамраб олган асосий фан соҳалари."
+
+msgid "manager.setup.disciplineExamples"
+msgstr "Мисол: Тарих, Иқтисодиёт, Биология ва ҳ.к."
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "Тегишли илмий соҳаларга мисоллар келтиринг"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "Бош саҳифада жорий сон мундарижасини кўрсатиш."
+
+msgid "manager.setup.editorDecision"
+msgstr "Муҳаррир қарори"
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Хатоликлар учун почта манзили (Bounce Address)"
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr "Етиб бормаган хатлар ҳақида хабарнома юбориладиган манзил."
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr "Бу функцияни ёқиш учун сервер созламаларини ўзгартириш керак."
+
+msgid "manager.setup.emails"
+msgstr "Электрон почта созламалари"
+
+msgid "manager.setup.emailSignature"
+msgstr "Имзо"
+
+msgid "manager.setup.emailSignature.description"
+msgstr "Тизим томонидан юбориладиган барча хатлар охиридаги имзо."
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Эълонларни ёқиш"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr "Журнал янгиликлари ва воқеалари ҳақида эълон бериш имконияти."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Бош саҳифада кўрсатиладиган эълонлар сони"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr "Бош саҳифада нечта энг янги эълон кўринсин? (0 - кўрсатмаслик)"
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "Меҳмонларга сайтда рўйхатдан ўтишга рухсат бериш."
+
+msgid "manager.setup.focusAndScope"
+msgstr "Журнал йўналиши ва қамрови (Focus and Scope)"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr "Муаллиф ва ўқувчиларга журнал қандай мақолаларни нашр этишини тушунтиринг."
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "Муаллифлар томонидан мақолани индексациялаш"
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr "OJS глобал индексация стандартларига (OAI) жавоб беради. Муаллифлардан метамаълумотларни тўғри тўлдиришни сўранг."
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "Кўрсатилган ISSN нотўғри."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "Асосий контакт почтаси шарт."
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "Асосий контакт исми шарт."
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "Журнал қисқартмаси шарт."
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "Журнал номи шарт."
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "Ҳар бир мақола учун тақризчилар сонини белгиланг."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "Техник ёрдам почтаси шарт."
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "Техник ёрдам исми шарт."
+
+msgid "manager.setup.generalInformation"
+msgstr "Умумий маълумот"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "1-қадам. Тафсилотларни тўлдириш"
+
+msgid "manager.setup.guidelines"
+msgstr "Йўриқномалар"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "3-қадам. Материал топшириш қоидалари"
+
+msgid "manager.setup.identity"
+msgstr "Журнал идентификацияси"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr "Нашр этилган мақолаларга Creative Commons лицензиясини қўшиш."
+
+msgid "manager.setup.information"
+msgstr "Маълумот"
+
+msgid "manager.setup.information.description"
+msgstr "Кутубхоначилар, муаллифлар ва ўқувчилар учун қисқача тавсифлар."
+
+msgid "manager.setup.information.forAuthors"
+msgstr "Муаллифлар учун"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "Кутубхоначилар учун"
+
+msgid "manager.setup.information.forReaders"
+msgstr "Ўқувчилар учун"
+
+msgid "manager.setup.initialIssue"
+msgstr "Биринчи нашр (Initial Issue)"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr "Тизимда нашр этишни бошлайдиган илк соннинг маълумотлари (том, сон, йил)."
+
+msgid "manager.setup.institution"
+msgstr "Муассаса"
+
+msgid "manager.setup.itemsDescription"
+msgstr "Навигация менюсига янги элементлар қўшиш."
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Саҳифадаги элементлар сони"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr "Рўйхатларда (масалан, мақолалар) бир саҳифада нечта сатр кўрсатилсин."
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Журнал қисқартмаси"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Журнални архивлаш"
+
+msgid "manager.setup.contextSummary"
+msgstr "Журнал аннотацияси"
+
+msgid "manager.setup.contextAbout"
+msgstr "Журнал ҳақида"
+
+msgid "manager.setup.contextAbout.description"
+msgstr "Журнал ҳақидаги барча маълумотлар (сиёсат, тарих, таҳририят ҳайъати)."
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "Бош саҳифа таркиби"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr "Бош саҳифада кўрсатиладиган расм, матн ва мақолалар рўйхати."
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Бош саҳифа сарлавҳаси"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Журнал бош саҳифаси сарлавҳаси"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr "Бош саҳифа учун график логотип ёки расм юклашингиз мумкин."
+
+msgid "manager.setup.contextInitials"
+msgstr "Журнал бош ҳарфлари"
+
+msgid "manager.setup.selectCountry"
+msgstr "Мамлакатни танланг"
+
+msgid "manager.setup.journalLayout"
+msgstr "Журнал макети"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr "Журнал мавзуси (Theme) ва блок созламалари."
+
+msgid "manager.setup.journalLogo"
+msgstr "Журнал логотипи"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Журнал логотипи"
+
+msgid "manager.setup.journalPageFooter"
+msgstr "Саҳифа пастки қисми (Footer)"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr "Ҳар бир саҳифанинг энг пастки қисмида кўринадиган HTML матн."
+
+msgid "manager.setup.journalPolicies"
+msgstr "2-қадам. Журнал сиёсати"
+
+msgid "manager.setup.journalSetup"
+msgstr "Журнални созлаш"
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "Журнал созламалари янгиланди."
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "Нотўғри CSS файл формати юкланди."
+
+msgid "manager.setup.journalTheme"
+msgstr "Журнал мавзуси"
+
+msgid "manager.setup.journalThumbnail"
+msgstr "Журнал эскизи (Thumbnail)"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr "Журналлар рўйхатида кўринадиган кичик расм."
+
+msgid "manager.setup.contextTitle"
+msgstr "Журнал номи"
+
+msgid "manager.setup.labelName"
+msgstr "Ёрлиқ номи"
+
+msgid "manager.setup.lists"
+msgstr "Рўйхатлар"
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "PKP PN плагинини ёқиш"
+
+msgid "manager.setup.plnDescription"
+msgstr "PKP сақлаш тармоғи (PN) журнал мазмунини бепул архивлаш хизматини тақдим этади."
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr "PKP PN хизматидан фойдаланиш шартларини қабул қилинг."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP сақлаш тармоғи (PN)"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr "PKP PN плагини ўрнатилмаган."
+
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS ва CLOCKSS тизимлари"
+
+msgid "manager.setup.lockssEnable"
+msgstr "LOCKSS архивлаш тизимини фаоллаштириш."
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr "LOCKSS лицензияси ҳақида маълумот."
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "LOCKSS лицензияси ёрлиғи"
+
+msgid "manager.setup.lockssRegister"
+msgstr "Журнални LOCKSS тизимида рўйхатдан ўтказиш."
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.clockssEnable"
+msgstr "CLOCKSS тизимини фаоллаштириш."
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr "CLOCKSS лицензияси ҳақида маълумот."
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "CLOCKSS лицензияси ёрлиғи"
+
+msgid "manager.setup.clockssRegister"
+msgstr "Журнални CLOCKSS тизимида рўйхатдан ўтказиш."
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.look"
+msgstr "Ташқи кўриниш"
+
+msgid "manager.setup.look.description"
+msgstr "Сарлавҳа, мазмун, логотип ва услублар."
+
+msgid "manager.setup.management"
+msgstr "Бошқарув"
+
+msgid "manager.setup.management.description"
+msgstr "Кириш ҳуқуқлари, режалаштириш ва эълонлар."
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Асосий таҳририят босқичларини бошқариш"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Нашриёт жараёнини бошқариш"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "4-қадам. Журнални бошқариш"
+
+msgid "manager.setup.navigationBar"
+msgstr "Навигация панели"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "Менюдаги ҳаволаларни бошқариш."
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr "URL манзил мутлақ (масалан: http://...)"
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr "Ёрлиқ қиймати таржима калити эмас, балки оддий матн."
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "Расм юкланмади."
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "CSS файл юкланмади."
+
+msgid "manager.setup.note"
+msgstr "Эслатма"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr "Диққат: Мақола қабул қилингани ҳақидаги автоматик хат ўчирилган."
+
+msgid "manager.setup.numPageLinks"
+msgstr "Саҳифа ҳаволалари сони"
+
+msgid "manager.setup.numPageLinks.description"
+msgstr "Рўйхатлар пастида кўринадиган саҳифа рақамлари сони."
+
+msgid "manager.setup.onlineIssn"
+msgstr "Online ISSN"
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "Саҳифа рақами опцияси"
+
+msgid "manager.setup.policies"
+msgstr "Сиёсатлар"
+
+msgid "manager.setup.policies.description"
+msgstr "Тақриз қилиш, бўлимлар, махфийлик ва хавфсизлик."
+
+msgid "manager.setup.printIssn"
+msgstr "Print ISSN"
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Корректура бўйича кўрсатмалар"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr "Муаллиф ва муҳаррирларга мақолани якуний текшириш бўйича кўрсатмалар."
+
+msgid "manager.setup.publicationSchedule"
+msgstr "Нашр жадвали"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr "Журнал нашр этилиш даврийлиги (масалан: йилда 4 марта)."
+
+msgid "manager.setup.publicationScheduling"
+msgstr "Нашрни режалаштириш"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Журнал контентини идентификациялаш"
+
+msgid "manager.setup.publisher"
+msgstr "Нашриётчи"
+
+msgid "manager.setup.referenceLinking"
+msgstr "Адабиётлар рўйхатига ҳавола бериш"
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr "Мақолаларни кўриш учун рўйхатдан ўтиш шарт."
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr "Сайтни кўриш учун рўйхатдан ўтиш шарт."
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "Тақризчилар учун қўлланма"
+
+msgid "manager.setup.reviewOptions"
+msgstr "Тақриз қилиш созламалари"
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Автоматик эслатмалар юбориш"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr "Автоматик эслатмалар ўчирилган (сервер созламалари талаб қилинади)."
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Тақриз қилиш учун бериладиган муддат (ҳафта)"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr "Муҳаррирлар тақриз сифатини баҳолай оладилар."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Тақризчиларга файлларни фақат тақриз қилишга рози бўлгандан кейин кўрсатиш."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr "Тақризчи мақолани кўриб чиқишга расман розилик бермагунча мақола файлига кира олмайди."
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "Тақризчиларнинг кириш имконияти"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "Бир марталик ҳавола орқали киришни ёқиш (Access Keys)."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr "Тақризчилар тизимга паролсиз, почтага келган ҳавола орқали киришлари мумкин."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Почта орқали хавфсиз киришни ёқиш"
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "Тақризчилар рейтинги"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "Тақризчиларга эслатмалар"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "Тақриз қилиш сиёсати"
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Қидирув тизимларини индексация қилиш"
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr "Сайтнинг Google каби тизимларда кўриниши учун калит сўзлар ва тавсиф қўшинг."
+
+msgid "manager.setup.searchDescription.description"
+msgstr "Журналнинг қидирув тизимлари учун қисқача тавсифи."
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "Бўлимлар ва бўлим муҳаррирлари"
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr "(Агар бўлим танланмаса, мақолалар автоматик равишда ушбу бўлимга тушади)."
+
+msgid "manager.setup.sectionsDescription"
+msgstr "Журнал бўлимларини яратинг ва бошқаринг (масалан: Мақолалар, Шарҳлар)."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "Таҳририят жараёнини охиригача бошқарадиган муҳаррирни танланг."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "Мақола топширишда муаллиф танлаши керак бўлган бўлим."
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "Файллар ҳаволаларини ҳар доим кўрсатиш."
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Сайтга кириш"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Мазмунни кўриш"
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "Журнал сайтини созлаш босқичлари"
+
+msgid "manager.setup.subjectExamples"
+msgstr "Мисол: Квант физикаси, Макроиқтисодиёт."
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "Калит сўзлар ва мавзулар"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "Мавзуларга мисоллар келтиринг"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "Мақола топшириш бўйича йўриқнома"
+
+msgid "manager.setup.submissions"
+msgstr "Топширилган мақолалар"
+
+msgid "manager.setup.submissions.description"
+msgstr "Топшириш тартиби, муаллифлик ҳуқуқи ва индексация."
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr "Янги мақола қабул қилишни тўхтатиш."
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr "Ушбу журнал ҳозирда мақола қабул қилмаяпти."
+
+msgid "manager.setup.enableOai"
+msgstr "OAI интерфейсини ёқиш"
+
+msgid "manager.setup.enableOai.description"
+msgstr "Метамаълумотларни ташқи тизимлар (масалан: Scholar) йиғиши учун очиқ интерфейс."
+
+msgid "manager.setup.typeExamples"
+msgstr "Мисол: Илмий тадқиқот, Китоб шарҳи."
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "Усул ва ёндашув"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr "Турларга мисоллар келтиринг"
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "Уникал идентификатор"
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr "Мақола ва сонлар учун махсус ID-лар (масалан: DOI)."
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "Журналда таҳририят ҳайъати мавжуд."
+
+msgid "manager.setup.useThumbnail"
+msgstr "Эскиз (расм)дан фойдаланиш"
+
+msgid "manager.setup.useImageTitle"
+msgstr "Сарлавҳа ўрнига расм ишлатиш"
+
+msgid "manager.setup.userRegistration"
+msgstr "Фойдаланувчиларни рўйхатдан ўтказиш"
+
+msgid "manager.setup.useTextTitle"
+msgstr "Матнли сарлавҳадан фойдаланиш"
+
+msgid "manager.statistics.statistics"
+msgstr "Статистика"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Мақола кўришлар сони"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Қабул қилинган"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Рад этилган"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Қайта ишлашга юборилган"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "Тақриз учун кетган кунлар"
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Нашр этилгунча кетган кунлар"
+
+msgid "manager.statistics.statistics.description"
+msgstr "Журнал фаолияти бўйича асосий кўрсаткичлар."
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "Нашр этилган материаллар"
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr "Статистикани сайтда ҳамма учун очиқ қилиш."
+
+msgid "manager.statistics.statistics.note"
+msgstr "Эслатма: Бу кўрсаткичлар автоматик тарзда ҳисобланади."
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "Нашр этилган сонлар миқдори"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "Жами топширилган мақолалар"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Тақриз қилинган"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Рўйхатдан ўтган ўқувчилар"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "Тақризчилар сони"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "Тақризчилар"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "Тақризчи баҳоси"
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "Ҳар бир тақризчига тўғри келадиган тақризлар сони"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr "Статистика учун бўлимларни танланг"
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "Обуналар"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Мақола юклаб олишлар"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Аннотация кўришлар"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Аннотация кўришлар ва юклаб олишлар"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Бош саҳифа кўришлар"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "Нашр сони кўришлар"
+
+msgid "manager.subscriptionPolicies"
+msgstr "Обуна сиёсати"
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "Кечиктирилган очиқ кириш"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Обуна тугашидан бир неча ой олдин эслатма юборишни ёқиш."
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "Обуна муддатининг тугаши"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr "Обуна муддати тугаганда мазмунга кириш автоматик тарзда чекланади."
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "Тўлиқ тугаш"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr "Муддати тугаган обуначилар мазмунга умуман кира олмайдилар."
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "Қисман тугаш"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr "Муддати тугаган обуначилар фақат эски мақолаларни кўришлари мумкин."
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} ой"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} ҳафта"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Муддат тугагандан бир неча ой кейин эслатиш"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "Муддат тугагандан бир неча ҳафта кейин эслатиш"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "Муддат тугашидан бир неча ой олдин эслатиш"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "Муддат тугашидан бир неча ҳафта олдин эслатиш"
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "Обуна муддати тугаши ҳақида хабарномалар"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr "Обуначиларга муддат тугаши ҳақида автоматик хатлар юборилади."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr "Эслатмалар ўчирилган."
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "Опцияни танланг"
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr "HTML коддан фойдаланиш мумкин."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr "Ойлар сонини киритинг."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr "Ойлар сонини киритинг."
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr "Ҳафталар сонини киритинг."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr "Ҳафталар сонини киритинг."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr "Мақолалар очиқ киришга ўтганда ўқувчиларга хабар бериш."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr "Очиқ кириш хабарномаси ўчирилган."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Онлайн тўлов хабарномалари"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr "Тўлов амалга оширилганда муҳаррирга хабар бериш."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr "Жеке обуна сотиб олинганда хабар бериш."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr "Ташкилий обуна сотиб олинганда хабар бериш."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr "Жеке обуна янгиланганда хабар бериш."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr "Ташкилий обуна янгиланганда хабар бериш."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr "Ташкилотлар учун онлайн тўлов имконияти."
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr "Онлайн тўловлар ўчирилган."
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "Очиқ кириш вариантлари"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr "Обуна асосидаги журналларда очиқ киришни бошқариш."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "Қўшимча маълумот"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr "Обуна саҳифасида кўрсатиладиган қўшимча шартлар."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "Обуна бўйича масъул шахс"
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr "Обуна масалалари бўйича боғланиш учун шахс."
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "Тўғри электрон почта манзилини киритинг."
+
+msgid "manager.subscriptions"
+msgstr "Обуналар"
+
+msgid "manager.individualSubscriptions"
+msgstr "Жеке обуналар"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Ташкилий обуналар"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Ушбу обунани янгилашни тасдиқлайсизми?"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "Ушбу обунани ўчиришни тасдиқлайсизми?"
+
+msgid "manager.subscriptions.summary"
+msgstr "Обуналар бўйича қисқача маълумот"
+
+msgid "manager.subscriptions.create"
+msgstr "Янги обуна яратиш"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "Янги обуна қўшиш"
+
+msgid "manager.subscriptions.renew"
+msgstr "Янгилаш"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "Тугаш санаси"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "Тугаш санаси бўйича қидириш"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "Бошланиш санаси"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "Бошланиш санаси бўйича қидириш"
+
+msgid "manager.subscriptions.domain"
+msgstr "Домен (IP орқали кириш учун)"
+
+msgid "manager.subscriptions.edit"
+msgstr "Таҳрирлаш"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "Обунани таҳрирлаш"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "Статус бўйича"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "Барча статуслар"
+
+msgid "manager.subscriptions.form.status"
+msgstr "Статус"
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "Статус танланиши шарт."
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Тўғри статус танланг."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Обуна тури"
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "Обуна тури танланиши шарт."
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Тўғри тур танланг."
+
+msgid "manager.subscriptions.form.institution"
+msgstr "Муассаса номи"
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "Тўғри муассасани танланг."
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "Бошланиш санаси"
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "Бошланиш санаси шарт."
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "Тўғри сана киритинг."
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Тугаш санаси"
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "Тугаш санаси шарт."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr "Агар обуна муддати чекланмаган бўлса, бўш қолдиринг."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr "Агар обуна муддати чекланмаган бўлса, бўш қолдиринг."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Тугаш санаси бошланиш санасидан кейин бўлиши керак."
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr "Фойдаланувчи маълумотлари обуна билан бирга сақланади."
+
+msgid "manager.subscriptions.form.userId"
+msgstr "Фойдаланувчи"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Боғланиш маълумотлари"
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "Фойдаланувчи танланиши шарт."
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Тўғри фойдаланувчини танланг."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Тўғри мамлакатни танланг."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr "Фойдаланувчига почта орқали хабар бериш."
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Ушбу опцияни фақат тўғри почта манзили бўлса ишлатинг."
+
+msgid "manager.subscriptions.form.membership"
+msgstr "Аъзолик"
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Маълумотнома рақами (Reference Number)"
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr "Обуна аъзолик билан боғлиқ бўлса, маълумот қўшинг."
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "Аъзолик маълумоти шарт."
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Эслатмалар"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Домен"
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Муассаса номи"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "Муассаса номи киритилиши шарт."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Муассаса почта манзили"
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr "Киришни домен орқали чеклаш учун доменни киритинг."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr "Домен ёки IP диапазони киритилиши шарт."
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Тўғри домен киритинг."
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "IP диапазони"
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "IP манзил"
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr "Масалан: 192.168.1.*"
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Тўғри IP манзилини киритинг."
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Ўчириш"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Қўшиш"
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "Сақлаш ва янгисини яратиш"
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr "Контакт шахси киритилиши шарт."
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "Ушбу фойдаланувчида аллақачон обуна мавжуд."
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "Обуна тури шарт."
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr "Муассаса танланиши шарт."
+
+msgid "manager.subscriptions.ipRange"
+msgstr "IP диапазони"
+
+msgid "manager.subscriptions.membership"
+msgstr "Аъзолик"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Маълумотнома рақами"
+
+msgid "manager.subscriptions.notes"
+msgstr "Эслатмалар"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "Обуналар мавжуд эмас."
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Контактни танланг"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Фойдаланувчини танланг"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr "Обуначини танланг."
+
+msgid "manager.subscriptions.select"
+msgstr "Танлаш"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "Обуна муваффақиятли яратилди."
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "Обуна тури"
+
+msgid "manager.subscriptions.user"
+msgstr "Фойдаланувчи"
+
+msgid "manager.subscriptions.contact"
+msgstr "Контакт"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Муассаса номи"
+
+msgid "manager.subscriptionTypes"
+msgstr "Обуна турлари"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr "Ушбу обуна турини ўчиришни тасдиқлайсизми?"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "Нарх"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Обуналар"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Жеке"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Ташкилий"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "Янги тур яратиш"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "Обуна турини қўшиш"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Давомийлиги"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "Таҳрирлаш"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Обуна турини таҳрирлаш"
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "Нархи"
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr "Сон кўринишида киритинг (масалан: 50.00)."
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "Нарх сон бўлиши керак."
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "Нарх киритилиши шарт."
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "Валюта"
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "Валюта танланиши шарт."
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "Тўғри валютани танланг."
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "Тавсиф"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Обуна муддати"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "ой"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Муддатсиз"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Тўғри муддатни танланг."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Давомийлиги (ойларда)"
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "Ойлар сонини киритинг."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "Давомийлик сон бўлиши керак."
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "Давомийлик киритилиши шарт."
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Формат"
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "Формат танланиши шарт."
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "Тўғри форматни танланг."
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Обуналар"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Жеке (Individual)"
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr "Ташкилий (Institutional)"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Опцияни танланг."
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr "Аъзолик талаб қилинади."
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Опцияни танланг."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Параметрлар"
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr "Очиқ кўринадиган (Public)"
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Опцияни танланг."
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Сақлаш ва бошқа тур яратиш"
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "Тур номи"
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "Бундай номли обуна тури аллақачон мавжуд."
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "Тур номи шарт."
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Обуналар ҳақида маълумот берувчи саҳифа."
+
+msgid "manager.setup.categories"
+msgstr "Категориялар"
+
+msgid "manager.setup.categories.description"
+msgstr "Журнал мақолаларини мавзулар бўйича категорияларга ажратиш."
+
+msgid "grid.category.path"
+msgstr "Йўл (URL Path)"
+
+msgid "grid.action.addSection"
+msgstr "Бўлим қўшиш"
+
+msgid "manager.setup.section.description"
+msgstr "Журналнинг мақолалар бўлими (масалан: Таҳририят мақоласи, Илмий мақола)."
+
+msgid "settings.roles.gridDescription"
+msgstr "Журналдаги ролларни бошқариш (Муаллиф, Тақризчи, Муҳаррир)."
+
+msgid "manager.publication.library"
+msgstr "Нашриёт кутубхонаси"
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Муаллифлик ҳуқуқи йили асоси"
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr "Мақола нашр этилганда"
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "Сон нашр этилганда"
+
+msgid "manager.setup.resetPermissions"
+msgstr "Рухсатларни қайта ўрнатиш"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr "Барча мақолалар учун рухсатларни стандарт ҳолатга келтиришни тасдиқлайсизми?"
+
+msgid "manager.setup.resetPermissions.description"
+msgstr "Бу амал журналдаги барча мақолалар учун муаллифлик ҳуқуқи ва лицензия маълумотларини ҳозирги созламалар асосида янгилайди."
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Рухсатлар муваффақиятли янгиланди."
+
+msgid "grid.genres.title.short"
+msgstr "Турлар"
+
+msgid "grid.genres.title"
+msgstr "Материал турлари"
+
+msgid "grid.genres.description"
+msgstr "Топшириладиган файллар турларини белгилаш (масалан: Мақола матни, Расм, Маълумотлар тўплами)."
+
+msgid "plugins.importexport.common.settings"
+msgstr "Созламалар"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "DOI плагини созламалари"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Мақолаларни экспорт қилиш"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Нашр сонларини экспорт қилиш"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr "DOI хизмати мавжуд эмас."
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Ҳар қандай"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Юборилмаган"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "Рўйхатдан ўтган деб белгиланган"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Рўйхатдан ўтган"
+
+msgid "plugins.importexport.common.action"
+msgstr "Ҳаракат"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Экспорт"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Рўйхатдан ўтказиш"
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Муваффақиятли рўйхатдан ўтказилди."
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr "Асосий контакт почтасига нусха юбориш."
+
+msgid "stats.contextStats"
+msgstr "Журнал статистикаси"
+
+msgid "stats.context.tooltip.text"
+msgstr "Журналнинг кўриш ва юклаб олиш статистикаси."
+
+msgid "stats.context.downloadReport.description"
+msgstr "Ҳисоботни CSV форматида юклаб олиш."
+
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr "Ушбу журнал учун статистика ҳисоботини юклаб олиш."
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr "Журнал ҳисоботини юклаб олиш"
+
+msgid "stats.issueStats"
+msgstr "Нашр сонлари статистикаси"
+
+msgid "stats.issues.details"
+msgstr "Нашр сонлари тафсилотлари"
+
+msgid "stats.issues.searchIssueDescription"
+msgstr "Нашр сонлари бўйича қидириш"
+
+msgid "stats.issues.none"
+msgstr "Ҳеч қандай нашр сони топилмади."
+
+msgid "stats.issues.downloadReport.description"
+msgstr "Нашр сонлари бўйича статистика ҳисоботини юклаб олиш."
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr "Танланган нашр сонлари учун кўрсаткичларни юклаб олиш."
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr "Нашр сонлари статистикасини юклаб олиш"
+
+msgid "stats.issues.countOfTotal"
+msgstr "{$total} тадан {$count} та нашр сони"
+
+msgid "stats.issues.tooltip.label"
+msgstr "Нашр сонлари бўйича маълумот"
+
+msgid "stats.issues.tooltip.text"
+msgstr "Нашр сони кўрилган: {$count}"
+
+msgid "stats.publicationStats"
+msgstr "Мақолалар статистикаси"
+
+msgid "stats.publications.details"
+msgstr "Нашр тафсилотлари"
+
+msgid "stats.publications.none"
+msgstr "Ҳеч қандай мақола топилмади."
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Вақт оралиғида аннотацияларни кўришлар сони"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Вақт оралиғида файлларни юклаб олишлар сони"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$total} тадан {$count} та мақола"
+
+msgid "stats.publications.abstracts"
+msgstr "Аннотациялар"
+
+msgid "stats.publications.galleys"
+msgstr "Файллар"
+
+msgid "stats.publications.downloadReport.description"
+msgstr "Мақолалар бўйича статистика ҳисоботини юклаб олиш."
+
+msgid "stats.publications.downloadReport.downloadSubmissions"
+msgstr "Мақолалар статистикасини юклаб олиш"
+
+msgid "stats.publications.downloadReport.downloadSubmissions.description"
+msgstr "Танланган мақолалар учун кўрсаткичларни юклаб олиш."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr "Мақола қабул қилингани ҳақидаги тасдиқнома нусхасини асосий контактга юбориш."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr "Диққат: Ушбу функцияни ишлатиш учун аввал «Мақола қабул қилингани ҳақида тасдиқнома» хатини ёқиш керак."
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Нашр сонларини экспорт қилиш натижалари"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "Нашр сонларини чиқариш"
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "Нашр сони файлларини экспорт қилиб бўлмади."
+
+# --- Электрон почта ўзгарувчилари (Email Variables) ---
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Журнал номи"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "Журнал URL манзили"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "Контакт шахснинг исми"
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr "Журнал аббревиатураси"
+
+msgid "emailTemplate.variable.context.contextSignature"
+msgstr "Журнал имзоси"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "Контакт электрон почтаси"
+
+msgid "emailTemplate.variable.context.mailingAddress"
+msgstr "Почта манзили"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "Тўлов элементи номи"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "Тўлов миқдори"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "Валюта коди"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Сайт номи"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr "Обуначи тафсилотлари"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "Обуна имзоси"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "Обуна URL манзили"
+
+msgid "emailTemplate.variable.subscription.expiryDate"
+msgstr "Обуна тугаш санаси"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "Обуна тури"
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Аъзолик маълумоти"
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr "Муассаса номи"
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "Муассаса манзили"
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "Обуна домени"
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "IP диапазонлари"
+
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr "Тўлов URL манзили"
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr "Мақола топшириш йўриқномаси URL манзили"
+
+msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
+msgstr "Статистика ҳисоботига ҳавола"
+
+msgid "emailTemplate.variable.issueId"
+msgstr "Нашр сони ID-си"
+
+msgid "mailable.statisticsReportNotify.description"
+msgstr "Муҳаррирларга журнал статистикаси ҳақида юбориладиган хабарнома."
+
+msgid "mailable.validateEmailContext.name"
+msgstr "Электрон почтани тасдиқлаш"
+
+msgid "mailable.validateEmailContext.description"
+msgstr "Янги фойдаланувчиларга почта манзилини тасдиқлаш учун юбориладиган хат."
+
+# --- DOI Созламалари (DOI Settings) ---
+
+msgid "doi.displayName"
+msgstr "DOI"
+
+msgid "doi.description"
+msgstr "Рақамли объект идентификатори (Digital Object Identifier)."
+
+msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.manager.displayName"
+msgstr "DOI бошқаруви"
+
+msgid "doi.manager.settings.description"
+msgstr "DOI тизимини созлаш ва бошқариш."
+
+msgid "doi.manager.settings.explainDois"
+msgstr "DOI — бу онлайн нашр этилган объектларни бир хилда аниқлаш имконини берувчи доимий идентификатор."
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "Файллар (galleys) учун DOI-ни ёқиш"
+
+msgid "doi.manager.settings.galleysWithDescription"
+msgstr "Танланган форматдаги файллар учун DOI тайинланади."
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "DOI префикси"
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "DOI префикси шакли 10.xxxx бўлиши керак."
+
+msgid "doi.manager.settings.doiSuffixPattern"
+msgstr "DOI суффикси андозаси"
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr "Мисол: j.v%vi%i (журнал.том.сон.мақола)"
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr "Нашр сонлари учун суффикс"
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "Мақолалар учун суффикс"
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr "Файллар (galleys) учун суффикс"
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Нашр сонлари учун суффикс андозасини киритинг."
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Мақолалар учун суффикс андозасини киритинг."
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Файллар учун суффикс андозасини киритинг."
+
+msgid "doi.manager.settings.doiReassign"
+msgstr "DOI-ларни қайта тайинлаш"
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr "Мавжуд DOI-ларни ўчириб, янги андоза асосида қайта тайинлаш."
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr "Барча объектлар учун DOI-ларни қайта тайинлашни тасдиқлайсизми? Бу амални орқага қайтариб бўлмайди."
+
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "Журнал бўйича DOI тайинлаш"
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr "Ҳали DOI олмаган барча нашр этилган объектларга DOI тайинлаш."
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr "Барча объектларга DOI тайинлашни тасдиқлайсизми?"
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Рўйхатдан ўтказиш агентлиги"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr "DOI-ларни рўйхатдан ўтказиш учун агентликни танланг (масалан: Crossref)."
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Агентлик танланмаган"
+
+msgid "doi.editor.doi"
+msgstr "DOI"
+
+msgid "doi.editor.doi.description"
+msgstr "Ушбу мақола учун DOI."
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "DOI тайинлаш"
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "Нашр сони"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "Мақола"
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "Файл (Galley)"
+
+msgid "doi.editor.customSuffixMissing"
+msgstr "Махсус суффикс киритилмаган."
+
+msgid "doi.editor.missingIssue"
+msgstr "Нашр сони танланмаган. DOI тайинлаш учун мақола бирор сонга бириктирилган бўлиши керак."
+
+msgid "doi.editor.missingParts"
+msgstr "DOI яратиш учун баъзи маълумотлар етишмаяпти."
+
+msgid "doi.editor.patternNotResolved"
+msgstr "DOI андозаси ҳисоблаб бўлмади."
+
+msgid "doi.editor.canBeAssigned"
+msgstr "DOI тайинлаш мумкин"
+
+msgid "doi.editor.assigned"
+msgstr "DOI тайинланди"
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr "Кўрсатилган DOI суффикси уникал эмас."
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "DOI-ларни тозалаш"
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "Объектлардан DOI-ни олиб ташлашни тасдиқлайсизми?"
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "Нашр сони объектларидан DOI-ларни тозалаш"
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "Ушбу нашр сонидаги барча объектлардан DOI-ни ўчиришни тасдиқлайсизми?"
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr "Нашр сони ва ундаги барча мақолаларнинг DOI идентификаторларини ўчиради."
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr "Суффикс бўш бўлиши мумкин эмас."
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr "Андоза бўйича DOI"
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr "Ушбу объектга DOI тайинланган."
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "DOI тайинланиши кутилмоқда."
+
+msgid "doi.editor.missingPrefix"
+msgstr "DOI префикси созланмаган."
+
+msgid "doi.editor.preview.publication"
+msgstr "Нашр DOI-си"
+
+msgid "doi.editor.preview.publication.none"
+msgstr "Мақола учун DOI мавжуд эмас."
+
+msgid "doi.editor.preview.galleys"
+msgstr "Файллар DOI-лари"
+
+msgid "doi.editor.preview.objects"
+msgstr "Объектлар DOI-лари"
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "Файл ушбу нашрга тегишли эмас."
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr "Нашр этилган DOI-ни таҳрирлаш учун рухсатингиз йўқ."
+
+msgid "api.issue.400.invalidDoi"
+msgstr "Нотўғри DOI формати."
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "Нашр этилган соннинг DOI-ни ўзгартириб бўлмайди."
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "Нашр сонлари топилмади."
+
+msgid "doi.manager.submissionDois"
+msgstr "Мақола DOI-лари"
+
+msgid "doi.manager.issueDois"
+msgstr "Нашр сонлари DOI-лари"
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr "Муаллифга мақоласи дастлабки кўриб чиқиш босқичида рад этилгани ҳақида хабарнома."
+
+msgid "manager.institutions.noContext"
+msgstr "Ҳеч қандай муассаса топилмади."
+
+msgid "mailable.subscriptionNotify.name"
+msgstr "Обуна хабарномаси"
+
+msgid "mailable.subscriptionNotify.description"
+msgstr "Фойдаланувчига обунаси фаоллаштирилгани ҳақида хабар бериш."
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr "Обуна муддати тугаши ҳақида эслатма"
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr "Обуначиларга муддат тез орада тугаши ҳақида юбориладиган эслатма."
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "Обуна муддати тугади"
+
+msgid "mailable.subscriptionExpired.description"
+msgstr "Обуначиларга муддат тугагани ҳақида юбориладиган хабарнома."
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr "Обуна муддати тугаши (Якуний эслатма)"
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr "Обуна муддати тугагани ҳақидаги энг охирги эслатма."
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr "Жеке обуна сотиб олинди"
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr "Фойдаланувчи жеке обуна сотиб олганида администраторга юбориладиган хабарнома."
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "Ташкилий обуна сотиб олинди"
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr "Муассаса обуна сотиб олганида администраторга юбориладиган хабарнома."
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "Жеке обуна янгиланди"
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr "Фойдаланувчи жеке обунасини янгилаганида юбориладиган хабарнома."
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "Ташкилий обуна янгиланди"
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr "Муассаса обунаси янгиланганида юбориладиган хабарнома."
+
+msgid "mailable.openAccessNotify.name"
+msgstr "Очиқ кириш ҳақида хабарнома"
+
+msgid "mailable.openAccessNotify.description"
+msgstr "Ўқувчиларга нашр сони очиқ киришга ўтгани ҳақида хабар бериш."
+
+msgid "mailable.issuePublishNotify.name"
+msgstr "Янги нашр сони ҳақида хабарнома"
+
+msgid "mailable.issuePublishNotify.description"
+msgstr "Ўқувчиларга янги сон нашр этилгани ҳақида хабар бериш."
+
+msgid "manager.manageEmails.description"
+msgstr "Тизимнинг электрон почта шаблонларини бошқариш ва таҳрирлаш."
+
+msgid "mailable.layoutComplete.name"
+msgstr "Верстка якунланди"
+
+msgid "mailable.publicationVersionNotify.name"
+msgstr "Нашр версияси янгиланди"
+
+msgid "mailable.publicationVersionNotify.description"
+msgstr "Муаллифларга мақоланинг янги версияси чиққани ҳақида хабар бериш."
+
+msgid "mailable.submissionNeedsEditor.description"
+msgstr "Муҳаррирларга янги топширилган мақола ҳақида эслатма юбориш."
+
+msgid "mailable.paymentRequest.name"
+msgstr "Тўлов сўрови"
+
+msgid "mailable.paymentRequest.description"
+msgstr "Муаллиф ёки ўқувчиларга тўлов қилиш ҳақида юбориладиган сўров."
