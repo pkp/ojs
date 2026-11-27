@@ -1,0 +1,91 @@
+<div class="article-sections">
+
+    @if($publication->getLocalizedData('summaryOfChanges'))
+        <section class="article-section article-section-summary-of-changes">
+            <h3 class="article-section-title" id="summary-of-changes">
+                {{ __('submission.files.amendmentNotice') }}
+            </h3>
+            <div class="article-section-content">
+                {!! ViewHelper::sanitizeHtml($publication->getLocalizedData('summaryOfChanges')) !!}
+            </div>
+        </section>
+    @endif
+
+    @if($publication->getLocalizedData('abstract'))
+        <section class="article-section article-section-abstract">
+            <h3 class="article-section-title" id="abstract">
+                {{ __('article.abstract') }}
+            </h3>
+            <div class="article-section-content">
+                {!! ViewHelper::sanitizeHtml($publication->getLocalizedData('abstract')) !!}
+            </div>
+        </section>
+    @endif
+
+    @if($publication->getLocalizedData('plainLanguageSummary'))
+        <section class="article-section article-section-plain-language-summary" id="summary">
+            <h3 class="article-section-title">
+                {{ __('submission.plainLanguageSummary') }}
+            </h3>
+            <div class="article-section-content">
+                {!! ViewHelper::sanitizeHtml($publication->getLocalizedData('plainLanguageSummary')) !!}
+            </div>
+        </section>
+    @endif
+
+    @if(count($parsedCitations) || (string) $publication->getData('citationsRaw'))
+        <section class="article-section article-section-references">
+            <h3 class="article-section-title" id="references">
+                {{ __('submission.citations') }}
+            </h3>
+            <x-reveal
+                id="article-references"
+                class="article-section-content"
+                height="30"
+            >
+                <x-slot:trigger>
+                    {{ __('plugins.themes.eidos.viewAllReferences') }}
+                </x-slot>
+                @if(count($parsedCitations))
+                    @foreach($parsedCitations as $parsedCitation)
+                        <p>
+                            {!! ViewHelper::sanitizeHtml($parsedCitation->getRawCitationWithLinks()) !!}
+                            @callHook(['name' => 'Templates::Article::Details::Reference', 'citation' => $parsedCitation])
+                        </p>
+                    @endforeach
+                @else
+                    {{ nl2br($publication->getData('citationsRaw')) }}
+                @endif
+            </x-reveal>
+        </section>
+    @endif
+
+    @php
+        $hasAuthorDetails = false;
+        foreach ($publication->getData('authors') as $author) {
+            if (
+                $author->getLocalizedData('biography')
+                || count($author->getAffiliations())
+                || count($author->getLocalizedContributorRoleNames())
+                || count($author->getCreditRoles())
+            ) {
+                $hasAuthorDetails = true;
+                break;
+            }
+        }
+    @endphp
+    @if($hasAuthorDetails)
+        <section class="article-section article-section-author-details" id="authors">
+            <h3 class="article-section-title">
+                {{ __('plugins.themes.eidos.authorDetails') }}
+            </h3>
+            <ul class="article-section-author-details-list">
+                @foreach ($publication->getData('authors') as $author)
+                    <li>
+                        @include('components/author-detail', ['author' => $author])
+                    </li>
+                @endforeach
+            </ul>
+        </section>
+    @endif
+</div>

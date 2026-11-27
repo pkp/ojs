@@ -1,0 +1,106 @@
+.system {
+  --padding-x: 1rem;
+  --radius: 0.25rem;
+  --light: #f2f2f2;
+  --dark: #222;
+  font-family: "Noto Sans", "Noto Sans Arabic", system-ui, -apple-system, BlinkMacSystemFont, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.system-bg {
+  min-width: 100vw;
+  min-height: 100vh;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e5e5e5;
+  color: var(--dark);
+}
+
+.system-panel {
+  @apply shadow-lg;
+  width: 100%;
+  max-width: 30rem;
+  border-radius: var(--radius);
+  background: var(--light);
+}
+
+.system-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.system-header {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem var(--padding-x);
+  gap: 1rem;
+  background: var(--dark);
+  color: var(--light);
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+.system-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.system-html-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem var(--padding-x);
+
+  & ul {
+    list-style: disc;
+    padding-inline-start: 1rem;
+  }
+
+  & li + li {
+    margin-top: 0.25em;
+  }
+
+}
+
+.system-link,
+.system-desc a,
+.system-html-content a:not(.system-button):not(.system-button-secondary):not(.system-button-link) {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 0.15em;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: none;
+    outline: 0.15em solid;
+    outline-offset: 0.15em;
+  }
+}
+
+.system-desc {
+
+  & a {
+    font-weight: 600;
+  }
+}
+
+.system-divider {
+  opacity: 0.125;
+  margin-inline: calc(-1 * var(--padding-x));
+}
+
+@media (min-width: 400px) {
+
+  .system {
+    --padding-x: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .system-bg {
+    padding: 2rem;
+  }
+}

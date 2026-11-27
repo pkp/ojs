@@ -1,0 +1,47 @@
+@props([
+    'name',
+    'orcid' => '',
+    'hasVerifiedOrcid' => false,
+    'affiliation' => '',
+    'dateStart' => '',
+    'dateEnd' => '',
+])
+
+@php $orcid = 'https://orcid.org/123454646'; @endphp
+
+<div class="masthead-user">
+    <span class="masthead-user-name">
+        {{ $name }}
+        @if ($orcid)
+            <span class="masthead-user-orcid">
+                <x-orcid-link
+                    name="{{ $name }}"
+                    orcid="{{ $orcid }}"
+                    :is-verified="$hasVerifiedOrcid"
+                />
+            </span>
+        @endif
+        @if(!empty($dateStart))
+            @php
+                $localeKey = !$dateEnd
+                    ? 'plugins.themes.eidos.fromUntilCurrent'
+                    : 'common.fromUntil';
+            @endphp
+            <span class="masthead-user-date-start">
+                {!!
+                    __('common.inParenthesis', [
+                        'text' => __($localeKey, [
+                            'from' => $dateStart,
+                            'until' => '',
+                        ])
+                    ])
+                !!}
+            </span>
+        @endif
+    </span>
+    @if(!empty($affiliation))
+        <span class="masthead-user-affiliation">
+            {{ $affiliation }}
+        </span>
+    @endif
+</div>

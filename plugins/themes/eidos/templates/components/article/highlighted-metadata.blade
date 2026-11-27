@@ -1,0 +1,20 @@
+@php
+    $blocks = $getBlocks($metadataBlocks, 'highlightArticleMetadata');
+@endphp
+
+@if ($blocks->count())
+    <div class="article-highlighted-metadata">
+        <div class="metadata-blocks-table">
+            @foreach ($blocks as $block)
+                <x-dynamic-component
+                    :component="$block->component"
+                    headingTag="h2"
+                    :id="$block->id"
+                    :title="$block->title"
+                    :$publication
+                    :submission="$article"
+                />
+            @endforeach
+        </div>
+    </div>
+@endif

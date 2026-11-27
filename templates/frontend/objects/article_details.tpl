@@ -341,7 +341,7 @@
 			{/if}
 
 			{* JATS XML Link *}
-			{if isset($jatsDownloadUrl)}
+			{if $jatsDownloadUrl}
 				<div class="item jats">
 					<span class="value jats_link">
 						<a class="obj_galley_link xml" href="{$jatsDownloadUrl|escape}">
@@ -510,7 +510,7 @@
 			{if $enablePublicComments}
 			    <div class="item comments">
 				    <section class="sub_item" data-vue-root>
-                        <h2 class="label"> {translate key="userComment.comments"} </h2>
+                        <h2 class="label"> {translate key="manager.userComment.comments"} </h2>
                         <pkp-scroll-to-comments></pkp-scroll-to-comments>
 				    </section>
 			    </div>

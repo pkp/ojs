@@ -23,11 +23,6 @@
 	vertical-align: middle;
 }
 
-.PkpCommentsNotificationNotLatest {
-	display: flex;
-	align-items: center;
-}
-
 .PkpCommentsNotificationMessageNeedsApproval {
 	display: flex;
 	align-items: center;
@@ -63,6 +58,11 @@
     color: @primary;
 }
 
+.PkpComments__messages {
+    margin-top: @double;
+    gap: @base;
+}
+
 .PkpCommentsNew {
     margin-top: @base;
 
@@ -85,9 +85,21 @@
     margin-top: @base;
 }
 
-.PkpComments__messages {
-    margin-top: @double;
-    gap: @base;
+.PkpCommentsNotificationNotLatest {
+	display: flex;
+	align-items: center;
+}
+
+.PkpCommentsNotificationMessageNeedsApproval {
+    color: @primary;
+    font-size: @font-tiny;
+    gap: @half;
+    margin-bottom: @half;
+
+    > svg {
+        height: 1rem;
+        width: 1rem;
+    }
 }
 
 .PkpCommentsNotificationNotLatest {
@@ -101,19 +113,6 @@
 
     > svg {
         color: @offset;
-        height: 1rem;
-        width: 1rem;
-    }
-}
-
-
-.PkpCommentsNotificationMessageNeedsApproval {
-    color: @primary;
-    font-size: @font-tiny;
-    gap: @half;
-    margin-bottom: @half;
-
-    > svg {
         height: 1rem;
         width: 1rem;
     }

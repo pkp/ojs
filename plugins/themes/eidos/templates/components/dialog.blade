@@ -1,0 +1,32 @@
+@props([
+    'class' => '',
+    'showClose' => false,
+    'triggerClass' => '',
+])
+
+<div class="PkpDialog {{ $class }}" data-vue-root>
+    <dialog-root class="PkpDialog__root">
+        <dialog-trigger class="PkpDialog__trigger {{ $triggerClass }}">
+            {{ $trigger }}
+        </dialog-trigger>
+        <dialog-portal>
+            <dialog-overlay class="PkpDialog__overlay"></dialog-overlay>
+			<div class="PkpDialog__positionContainer">
+                <dialog-content class="PkpDialog__content">
+                    <dialog-close class="PkpDialog__close @if ($showClose) PkpDialog__close-visible @endif">
+                        <span class="sr-only">{{ __('common.close') }}</span>
+                        @include('components/icons/close')
+                    </dialog-close>
+                    @if ($title)
+                        <dialog-title class="PkpDialog__title">
+                            {!! ViewHelper::sanitizeHtml($title) !!}
+                        </dialog-title>
+                    @endif
+                    <dialog-description class="PkpDialog__body">
+                        {{ $slot }}
+                    </dialog-description>
+                </dialog-content>
+            </div>
+        </dialog-portal>
+    </dialog-root>
+</div>
