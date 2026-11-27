@@ -65,23 +65,31 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3rem;
+  height: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  & .PkpIcon {
+  & .PkpIcon,
+  & svg {
     fill: currentColor;
+    border: var(--border-width) solid transparent;
   }
 
-  &:hover .PkpIcon {
+  &:hover .PkpIcon,
+  &:hover svg {
     border-radius: var(--radius);
     border: var(--border-width) solid;
   }
 
   &:focus-visible {
     outline-offset: -0.5rem;
+
+    &:hover .PkpIcon,
+    &:hover svg {
+      border-color: transparent;
+    }
   }
 }
 

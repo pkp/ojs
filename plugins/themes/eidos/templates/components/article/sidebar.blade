@@ -28,7 +28,7 @@
             :submission="$article"
         />
         @if ($citeConfig)
-            <x-dropdown
+            <x-dialog
                 class="article-sidebar-cite"
                 :showClose="true"
                 triggerClass="article-sidebar-cite-button"
@@ -39,8 +39,11 @@
                         {{ __('plugins.themes.eidos.cite') }}
                     </span>
                 </x-slot:trigger>
+                <x-slot:title>
+                    {{ __('submission.howToCite') }}
+                </x-slot:title>
                 <pkp-cite-body v-bind='@json($citeConfig)'></pkp-cite-body>
-            </x-dropdown>
+            </x-dialog>
         @endif
         @if ($shareOptions)
             <x-dropdown

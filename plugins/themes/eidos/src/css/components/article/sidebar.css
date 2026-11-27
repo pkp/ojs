@@ -33,7 +33,6 @@
   width: 100%;
 }
 
-.article-sidebar-cite,
 .article-sidebar-share {
 
   & .dropdown-content {
@@ -98,7 +97,6 @@
       grid-column-end: 3;
     }
 
-    & .article-sidebar-cite,
     & .article-sidebar-share {
       min-width: 0;
     }
@@ -110,29 +108,8 @@
       white-space: nowrap;
     }
 
-    & .article-sidebar-cite .dropdown-content {
-      min-width: 24rem;
-    }
-
     & .article-sidebar-share .dropdown-content {
       min-width: 16rem;
-    }
-  }
-}
-
-@media (min-width: 1200px) {
-
-  .article-sidebar-cite {
-
-    & .dropdown-content {
-      max-height: calc(var(--reka-popover-content-available-height) - 1rem);
-    }
-  }
-
-  .article-sidebar-top:has(.article-sidebar-cite):has(.article-sidebar-share) {
-
-    & .article-sidebar-cite {
-      --dropdown-width-scale: 2.5
     }
   }
 }
