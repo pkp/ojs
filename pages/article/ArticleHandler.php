@@ -243,7 +243,7 @@ class ArticleHandler extends Handler
             'metricsByType' => $metricsByType,
         ]);
 
-        $openReviewComponent = new OpenReviewComponent($article);
+        $openReviewComponent = new OpenReviewComponent($article, $context);
         $templateMgr->setLocaleKeys($openReviewComponent->getLocaleKeys());
         $templateMgr->addSvgIcons($openReviewComponent->getSvgIcons());
         $templateMgr->assign('openReviewConfig', $openReviewComponent->getConfig());
