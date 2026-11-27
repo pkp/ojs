@@ -344,7 +344,7 @@ class ArticleHandler extends Handler
                     $context->getPath(),
                     "submissions/{$article->getId()}/publications/{$publication->getId()}/jats/download"
                 )
-                : ''
+                : null
         ]);
 
         // Citations
